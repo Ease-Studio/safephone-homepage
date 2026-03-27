@@ -2,14 +2,14 @@
 <html dir="auto" lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Privacy - My Page Title</title>
+    <title>Hướng dẫn cấu hình Slack để nhận cảnh báo khi người thân bấm vào các đường link</title>
 
-    <meta name="description" content="My Page Description" />
+    <meta name="description" content="Hướng dẫn cấu hình Slack để nhận cảnh báo khi người thân bấm vào các đường link" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="assets/favicon.png" />
 
-    <meta property="og:title" content="Privacy - My Page Title" />
-    <meta property="og:description" content="My Page Description" />
+    <meta property="og:title" content="Hướng dẫn cấu hình Slack để nhận cảnh báo khi người thân bấm vào các đường link" />
+    <meta property="og:description" content="Hướng dẫn cấu hình Slack để nhận cảnh báo khi người thân bấm vào các đường link" />
     <meta property="og:image" content="assets/og-image.png" />
 
     <link rel="stylesheet" href="assets/tobi.css" />
@@ -20,10 +20,63 @@
 <main>
     <article class="page">
         <header class="page__header">
-            <h1 class="page__title">Privacy</h1>
+            <h1 class="page__title">Hướng dẫn cấu hình Slack để nhận cảnh báo khi người thân bấm vào các đường link</h1>
         </header>
         <div class="page__content">
 
+
+
+    <h3>1. Vấn đề: Rủi ro từ các đường link không an toàn</h3>
+    <p>
+        Trẻ em và người lớn tuổi có thể vô tình nhấp vào các đường link độc hại hoặc lừa đảo trong email, tin nhắn hoặc trang web.
+        Những rủi ro thường gặp gồm:
+    </p>
+    <ul>
+        <li>Trang web giả mạo yêu cầu thông tin cá nhân hoặc tài khoản</li>
+        <li>Download phần mềm độc hại hoặc virus</li>
+        <li>Mất quyền kiểm soát thiết bị hoặc dữ liệu cá nhân</li>
+        <li>Khó nhận biết ngay lập tức nếu không có cảnh báo kịp thời</li>
+    </ul>
+
+    <p>
+        Việc chỉ dựa vào chặn website hoặc blacklist đôi khi chưa đủ, cần có cơ chế cảnh báo ngay khi người thân tương tác với link nguy hiểm.
+    </p>
+
+    <h3>2. Giải pháp: Tích hợp SafePhone với Slack</h3>
+    <p>
+        SafePhone cho phép gửi cảnh báo đến kênh Slack của gia đình mỗi khi người thân bấm vào các đường link nằm trong blacklist hoặc nghi ngờ mạo danh.
+    </p>
+
+    <p>Lợi ích:</p>
+    <ul>
+        <li>Nhận cảnh báo tức thì khi có hành động nguy hiểm</li>
+        <li>Giúp người thân nhận hỗ trợ kịp thời</li>
+        <li>Dễ dàng quản lý và giám sát nhiều thành viên trong gia đình</li>
+        <li>Tích hợp linh hoạt với workflow Slack cho các hành động tiếp theo</li>
+    </ul>
+
+    <h3>3. Hướng dẫn cấu hình</h3>
+    <ol>
+        <li>Tạo một kênh riêng trên Slack, ví dụ <strong>#canh-bao-link</strong></li>
+        <li>Vào <strong>Apps</strong> và cài đặt <strong>Incoming Webhooks</strong></li>
+        <li>Tạo webhook mới cho kênh và sao chép URL webhook</li>
+        <li>Mở ứng dụng SafePhone trên thiết bị của người thân</li>
+        <li>Vào <strong>Cài đặt</strong> → <strong>Tích hợp</strong> → <strong>Slack</strong></li>
+        <li>Dán URL webhook đã sao chép vào cấu hình</li>
+        <li>Bật tùy chọn <strong>Cảnh báo khi bấm vào đường link nguy hiểm</strong></li>
+        <li>Lưu và kích hoạt</li>
+    </ol>
+
+    <p>
+        Khi hoàn tất, bất kỳ lần nào người thân bấm vào link nằm trong blacklist hoặc nghi ngờ mạo danh,
+        hệ thống sẽ gửi cảnh báo trực tiếp đến kênh Slack đã cấu hình.
+    </p>
+
+    <ul>
+        <li>Thêm các thành viên gia đình vào kênh để cùng theo dõi</li>
+        <li>Thường xuyên cập nhật danh sách link nguy hiểm trong SafePhone</li>
+        <li>Kết hợp với tính năng chặn website để tăng mức độ bảo vệ</li>
+    </ul>
         </div>
     </article>
 
