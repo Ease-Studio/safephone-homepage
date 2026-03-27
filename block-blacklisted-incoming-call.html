@@ -2,14 +2,14 @@
 <html dir="auto" lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Privacy - My Page Title</title>
+    <title>Hướng dẫn chặn số lạ bằng danh sách đen bằng app SafePhone</title>
 
-    <meta name="description" content="My Page Description" />
+    <meta name="description" content="Hướng dẫn chặn số lạ bằng danh sách đen bằng app SafePhone" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="assets/favicon.png" />
 
-    <meta property="og:title" content="Privacy - My Page Title" />
-    <meta property="og:description" content="My Page Description" />
+    <meta property="og:title" content="Hướng dẫn chặn số lạ bằng danh sách đen bằng app SafePhone" />
+    <meta property="og:description" content="Hướng dẫn chặn số lạ bằng danh sách đen bằng app SafePhone" />
     <meta property="og:image" content="assets/og-image.png" />
 
     <link rel="stylesheet" href="assets/tobi.css" />
@@ -20,13 +20,132 @@
 <main>
     <article class="page">
         <header class="page__header">
-            <h1 class="page__title">Privacy</h1>
+            <h1 class="page__title">Hướng dẫn chặn số lạ bằng danh sách đen bằng app SafePhone</h1>
         </header>
         <div class="page__content">
+            <h2>Vì sao bạn cần chặn số lạ?</h2>
+            <p>
+            Hiện nay, tình trạng cuộc gọi rác, lừa đảo, giả mạo ngân hàng/cơ quan nhà nước đang ngày càng phổ biến. Các số điện thoại này thường:
+                <ul>
+            <li>Gọi nhiều lần trong ngày, gây phiền toái</li>
+            <li>Giả danh để chiếm đoạt thông tin cá nhân</li>
+            <li>Dụ người dùng bấm vào link độc hại</li>
+            <li>Lừa chuyển tiền hoặc cung cấp OTP</li>
+        </ul>
+
+            Việc chỉ “không nghe máy” là chưa đủ, vì:
+            <ul>
+
+            <li>Bạn vẫn bị làm phiền liên tục</li>
+                <li>Người thân (trẻ em, người lớn tuổi) dễ bị lừa</li>
+                <li>Một số cuộc gọi nguy hiểm có thể khiến bạn mất tiền.</li>
+            </ul>
+
+            Vì vậy, giải pháp tốt nhất là chặn chủ động bằng danh sách đen (blacklist).
+            </p>
+
+            <h2>Phương pháp thu thập dữ liệu của SafePhone</h2>
+            <p>
+                SafePhone hoạt động dựa trên nhiều nguồn dữ liệu để nhận diện số nguy hiểm:
+
+            <h3>Dữ liệu cộng đồng (crowdsourced)</h3>
+            <ol>
+                <li>Người dùng báo cáo số lừa đảo / spam</li>
+                <li> Hệ thống tổng hợp và đánh giá mức độ nguy hiểm</li>
+            </ol>
+
+            <h3>Danh sách số đã được xác minh</h3>
+            <ul>
+                <li>Các số từng bị báo cáo nhiều lần</li>
+                <li>Số có hành vi gọi hàng loạt (robocall)</li>
+            </ul>
+
+            <h3> Phân tích hành vi </h3>
+            <ul>
+                <li>Tần suất gọi bất thường</li>
+                <li>Gọi từ nhiều đầu số tương tự</li>
+                <li>Pattern giống hệ thống spam</li>
+            </ul>
+
+                Từ đó, app tạo ra blacklist tự động, giúp bạn chặn ngay cả khi chưa từng gặp số đó.
+            </p>
+
+            <h2>Hướng dẫn cấp quyền Call Screener</h2>
+            <p>
+                Để chặn cuộc gọi hiệu quả, bạn cần cấp quyền Call Screening (lọc cuộc gọi) cho app.
+                <br>
+
+            <h3>Các bước thực hiện:</h3>
+            <ol>
+                <li>Mở app SafePhone</li>
+                <li>Bấm vào chuỗi biểu tượng tấm khiên</li>
+                <li>Bấm vào Chặn cuộc gọi đến từ SĐT trong danh sách đen</li>
+                <li>Bấm tiếp vào Cấp quyền Sàng lọc cuộc gọi, một hộp thoại sẽ hiện lên</li>
+                <li>Bấm vào dòng có logo và tên SafePhone</li>
+                <li>Bấm nút quay lại để về màn hình chính, hoặc tắt app rồi mở lại</li>
+            </ol>
+
+                Sau khi hoàn tất:
+            <ul>
+                <li>Cuộc gọi từ số nằm trong blacklist sẽ bị chặn tự động</li>
+                <li>Bạn không còn bị làm phiền</li>
+                <li>Có thể xem log cuộc gọi bị chặn trong ứng dụng gọi điện mặc định của mình</li>
+            </ul>
+            </p>
+
+            <div class="app__screenshots-list">
+                <a href="assets/screenshot.png" class="lightbox">
+                    <img src="assets/screenshot.png" class="app__screenshot" alt="" />
+                </a>
+                <a href="assets/screenshot.png" class="lightbox">
+                    <img src="assets/screenshot.png" class="app__screenshot" alt="" />
+                </a>
+                <a href="assets/screenshot.png" class="lightbox">
+                    <img src="assets/screenshot.png" class="app__screenshot" alt="" />
+                </a>
+                <a href="assets/screenshot.png" class="lightbox">
+                    <img src="assets/screenshot.png" class="app__screenshot" alt="" />
+                </a>
+            </div>
+
+            <h2>Giải thích về quyền Sàng lọc cuộc gọi (Call Screener)</h2>
+            <p>
+                Call Screener (Sàng lọc cuộc gọi) là quyền đặc biệt trên Android cho phép ứng dụng:
+                <ol>
+            <li>Kiểm tra số điện thoại trước khi bạn nhận cuộc gọi</li>
+                <li>Đưa ra quyết định:
+                Cho phép đổ chuông,
+                Tắt chuông,
+                hoặc Chặn hoàn toàn
+        </ol>
+                SafePhone sử dụng quyền này để làm gì?
+            <ol>
+                <li>So sánh số gọi đến với blacklist</li>
+                <li>Chặn cuộc gọi trước khi làm phiền bạn</li>
+                <li>Gửi cảnh báo đến kênh truyền cảnh báo nếu đã được thiết lập</li>
+            </ol>
+                Quan trọng về quyền riêng tư:
+            <ul>
+                <li>App không ghi âm cuộc gọi</li>
+                <li>Không truy cập nội dung cuộc gọi</li>
+                <li>Chỉ xử lý số điện thoại</li>
+            </ul>
+            </p>
+
+            <h2>Kết luận</h2>
+            <p>
+                Việc chặn số lạ không chỉ giúp bạn:
+                <ul>
+            <li>Tránh bị làm phiền</li>
+            <li>Bảo vệ tài chính</li>
+            <li>Bảo vệ người thân</li>
+        </ul>
+
+                Mà còn góp phần xây dựng hệ sinh thái an toàn hơn cho cộng đồng.
+            </p>
 
         </div>
     </article>
-
 
 
 </main>
