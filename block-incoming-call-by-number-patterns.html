@@ -2,14 +2,14 @@
 <html dir="auto" lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Privacy - My Page Title</title>
+    <title>Cấu hình chặn số theo mẫu hình</title>
 
-    <meta name="description" content="My Page Description" />
+    <meta name="description" content="Cấu hình chặn số theo mẫu hình" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="assets/favicon.png" />
 
-    <meta property="og:title" content="Privacy - My Page Title" />
-    <meta property="og:description" content="My Page Description" />
+    <meta property="og:title" content="Cấu hình chặn số theo mẫu hình" />
+    <meta property="og:description" content="Cấu hình chặn số theo mẫu hình" />
     <meta property="og:image" content="assets/og-image.png" />
 
     <link rel="stylesheet" href="assets/tobi.css" />
@@ -20,9 +20,68 @@
 <main>
     <article class="page">
         <header class="page__header">
-            <h1 class="page__title">Privacy</h1>
+            <h1 class="page__title">Cấu hình chặn số theo mẫu hình</h1>
         </header>
         <div class="page__content">
+
+    <h2>Cấu hình chặn số theo mẫu hình</h2>
+
+    <h3>1. Hạn chế của blacklist và whitelist riêng lẻ</h3>
+    <p>
+        Hai phương pháp phổ biến hiện nay là chặn theo danh sách đen (blacklist) và chỉ nhận cuộc gọi từ danh bạ (whitelist).
+        Tuy nhiên, khi sử dụng riêng lẻ, mỗi cách đều có điểm hạn chế:
+    </p>
+    <ul>
+        <li>Blacklist: Không theo kịp các số spam mới liên tục thay đổi</li>
+        <li>Whitelist: Có thể bỏ lỡ cuộc gọi quan trọng từ số chưa lưu</li>
+        <li>Cả hai đều thiếu tính linh hoạt khi đối phó với các dạng số đáng ngờ có quy luật</li>
+    </ul>
+
+    <p>
+        Trong thực tế, nhiều cuộc gọi rác thường xuất phát từ các dải số hoặc có mẫu hình giống nhau
+        (ví dụ: cùng đầu số, độ dài bất thường, hoặc định dạng quốc tế lạ).
+        Đây là cơ sở để áp dụng giải pháp chặn theo mẫu hình.
+    </p>
+
+    <h3>2. Giải pháp: Kết hợp blacklist, whitelist và chặn theo mẫu hình</h3>
+    <p>
+        Ứng dụng SafePhone cho phép người dùng thiết lập quy tắc chặn dựa trên mẫu số điện thoại,
+        giúp cân bằng giữa việc bảo vệ và không bỏ lỡ liên lạc quan trọng.
+    </p>
+
+    <p>Lợi ích của phương pháp này:</p>
+    <ul>
+        <li>Chủ động chặn các nhóm số đáng ngờ theo quy luật</li>
+        <li>Giảm phụ thuộc vào việc cập nhật blacklist thủ công</li>
+        <li>Vẫn cho phép nhận cuộc gọi ngoài danh bạ nếu không thuộc mẫu bị chặn</li>
+    </ul>
+
+    <h3>3. Hướng dẫn cấu hình chặn theo mẫu hình</h3>
+    <ol>
+        <li>Mở ứng dụng SafePhone trên điện thoại</li>
+        <li>Truy cập mục <strong>Cài đặt</strong></li>
+        <li>Chọn <strong>Quy tắc chặn nâng cao</strong></li>
+        <li>Thêm quy tắc mới theo mẫu số, ví dụ:
+            <ul>
+                <li>Chặn tất cả số bắt đầu bằng <strong>+882</strong></li>
+                <li>Chặn số có độ dài lớn hơn <strong>12 chữ số</strong></li>
+                <li>Chặn các số có định dạng lặp bất thường</li>
+            </ul>
+        </li>
+        <li>Kết hợp thêm danh sách cho phép (whitelist) nếu cần</li>
+        <li>Lưu và kích hoạt cấu hình</li>
+    </ol>
+
+    <p>
+        Sau khi thiết lập, hệ thống sẽ tự động lọc các cuộc gọi dựa trên quy tắc bạn đã định nghĩa,
+        giúp giảm thiểu cuộc gọi rác mà vẫn đảm bảo tính linh hoạt.
+    </p>
+
+    <ul>
+        <li>Nên theo dõi nhật ký cuộc gọi bị chặn để điều chỉnh quy tắc phù hợp</li>
+        <li>Tránh thiết lập mẫu quá rộng gây chặn nhầm cuộc gọi quan trọng</li>
+    </ul>
+
 
         </div>
     </article>
