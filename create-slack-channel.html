@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hướng dẫn tạo kênh Slack để truyền cảnh báo</title>
+
+    <meta name="description" content="Hướng dẫn tạo kênh Slack để truyền cảnh báo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.png" />
+
+    <meta property="og:title" content="Hướng dẫn tạo kênh Slack để truyền cảnh báo" />
+    <meta property="og:description" content="Hướng dẫn tạo kênh Slack để truyền cảnh báo" />
+    <meta property="og:image" content="assets/og-image.png" />
+
+    <link rel="stylesheet" href="assets/tobi.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+</head>
+<body>
+<main>
+    <article class="page">
+        <header class="page__header">
+            <h1 class="page__title">Hướng dẫn tạo kênh Slack để truyền cảnh báo</h1>
+        </header>
+        <div class="page__content">
+            <p>
+                Slack là một nền tảng giao tiếp và làm việc nhóm được phát triển bởi Slack Technologies, giúp các cá nhân và doanh nghiệp trao đổi thông tin nhanh chóng và hiệu quả. Với khả năng tạo kênh (channel), gửi tin nhắn theo thời gian thực, chia sẻ tệp và tích hợp với nhiều ứng dụng khác, Slack trở thành công cụ phổ biến để quản lý công việc, phối hợp nhóm và tự động hóa quy trình như gửi cảnh báo từ hệ thống hoặc ứng dụng.
+            </p>
+            <p>
+                Ứng dụng SafePhone cho phép bạn cấu hình gửi cảnh báo trực tiếp đến Slack mỗi khi điện thoại nhận cuộc gọi từ số lạ hoặc khi người dùng bấm vào một đường link đáng ngờ.</p>
+
+                <p>Tính năng này đặc biệt hữu ích khi bạn cài SafePhone cho điện thoại của con cái hoặc người lớn tuổi trong gia đình. Ngay khi có sự kiện bất thường xảy ra, SafePhone sẽ tự động gửi thông báo vào kênh Slack của bạn, giúp bạn biết được:
+<ul>
+            <li>Có cuộc gọi từ số không nằm trong danh bạ</li>
+            <li>Có người bấm vào một link lạ trên trình duyệt</li>
+            <li>Cuộc gọi đã bị chặn hay chỉ cảnh báo</li>
+        </ul>
+
+                Nhờ đó, bạn có thể theo dõi và phát hiện sớm các dấu hiệu lừa đảo mà không cần phải kiểm tra điện thoại trực tiếp.
+                </p>
+            <p>
+                Chỉ cần kết nối SafePhone với Slack bằng <strong>bot token</strong> và <strong>channel ID</strong>, mọi cảnh báo sẽ được gửi ngay lập tức đến kênh Slack của bạn. Đây là một cách đơn giản nhưng rất hiệu quả để tăng lớp bảo vệ cho gia đình trước các cuộc gọi và đường link lừa đảo ngày càng tinh vi.
+            </p>
+
+            <p>Để ứng dụng có thể gửi cảnh báo đến Slack, bạn cần tạo một kênh Slack, tạo Bot, và lấy <strong>Bot Token</strong> cùng <strong>Channel ID</strong>. Thực hiện theo các bước sau:</p>
+
+            <h2>Bước 1: Tạo kênh Slack</h2>
+            <ol>
+                <li>Đăng nhập vào Slack tại <a href="https://slack.com">https://slack.com</a>.</li>
+                <li>Trong thanh bên trái, bấm vào <strong>Add channels</strong> → <strong>Create a new channel</strong>.</li>
+                <li>Đặt tên kênh và tạo kênh.</li>
+            </ol>
+            <p>Đây sẽ là nơi nhận các cảnh báo từ ứng dụng.</p>
+
+            <h2>Bước 2: Tạo Slack App và Bot</h2>
+            <ol>
+                <li>Truy cập trang quản lý ứng dụng Slack: <a href="https://api.slack.com/apps">https://api.slack.com/apps</a></li>
+                <li>Nhấn <strong>Create New App</strong> → chọn <strong>From scratch</strong>.</li>
+                <li>Đặt tên cho app và chọn workspace của bạn.</li>
+                <li>Sau khi tạo xong, vào mục <strong>OAuth & Permissions</strong>.</li>
+            </ol>
+
+            <p>Trong phần <strong>Bot Token Scopes</strong>, thêm quyền:</p>
+            <ul>
+                <li>chat:write (để bot có thể gửi tin nhắn)</li>
+            </ul>
+
+            <h2>Bước 3: Cài đặt App và lấy Bot Token</h2>
+            <ol>
+                <li>Trong trang “OAuth & Permissions”, nhấn “Install to Workspace”.</li>
+                <li>Sau khi cài đặt, bạn sẽ thấy Bot User OAuth Token có dạng <strong>xoxb-...</strong>.</li>
+            </ol>
+
+            <p>Sao chép token này – đây chính là <strong>Bot Token</strong> dùng để gửi tin nhắn từ ứng dụng.</p>
+
+            <h2>Bước 4: Mời Bot vào kênh</h2>
+            <ol>
+                <li>Mở kênh Slack đã tạo.</li>
+                <li>Gõ lệnh: <code>/invite @tên-bot</code></li>
+            </ol>
+
+            <p>Bot sẽ được thêm vào kênh để có thể gửi cảnh báo.</p>
+
+            <h2>Bước 5: Lấy Channel ID</h2>
+            <ol>
+                <li>Mở kênh Slack trên trình duyệt.</li>
+                <li>Nhìn vào URL, bạn sẽ thấy dạng: <strong>https://app.slack.com/client/TXXXXXXX/CYYYYYYY</strong></li>
+            </ol>
+
+
+            <p>Phần bắt đầu bằng C (ví dụ CYYYYYYY) chính là <strong>Channel ID</strong>.</p>
+
+            <h2>Hoàn tất cấu hình</h2>
+            <p>Sau khi có <strong>Bot Token</strong> và <strong>Channel ID</strong>, bạn nhập hai thông tin này vào ứng dụng để có thể tự động gửi cảnh báo lên Slack khi phát hiện cuộc gọi lạ hoặc đường link nguy hiểm.</p>
+        </div>
+    </article>
+
+
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <p class="footer__love">
+                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
+            &mdash; Template by <a href="https://www.sandoche.com" target="_blank">Sandoche</a>
+            &mdash; Powered by <a href="https://t3mpl.n4no.com/" target="_blank" title="T3MPL Editor">T3MPL</a>
+            </p>
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="page-1.html">Privacy</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://n4no.com/" targe="_blank">GitHub</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://n4no.com/" targe="_blank">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/tobi.min.js" /></script>
+<script>
+    window.onload = function () {
+        var tobi = new Tobi();
+    };
+</script>
+
+</body>
+</html>
