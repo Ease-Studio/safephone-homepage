@@ -56,16 +56,16 @@
     </ul>
 
     <h3>3. Hướng dẫn cấu hình</h3>
-    <ol>
-        <li>Tạo một kênh riêng trên Slack, ví dụ <strong>#canh-bao-link</strong></li>
-        <li>Vào <strong>Apps</strong> và cài đặt <strong>Incoming Webhooks</strong></li>
-        <li>Tạo webhook mới cho kênh và sao chép URL webhook</li>
-        <li>Mở ứng dụng SafePhone trên thiết bị của người thân</li>
-        <li>Vào <strong>Cài đặt</strong> → <strong>Tích hợp</strong> → <strong>Slack</strong></li>
-        <li>Dán URL webhook đã sao chép vào cấu hình</li>
-        <li>Bật tùy chọn <strong>Cảnh báo khi bấm vào đường link nguy hiểm</strong></li>
-        <li>Lưu và kích hoạt</li>
-    </ol>
+            <ol>
+                <li>Tạo một kênh riêng trên Slack  <a href="create-slack-channel.html"> (xem hướng dẫn tạo kênh Slack và lấy thông tin cấu hình tại đây) </a></li>
+                <li>Bấm vào chuỗi biểu tượng tấm khiên dòng đầu tiên</li>
+                <li>Bấm vào <strong>Gửi thông báo đến người thân</strong></li>
+                <li>Trên màn hình mới hiện lên, nhập tên thiết bị, ví dụ: "điện thoại của ba", "tablet của cu tí", ... </li>
+                <li>Chọn <strong>Gửi qua Slack</strong></li>
+                <li>Dán channel ID và bot token vào phần <strong>Cấu hình kênh Slack</strong> </li>
+                <li>Đánh dấu tick vào các lựa chọn ở phần <strong>Khi người dùng bấm vào các liên kết, gửi cảnh báo nếu </strong> </li>
+                <li>Bấm vào <strong>Lưu lại</strong></li>
+            </ol>
 
             <div class="app__screenshots-list">
                 <a href="assets/screenshot.png" class="lightbox">
@@ -82,16 +82,18 @@
                 </a>
             </div>
 
-    <p>
-        Khi hoàn tất, bất kỳ lần nào người thân bấm vào link nằm trong blacklist hoặc nghi ngờ mạo danh,
-        hệ thống sẽ gửi cảnh báo trực tiếp đến kênh Slack đã cấu hình.
-    </p>
+            <p>
+                Sau khi thiết lập, mỗi khi người dùng bấm vào một đường dẫn nào đó, ứng dụng SafePhone sẽ gửi thông báo đến kênh Slack bạn đã tạo,
+                giúp bạn nhanh chóng nắm bắt tình hình và chủ động xử lý khi có các dấu hiệu đáng ngờ.
+            </p>
 
-    <ul>
-        <li>Thêm các thành viên gia đình vào kênh để cùng theo dõi</li>
-        <li>Thường xuyên cập nhật danh sách link nguy hiểm trong SafePhone</li>
-        <li>Kết hợp với tính năng chặn website để tăng mức độ bảo vệ</li>
-    </ul>
+            <p>Nếu bạn là người am hiểu công nghệ duy nhất trong nhà và lo lắng trước hiện trạng lừa đảo qua mạng nhan nhản, hãy:</p>
+
+            <ol>
+                <li>Cài đặt SafePhone trên các thiết bị của con cái và bố mẹ</li>
+                <li>Bật tính năng Cảnh báo này của SafePhone trên tất cả các thiết bị</li>
+                <li>Cài app Slack trên điện thoại của bạn & đăng nhập vào Slack để nhận các cảnh báo từ kênh Slack bạn đã cấu hình.</li>
+            </ol>
         </div>
     </article>
 
