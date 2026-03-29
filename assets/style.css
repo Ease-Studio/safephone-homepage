@@ -170,32 +170,29 @@ html[dir=rtl] .app__logo-wrapper {
     margin-bottom: 0;
   }
 }
+.app__screenshots-wrapper {
+  overflow-x: auto;
+  padding: 16px;
+}
+
 .app__screenshots-list {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px 200px 200px;
-  grid-column-gap: 20px;
-  padding: 30px 0;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  padding: 16px 0;
 }
-@media (max-width: 768px) {
-  .app__screenshots-list {
-    padding: 32px;
-    width: 800px;
-  }
-}
+
 .app__screenshot {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 12px 48px rgba(17, 16, 62, 0.12);
   transition: all 0.3s ease-in-out;
-  transform: scale(1);
   cursor: pointer;
 }
+
 .app__screenshot:hover {
   box-shadow: 0 24px 48px rgba(17, 16, 62, 0.12);
   transform: scale(1.05);
-}
-.app__screenshots-wrapper {
-  overflow-y: auto;
 }
 .app__buttons {
   display: flex;
