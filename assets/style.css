@@ -346,3 +346,10 @@ html[dir=rtl] .app__logo-wrapper {
   font-size: 16px;
   font-weight: 500;
 }
+
+.highlight {
+  background-color: #ff8f00;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 8px;
+}
