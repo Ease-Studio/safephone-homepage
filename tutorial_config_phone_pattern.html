@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hướng dẫn cấu hình chặn số điện thoại theo khuôn mẫu</title>
+
+    <meta name="description" content="Hướng dẫn cấu hình chặn số điện thoại theo khuôn mẫu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.png" />
+
+    <meta property="og:title" content="Hướng dẫn cấu hình chặn số điện thoại theo khuôn mẫu" />
+    <meta property="og:description" content="Hướng dẫn cấu hình chặn số điện thoại theo khuôn mẫu" />
+    <meta property="og:image" content="assets/og-image.png" />
+
+    <link rel="stylesheet" href="assets/tobi.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar__left">
+        <a href="index.html" class="navbar__home">
+            <img src="assets/icon.png" class="navbar__logo" />
+        </a>
+        <span class="navbar__title">
+            SafePhone - App Phòng chống lừa đảo online
+        </span>
+    </div>
+</nav>
+<main>
+    <article class="page">
+        <header class="page__header">
+            <h1 class="page__title">Hướng dẫn cấu hình chặn số điện thoại theo khuôn mẫu</h1>
+        </header>
+        <div class="page__content">
+
+            <p>
+                Giả sử bạn nghi ngờ và muốn chặn một loạt các số điện thoại có quy luật giống nhau, bạn có thể sử dụng chức năng <strong>Chặn đầu số</strong> của SafePhone để định nghĩa quy tắc chặn đó.
+                Điều này giúp bạn linh hoạt hơn trong việc thiết lập quy tắc chặn hoặc cho phép số điện thoại mà không cần phụ thuộc vào việc cập nhật danh sách đen và danh sách tín nhiệm thường xuyên.
+            </p>
+
+            <h3>1. Quy tắc cơ bản</h3>
+            <ul>
+                <li>
+                    <span>Dấu *</span>
+                    <p>Mỗi dấu <span>*</span> tương ứng với <b>1 chữ số bất kỳ (0–9)</b>.</p>
+                </li>
+                <li>
+                    <span>Độ dài phải khớp</span>
+                    <p>Số lượng dấu <span>*</span> phải tương ứng với số chữ số cần thay thế.</p>
+                </li>
+                <li>
+                    <span>Kết hợp số và *</span>
+                    <p>Bạn có thể kết hợp số cụ thể với <span>*</span> để tạo điều kiện lọc chính xác hơn.</p>
+                </li>
+            </ul>
+
+            <h3>2. Các cách cấu hình phổ biến</h3>
+
+            <div>
+                <h4>Chặn theo đầu số</h4>
+                <ul>
+                    <li>
+                        <span>Ví dụ: 090*******</span>
+                        <p>Chặn tất cả các số bắt đầu bằng 090 và có tổng độ dài tương ứng.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Chặn theo đuôi số</h4>
+                <ul>
+                    <li>
+                        <span>Ví dụ: *******123</span>
+                        <p>Chặn tất cả các số kết thúc bằng 123.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Chặn theo mẫu cụ thể</h4>
+                <ul>
+                    <li>
+                        <span>Ví dụ: 09*5****8*</span>
+                        <p>
+                            Chặn các số có dạng:
+                            bắt đầu bằng 09, chữ số thứ 3 bất kỳ, chữ số thứ 4 là 5,
+                            các chữ số tiếp theo bất kỳ và gần cuối có số 8.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Chặn số có định dạng cố định</h4>
+                <ul>
+                    <li>
+                        <span>Ví dụ: **********</span>
+                        <p>Chặn toàn bộ số điện thoại có 10 chữ số (tùy hệ thống).</p>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>3. Ví dụ minh họa</h3>
+            <ol>
+                <li>
+                    <span>090*******</span>
+                    <p>→ Chặn: 0901234567, 0908889999</p>
+                </li>
+                <li>
+                    <span>*******888</span>
+                    <p>→ Chặn: 0912345888, 0987654888</p>
+                </li>
+                <li>
+                    <span>03*2*****</span>
+                    <p>→ Chặn: 031234567, 0392xxxxx (đúng định dạng)</p>
+                </li>
+                <li>
+                    <span>09********</span>
+                    <p>→ Chặn toàn bộ số bắt đầu bằng 09</p>
+                </li>
+            </ol>
+
+            <h3>4. Lưu ý khi sử dụng</h3>
+            <ul>
+                <li>
+                    <span>Tránh chặn quá rộng</span>
+                    <p>Nếu dùng quá nhiều dấu <span>*</span>, bạn có thể chặn nhầm số quan trọng.</p>
+                </li>
+                <li>
+                    <span>Kiểm tra độ dài số</span>
+                    <p>Đảm bảo mẫu bạn nhập phù hợp với định dạng số điện thoại tại quốc gia.</p>
+                </li>
+                <li>
+                    <span>Kết hợp nhiều quy tắc</span>
+                    <p>Sử dụng nhiều mẫu khác nhau để đạt hiệu quả tốt nhất.</p>
+                </li>
+            </ul>
+
+            <h3>5. Ứng dụng thực tế</h3>
+            <p>
+                Các ứng dụng như <span>SafePhone</span> cho phép bạn cấu hình linh hoạt các quy tắc này để chặn cuộc gọi rác,
+                lừa đảo theo từng nhóm số. Nhờ đó, bạn có thể bảo vệ bản thân và gia đình một cách chủ động hơn.
+            </p>
+
+            <h3>Kết luận</h3>
+            <p>
+                Việc sử dụng ký tự <span>*</span> giúp bạn tạo ra các quy tắc chặn số điện thoại linh hoạt và hiệu quả.
+                Chỉ cần hiểu rõ nguyên tắc, bạn có thể dễ dàng kiểm soát các cuộc gọi không mong muốn.
+            </p>
+        </div>
+    </article>
+
+
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <p class="footer__love">
+                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
+            &mdash; Founded by <a href="https://www.quora.com/profile/Nguyen-Duy-Y/" target="_blank">N.D.Y</a>
+            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
+            </p>
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="privacy.html">Privacy</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/tobi.min.js" /></script>
+<script>
+    window.onload = function () {
+        var tobi = new Tobi();
+    };
+</script>
+
+</body>
+</html>
