@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Quyền Sàng lọc cuộc gọi (Call Screening) trên Android và iOS</title>
+    <meta name="robots" content="index, follow">
+
+
+    <meta name="description" content="call screening permission, sàng lọc cuộc gọi, chặn cuộc gọi, cài đặt, android, ios" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.png" />
+
+    <meta property="og:title" content="Quyền Sàng lọc cuộc gọi (Call Screening) trên Android và iOS" />
+    <meta property="og:description" content="call screening permission, sàng lọc cuộc gọi, chặn cuộc gọi, cài đặt, android, ios" />
+    <meta property="og:image" content="assets/og-image.png" />
+
+    <link rel="stylesheet" href="assets/tobi.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar__left">
+        <a href="index.html" class="navbar__home">
+            <img src="assets/icon.png" class="navbar__logo" />
+        </a>
+        <span class="navbar__title">
+            SafePhone - App Phòng chống lừa đảo online
+        </span>
+    </div>
+    <div class="navbar__right">
+        <span class="navbar__menu">
+            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
+        </span>
+        <span class="navbar__menu">
+            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
+        </span>
+
+    </div>
+</nav>
+<main>
+    <article class="page">
+        <header class="page__header">
+            <h1 class="page__title">Quyền Sàng lọc cuộc gọi (Call Screening) trên Android và iOS</h1>
+        </header>
+        <div class="page__content">
+            <div>
+                <p><span><b>Cấp quyền Sàng lọc cuộc gọi là sao?</b></span></p>
+
+                <p>
+                    Trên Android, <span>“Cấp quyền Sàng lọc cuộc gọi” (Call Screening Permission)</span> nghĩa là bạn cho phép một ứng dụng nhận và xử lý cuộc gọi trước khi điện thoại đổ chuông, để ứng dụng có thể:
+                </p>
+
+                <ul>
+                    <li><span>Chặn cuộc gọi spam</span></li>
+                    <li><span>Hiện cảnh báo “cuộc gọi rác / lừa đảo”</span></li>
+                    <li><span>Tự động trả lời bằng trợ lý (Google Assistant Call Screening)</span></li>
+                    <li><span>Xác định danh tính người gọi</span></li>
+                    <li><span>Quyết định cho phép, từ chối, hoặc gửi vào voicemail</span></li>
+                </ul>
+
+                <p>
+                    <span>Các ứng dụng mặc định không được cấp quyền này cho đến khi bạn chủ đích cấp quyền cho 1 ứng dụng nhất định.</span>
+                    <span>Tại mỗi thời điểm chỉ có 1 ứng dụng được nhận quyền này.</span>
+                    <span>Bạn luôn có thể thu hồi quyền hoặc tái cấp quyền bất kì lúc nào.</span>
+                </p>
+
+                <p><span><b>Trên iPhone thì sao?</b></span></p>
+
+                <p>
+                    Trên iPhone không có Call Screening đúng nghĩa như Android. Hiện tại iOS không cho phép:
+                </p>
+
+                <ul>
+                    <li><span>App nghe cuộc gọi trước khi bạn nghe</span></li>
+                    <li><span>App trả lời cuộc gọi thay bạn</span></li>
+                    <li><span>Assistant (Siri) nói chuyện với người gọi</span></li>
+                    <li><span>Xem transcript khi người gọi đang nói</span></li>
+                    <li><span>Chặn theo prefix, pattern, hoặc logic runtime</span></li>
+                </ul>
+
+                <p>
+                    <span>Thay vào đó, iOS chỉ có “Call Blocking & Identification”, dùng để:</span>
+                </p>
+
+                <ul>
+                    <li><span>App thêm danh sách số bị chặn (block list)</span></li>
+                    <li><span>App gắn nhãn (tag) cho số gọi tới</span></li>
+                </ul>
+
+                <p>
+                    <span>Apple gọi API này là Call Directory Extension (CallKit).</span>
+                    <span>Vì vậy tính năng "Chặn Mở Rộng" trên Android có thể chưa sử dụng được trên iOS.</span>
+                </p>
+            </div>
+        </div>
+    </article>
+
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <p class="footer__love">
+                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
+            &mdash; Founded by <a href="https://www.quora.com/profile/Nguyen-Duy-Y/" target="_blank">N.D.Y</a>
+            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
+            </p>
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="privacy.html">Privacy</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/tobi.min.js" /></script>
+<script>
+    window.onload = function () {
+        var tobi = new Tobi();
+    };
+</script>
+
+</body>
+</html>
