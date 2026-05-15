@@ -794,3 +794,129 @@ tr:hover {
     padding: 26px;
   }
 }
+
+.guide-section {
+  margin: 72px auto;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.guide-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.guide-title span {
+  color: #2563eb;
+}
+
+.guide-description {
+  max-width: 900px;
+  margin: auto;
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.guide-card {
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.07);
+  transition: all 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+}
+
+.guide-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.guide-card a {
+  text-decoration: none;
+}
+
+.guide-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.guide-card-desc {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.guide-badge {
+  display: inline-block;
+  margin-top: 14px;
+  background: #dc8e35;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.guide-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.guide-footer-box {
+  display: inline-block;
+  padding: 18px 26px;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  color: #1e3a8a;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+
+  .guide-title {
+    font-size: 32px;
+  }
+
+  .guide-description {
+    font-size: 16px;
+  }
+
+  .guide-card {
+    padding: 22px;
+  }
+
+  .guide-card-title {
+    font-size: 18px;
+  }
+}
