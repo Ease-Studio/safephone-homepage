@@ -455,3 +455,157 @@ tr:hover {
   border-radius: 999px;
   margin-bottom: 12px;
 }
+
+.features-section {
+  margin: 48px auto;
+}
+
+.features-main-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 32px;
+}
+
+.features-tab-buttons {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+  scrollbar-width: thin;
+}
+
+.features-tab-buttons::-webkit-scrollbar {
+  height: 8px;
+}
+
+.features-tab-buttons::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 999px;
+}
+
+.feature-tab-btn {
+  border: 2px solid #2563eb;
+  background: white;
+  color: #2563eb;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+.feature-tab-btn:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.feature-tab-btn.active {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.22);
+}
+
+.feature-tab-content {
+  display: none;
+}
+
+.feature-tab-content.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+.feature-box {
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
+}
+
+.feature-title {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid #2563eb;
+  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.feature-description {
+  color: #475569;
+  line-height: 1.9;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.feature-images {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.feature-images::-webkit-scrollbar {
+  height: 8px;
+}
+
+.feature-images::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 999px;
+}
+
+.feature-images a {
+  flex-shrink: 0;
+}
+
+.feature-images img {
+  width: 220px;
+  border-radius: 18px;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.08);
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.feature-images img:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .features-main-title {
+    font-size: 28px;
+  }
+
+  .feature-title {
+    font-size: 22px;
+  }
+
+  .feature-images img {
+    width: 180px;
+  }
+
+  .feature-box {
+    padding: 20px;
+  }
+}
