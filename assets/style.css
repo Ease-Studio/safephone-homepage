@@ -389,3 +389,69 @@ th {
 tr:hover {
   background-color: #f9f9f9;
 }
+
+.article-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 0 12px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.article-scroll::-webkit-scrollbar-thumb {
+  background: #d0d7de;
+  border-radius: 999px;
+}
+
+.article-card {
+  min-width: 280px;
+  max-width: 280px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  scroll-snap-align: start;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.article-card a {
+  text-decoration: none;
+  color: #111827;
+  display: block;
+}
+
+.article-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.article-card-desc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.article-badge {
+  display: inline-block;
+  background: #dc8e35;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
