@@ -68,22 +68,30 @@
             <p>SafePhone là một ứng dụng được thiết kế nhằm nâng cao mức độ an toàn khi lướt web, giúp người dùng kiểm soát hoàn toàn những gì mình truy cập. Không chỉ đơn thuần là một công cụ hỗ trợ, SafePhone hoạt động như một lớp bảo vệ chủ động, giúp ngăn chặn các nguy cơ ngay từ đầu.</p>
 
             <h2>SafePhone hoạt động như thế nào?</h2>
-            <p>Khác với các trình duyệt truyền thống, SafePhone sử dụng cơ chế kiểm soát truy cập thông minh dựa trên danh sách trắng (whitelist) và danh sách đen (blacklist). Điều này giúp đảm bảo rằng người dùng chỉ truy cập vào các trang web đã được xác minh an toàn.</p>
+            <p>Khác với các trình duyệt truyền thống, SafePhone sử dụng cơ chế kiểm soát truy cập dựa trên danh sách tín nhiệm (whitelist) và danh sách đen (blacklist).
+                Danh sách đen bao gồm các trang web đã bị xác định là có nội dung độc hại hoặc giả mạo các trang web khác, được thu thập từ quá trình phân tích các quảng cáo trên các nền tảng số, và đồng thời thu thập từ các kênh phân tích nổi tiếng khác.
+                Danh sách tín nhiệm là các trang web chính thống, phổ biến, hoặc đã đăng kí trên Bộ Công Thương.
+                Cụ thể, mỗi khi người dùng bấm vào 1 đường link từ email hoặc các ứng dụng khác, SafePhone sẽ:
+            </p>
 
             <ul>
-                <li>Phân tích và lọc URL trước khi cho phép truy cập</li>
-                <li>Chặn các domain có dấu hiệu lừa đảo hoặc chứa mã độc</li>
-                <li>Cảnh báo người dùng khi truy cập vào link đáng ngờ</li>
-                <li>Ngăn chặn các script theo dõi và thu thập dữ liệu trái phép</li>
+                <li>Kiểm tra xem trang web đó có nằm trong danh sách tín nhiệm chưa</li>
+                <li>Kiểm tra xem trang web đó có bị cho vào danh sách đen chưa</li>
+                <li>Kiểm tra xem nội dung hiển thị có dấu hiệu giả mạo trang web khác hay không</li>
+                <li>Kiểm tra xem đường link có lạm dụng kĩ thuật chuyển hướng sang nhiều trang trung gian không (kĩ thuật phổ biến thường thấy ở các quảng cáo lừa đảo)</li>
             </ul>
 
+            <p>Quy trình kiểm tra này giúp đảm bảo rằng người dùng chỉ truy cập vào các trang web đã được xác minh an toàn, và tránh xa các trang web độc hại.</p>
+
+
             <h2>Vì sao SafePhone an toàn hơn trình duyệt thông thường?</h2>
+            <p>Với cơ sở dữ liệu được bổ sung hằng ngày, và tự động kiểm tra các đường link, rủi ro vào phải các trang web giả mạo sẽ giảm đến mức tối đa.</p>
             <ul>
-                <li>Chặn mặc định các website nguy hiểm thay vì chỉ cảnh báo</li>
-                <li>Cho phép người dùng tự xây dựng danh sách website an toàn</li>
-                <li>Giảm thiểu tối đa rủi ro bị hack tài khoản hoặc mất dữ liệu</li>
-                <li>Hạn chế quảng cáo độc hại và popup gây phiền nhiễu</li>
-                <li>Hoạt động như một lớp sandbox giúp cô lập các nội dung nguy hiểm</li>
+                <li>Nếu trang web đã có trong danh sách đen, SafePhone sẽ chặn, không cho phép người dùng truy cập, trừ khi người dùng sử dụng trình duyệt khác để cố tình truy cập (vì tò mò chẳng hạn)</li>
+                <li>Nếu trang web có trong danh sách tín nhiệm, người dùng sẽ luôn có thể truy cập</li>
+                <li>Nếu trang web có nội dung giả mạo dịch vụ hoặc trang web nào khác, SafePhone sẽ hiện thị thông báo để nâng mức cảnh giác của người dùng lên, và đề xuất rời khỏi các trang đó ngay.</li>
+                <li>Nếu người dùng sử dụng SafePhone để tra cứu trên Google, hoặc lướt Facebook, các quảng cáo sẽ bị ẩn đi.</li>
+                <li>Ngoài ra, trong các phiên bản sắp tới, SafePhone sẽ cho phép tự động chặn các trang web liên quan đến các nội dung không lành mạnh khác, phù hợp với nhu cầu giám sát trẻ em để các bé tránh xa các nội dung chưa phù hợp với độ tuổi.</li>
             </ul>
 
             <h2>Hướng dẫn sử dụng SafePhone để lướt web an toàn</h2>
@@ -92,19 +100,19 @@
             </p>
             <ol>
                 <li>Tải và cài đặt ứng dụng SafePhone từ cửa hàng ứng dụng</li>
-                <li>Mở app và cấp các quyền cần thiết để đảm bảo chức năng bảo mật hoạt động đầy đủ</li>
-                <li>Kích hoạt chế độ bảo vệ mặc định (block unknown websites)</li>
-                <li>Thêm các website bạn tin tưởng vào danh sách trắng</li>
+                <li>Mở app và cấp Quyền Sàng Lọc Đường Link.</li>
+                <li>Kích hoạt các chế độ bảo vệ mà bạn mong muốn</li>
                 <li>Luôn mở các đường link thông qua SafePhone thay vì trình duyệt ngoài</li>
-                <li>Thường xuyên cập nhật danh sách bảo mật để đảm bảo hiệu quả cao nhất</li>
+                <li>Thường xuyên cập nhật ứng dụng để đảm bảo luôn có danh sách đen và danh sách tín nhiệm mới nhất</li>
             </ol>
 
             <h2>Lợi ích khi sử dụng SafePhone trong dài hạn</h2>
-            <p>Việc sử dụng SafePhone không chỉ giúp bạn an toàn trong từng lần truy cập mà còn tạo ra một thói quen sử dụng internet an toàn hơn. Bạn sẽ dần hạn chế việc truy cập các nguồn không đáng tin cậy và bảo vệ được thông tin cá nhân của mình trước các mối đe dọa ngày càng phức tạp.</p>
+            <p>Việc sử dụng SafePhone không chỉ giúp bạn an toàn trong từng lần truy cập mà còn tạo ra một thói quen sử dụng internet an toàn hơn.
+                Bạn sẽ dần hạn chế việc truy cập các nguồn không đáng tin cậy và bảo vệ được thông tin cá nhân của mình trước các mối đe dọa ngày càng phức tạp.</p>
 
-            <p>Đặc biệt, SafePhone rất phù hợp với những người không có nhiều kiến thức về công nghệ nhưng vẫn muốn bảo vệ bản thân, gia đình khỏi các rủi ro trên mạng. Đây cũng là giải pháp lý tưởng cho phụ huynh muốn kiểm soát nội dung mà con em mình truy cập.</p>
+            <p>Đặc biệt, SafePhone rất phù hợp với những người không có nhiều kiến thức về công nghệ nhưng vẫn muốn bảo vệ bản thân, gia đình khỏi các rủi ro trên mạng.
+                Đây cũng là giải pháp lý tưởng cho phụ huynh muốn kiểm soát nội dung mà con em mình truy cập trên Internet.</p>
 
-            <h2>Kết luận</h2>
             <p>So với các trình duyệt truyền thống, SafePhone mang lại một cách tiếp cận chủ động hơn trong việc bảo vệ người dùng. Thay vì chỉ phản ứng khi có nguy cơ, ứng dụng này giúp ngăn chặn rủi ro ngay từ đầu, mang lại trải nghiệm lướt web an toàn, riêng tư và đáng tin cậy hơn.</p>
 
             <p>Nếu bạn đang tìm kiếm một giải pháp để bảo vệ bản thân khi online, SafePhone là một lựa chọn đáng cân nhắc trong thời đại số hiện nay.</p>
