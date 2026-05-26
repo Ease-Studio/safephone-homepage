@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào</title>
+    <meta name="robots" content="index, follow">
+
+    <meta name="description" content="Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.png" />
+
+    <meta property="og:title" content="Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào" />
+    <meta property="og:description" content="Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào" />
+    <meta property="og:image" content="assets/og-image.png" />
+
+    <link rel="stylesheet" href="assets/tobi.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào",
+            "description": "Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào"
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2N6LEQEEE');
+    </script>
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar__left">
+        <a href="index.html" class="navbar__home">
+            <img src="assets/icon.png" class="navbar__logo" />
+        </a>
+        <span class="navbar__title">
+            SafePhone - Bảo mật trên thiết bị di động
+        </span>
+    </div>
+    <div class="navbar__right">
+        <span class="navbar__menu">
+            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
+        </span>
+        <span class="navbar__menu">
+            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
+        </span>
+
+    </div>
+</nav>
+<main>
+    <article class="page">
+        <header class="page__header">
+            <h1 class="page__title">Cookie là gì và các trang web theo dõi bạn qua cookie như thế nào</h1>
+        </header>
+        <div class="page__content">
+            <div class="article">
+
+                <h2>Cookie là gì?</h2>
+
+                <div>
+                    <p>
+                        Cookie là một đoạn dữ liệu nhỏ mà các website lưu trên trình duyệt của bạn khi bạn truy cập vào trang web đó.
+                        Cookie giống như một "thẻ ghi nhớ" để giúp các website nhớ bạn là ai, bạn đã làm gì trên trang web đó và các lựa chọn khác như ngôn ngữ, chế độ hiển thị (ví dụ dark mode, themes ...) và nhiều công dụng khác.
+                    </p>
+
+                    <p>Một vài ví dụ về công dụng của cookie:</p>
+
+                    <ul>
+                        <li>
+                            Khi bạn đăng nhập vào facebook.com, trang web facebook.com sẽ yêu cầu trình duyệt (Chrome, Firefox) lưu đoạn cookie với nhiều thông tin khác nhau, trong đó có 1 cookie chứa session_id - đoạn mã đại diện cho phiên đăng nhập của bạn.
+                            Nhờ vào session_id trong cookie lưu ở ngay trên trình duyệt của bạn, mỗi khi bạn quay trở lại facebook.com, trình duyệt sẽ gửi kèm cookie chứa session_id đó và nhờ đó bạn không cần đăng nhập lại lần nữa.
+                        </li>
+
+                        <li>
+                            Một trường hợp phổ biến khác là các giỏ hàng trên các trang thương mại điện tử. Mỗi khi bạn chọn 1 vài sản phẩm để bỏ vào giỏ hàng, sản phẩm đó có thể được lưu vào cookie ngay trên tình duyệt.
+                            Nhờ đó, mỗi khi bạn quay lại tiếp tục mua hàng, trình duyệt có thể nhớ được trước đó bạn đã chọn những sản phẩm nào.
+                        </li>
+                        <li>
+                            Hoặc, khi bạn truy cập một trang web và chọn chế độ hiển thị tiếng Việt và darkmode,
+                            các tuỳ chỉnh này cũng có thể được lưu vào cookie ngay trên trình duyệt
+                            và các lần sau khi bạn quay lại trang web đó, các lựa chọn của bạn vẫn được ghi nhớ và bạn không cần phải chọn lại.
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>Cookie có thể chứa những thông tin gì?</h3>
+
+                <div>
+                    <p>Cookie thường chứa các thông tin sau:</p>
+
+                    <ul>
+                        <li>Mã định danh người dùng (User ID / Session ID): các thông tin này giúp bạn không phải đăng nhập lại mỗi khi truy cập.</li>
+                        <li>Lựa chọn Ngôn ngữ, giao diện trước đó: giúp bạn không phải tuỳ chỉnh lại mỗi khi truy cập.</li>
+                        <li>Lịch sử xem sản phẩm hoặc trang web: giúp xây dụng các tính năng như giỏ hàng hoặc các đề xuất dựa trên các hành vi trong quá khứ.</li>
+                        <li>Các mã theo dõi từ các công ty quảng cáo: các thông tin này được sử dụng để nghiên cứu hành vi người dùng nhằm hiển thị quảng cáo phù hợp</li>
+                    </ul>
+
+                    <p>
+                        Cookie không phải mã độc, nhưng cookie có thể bị lợi dụng để theo dõi hành vi người dùng.
+                    </p>
+                </div>
+
+                <h2>Website theo dõi bạn qua các cookie như thế nào?</h2>
+                Cookie có 2 loại: First-party Cookie và Third-party Cookie.
+                First-party Cookie là cookie do chính website bạn đang truy cập yêu cầu trình duyệt ghi nhớ.
+                Third-party Cookie là loại cookie phục vụ mục đích theo dõi thường đến từ các hệ thống quảng cáo hoặc theo dõi hành vi người dùng.
+
+                <h3>1. First-party Cookie</h3>
+
+                <div>
+                    <p>
+                        First-party Cookie là cookie do chính website bạn đang truy cập yêu cầu trình duyệt ghi nhớ.
+                    </p>
+
+                    <p>Ví dụ:</p>
+
+                    <ol>
+                        <li>Mỗi khi bạn truy cập một website và chọn một số sản phẩm bỏ vào giỏ hàng.</li>
+                        <li>Website đó sẽ lưu thông tin các sản phẩm bạn đã chọn vào cookie lưu ngay trên trình duyệt của bạn</li>
+                        <li>Bạn chọn ngôn ngữ tiếng Việt, website ghi nhớ bạn đang dùng tiếng Việt bằng cách lưu vào cookie</li>
+                        <li>Lần sau quay lại, bạn sẽ thấy nội dung tiếng Việt và giỏ hàng vẫn còn các sản phẩm bạn đã chọn trước đó.</li>
+                    </ol>
+
+                    <p>
+                        First-party Cookie là loại cookie phổ biến và thường được dùng để cải thiện trải nghiệm người dùng.
+                    </p>
+                </div>
+
+                <h3>2. Third-party Cookie</h3>
+
+                <div>
+                    <p>
+                        Đây là loại cookie phục vụ mục đích theo dõi từ các trang web khác, thường là các hệ thống quảng cáo hoặc theo dõi hành vi người dùng (tracker).
+                    </p>
+
+                    <p>Ví dụ, ta có 3 website như sau:</p>
+
+                    <ul>
+                        <li>websiteA.com — trang bán giày thể thao</li>
+                        <li>websiteB.com — trang đặt vé du lịch</li>
+                        <li>websiteC.com — trang bán laptop</li>
+                    </ul>
+
+                    <p>
+                        Cả 3 website này đều nhúng mã quảng cáo hoặc tracker từ cùng một công ty quảng cáo, ví dụ như Google Ads, Meta Pixel, Google Analytics
+                    </p>
+
+                    <p>
+                        Mỗi khi bạn truy cập websiteA.com lần, tracker (hệ thống theo dõi hành vi người dùng) sẽ tạo và lưu một cookie có dạng như sau trong trình duyệt của bạn: <span class="code">user_id = XXXXXXXX</span>
+                    </p>
+
+                    <p>
+                        Cookie này hoạt động như một mã định danh riêng để nhận biết trình duyệt của bạn trên nhiều website khác nhau, và từ đó theo dõi hành vi của bạn trên nhiều website khác nhau.
+                    </p>
+
+                    <p>
+                        Sau đó, khi bạn tiếp tục truy cập các website khác cũng sử dụng cùng tracker đó, các bên quảng cáo này sẽ biết được bạn đang tìm kiếm điều gì, chẳng hạn như:
+                    </p>
+
+                    <ul>
+                        <li>Website A ghi nhận rằng bạn đang xem giày chạy bộ</li>
+                        <li>Website B ghi nhận rằng bạn tìm kiếm tour du lịch Đà Nẵng</li>
+                        <li>Website C ghi nhận rằng bạn xem laptop gaming</li>
+                    </ul>
+
+                    <p>
+                        Vì cả 3 website đều dùng cùng hệ thống quảng cáo, tracker có thể nhận ra rằng: <span class="code">user_id = XXXXXXXX</span> là cùng một người dùng.
+                    </p>
+
+                    <p>
+                        Từ đó, dữ liệu từ nhiều website sẽ được kết hợp lại để xây dựng hồ sơ quảng cáo chi tiết của bạn. Từ hồ sơ quảng cáo của bạn, các bên quảng cáo sẽ biết được nhiều thông tin cá nhân của bạn, ví dụ:
+                    </p>
+
+                    <ul>
+                        <li>Sở thích: thể thao, công nghệ, du lịch</li>
+                        <li>Mức chi tiêu dự kiến</li>
+                        <li>Thiết bị đang sử dụng</li>
+                        <li>Khu vực sinh sống</li>
+                        <li>Thời gian hoạt động trên Internet</li>
+                    </ul>
+
+                    <p>
+                        Hồ sơ này sau đó được dùng để hiển thị quảng cáo được cá nhân hóa, theo dõi hành vi người dùng hoặc phục vụ phân tích marketing.
+                    </p>
+                </div>
+
+                <h2>Vì sao cookie gây lo ngại về quyền riêng tư?</h2>
+
+                <div>
+                    <p>
+                        Như đã biết, Cookie có thể được dùng để:
+                    </p>
+
+                    <ul>
+                        <li>Theo dõi lịch sử duyệt web của người dùng</li>
+                        <li>Phân tích thói quen của người dùng</li>
+                        <li>Xây dựng hồ sơ quảng cáo của người dùng</li>
+                        <li>Phân tích vị trí và thiết bị của người dùng</li>
+                    </ul>
+
+                    <p>
+                        Trong nhiều trường hợp, dữ liệu này còn được chia sẻ hoặc bán cho các công ty quảng cáo khác hoặc mạng xã hội nhằm tối ưu khả năng hiển thị quảng cáo phù hợp cho từng người dùng.
+                        Nhiều nhóm tội phạm mạng cũng sử dụng khả năng này để thiết kế kịch bản lừa đảo tinh vi nhắm vào một số người dùng cụ thể mà đã bị lộ thông tin cá nhân quá nhiều.
+                        Trên thực tế, cũng đã có nhiều vụ án lừa đảo diễn ra gây thiệt hại về tài chính cho người dùng cũng chỉ vì người dùng sơ ý để lộ quá nhiều thông tin qua cookie.
+                        Trên thế giới cũng có nhiều vụ kiện cáo các tập đoàn lớn, mạng xã hội và các bên quảng cáo vi phạm quyền riêng tư của người dùng.
+                        Do đó, hiểu biết về cookie là rất cần thiết cho mỗi người dùng Internet ngày nay để bảo vệ quyền riêng tư của mình trên không gian mạng.
+                    </p>
+                </div>
+
+
+                <h2>Cách hạn chế bị theo dõi qua Cookie</h2>
+                Về mặt kĩ thuật, người dùng luôn có thể quản lý các Cookie trên trình duyệt của mình nhưng do đại đa số người dùng không có kiến thức về công nghệ thông tin, hầu như mọi người không biết phải làm gì.
+                Dưới đây là một số phương pháp bạn có thể áp dụng nhằm giảm lộ lọt thông tin cá nhân qua Cookie mà vẫn đảm bảo khả năng truy cập Internet bình thường.
+
+                <div>
+
+                    <h3>1. Đối với các trình duyệt thông thường:</h3>
+
+                    <ul>
+                        <li>
+                            <strong>Bật tính năng Chặn third-party cookies có sẵn trong các trình duyệt phổ biến</strong>
+                            <p>
+                                Third-party cookies là cookie được tạo bởi các dịch vụ bên thứ ba như mạng quảng cáo, tracker hoặc hệ thống phân tích dữ liệu.
+                                Chúng cho phép theo dõi người dùng trên nhiều website khác nhau.
+                            </p>
+                            <p>
+                                Khi bật tính năng chặn third-party cookies, trình duyệt sẽ hạn chế việc các công ty quảng cáo theo dõi hoạt động duyệt web của bạn giữa nhiều trang web.
+                            </p>
+                            <p>Ví dụ:</p>
+
+                            <ul>
+                                <li>Trên Google Chrome: bạn vào mục Settings → Privacy and security → Third-party cookies</li>
+                                <li>Trên Firefox: bạn vào mục Enhanced Tracking Protection</li>
+                                <li>Trên Safari: bạn vào mục Prevent Cross-Site Tracking</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Dùng chế độ ẩn danh khi truy cập Internet  (Incognito, hoặc Private Mode)</strong>
+
+                            <p>
+                                Chế độ ẩn danh giúp trình duyệt không lưu lại:
+                            </p>
+
+                            <ul>
+                                <li>Lịch sử duyệt web</li>
+                                <li>Cookie sau khi đóng cửa sổ</li>
+                                <li>Dữ liệu đăng nhập tạm thời</li>
+                            </ul>
+
+                            <p>
+                                Điều này giúp giảm khả năng tracker xây dựng hồ sơ theo dõi dài hạn trên thiết bị của bạn.
+                            </p>
+
+                            <p>
+                                Tuy nhiên, chế độ Incognito không làm bạn “ẩn danh hoàn toàn”. Nhà mạng, công ty cung cấp Internet, website và các hệ thống tracker vẫn có thể nhìn thấy một phần hoạt động của bạn.
+                            </p>
+                        </li>
+
+                        <li>
+                            <strong>Xóa cookie định kỳ</strong>
+
+                            <p>
+                                Cookie có thể lưu trữ mã định danh người dùng trong thời gian dài, đôi khi kéo dài nhiều tháng hoặc nhiều năm.
+                            </p>
+
+                            <p>
+                                Việc xóa cookie định kỳ giúp:
+                            </p>
+
+                            <ul>
+                                <li>Xóa mã định danh cũ</li>
+                                <li>Giảm khả năng bị theo dõi liên tục</li>
+                                <li>Ngắt hồ sơ quảng cáo đã được xây dựng trước đó</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Chặn tracker</strong>
+
+                            <p>
+                                Tracker là các đoạn mã được nhúng vào website nhằm thu thập dữ liệu về hành vi người dùng.
+                            </p>
+
+                            <p>
+                                Chúng có thể:
+                            </p>
+
+                            <ul>
+                                <li>Ghi nhận website bạn truy cập</li>
+                                <li>Theo dõi thời gian bạn ở lại trên trang</li>
+                                <li>Phân tích hành vi click</li>
+                                <li>Xây dựng hồ sơ quảng cáo cá nhân</li>
+                            </ul>
+
+                            <p>
+                                Bạn có thể sử dụng:
+                            </p>
+
+                            <ul>
+                                <li>Tính năng chống theo dõi tích hợp sẵn trong trình duyệt</li>
+                                <li>Tiện ích mở rộng chặn tracker</li>
+                                <li>Trình duyệt tập trung vào quyền riêng tư</li>
+                            </ul>
+
+                            <p>Ví dụ các công cụ phổ biến:</p>
+
+                            <ul>
+                                <li>SafePhone</li>
+                                <li>uBlock Origin</li>
+                                <li>Privacy Badger</li>
+                                <li>DuckDuckGo Privacy Essentials</li>
+                                <li>Brave Browser</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>2. Sử dụng các trình duyệt chú trọng quyền riêng tư</h3>
+
+                    <p>
+                        Một số trình duyệt hiện nay được thiết kế với mục tiêu giảm theo dõi người dùng,
+                        hạn chế tracker và tăng cường bảo vệ dữ liệu cá nhân khi truy cập Internet.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>SafePhone</strong>
+
+                            <p>
+                                SafePhone là trình duyệt tập trung vào bảo mật và an toàn cho người dùng phổ thông.
+                            </p>
+
+                            <p>
+                                Trình duyệt có thể hỗ trợ:
+                            </p>
+
+                            <ul>
+                                <li>Chặn website độc hại</li>
+                                <li>Phát hiện website giả mạo thương hiệu</li>
+                                <li>Chặn tracker và quảng cáo</li>
+                                <li>Cảnh báo nội dung nguy hiểm</li>
+                            </ul>
+
+                            <p>
+                                SafePhone còn có thể phân tích nội dung website theo thời gian thực để phát hiện dấu hiệu lừa đảo hoặc phishing.
+                            </p>
+                        </li>
+
+                        <li>
+                            <strong>Firefox</strong>
+
+                            <p>
+                                Firefox là trình duyệt nổi tiếng với các tính năng bảo vệ quyền riêng tư được tích hợp sẵn.
+                            </p>
+
+                            <p>
+                                Firefox cung cấp:
+                            </p>
+
+                            <ul>
+                                <li>Enhanced Tracking Protection</li>
+                                <li>Chặn nhiều loại tracker mặc định</li>
+                                <li>Chặn fingerprinting</li>
+                                <li>Chặn cryptomining scripts</li>
+                                <li>Kiểm soát cookie theo từng website</li>
+                            </ul>
+
+                            <p>
+                                Firefox cũng cho phép người dùng tùy chỉnh sâu các thiết lập quyền riêng tư và sử dụng nhiều tiện ích mở rộng bảo mật.
+                            </p>
+                        </li>
+
+                        <li>
+                            <strong>Brave</strong>
+
+                            <p>
+                                Brave là trình duyệt tập trung mạnh vào việc chặn quảng cáo và tracker ngay từ đầu.
+                            </p>
+
+                            <p>
+                                Brave tích hợp sẵn hệ thống:
+                            </p>
+
+                            <ul>
+                                <li>Chặn quảng cáo</li>
+                                <li>Chặn third-party trackers</li>
+                                <li>Chặn cookie theo dõi</li>
+                                <li>Nâng cấp kết nối HTTPS khi có thể</li>
+                            </ul>
+
+                            <p>
+                                Do nhiều tracker bị chặn ngay từ đầu, Brave thường giúp website tải nhanh hơn và giảm lượng dữ liệu bị gửi tới các công ty quảng cáo.
+                            </p>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Tuy nhiên, không có trình duyệt nào có thể bảo vệ quyền riêng tư 100%.
+                        Người dùng vẫn nên kết hợp:
+                    </p>
+
+                    <ul>
+                        <li>Thói quen truy cập an toàn</li>
+                        <li>Kiểm tra quyền truy cập website</li>
+                        <li>Hạn chế đăng nhập không cần thiết</li>
+                        <li>Sử dụng mật khẩu mạnh</li>
+                        <li>Cập nhật trình duyệt thường xuyên</li>
+                    </ul>
+
+                    <h3>3. Cài đặt các extension bảo vệ quyền riêng tư</h3>
+
+                    <p>
+                        Ngoài các tính năng bảo mật có sẵn trong trình duyệt, người dùng có thể cài thêm các extension
+                        (tiện ích mở rộng) để tăng cường khả năng chặn quảng cáo, tracker và các hệ thống theo dõi hành vi.
+                    </p>
+
+                    <p>
+                        Các extension này hoạt động bằng cách:
+                    </p>
+
+                    <ul>
+                        <li>Chặn các domain quảng cáo</li>
+                        <li>Ngăn tracker gửi dữ liệu về máy chủ</li>
+                        <li>Phát hiện script theo dõi người dùng</li>
+                        <li>Giảm fingerprinting</li>
+                        <li>Hạn chế tải các tài nguyên không cần thiết</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <strong>SafeChrome (phiên bản Chrome của SafePhone) (sắp phát hành)</strong>
+
+                            <p>
+                                SafeChrome là một trong những extension chặn quảng cáo và tracker phổ biến. Extension này sử dụng các bộ lọc blacklist và whitelist để chặn:
+                            </p>
+
+                            <ul>
+                                <li>Chặn website độc hại</li>
+                                <li>Phát hiện website giả mạo thương hiệu</li>
+                                <li>Chặn tracker và quảng cáo</li>
+                                <li>Cảnh báo nội dung nguy hiểm</li>
+                            </ul>
+
+                            <p>
+                                Người dùng nâng cao còn có thể tự tạo bộ lọc riêng để chặn các nội dung độc hại cụ thể trên các website.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>uBlock Origin</strong>
+
+                            <p>
+                                uBlock Origin là một trong những extension chặn quảng cáo và tracker phổ biến. Extension này sử dụng các bộ lọc để chặn:
+                            </p>
+
+                            <ul>
+                                <li>Quảng cáo hiển thị</li>
+                                <li>Popup quảng cáo</li>
+                                <li>Tracker theo dõi hành vi</li>
+                                <li>Script độc hại</li>
+                                <li>Một số website lừa đảo hoặc domain đáng ngờ</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Privacy Badger</strong>
+
+                            <p>
+                                Privacy Badger là extension tập trung vào việc phát hiện và chặn tracker theo dõi người dùng giữa nhiều website.
+                                Khác với một số extension sử dụng danh sách chặn cố định, Privacy Badger có thể tự học và nhận diện:
+                            </p>
+
+                            <ul>
+                                <li>Tracker xuất hiện trên nhiều website</li>
+                                <li>Các script theo dõi hành vi</li>
+                                <li>Các domain thu thập dữ liệu người dùng</li>
+                            </ul>
+
+                            <p>
+                                Khi phát hiện một dịch vụ đang cố theo dõi người dùng trên nhiều website khác nhau,
+                                extension sẽ tự động hạn chế hoặc chặn kết nối đó.
+                            </p>
+
+                            <p>
+                                Privacy Badger đặc biệt hữu ích trong việc:
+                            </p>
+
+                            <ul>
+                                <li>Giảm theo dõi quảng cáo</li>
+                                <li>Hạn chế xây dựng hồ sơ người dùng</li>
+                                <li>Ngăn cross-site tracking</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Tuy nhiên, việc cài quá nhiều extension cũng có thể:
+                    </p>
+
+                    <ul>
+                        <li>Làm trình duyệt chậm hơn</li>
+                        <li>Gây xung đột giữa các extension</li>
+                        <li>Tăng rủi ro bảo mật nếu extension không đáng tin cậy</li>
+                    </ul>
+
+                    <p>
+                        Vì vậy, người dùng nên:
+                    </p>
+
+                    <ul>
+                        <li>Chỉ cài extension từ nguồn uy tín</li>
+                        <li>Kiểm tra quyền truy cập của extension</li>
+                        <li>Gỡ bỏ extension không còn sử dụng</li>
+                        <li>Cập nhật extension thường xuyên</li>
+                    </ul>
+
+                </div>
+
+                <h2>Một hiểu nhầm phổ biến</h2>
+
+                <div>
+                    <p>
+                        Cookie không thể:
+                    </p>
+
+                    <ul>
+                        <li>Nghe lén qua microphone</li>
+                        <li>Đọc lén các file trên máy tính</li>
+                        <li>Điều khiển thiết bị</li>
+                    </ul>
+
+                    <p>
+                        Cookie chỉ là dữ liệu text nhỏ trong trình duyệt.
+                    </p>
+
+                    <p>
+                        Rủi ro của Cookie nằm ở việc các bên theo dõi và quảng cáo kết hợp dữ liệu thu thập được để xây dựng hồ sơ người dùng trên diện rộng và từ đó sử dụng cho các mục đích khác.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div>
+            <h3>Xem thêm:</h3>
+            <ul>
+                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
+                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
+                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
+                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
+                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
+                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
+                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
+                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
+                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
+                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
+                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+            </ul>
+        </div>
+    </article>
+
+
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <p class="footer__love">
+                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
+            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
+            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
+            </p>
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="privacy.html">Privacy</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/tobi.min.js" /></script>
+<script>
+    window.onload = function () {
+        var tobi = new Tobi();
+    };
+</script>
+
+</body>
+</html>
