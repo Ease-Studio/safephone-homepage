@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo</title>
+    <meta name="robots" content="index, follow">
+
+    <meta name="description" content="Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.png" />
+
+    <meta property="og:title" content="Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo" />
+    <meta property="og:description" content="Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo" />
+    <meta property="og:image" content="assets/og-image.png" />
+
+    <link rel="stylesheet" href="assets/tobi.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo",
+            "description": "Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo"
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2N6LEQEEE');
+    </script>
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar__left">
+        <a href="index.html" class="navbar__home">
+            <img src="assets/icon.png" class="navbar__logo" />
+        </a>
+        <span class="navbar__title">
+            SafePhone - Bảo mật trên thiết bị di động
+        </span>
+    </div>
+    <div class="navbar__right">
+        <span class="navbar__menu">
+            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
+        </span>
+        <span class="navbar__menu">
+            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
+        </span>
+
+    </div>
+</nav>
+<main>
+    <article class="page">
+        <header class="page__header">
+            <h1 class="page__title">Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo</h1>
+        </header>
+        <div class="page__content">
+            <div class="article">
+                <h2>Hướng Dẫn Tạo API Key OpenAI và DeepSeek</h2>
+
+                <p>
+                    Các mô hình AI hiện đại như <span>OpenAI</span> và <span>DeepSeek</span> cho phép nhà phát triển tích hợp trí tuệ nhân tạo vào ứng dụng, website hoặc hệ thống tự động hóa thông qua API. Để sử dụng các dịch vụ này, bạn cần tạo một <span>API Key</span>, đây là mã xác thực giúp ứng dụng của bạn giao tiếp với hệ thống AI.
+                </p>
+
+                <div>
+                    <p>
+                        Trong bài viết này, chúng tôi sẽ hướng dẫn từng bước cách tạo API Key từ OpenAI và DeepSeek.
+                    </p>
+                </div>
+
+                <h2>Tạo API Key OpenAI</h2>
+
+                <p>
+                    Trang chính thức của OpenAI:
+                </p>
+
+                <p>
+                    <a href="https://platform.openai.com/" target="_blank">
+                        https://platform.openai.com/
+                    </a>
+                </p>
+
+                <h3>Bước 1: Đăng ký hoặc đăng nhập tài khoản OpenAI</h3>
+
+                <p>
+                    Truy cập nền tảng dành cho nhà phát triển của OpenAI tại:
+                </p>
+
+                <p>
+                    <a href="https://platform.openai.com/" target="_blank">
+                        https://platform.openai.com/
+                    </a>
+                </p>
+
+                <p>
+                    Đăng nhập hoặc tạo tài khoản mới nếu bạn chưa có tài khoản OpenAI.
+                </p>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_OPENAI_LOGIN.png" alt="Đăng nhập OpenAI">
+                    <p><span>Hình 1:</span> Trang đăng nhập OpenAI Platform.</p>
+                </div>
+
+                <h3>Bước 2: Truy cập mục API Keys</h3>
+
+                <ol>
+                    <li>Nhấn vào ảnh đại diện tài khoản.</li>
+                    <li>Chọn <span>View API Keys</span> hoặc truy cập trực tiếp:</li>
+                </ol>
+
+                <p>
+                    <a href="https://platform.openai.com/api-keys" target="_blank">
+                        https://platform.openai.com/api-keys
+                    </a>
+                </p>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_OPENAI_API_KEYS.png" alt="OpenAI API Keys">
+                    <p><span>Hình 2:</span> Trang quản lý API Keys của OpenAI.</p>
+                </div>
+
+                <h3>Bước 3: Tạo API Key mới</h3>
+
+                <ul>
+                    <li>Nhấn nút <span>Create new secret key</span>.</li>
+                    <li>Đặt tên cho API Key.</li>
+                    <li>Xác nhận tạo khóa.</li>
+                </ul>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_OPENAI_CREATE_KEY.png" alt="Tạo OpenAI API Key">
+                    <p><span>Hình 3:</span> Tạo API Key mới trên OpenAI.</p>
+                </div>
+
+                <p>
+                    Sau khi tạo thành công, hệ thống sẽ hiển thị API Key duy nhất một lần. Hãy lưu trữ cẩn thận vì bạn sẽ không thể xem lại toàn bộ khóa sau đó.
+                </p>
+
+                <h3>Bước 4: Thiết lập thanh toán</h3>
+
+                <p>
+                    Để sử dụng API, bạn cần có phương thức thanh toán hợp lệ hoặc số dư trong tài khoản.
+                </p>
+
+                <p>
+                    Trang Billing:
+                </p>
+
+                <p>
+                    <a href="https://platform.openai.com/settings/organization/billing" target="_blank">
+                        https://platform.openai.com/settings/organization/billing
+                    </a>
+                </p>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_OPENAI_BILLING.png" alt="OpenAI Billing">
+                    <p><span>Hình 4:</span> Thiết lập thanh toán và quản lý chi phí API.</p>
+                </div>
+
+                <h2>Tạo API Key DeepSeek</h2>
+
+                <p>
+                    Trang chính thức của DeepSeek:
+                </p>
+
+                <p>
+                    <a href="https://platform.deepseek.com/" target="_blank">
+                        https://platform.deepseek.com/
+                    </a>
+                </p>
+
+                <h3>Bước 1: Đăng ký hoặc đăng nhập DeepSeek Platform</h3>
+
+                <p>
+                    Truy cập:
+                </p>
+
+                <p>
+                    <a href="https://platform.deepseek.com/" target="_blank">
+                        https://platform.deepseek.com/
+                    </a>
+                </p>
+
+                <p>
+                    Đăng nhập hoặc tạo tài khoản DeepSeek.
+                </p>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_DEEPSEEK_LOGIN.png" alt="Đăng nhập DeepSeek">
+                    <p><span>Hình 5:</span> Trang đăng nhập DeepSeek Platform.</p>
+                </div>
+
+                <h3>Bước 2: Truy cập API Keys</h3>
+
+                <ol>
+                    <li>Mở Dashboard.</li>
+                    <li>Chọn mục <span>API Keys</span>.</li>
+                    <li>Nhấn <span>Create API Key</span>.</li>
+                </ol>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_DEEPSEEK_API_KEYS.png" alt="DeepSeek API Keys">
+                    <p><span>Hình 6:</span> Trang quản lý API Keys của DeepSeek.</p>
+                </div>
+
+                <h3>Bước 3: Tạo API Key mới</h3>
+
+                <ul>
+                    <li>Đặt tên cho API Key.</li>
+                    <li>Xác nhận tạo khóa.</li>
+                    <li>Sao chép khóa vừa được tạo.</li>
+                </ul>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_DEEPSEEK_CREATE_KEY.png" alt="Tạo DeepSeek API Key">
+                    <p><span>Hình 7:</span> Tạo API Key trên DeepSeek.</p>
+                </div>
+
+                <p>
+                    DeepSeek cũng chỉ hiển thị khóa đầy đủ một lần sau khi tạo thành công.
+                </p>
+
+                <h3>Bước 4: Nạp số dư sử dụng API</h3>
+
+                <p>
+                    DeepSeek hoạt động theo mô hình tính phí dựa trên lượng token sử dụng.
+                </p>
+
+                <ul>
+                    <li>Mở mục Wallet hoặc Billing.</li>
+                    <li>Nạp số dư vào tài khoản.</li>
+                    <li>Kiểm tra lượng token tiêu thụ trong Dashboard.</li>
+                </ul>
+
+                <div class="screenshot">
+                    <img src="YOUR_SCREENSHOT_DEEPSEEK_BILLING.png" alt="DeepSeek Billing">
+                    <p><span>Hình 8:</span> Nạp tiền và theo dõi chi phí API trên DeepSeek.</p>
+                </div>
+
+                <h2>Lưu Ý Bảo Mật API Key</h2>
+
+                <p>
+                    API Key tương tự như mật khẩu của dịch vụ AI. Nếu bị lộ, người khác có thể sử dụng tài khoản của bạn và phát sinh chi phí ngoài ý muốn.
+                </p>
+
+                <ul>
+                    <li>Không đăng API Key lên GitHub công khai.</li>
+                    <li>Không nhúng API Key trực tiếp trong ứng dụng client.</li>
+                    <li>Lưu trữ bằng Environment Variables hoặc Secret Manager.</li>
+                    <li>Thu hồi và tạo khóa mới nếu nghi ngờ bị lộ.</li>
+                </ul>
+
+                <h2>Sử Dụng API Key Trong Ứng Dụng</h2>
+
+                <p>
+                    Sau khi tạo thành công API Key, bạn có thể sử dụng AI Key này để nhập vào ô API Key trong SafePhone. Các bước thực hiện như sau:
+                    <ul>
+                <li>Mở ứng dụng SafePhone</li>
+                <li>Bấm vào nút có chữ "AI" ngay bên cạnh tiêu đề "SafePhone", 1 hộp thoại sẽ hiện lên</li>
+                <li>Bấm kích hoạt AI</li>
+                <li>Chọn nhà cung cấp AI: OpenAI hoặc DeepSeek</li>
+                <li>Dán API Key vào ô "API Key"</li>
+                <li>Bấm "Lưu lại"</li>
+                <li>Sau khi hoàn tất, nút có chữ "AI" sẽ chuyển sang màu xanh</li>
+
+            </ul>
+                </p>
+
+
+
+            </div>
+
+        </div>
+
+        <div>
+            <h3>Xem thêm:</h3>
+            <ul>
+                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
+                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
+                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
+                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
+                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
+                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
+                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
+                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
+                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
+                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
+                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+            </ul>
+        </div>
+    </article>
+
+
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <p class="footer__love">
+                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
+            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
+            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
+            </p>
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="privacy.html">Privacy</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
+                </li>
+                <li class="footer__link">
+                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/tobi.min.js" /></script>
+<script>
+    window.onload = function () {
+        var tobi = new Tobi();
+    };
+</script>
+
+</body>
+</html>
