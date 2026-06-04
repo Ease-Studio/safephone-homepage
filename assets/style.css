@@ -311,6 +311,11 @@ html[dir=rtl] .app__logo-wrapper {
   margin: auto;
 }
 
+.page .banner {
+  max-width: 960px;
+  margin: auto auto 1em;
+}
+
 .darkmode-toggle {
   z-index: 500;
 }
