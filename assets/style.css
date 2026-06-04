@@ -310,10 +310,11 @@ html[dir=rtl] .app__logo-wrapper {
   padding: 0 30px;
   margin: auto;
 }
-
 .page .banner {
+  width: 100%;
   max-width: 960px;
-  margin: auto auto 1em;
+  margin: 0 auto 1em;
+  box-sizing: border-box;
 }
 
 .darkmode-toggle {
@@ -478,7 +479,6 @@ tr:hover {
   gap: 12px;
   overflow-x: auto;
   padding-bottom: 14px;
-  margin-bottom: 24px;
   scrollbar-width: thin;
 }
 
