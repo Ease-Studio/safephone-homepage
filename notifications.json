@@ -1,0 +1,16 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "title": "Củng cố kiến thức An Ninh Mạng tại trang chủ của SafePhone",
+      "message": "Tri thức là sức mạnh",
+      "link": "https://safephone.io.vn/security_handbook.html"
+    },
+    {
+      "id": 2,
+      "title": "Phiên bản mới!",
+      "message": "Cập nhật phiên bản SafePhone mới nhất để luôn đạt hiệu quả bảo mật tối đa!",
+      "link": "https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
+    }
+  ]
+}
