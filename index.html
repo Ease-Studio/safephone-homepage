@@ -302,24 +302,44 @@
 			const buttons = document.querySelectorAll(".feature-tab-btn");
 			const tabs = document.querySelectorAll(".feature-tab-content");
 
+			let currentIndex = 0;
+			let userInteracted = false;
+
+			function activateTab(index) {
+
+				buttons.forEach(btn => {
+					btn.classList.remove("active");
+				});
+
+				tabs.forEach(tab => {
+					tab.classList.remove("active");
+				});
+
+				buttons[index].classList.add("active");
+				tabs[index].classList.add("active");
+
+				currentIndex = index;
+			}
+
 			buttons.forEach((button, index) => {
 
 				button.addEventListener("click", function () {
 
-					buttons.forEach(btn => {
-						btn.classList.remove("active");
-					});
-
-					tabs.forEach(tab => {
-						tab.classList.remove("active");
-					});
-
-					button.classList.add("active");
-					tabs[index].classList.add("active");
+					userInteracted = true;
+					activateTab(index);
 
 				});
 
 			});
+
+			setInterval(() => {
+
+				if (userInteracted) return;
+
+				let nextIndex = (currentIndex + 1) % buttons.length;
+				activateTab(nextIndex);
+
+			}, 4000);
 
 		});
 	</script>
