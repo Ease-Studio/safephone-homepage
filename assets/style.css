@@ -925,3 +925,80 @@ tr:hover {
     font-size: 18px;
   }
 }
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+  .app__header {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 24px 16px;
+  }
+
+  .app__screenshot {
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .app__infos {
+    width: 100%;
+  }
+
+  .app__infos ul {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto 20px;
+  }
+
+  .app__buttons {
+    justify-content: center;
+  }
+
+  .app__buttons img {
+    height: 54px;
+  }
+
+  .app__description {
+    font-size: 16px;
+  }
+
+  .app__name {
+    font-size: 36px;
+  }
+}
+
+/* ---------- Small phones ---------- */
+
+@media (max-width: 480px) {
+
+  .app__header {
+    padding: 20px 12px;
+  }
+
+  .app__screenshot {
+    width: 180px;
+  }
+
+  .app__name {
+    font-size: 30px;
+  }
+
+  .app__description {
+    font-size: 15px;
+  }
+
+  .app__buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .app__buttons img {
+    height: 48px;
+  }
+
+  .app__infos ul {
+    padding-left: 20px;
+  }
+}
