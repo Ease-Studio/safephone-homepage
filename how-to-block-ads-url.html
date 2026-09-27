@@ -1,225 +1,324 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Cách chặn quảng cáo trên Android sử dụng ứng dụng SafePhone </title>
-    <meta name="robots" content="index, follow">
-
-    <meta name="description" content="Cách sử dụng SafePhone để: chặn quảng cáo facebook, chặn quảng cáo google, chặn link quảng cáo, chặn quảng cáo trên Android" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Cách chặn quảng cáo trên Android sử dụng ứng dụng SafePhone" />
-    <meta property="og:description" content="Cách sử dụng SafePhone để: chặn quảng cáo facebook, chặn quảng cáo google, chặn link quảng cáo, chặn quảng cáo" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cách chặn quảng cáo trên Android: Facebook, Google Ads</title>
+    <meta name="description" content="Cách chặn quảng cáo trên Android chỉ với một nút gạt: SafePhone chặn quảng cáo Facebook, Google và link quảng cáo dẫn đến trang lừa đảo.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://safephone.io.vn/how-to-block-ads-url.html">
+    <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+    <meta name="theme-color" content="#0f6e56">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SafePhone">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://safephone.io.vn/how-to-block-ads-url.html">
+    <meta property="og:title" content="Cách chặn quảng cáo trên Android: Facebook, Google Ads">
+    <meta property="og:description" content="Quảng cáo Facebook, Google là con đường phổ biến dẫn đến trang lừa đảo. Chặn chúng chỉ bằng hai nút gạt trong SafePhone.">
+    <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/url-all-settings.png">
+    <meta property="article:modified_time" content="2026-09-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cách chặn quảng cáo trên Android: Facebook, Google Ads">
+    <meta name="twitter:description" content="Quảng cáo Facebook, Google là con đường phổ biến dẫn đến trang lừa đảo. Chặn chúng chỉ bằng hai nút gạt trong SafePhone.">
+    <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/url-all-settings.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Cách chặn quảng cáo trên Android sử dụng ứng dụng SafePhone",
-            "description": "Cách sử dụng SafePhone để: chặn quảng cáo facebook, chặn quảng cáo google, chặn link quảng cáo, chặn quảng cáo"
+            "@graph": [
+                {
+                    "@type": "TechArticle",
+                    "@id": "https://safephone.io.vn/how-to-block-ads-url.html#article",
+                    "headline": "Cách chặn quảng cáo trên Android: chặn quảng cáo Facebook, Google dẫn đến trang lừa đảo",
+                    "description": "Cách chặn quảng cáo trên Android chỉ với một nút gạt: SafePhone chặn quảng cáo Facebook, Google và link quảng cáo dẫn đến trang lừa đảo.",
+                    "inLanguage": "vi-VN",
+                    "mainEntityOfPage": "https://safephone.io.vn/how-to-block-ads-url.html",
+                    "image": "https://safephone.io.vn/assets/screenshots/url-all-settings.png",
+                    "dateModified": "2026-09-27",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "SafePhone",
+                        "url": "https://safephone.io.vn/"
+                    },
+                    "publisher": {
+                        "@id": "https://safephone.io.vn/#org"
+                    },
+                    "about": {
+                        "@id": "https://safephone.io.vn/#app"
+                    },
+                    "keywords": "chặn quảng cáo trên Android, chặn quảng cáo Facebook, chặn quảng cáo Google, ẩn quảng cáo Facebook, chặn link quảng cáo"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "SafePhone",
+                            "item": "https://safephone.io.vn/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Hướng dẫn sử dụng",
+                            "item": "https://safephone.io.vn/tutorials.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Cách chặn quảng cáo trên Android",
+                            "item": "https://safephone.io.vn/how-to-block-ads-url.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "SafePhone có xoá quảng cáo trong ứng dụng Facebook không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Quảng cáo trong ứng dụng Facebook chính thức vẫn hiển thị. Khi bạn lướt Facebook bằng trình duyệt có sẵn trong SafePhone, các bài viết quảng cáo sẽ được ẩn đi."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Kết quả tìm kiếm “Được tài trợ” có nguy hiểm không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Không phải tất cả, nhưng đây là kết quả trả phí để xuất hiện đầu tiên và thường bị tin tặc lợi dụng để đưa trang giả mạo lên trên trang chính thức. SafePhone ẩn các kết quả này khi bạn tìm kiếm."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Có cần đặt SafePhone làm trình duyệt mặc định để chặn quảng cáo không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Có. SafePhone chỉ kiểm tra và chặn được các link quảng cáo được mở qua nó, nên cần là trình duyệt mặc định của điện thoại."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Làm sao tắt chặn quảng cáo?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Mở SafePhone, bấm vào dãy biểu tượng tấm khiên ở dòng thứ 2 và gạt nút Chặn quảng cáo trên Facebook hoặc Chặn quảng cáo từ Google Ads về vị trí tắt."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+    <style>
+        :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+        a{color:var(--brand)}
+        img{max-width:100%;height:auto;display:block}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+        header.site{border-bottom:1px solid var(--line);background:#fff}
+        header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+        .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+        .brand img{width:32px;height:32px}
+        nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+        nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+        .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+        .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+        .crumbs li+li::before{content:"›";margin-right:6px}
+        article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+        article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+        .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+        .lede{font-size:18px}
+        article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+        article.post h3{font-size:19px;margin:24px 0 8px}
+        .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+        .cta-box p{margin:0;font-weight:600}
+        .cta-box img{height:48px;width:auto}
+        .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+        .toc strong{display:block;margin-bottom:4px}
+        .toc ol{margin:0;padding-left:20px}
+        .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+        .steps li{margin-bottom:6px}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+        .gallery figure{margin:0}
+        .gallery img{border:1px solid var(--line);border-radius:10px}
+        .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+        table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+        th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+        th{background:var(--brand-soft)}
+        .tablewrap{overflow-x:auto}
+        details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+        summary{font-weight:600;cursor:pointer}
+        .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+        .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+        .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+        .related a b{display:block;color:var(--brand)}
+        .related a span{font-size:14px;color:var(--muted)}
+        .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+        footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+        footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+        footer ul{list-style:none;padding:0;margin:0}
+        footer li{margin:4px 0}
+        .social{display:flex;gap:12px;align-items:center}
+        .social img{height:28px;width:auto}
+        @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+        <nav class="top" aria-label="Điều hướng chính">
+            <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+            <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+        </nav>
     </div>
-</nav>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
-
-        <header class="page__header">
-            <h1 class="page__title">Cách chặn quảng cáo sử dụng ứng dụng SafePhone</h1>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
-
-            <p>
-                Nếu bạn đang tìm kiếm giải pháp giúp phát hiện và phòng tránh các website giả mạo, lừa đảo hoặc phát tán mã độc, hãy tải ngay ứng dụng <strong>SafePhone</strong>!
-            </p>
-
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
-                </a>
-            </p>
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+                <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+                <li aria-current="page">Cách chặn quảng cáo trên Android</li>
+            </ol>
+        </nav>
+    </div>
+    <article class="post">
+        <h1>Cách chặn quảng cáo trên Android: chặn quảng cáo Facebook, Google dẫn đến trang lừa đảo</h1>
+        <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+        <p class="lede">Quảng cáo trên Facebook và Google không chỉ gây phiền mà còn là con đường phổ biến dẫn đến trang web lừa đảo. Bài viết hướng dẫn <strong>cách chặn quảng cáo trên Android</strong> bằng SafePhone chỉ với hai nút gạt, cùng một cách chặn quảng cáo khác có sẵn trong cài đặt Android.</p>
+        <div class="cta-box">
+            <p>Chặn quảng cáo Facebook, Google với SafePhone</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
-        <div class="page__content">
+        <nav class="toc" aria-label="Mục lục">
+            <strong>Nội dung bài viết</strong>
+            <ol>
+                <li><a href="#vi-sao">Vì sao quảng cáo có thể dẫn đến trang lừa đảo?</a></li>
+                <li><a href="#huong-dan">Cách chặn quảng cáo trên Android bằng SafePhone</a></li>
+                <li><a href="#hoat-dong">SafePhone chặn quảng cáo như thế nào?</a></li>
+                <li><a href="#dns">Cách khác: chặn quảng cáo bằng DNS riêng tư</a></li>
+                <li><a href="#gia-dinh">Bảo vệ con nhỏ và bố mẹ khỏi quảng cáo lừa đảo</a></li>
+                <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+            </ol>
+        </nav>
 
+        <h2 id="vi-sao">Vì sao quảng cáo có thể dẫn đến trang lừa đảo?</h2>
+        <p>Nhiều quảng cáo trên Google Ads hay Facebook là phương tiện lừa đảo phổ biến hiện nay. Kẻ gian lợi dụng quảng cáo trực tuyến để:</p>
+        <ul>
+            <li>Đưa người dùng đến trang giả mạo yêu cầu thông tin cá nhân, mật khẩu ngân hàng</li>
+            <li>Dụ người dùng cài phần mềm độc hại hoặc chiếm quyền kiểm soát thiết bị</li>
+            <li>Nhắm vào trẻ em và người lớn tuổi — những người dễ bấm vào mà không nhận ra nguy hiểm</li>
+        </ul>
+        <p>Quảng cáo lừa đảo còn được nhắm chính xác đến bạn dựa trên dữ liệu cá nhân — xem <a href="https://safephone.io.vn/how-fake-advertisement-target-you.html">quảng cáo lừa đảo nhắm đến bạn như thế nào</a>. Thay vì chặn từng link quảng cáo thủ công, SafePhone cho phép chặn chỉ bằng một nút gạt.</p>
 
-    <h3>1. Vấn đề: Quảng cáo có thể dẫn dụ người xem đến các trang web lừa đảo</h3>
-    <p>
-        Nhiều quảng cáo trên Google Ads hoặc Facebook không chỉ gây phiền nhiễu mà còn là phương tiện để lừa đảo phổ biến hiện nay. Những kẻ lừa đảo thưởng lợi dụng quảng cáo trực tuyến để:
-    </p>
-    <ul>
-        <li>Đưa người dùng đến các trang giả mạo yêu cầu thông tin cá nhân</li>
-        <li>Dụ người dùng cài phần mềm độc hại hoặc chiếm quyền kiểm soát thiết bị</li>
-        <li>Dễ dụ trẻ em hoặc người lớn tuổi nhấp vào mà không nhận ra nguy hiểm</li>
-    </ul>
+        <h2 id="huong-dan">Cách chặn quảng cáo trên Android bằng SafePhone</h2>
+        <ol class="steps">
+            <li>Mở ứng dụng SafePhone và đảm bảo bạn đã <strong>đặt SafePhone làm trình duyệt mặc định</strong> — nếu chưa, làm theo hướng dẫn <a href="https://safephone.io.vn/screening-urls-before-openning.html">chặn trang web lừa đảo</a>. Chưa cài SafePhone? <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">Tải trên Google Play</a>.</li>
+            <li>Bấm vào dãy biểu tượng tấm khiên ở dòng thứ 2.</li>
+            <li>Bật nút gạt <strong>“Chặn quảng cáo trên Facebook”</strong>.</li>
+            <li>Bật tiếp nút gạt <strong>“Chặn quảng cáo từ Google Ads”</strong>.</li>
+            <li>Muốn tắt chặn quảng cáo, chỉ cần gạt nút về vị trí tắt.</li>
+        </ol>
+        <div class="gallery">
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png" alt="SafePhone đã được đặt làm trình duyệt mặc định" loading="lazy"></a><figcaption>Bước 1: SafePhone là trình duyệt mặc định</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/shields_2.png"><img src="https://safephone.io.vn/assets/screenshots/shields_2.png" alt="Dãy biểu tượng tấm khiên thứ hai trong SafePhone" loading="lazy"></a><figcaption>Bước 2: Dãy tấm khiên thứ hai</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url-all-settings.png"><img src="https://safephone.io.vn/assets/screenshots/url-all-settings.png" alt="Nút gạt chặn quảng cáo Facebook và Google Ads trong SafePhone" loading="lazy"></a><figcaption>Bước 3–4: Bật chặn quảng cáo Facebook, Google Ads</figcaption></figure>
+        </div>
+        <p>Chỉ một thao tác, không cần thiết lập phức tạp — quảng cáo dẫn đến trang lừa đảo bị chặn và bạn nhận được khuyến nghị không nên truy cập.</p>
 
-    <p>
-        Thay vì phải chặn từng link quảng cáo một cách thủ công, SafePhone cung cấp giải pháp cực kỳ đơn giản.
-    </p>
+        <h2 id="hoat-dong">SafePhone chặn quảng cáo như thế nào?</h2>
+        <h3>Chặn khi bấm vào link quảng cáo</h3>
+        <p>Khi nút gạt được bật, nếu bạn bấm vào một đường link quảng cáo từ Google Ads hoặc Facebook và link được mở qua trình duyệt mặc định, SafePhone sẽ chặn lại và khuyến nghị không truy cập.</p>
+        <h3>Ẩn kết quả “Được tài trợ” khi tìm kiếm</h3>
+        <p>Khi tìm kiếm bằng SafePhone, các kết quả có dòng chữ <em>“Được tài trợ”</em> được ẩn đi. Đây là kết quả trả phí để xuất hiện đầu tiên — và tin tặc thường lợi dụng chúng để đưa trang giả mạo lên trên cả trang chính thức của ngân hàng hay thương hiệu. Xem thêm kỹ thuật này trong bài <a href="https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html">12 kỹ thuật ngụy trang của website lừa đảo</a>.</p>
+        <h3>Ẩn bài quảng cáo khi lướt Facebook</h3>
+        <p>Nếu bạn lướt Facebook bằng trình duyệt có sẵn trong SafePhone, các bài viết quảng cáo cũng được ẩn đi. Trải nghiệm sẽ kém mượt hơn ứng dụng Facebook chính thức, nhưng rất hữu ích nếu bạn thấy phiền vì quảng cáo hoặc muốn bảo vệ người thân. Tìm hiểu thêm về <a href="https://safephone.io.vn/browse-internet-by-safephone-is-safer.html">cách lướt web an toàn bằng SafePhone</a>.</p>
+        <div class="note"><strong>Lưu ý:</strong> quảng cáo hiển thị bên trong ứng dụng Facebook chính thức vẫn xuất hiện, và một số ứng dụng mở link bằng trình duyệt tích hợp riêng thay vì trình duyệt mặc định. Để được bảo vệ đầy đủ, hãy lướt Facebook và tìm kiếm bằng SafePhone.</div>
 
-    <h3>2. Giải pháp: Chặn quảng cáo chỉ bằng một toggle</h3>
-    <p>
-        SafePhone tích hợp nút bật/tắt (toggle) để chặn tất cả quảng cáo từ Google Ads, Facebook và các nguồn quảng cáo đáng ngờ.
-        Khi toggle được bật, nếu người dùng điện thoại bấm vào một đường link quảng cáo nào đó, SafePhone sẽ lập tức chặn lại.
-    </p>
-            <p>
-                <span><strong>Tải SafePhone tại:</strong> <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" target="_blank">https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup</a></span>
-            </p>
+        <h2 id="dns">Cách khác: chặn quảng cáo bằng DNS riêng tư trên Android</h2>
+        <p>Android (từ phiên bản 9) có tính năng <em>DNS riêng tư</em> (Private DNS), cho phép dùng một dịch vụ DNS chặn quảng cáo cho toàn bộ điện thoại:</p>
+        <ol>
+            <li>Mở <em>Cài đặt</em> → <em>Mạng và Internet</em> (hoặc <em>Kết nối</em> trên Samsung) → <em>DNS riêng tư</em>.</li>
+            <li>Chọn <em>Tên máy chủ của nhà cung cấp DNS riêng tư</em> và nhập tên máy chủ của dịch vụ chặn quảng cáo, ví dụ <code>dns.adguard-dns.com</code>.</li>
+            <li>Bấm <em>Lưu</em>.</li>
+        </ol>
+        <p>Cách này chặn được quảng cáo trong nhiều ứng dụng, nhưng có hạn chế: đôi khi làm hỏng một số ứng dụng hoặc trang web, không ẩn được bài quảng cáo trên Facebook (vì chúng đến từ cùng máy chủ với nội dung thật), và không cảnh báo khi bạn mở trang lừa đảo. Bạn có thể dùng song song DNS riêng tư và SafePhone.</p>
 
-    <p>Lợi ích:</p>
-    <ul>
-        <li>Chỉ cần một thao tác, không cần thiết lập phức tạp</li>
-        <li>Ngăn chặn tất cả quảng cáo do đó loại bỏ hẳn các tiềm ẩn lừa đảo</li>
-        <li>Bảo vệ trẻ em và người lớn tuổi khỏi các chiêu dụ nguy hiểm</li>
-        <li>Duy trì trải nghiệm duyệt web an toàn</li>
-        <li>Ngoài ra, bạn còn có thể cấu hình kênh Slack để nhận cảnh báo để biết liệu người thân của mình có lỡ bấm phải các đường link hay không.</li>
-    </ul>
+        <h2 id="gia-dinh">Bảo vệ con nhỏ và bố mẹ khỏi quảng cáo lừa đảo</h2>
+        <p>Nếu bạn lo con nhỏ hoặc bố mẹ lớn tuổi dễ bị dẫn dụ bởi quảng cáo khi lướt web hay lướt Facebook:</p>
+        <ul>
+            <li>Đặt SafePhone làm trình duyệt mặc định trên điện thoại của họ và bật chặn quảng cáo.</li>
+            <li>Hướng dẫn họ dùng SafePhone để tìm kiếm thông tin và lướt Facebook — thói quen này hạn chế đáng kể khả năng bấm phải link lừa đảo.</li>
+            <li>Bật <a href="https://safephone.io.vn/send-alert-when-open-url.html">cảnh báo khi người thân bấm link lạ</a> qua <a href="https://safephone.io.vn/create-slack-channel.html">kênh Slack của gia đình</a> để biết ngay khi có chuyện.</li>
+            <li>Với trẻ nhỏ, cân nhắc chế độ <a href="https://safephone.io.vn/only-allow-access-trusted-sites.html">chỉ cho mở trang web tin cậy</a>.</li>
+        </ul>
 
-    <h3>3. Hướng dẫn bật tính năng</h3>
-
-    <ol>
-        <li>Mở ứng dụng SafePhone trên thiết bị, đảm bảo rằng bạn đã đặt <strong>SafePhone làm trình duyệt mặc định</strong></li>
-        <li>Bấm vào biểu tượng chuỗi tấm khiên ở dòng thứ 2</li>
-        <li>Bấm vào toggle có tên <strong>Chặn quảng cáo trên Facebook</strong></li>
-        <li>Bấm tiếp vào toggle dòng có tên <strong>Chặn quảng cáo từ Google Ads</strong></li>
-        <li>Để tắt chặn, chỉ cần gạt toggle xuống</li>
-    </ol>
-
-            <div class="app__screenshots-list">
-                <a href="assets/screenshots/url_blacklist_completed.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_completed.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/shields_2.png" class="lightbox">
-                    <img src="assets/screenshots/shields_2.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/url-all-settings.png" class="lightbox">
-                    <img src="assets/screenshots/url-all-settings.png" class="app__screenshot" alt="" />
-                </a>
-            </div>
-
-    <p>
-        Sau khi bật, mỗi khi người dùng bấm vào bất kì quảng cáo trong các ứng dụng khác, SafePhone sẽ chặn và khuyến nghị không nên truy cập.
-    </p>
-    <p>
-        Ngoài chặn đường link, bạn cũng nên sử dụng SafePhone để lướt web hay tìm kiếm thông tin thay vì sử dụng các trình duyệt mặc định khác.
-        Khi sử dụng SafePhone để tìm kiếm thông tin, các kết quả tìm kiếm có dòng chữ "Được tài trợ" sẽ bị ẩn đi. Đây là các kết quả tìm kiếm có trả phí để xuất hiện trước tiên
-        và các nhóm tin tặc cũng thường xuyên lợi dụng khả năng này để lừa người dùng truy cập vào các trang web giả mạo, độc hại.
-        </p>
-            <p>Tương tự, nếu bạn lướt Facebook bằng trình duyệt có sẵn trên SafePhone, các bài viết quảng cáo cũng sẽ bị ẩn đi.
-        Tính năng này sẽ rất hữu ích nếu bạn đang cảm thấy phiền hà với các quảng cáo trên Facebook, mặc dù trải nghiệm lướt sẽ ít mượt mà hơn so với việc sử dụng ứng dụng Facebook chính thống.
-            </p>
-            <p>
-                Nếu bạn có con nhỏ hoặc người thân lớn tuổi và bạn đang e ngại họ dễ bị dẫn dụ bởi các quảng cáo khi lướt web hay lướt Facebook,
-                hãy cài SafePhone làm trình duyệt mặc định,
-                và hướng dẫn họ chỉ sử dụng SafePhone để tìm thông tin hoặc lướt Facebook.
-                Thói quen này sẽ hạn chế đáng kể khả năng họ nhấp phải link lừa đảo.
-            </p>
+        <h2 id="ket-luan">Kết luận</h2>
+        <p>Chặn quảng cáo không chỉ giúp lướt web dễ chịu hơn mà còn cắt đứt một trong những con đường phổ biến nhất dẫn đến trang lừa đảo. Với SafePhone, bạn chỉ cần bật hai nút gạt và tập thói quen tìm kiếm, lướt Facebook bằng SafePhone.</p>
+        <div class="cta-box">
+            <p>Bật chặn quảng cáo chỉ với 2 nút gạt</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
 
-        <div>
-            <h3>Xem thêm:</h3>
+        <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+        <details>
+            <summary>SafePhone có xoá quảng cáo trong ứng dụng Facebook không?</summary>
+            <p>Quảng cáo trong ứng dụng Facebook chính thức vẫn hiển thị. Khi bạn lướt Facebook bằng trình duyệt có sẵn trong SafePhone, các bài viết quảng cáo sẽ được ẩn đi.</p>
+        </details>
+        <details>
+            <summary>Kết quả tìm kiếm “Được tài trợ” có nguy hiểm không?</summary>
+            <p>Không phải tất cả, nhưng đây là kết quả trả phí để xuất hiện đầu tiên và thường bị tin tặc lợi dụng để đưa trang giả mạo lên trên trang chính thức. SafePhone ẩn các kết quả này khi bạn tìm kiếm.</p>
+        </details>
+        <details>
+            <summary>Có cần đặt SafePhone làm trình duyệt mặc định để chặn quảng cáo không?</summary>
+            <p>Có. SafePhone chỉ kiểm tra và chặn được các link quảng cáo được mở qua nó, nên cần là trình duyệt mặc định của điện thoại.</p>
+        </details>
+        <details>
+            <summary>Làm sao tắt chặn quảng cáo?</summary>
+            <p>Mở SafePhone, bấm vào dãy biểu tượng tấm khiên ở dòng thứ 2 và gạt nút Chặn quảng cáo trên Facebook hoặc Chặn quảng cáo từ Google Ads về vị trí tắt.</p>
+        </details>
+
+        <aside class="related" aria-labelledby="xem-them">
+            <h2 id="xem-them">Xem thêm</h2>
+            <p class="grp">Chặn web và link lừa đảo</p>
             <ul>
-                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
-                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
-                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
-                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
-                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
-                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
-                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+                <li><a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html"><b>Cách kiểm tra trang web lừa đảo</b><span>9 dấu hiệu nhận biết website giả mạo và cách check web.</span></a></li>
+                <li><a href="https://safephone.io.vn/screening-urls-before-openning.html"><b>Cách chặn trang web lừa đảo</b><span>Tự động chặn link độc hại trước khi mở trên Android.</span></a></li>
+                <li><a href="https://safephone.io.vn/browse-internet-by-safephone-is-safer.html"><b>Cách lướt web an toàn</b><span>Dùng SafePhone làm trình duyệt bảo vệ hằng ngày.</span></a></li>
+                <li><a href="https://safephone.io.vn/only-allow-access-trusted-sites.html"><b>Chặn web đen, chỉ mở web tin cậy</b><span>Chỉ cho phép truy cập các trang đã duyệt — phù hợp cho trẻ em.</span></a></li>
             </ul>
-        </div>
+            <p class="grp">Nhận biết lừa đảo</p>
+            <ul>
+                <li><a href="https://safephone.io.vn/how-fake-advertisement-target-you.html"><b>Quảng cáo lừa đảo nhắm đến bạn như thế nào?</b><span>Cơ chế nhắm mục tiêu và dấu hiệu nhận biết quảng cáo giả mạo.</span></a></li>
+            </ul>
+        </aside>
     </article>
-
-
-
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
+
+<footer>
+    <div class="wrap cols">
+        <div>
+            <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+            <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+        </div>
+        <ul>
+            <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+            <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+            <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+            <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+            <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
 
 </body>
 </html>
