@@ -1,235 +1,335 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Cách chặn các trang web lừa đảo trên điện thoại Android</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="Cách sử dụng blacklist trong SafePhone để chặn đường link lừa đảo, chặn web, chặn quảng cáo trên Android, chống lừa đảo" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Cách chặn các trang web lừa đảo trên điện thoại Android" />
-    <meta property="og:description" content="Cách sử dụng blacklist trong SafePhone để chặn đường link lừa đảo, chặn web, chặn quảng cáo trên Android, chống lừa đảo" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cách chặn trang web lừa đảo trên điện thoại Android | SafePhone</title>
+    <meta name="description" content="Cách chặn trang web lừa đảo trên điện thoại Android: dùng SafePhone lọc link theo danh sách đen, tự động chặn đường dẫn độc hại trước khi mở.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://safephone.io.vn/screening-urls-before-openning.html">
+    <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+    <meta name="theme-color" content="#0f6e56">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SafePhone">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://safephone.io.vn/screening-urls-before-openning.html">
+    <meta property="og:title" content="Cách chặn trang web lừa đảo trên điện thoại Android | SafePhone">
+    <meta property="og:description" content="Link lừa đảo trong tin nhắn, quảng cáo bị chặn trước khi mở. Hướng dẫn 8 bước bật lá chắn URL của SafePhone trên Android.">
+    <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png">
+    <meta property="article:modified_time" content="2026-09-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cách chặn trang web lừa đảo trên điện thoại Android | SafePhone">
+    <meta name="twitter:description" content="Link lừa đảo trong tin nhắn, quảng cáo bị chặn trước khi mở. Hướng dẫn 8 bước bật lá chắn URL của SafePhone trên Android.">
+    <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Cách chặn các trang web lừa đảo trên điện thoại Android",
-            "description": "Cách sử dụng blacklist trong SafePhone để chặn đường link lừa đảo, chặn web, chặn quảng cáo trên Android, chống lừa đảo"
+            "@graph": [
+                {
+                    "@type": "TechArticle",
+                    "@id": "https://safephone.io.vn/screening-urls-before-openning.html#article",
+                    "headline": "Cách chặn trang web lừa đảo trên điện thoại Android",
+                    "description": "Cách chặn trang web lừa đảo trên điện thoại Android: dùng SafePhone lọc link theo danh sách đen, tự động chặn đường dẫn độc hại trước khi mở.",
+                    "inLanguage": "vi-VN",
+                    "mainEntityOfPage": "https://safephone.io.vn/screening-urls-before-openning.html",
+                    "image": "https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png",
+                    "dateModified": "2026-09-27",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "SafePhone",
+                        "url": "https://safephone.io.vn/"
+                    },
+                    "publisher": {
+                        "@id": "https://safephone.io.vn/#org"
+                    },
+                    "about": {
+                        "@id": "https://safephone.io.vn/#app"
+                    },
+                    "keywords": "chặn trang web lừa đảo, chặn link lừa đảo, chặn web trên Android, chặn website giả mạo, chặn web độc hại"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "SafePhone",
+                            "item": "https://safephone.io.vn/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Hướng dẫn sử dụng",
+                            "item": "https://safephone.io.vn/tutorials.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Cách chặn trang web lừa đảo",
+                            "item": "https://safephone.io.vn/screening-urls-before-openning.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Vì sao phải đặt SafePhone làm trình duyệt mặc định?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Trên Android, trình duyệt mặc định là nơi xử lý các đường link bạn bấm. Đặt SafePhone làm trình duyệt mặc định giúp mọi link được kiểm tra với danh sách web lừa đảo trước khi mở."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Danh sách trang web lừa đảo được cập nhật như thế nào?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Danh sách đen được thu thập và cập nhật mỗi ngày. Hãy cập nhật ứng dụng SafePhone thường xuyên trên Google Play để có danh sách mới nhất."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Link trong Zalo, Messenger có được kiểm tra không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Một số ứng dụng mở link bằng trình duyệt tích hợp riêng nên link không đi qua SafePhone. Hãy chọn Mở bằng trình duyệt trong menu ba chấm để link được kiểm tra."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Có chặn được trang web lừa đảo trên iPhone không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Hiện SafePhone có trên Android. iOS không cho phép ứng dụng kiểm tra link ở cấp hệ thống như Android, nên tính năng chặn tự động không hoạt động đầy đủ trên iPhone."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+    <style>
+        :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+        a{color:var(--brand)}
+        img{max-width:100%;height:auto;display:block}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+        header.site{border-bottom:1px solid var(--line);background:#fff}
+        header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+        .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+        .brand img{width:32px;height:32px}
+        nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+        nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+        .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+        .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+        .crumbs li+li::before{content:"›";margin-right:6px}
+        article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+        article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+        .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+        .lede{font-size:18px}
+        article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+        article.post h3{font-size:19px;margin:24px 0 8px}
+        .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+        .cta-box p{margin:0;font-weight:600}
+        .cta-box img{height:48px;width:auto}
+        .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+        .toc strong{display:block;margin-bottom:4px}
+        .toc ol{margin:0;padding-left:20px}
+        .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+        .steps li{margin-bottom:6px}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+        .gallery figure{margin:0}
+        .gallery img{border:1px solid var(--line);border-radius:10px}
+        .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+        table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+        th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+        th{background:var(--brand-soft)}
+        .tablewrap{overflow-x:auto}
+        details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+        summary{font-weight:600;cursor:pointer}
+        .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+        .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+        .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+        .related a b{display:block;color:var(--brand)}
+        .related a span{font-size:14px;color:var(--muted)}
+        .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+        footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+        footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+        footer ul{list-style:none;padding:0;margin:0}
+        footer li{margin:4px 0}
+        .social{display:flex;gap:12px;align-items:center}
+        .social img{height:28px;width:auto}
+        @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+        <nav class="top" aria-label="Điều hướng chính">
+            <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+            <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+        </nav>
     </div>
-</nav>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
-
-        <header class="page__header">
-            <h1 class="page__title">Cách chặn các trang web lừa đảo trên điện thoại Android</h1>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
-
-            <p>
-                Nếu bạn đang tìm kiếm giải pháp giúp phòng ngừa các website giả mạo, website lừa đảo, hay website phát tán mã độc, hãy tải ngay <strong>SafePhone</strong>!
-            </p>
-
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
-                </a>
-            </p>
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+                <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+                <li aria-current="page">Cách chặn trang web lừa đảo</li>
+            </ol>
+        </nav>
+    </div>
+    <article class="post">
+        <h1>Cách chặn trang web lừa đảo trên điện thoại Android</h1>
+        <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+        <p class="lede">Chỉ một cú bấm vào link lạ trong tin nhắn, quảng cáo hay bình luận Facebook là đủ để mất tài khoản ngân hàng. Bài viết hướng dẫn <strong>cách chặn trang web lừa đảo</strong> trên điện thoại Android bằng SafePhone: mọi đường link được kiểm tra với danh sách web lừa đảo <em>trước khi mở</em>, và trang nguy hiểm bị chặn tự động.</p>
+        <div class="cta-box">
+            <p>Chặn trang web lừa đảo với SafePhone</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
-        <div class="page__content">
+        <nav class="toc" aria-label="Mục lục">
+            <strong>Nội dung bài viết</strong>
+            <ol>
+                <li><a href="#vi-sao">Vì sao cần chặn trang web lừa đảo trên điện thoại?</a></li>
+                <li><a href="#chrome">Chrome có tự chặn web lừa đảo không?</a></li>
+                <li><a href="#huong-dan">Cách chặn trang web lừa đảo bằng SafePhone</a></li>
+                <li><a href="#hoat-dong">SafePhone chặn link lừa đảo như thế nào?</a></li>
+                <li><a href="#zalo-messenger">Lưu ý với link mở trong Zalo, Messenger, Facebook</a></li>
+                <li><a href="#chan-chat-hon">Chặn chặt hơn cho trẻ em và người lớn tuổi</a></li>
+                <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+            </ol>
+        </nav>
 
+        <h2 id="vi-sao">Vì sao cần chặn trang web lừa đảo trên điện thoại?</h2>
+        <p>Người dùng — đặc biệt là trẻ em và người lớn tuổi — có thể vô tình mở các trang web lừa đảo, phát tán mã độc hoặc có nội dung không phù hợp. Những khó khăn thường gặp:</p>
+        <ul>
+            <li>Không phân biệt được website thật và <a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">website giả mạo</a> — nhiều trang lừa đảo có giao diện giống hệt ngân hàng</li>
+            <li>Dễ bấm vào link lạ gửi qua tin nhắn SMS, Zalo hoặc <a href="https://safephone.io.vn/how-fake-advertisement-target-you.html">quảng cáo lừa đảo</a></li>
+            <li>Khó kiểm soát khi điện thoại có nhiều trình duyệt khác nhau</li>
+        </ul>
+        <p>Vì vậy, cách hiệu quả nhất là kiểm tra link <em>tập trung</em> ngay tại trình duyệt mặc định — nơi mọi đường link trên điện thoại được mở.</p>
 
+        <h2 id="chrome">Chrome có tự chặn web lừa đảo không?</h2>
+        <p>Chrome có tính năng Safe Browsing của Google, cảnh báo các trang độc hại nằm trong danh sách toàn cầu. Tuy vậy, tính năng này có hạn chế với người dùng Việt Nam:</p>
+        <ul>
+            <li>Các trang lừa đảo nhắm vào người Việt mới xuất hiện hằng ngày và thường chưa kịp có trong danh sách toàn cầu</li>
+            <li>Bạn không tự thêm được trang web muốn chặn cho người thân</li>
+            <li>Nhiều trang lừa đảo dùng <a href="https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html">kỹ thuật ngụy trang</a> để qua mặt các công cụ quét tự động</li>
+        </ul>
+        <p>Xem đánh giá chi tiết trong bài <a href="https://safephone.io.vn/compare-url-blocker-apps.html">so sánh các ứng dụng chặn web lừa đảo</a>.</p>
 
-    <h3>1. Vấn đề: Khó kiểm soát truy cập website độc hại</h3>
-    <p>
-        Người dùng, đặc biệt là trẻ em và người lớn tuổi, có thể vô tình truy cập vào các website
-        chứa nội dung độc hại, lừa đảo hoặc không phù hợp. Một số hạn chế thường gặp:
-    </p>
-    <ul>
-        <li>Không nhận biết được website nguy hiểm</li>
-        <li>Dễ bấm vào link lạ từ tin nhắn hoặc quảng cáo</li>
-        <li>Trình duyệt mặc định không có cơ chế chặn theo danh sách đen</li>
-        <li>Khó kiểm soát nếu sử dụng nhiều trình duyệt khác nhau</li>
-    </ul>
+        <h2 id="huong-dan">Cách chặn trang web lừa đảo bằng SafePhone</h2>
+        <p>SafePhone chặn các trang web trong danh sách đen bằng cách làm trình duyệt mặc định của điện thoại. Cách bật:</p>
+        <ol class="steps">
+            <li>Mở ứng dụng SafePhone. Nếu chưa cài, <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">tải SafePhone trên Google Play</a>.</li>
+            <li>Bấm vào dãy biểu tượng tấm khiên ở dòng đầu tiên.</li>
+            <li>Chọn mục <strong>“Chặn đường dẫn (URL) độc hại”</strong>.</li>
+            <li>Bấm <strong>“Kích hoạt lá chắn URL lạ”</strong>.</li>
+            <li>Một trang hướng dẫn hiện lên — bấm <strong>“Kích hoạt lá chắn URL lạ”</strong> thêm một lần nữa.</li>
+            <li>Ở màn hình tiếp theo, bấm vào dòng <strong>“Trình duyệt mặc định”</strong> (hoặc <em>Browser app</em> nếu điện thoại dùng tiếng Anh).</li>
+            <li>Chọn dòng có logo và tên <strong>SafePhone</strong>.</li>
+            <li>Bấm nút quay lại để về màn hình chính, hoặc mở lại ứng dụng.</li>
+        </ol>
+        <div class="gallery">
+            <figure><a href="https://safephone.io.vn/assets/screenshots/shields.png"><img src="https://safephone.io.vn/assets/screenshots/shields.png" alt="Dãy biểu tượng tấm khiên trên màn hình chính SafePhone" loading="lazy"></a><figcaption>Bước 2: Dãy tấm khiên đầu tiên</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_step_1.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_step_1.png" alt="Mục chặn đường dẫn URL độc hại trong SafePhone" loading="lazy"></a><figcaption>Bước 3: Chặn đường dẫn (URL) độc hại</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_step_2.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_step_2.png" alt="Nút kích hoạt lá chắn URL lạ" loading="lazy"></a><figcaption>Bước 4: Kích hoạt lá chắn URL lạ</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_step_3.png" alt="Trang hướng dẫn kích hoạt lá chắn URL lạ" loading="lazy"></a><figcaption>Bước 5: Bấm kích hoạt lần nữa</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_step_4.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_step_4.png" alt="Cài đặt trình duyệt mặc định trên Android" loading="lazy"></a><figcaption>Bước 6: Chọn “Trình duyệt mặc định”</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_step_5.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_step_5.png" alt="Chọn SafePhone làm trình duyệt mặc định trên Android" loading="lazy"></a><figcaption>Bước 7: Chọn SafePhone</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png"><img src="https://safephone.io.vn/assets/screenshots/url_blacklist_completed.png" alt="SafePhone đã bật lá chắn chặn trang web lừa đảo" loading="lazy"></a><figcaption>Hoàn tất: lá chắn URL đã bật</figcaption></figure>
+        </div>
+        <p>Vì sao cần đặt SafePhone làm trình duyệt mặc định? Trên Android, đây là cách duy nhất để một ứng dụng kiểm tra link trước khi mở — xem giải thích trong bài <a href="https://safephone.io.vn/url-screening-permission-on-android-and-ios.html">quyền sàng lọc URL trên Android và iOS</a>.</p>
 
-    <p>
-        Do đó, cần một giải pháp kiểm soát tập trung việc truy cập web ngay từ trình duyệt mặc định.
-    </p>
+        <h2 id="hoat-dong">SafePhone chặn link lừa đảo như thế nào?</h2>
+        <p>Sau khi bật, khi bạn bấm vào một đường link — trong tin nhắn, email hay ứng dụng khác — link đó được mở qua SafePhone. SafePhone đối chiếu tên miền với danh sách đen các trang lừa đảo, phát tán mã độc; nếu trùng, trang bị chặn và bạn thấy cảnh báo thay vì nội dung trang.</p>
+        <ul>
+            <li>Danh sách đen được thu thập và cập nhật mỗi ngày.</li>
+            <li>Hãy <strong>cập nhật ứng dụng thường xuyên</strong> trên Google Play để có danh sách mới nhất.</li>
+        </ul>
+        <p>Tìm hiểu chi tiết trong bài <a href="https://safephone.io.vn/safephone-mechanism.html">SafePhone hoạt động như thế nào</a>.</p>
 
-    <h3>2. Giải pháp: Dùng SafePhone làm trình duyệt để lọc website blacklist</h3>
-    <p>
-        SafePhone cung cấp tính năng duyệt web an toàn, cho phép chặn các website nằm trong danh sách đen
-        đã được cấu hình sẵn.
-    </p>
-            <p>
-                <span><strong>Tải SafePhone tại:</strong> <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" target="_blank">https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup</a></span>
-            </p>
+        <h2 id="zalo-messenger">Lưu ý với link mở trong Zalo, Messenger, Facebook</h2>
+        <p>Một số ứng dụng như Facebook, Messenger hay Zalo mở link bằng trình duyệt tích hợp bên trong ứng dụng, không đi qua trình duyệt mặc định. Khi đó link sẽ không được SafePhone kiểm tra.</p>
+        <div class="note"><strong>Mẹo:</strong> khi nhận link lạ trong các ứng dụng này, hãy bấm vào biểu tượng ba chấm và chọn <em>“Mở bằng trình duyệt”</em> (hoặc <em>Open in browser</em>) để link được SafePhone kiểm tra trước khi mở.</div>
 
-    <p>Lợi ích của giải pháp:</p>
-    <ul>
-        <li>Tự động chặn truy cập vào các website nguy hiểm hoặc không mong muốn</li>
-        <li>Kiểm soát tập trung thay vì phụ thuộc từng trình duyệt riêng lẻ</li>
-        <li>Bảo vệ người thân khỏi các nội dung xấu trên internet</li>
-        <li>Dễ dàng cập nhật và quản lý danh sách website bị chặn</li>
-    </ul>
+        <h2 id="chan-chat-hon">Chặn chặt hơn cho trẻ em và người lớn tuổi</h2>
+        <p>Danh sách đen chỉ chặn được những trang đã bị phát hiện. Với người thân dễ bị lừa, bạn có thể kết hợp thêm:</p>
+        <ul>
+            <li><a href="https://safephone.io.vn/only-allow-access-trusted-sites.html">Chặn web đen, chỉ cho mở các trang web tin cậy</a> — mọi trang ngoài danh sách đều bị chặn.</li>
+            <li><a href="https://safephone.io.vn/how-to-block-ads-url.html">Chặn quảng cáo trên Android</a> — loại bỏ quảng cáo dẫn đến trang lừa đảo.</li>
+            <li><a href="https://safephone.io.vn/send-alert-when-open-url.html">Cảnh báo khi người thân bấm link lạ</a> — biết ngay để kịp hỗ trợ.</li>
+        </ul>
 
-    <h3>3. Hướng dẫn cấu hình</h3>
-    <ol>
-        <li>Mở ứng dụng SafePhone</li>
-        <li>Bấm vào chuỗi biểu tượng tấm khiên dòng đầu tiên</li>
-        <li>Chọn mục <strong>Chặn đường dẫn (URL) độc hại</strong></li>
-        <li>Bấm vào  <strong>Kích hoạt lá chắn URL lạ</strong></li>
-        <li>Một trang hướng dẫn sẽ hiện lên, bạn bấm tiếp vào <strong>Kích hoạt lá chắn URL lạ</strong> 1 lần nữa</li>
-        <li>Một màn hình khác hiện lên, bạn Bấm tiếp vào dòng <strong>Trình duyệt mặc định</strong> hoặc Browser App nếu bạn sử dụng tiếng Anh </li>
-        <li>Chọn dòng có logo và tên app <strong>SafePhone</strong></li>
-        <li>Bấm nút quay lại để về màn hình chính hoặc mở lại app</li>
-    </ol>
-
-            <div class="app__screenshots-list">
-                <a href="assets/screenshots/shields.png" class="lightbox">
-                    <img src="assets/screenshots/shields.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/url_blacklist_step_1.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_step_1.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/url_blacklist_step_2.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_step_2.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/url_blacklist_step_3.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_step_3.png" class="app__screenshot" alt="" />
-                </a>
-            </div>
-            <div class="app__screenshots-list">
-                <a href="assets/screenshots/url_blacklist_step_4.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_step_4.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/url_blacklist_step_5.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_step_5.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/url_blacklist_completed.png" class="lightbox">
-                    <img src="assets/screenshots/url_blacklist_completed.png" class="app__screenshot" alt="" />
-                </a>
-            </div>
-
-    <p>
-        Sau khi hoàn tất, mọi liên kết được mở trên thiết bị sẽ đi qua SafePhone,
-        và các website nằm trong blacklist sẽ bị chặn tự động.
-    </p>
-
-    <ul>
-        <li>Bạn nên cập nhật ứng dụng thường xuyên để cập nhật danh sách đen mới nhất được thu thập mỗi ngày</li>
-    </ul>
+        <h2 id="ket-luan">Kết luận</h2>
+        <p>Đặt SafePhone làm trình duyệt mặc định là cách đơn giản để chặn trang web lừa đảo trên toàn bộ điện thoại, thay vì phải cài đặt từng trình duyệt. Kết hợp với thói quen mở link lạ bằng trình duyệt và cập nhật ứng dụng thường xuyên, bạn và người thân sẽ an toàn hơn nhiều trước các đường link lừa đảo.</p>
+        <div class="cta-box">
+            <p>Bật lá chắn chặn web lừa đảo trong 1 phút</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
 
-        <div>
-            <h3>Xem thêm:</h3>
+        <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+        <details>
+            <summary>Vì sao phải đặt SafePhone làm trình duyệt mặc định?</summary>
+            <p>Trên Android, trình duyệt mặc định là nơi xử lý các đường link bạn bấm. Đặt SafePhone làm trình duyệt mặc định giúp mọi link được kiểm tra với danh sách web lừa đảo trước khi mở.</p>
+        </details>
+        <details>
+            <summary>Danh sách trang web lừa đảo được cập nhật như thế nào?</summary>
+            <p>Danh sách đen được thu thập và cập nhật mỗi ngày. Hãy cập nhật ứng dụng SafePhone thường xuyên trên Google Play để có danh sách mới nhất.</p>
+        </details>
+        <details>
+            <summary>Link trong Zalo, Messenger có được kiểm tra không?</summary>
+            <p>Một số ứng dụng mở link bằng trình duyệt tích hợp riêng nên link không đi qua SafePhone. Hãy chọn Mở bằng trình duyệt trong menu ba chấm để link được kiểm tra.</p>
+        </details>
+        <details>
+            <summary>Có chặn được trang web lừa đảo trên iPhone không?</summary>
+            <p>Hiện SafePhone có trên Android. iOS không cho phép ứng dụng kiểm tra link ở cấp hệ thống như Android, nên tính năng chặn tự động không hoạt động đầy đủ trên iPhone.</p>
+        </details>
+
+        <aside class="related" aria-labelledby="xem-them">
+            <h2 id="xem-them">Xem thêm</h2>
+            <p class="grp">Chặn web và link lừa đảo</p>
             <ul>
-                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
-                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
-                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
-                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
-                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
-                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
-                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+                <li><a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html"><b>Cách kiểm tra trang web lừa đảo</b><span>Dấu hiệu nhận biết website giả mạo và cách check web trước khi nhập thông tin.</span></a></li>
+                <li><a href="https://safephone.io.vn/only-allow-access-trusted-sites.html"><b>Chặn web đen, chỉ mở web tin cậy</b><span>Chỉ cho phép truy cập các trang đã duyệt — phù hợp cho trẻ em.</span></a></li>
+                <li><a href="https://safephone.io.vn/how-to-block-ads-url.html"><b>Cách chặn quảng cáo trên Android</b><span>Chặn quảng cáo Facebook, Google dẫn đến trang lừa đảo.</span></a></li>
+                <li><a href="https://safephone.io.vn/compare-url-blocker-apps.html"><b>So sánh ứng dụng chặn web lừa đảo</b><span>BlockSite, Chrome Safe Browsing và SafePhone.</span></a></li>
             </ul>
-        </div>
+            <p class="grp">Bảo vệ người thân</p>
+            <ul>
+                <li><a href="https://safephone.io.vn/send-alert-when-open-url.html"><b>Cảnh báo khi người thân bấm link lạ</b><span>Biết ngay khi bố mẹ, con cái mở đường link lừa đảo.</span></a></li>
+            </ul>
+        </aside>
     </article>
-
-
-
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
+
+<footer>
+    <div class="wrap cols">
+        <div>
+            <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+            <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+        </div>
+        <ul>
+            <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+            <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+            <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+            <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+            <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
 
 </body>
 </html>
