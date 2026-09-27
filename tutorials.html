@@ -1,272 +1,370 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Hướng Dẫn Sử Dụng</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Cách cài đặt SafePhone, Cách Sử Dụng SafePhone, hướng dẫn bảo mật, bảo mật di động, chống hack, bảo vệ dữ liệu cá nhân, chống lừa đảo" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
+    <!-- ===== Core SEO ===== -->
+    <title>Hướng dẫn sử dụng SafePhone – Chặn số lạ, chặn web lừa đảo</title>
+    <meta name="description" content="Hướng dẫn sử dụng SafePhone: cài đặt, chặn số lạ, chặn đầu số, chặn web lừa đảo, chặn quảng cáo và gửi cảnh báo đến người thân qua Slack.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://safephone.io.vn/tutorials.html">
+    <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+    <meta name="theme-color" content="#0f6e56">
 
-    <meta property="og:title" content="Hướng Dẫn Sử Dụng" />
-    <meta property="og:description" content="Cách cài đặt SafePhone, Cách Sử Dụng SafePhone, hướng dẫn bảo mật, bảo mật di động, chống hack, bảo vệ dữ liệu cá nhân, chống lừa đảo" />
-    <meta property="og:image" content="assets/og-image.png" />
+    <!-- ===== Open Graph / social ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SafePhone">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://safephone.io.vn/tutorials.html">
+    <meta property="og:title" content="Hướng dẫn sử dụng SafePhone – Chặn số lạ, chặn web lừa đảo">
+    <meta property="og:description" content="12 hướng dẫn từng bước: chặn số lạ, chặn đầu số, chặn web lừa đảo, chặn quảng cáo và cảnh báo khi người thân gặp cuộc gọi, link đáng ngờ.">
+    <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+    <meta property="og:image:alt" content="Hướng dẫn sử dụng app chống lừa đảo SafePhone">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn sử dụng SafePhone – Chặn số lạ, chặn web lừa đảo">
+    <meta name="twitter:description" content="12 hướng dẫn từng bước để chặn số lạ, chặn web lừa đảo và bảo vệ người thân.">
+    <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
 
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
+    <!-- ===== Structured data ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "@id": "https://safephone.io.vn/tutorials.html#page",
+                    "url": "https://safephone.io.vn/tutorials.html",
+                    "name": "Hướng dẫn sử dụng SafePhone",
+                    "description": "Các hướng dẫn từng bước để cài đặt và sử dụng SafePhone: chặn số lạ, chặn đầu số, chặn web lừa đảo, chặn quảng cáo và cảnh báo người thân.",
+                    "inLanguage": "vi-VN",
+                    "isPartOf": { "@id": "https://safephone.io.vn/#website" },
+                    "about": { "@id": "https://safephone.io.vn/#app" },
+                    "breadcrumb": { "@id": "https://safephone.io.vn/tutorials.html#breadcrumb" },
+                    "mainEntity": { "@id": "https://safephone.io.vn/tutorials.html#list" }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://safephone.io.vn/tutorials.html#breadcrumb",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "SafePhone", "item": "https://safephone.io.vn/" },
+                        { "@type": "ListItem", "position": 2, "name": "Hướng dẫn sử dụng", "item": "https://safephone.io.vn/tutorials.html" }
+                    ]
+                },
+                {
+                    "@type": "ItemList",
+                    "@id": "https://safephone.io.vn/tutorials.html#list",
+                    "name": "Hướng dẫn sử dụng SafePhone",
+                    "numberOfItems": 12,
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1,  "name": "Cách chặn số lạ, số lừa đảo", "url": "https://safephone.io.vn/block-blacklisted-incoming-call.html" },
+                        { "@type": "ListItem", "position": 2,  "name": "Chặn cuộc gọi ngoài danh bạ", "url": "https://safephone.io.vn/build-trusted-contact-phone.html" },
+                        { "@type": "ListItem", "position": 3,  "name": "Cách chặn đầu số, số có quy luật", "url": "https://safephone.io.vn/block-incoming-call-by-number-patterns.html" },
+                        { "@type": "ListItem", "position": 4,  "name": "Cách chặn trang web lừa đảo", "url": "https://safephone.io.vn/screening-urls-before-openning.html" },
+                        { "@type": "ListItem", "position": 5,  "name": "Chặn web đen, chỉ mở web tin cậy", "url": "https://safephone.io.vn/only-allow-access-trusted-sites.html" },
+                        { "@type": "ListItem", "position": 6,  "name": "Cách kiểm tra trang web lừa đảo", "url": "https://safephone.io.vn/how-to-check-a-websites-is-fake.html" },
+                        { "@type": "ListItem", "position": 7,  "name": "Cách chặn quảng cáo trên Android", "url": "https://safephone.io.vn/how-to-block-ads-url.html" },
+                        { "@type": "ListItem", "position": 8,  "name": "Cách lướt web an toàn", "url": "https://safephone.io.vn/browse-internet-by-safephone-is-safer.html" },
+                        { "@type": "ListItem", "position": 9,  "name": "Bảo vệ người thân khỏi cuộc gọi lừa đảo", "url": "https://safephone.io.vn/send-alerts-when-receiving-calls.html" },
+                        { "@type": "ListItem", "position": 10, "name": "Cảnh báo khi người thân bấm link lạ", "url": "https://safephone.io.vn/send-alert-when-open-url.html" },
+                        { "@type": "ListItem", "position": 11, "name": "Tạo kênh Slack nhận cảnh báo", "url": "https://safephone.io.vn/create-slack-channel.html" },
+                        { "@type": "ListItem", "position": 12, "name": "Tạo API key OpenAI, DeepSeek cho SafePhone", "url": "https://safephone.io.vn/how-to-create-ai-api-keys.html" }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://safephone.io.vn/tutorials.html#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "SafePhone cần những quyền gì trên điện thoại?",
+                            "acceptedAnswer": { "@type": "Answer", "text": "Để chặn cuộc gọi, SafePhone cần quyền Sàng lọc cuộc gọi (Call Screening) của Android. Để kiểm tra và chặn đường link, bạn đặt SafePhone làm trình duyệt mặc định. Bạn chỉ cần cấp quyền cho những tính năng mình sử dụng." }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Nên bắt đầu dùng SafePhone từ tính năng nào?",
+                            "acceptedAnswer": { "@type": "Answer", "text": "Với bố mẹ lớn tuổi, hãy bắt đầu bằng chặn cuộc gọi ngoài danh bạ và cảnh báo cuộc gọi lạ. Với trẻ em, hãy bật chặn trang web lừa đảo hoặc chỉ cho phép mở các trang web tin cậy. Với người dùng thông thường, bật chặn số lạ và kiểm tra link là đủ." }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Có bắt buộc dùng Slack để nhận cảnh báo không?",
+                            "acceptedAnswer": { "@type": "Answer", "text": "Không. Các tính năng chặn cuộc gọi, chặn web và chặn quảng cáo hoạt động độc lập. Kênh Slack chỉ cần thiết nếu bạn muốn nhận cảnh báo khi người thân gặp cuộc gọi lạ hoặc bấm vào link đáng ngờ." }
+                        }
+                    ]
+                }
+            ]
+        }
     </script>
+
+    <!-- Styles: same as the new homepage — keep or replace with your existing stylesheet -->
+    <style>
+        :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+        a{color:var(--brand)}
+        img{max-width:100%;height:auto;display:block}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+        header.site{border-bottom:1px solid var(--line);background:#fff}
+        header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+        .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+        .brand img{width:32px;height:32px}
+        nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+        nav.top a[aria-current]{font-weight:700;color:var(--ink)}
+        nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+        .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+        .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+        .crumbs li+li::before{content:"›";margin-right:6px}
+        .hero{padding:16px 0 32px}
+        .hero h1{font-size:clamp(28px,4.5vw,40px);line-height:1.2;margin:0 0 16px;max-width:820px}
+        .lede{font-size:18px;color:var(--muted);margin:0 0 20px;max-width:760px}
+        .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+        .cta img{height:52px;width:auto}
+        .btn{display:inline-block;padding:10px 16px;border:1px solid var(--line);border-radius:8px;text-decoration:none;background:#fff}
+        .toc{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+        .toc a{font-size:14px;background:var(--brand-soft);border-radius:999px;padding:6px 12px;text-decoration:none}
+        section{padding:40px 0;border-top:1px solid var(--line)}
+        h2{font-size:clamp(22px,3vw,30px);line-height:1.25;margin:0 0 12px}
+        h3{font-size:18px;margin:0 0 6px}
+        .intro{color:var(--muted);max-width:760px;margin:0 0 24px}
+        .steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+        .steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 18px 18px 56px;position:relative}
+        .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+        .steps p{margin:0;font-size:15px;color:var(--muted)}
+        .guides{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+        .guide{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column}
+        .guide h3 a{text-decoration:none}
+        .guide p{margin:0 0 10px;font-size:15px}
+        .guide .for{font-size:13px;color:var(--muted);margin-top:auto}
+        .guide .more{font-size:14px;font-weight:600;text-decoration:none;margin-top:8px}
+        details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+        summary{font-weight:600;cursor:pointer}
+        footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+        footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+        footer ul{list-style:none;padding:0;margin:0}
+        footer li{margin:4px 0}
+        .social{display:flex;gap:12px;align-items:center}
+        .social img{height:28px;width:auto}
+        @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
+
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="https://safephone.io.vn/">
+            <img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">
+            SafePhone
         </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-
+        <nav class="top" aria-label="Điều hướng chính">
+            <a href="https://safephone.io.vn/tutorials.html" aria-current="page">Hướng dẫn sử dụng</a>
+            <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+        </nav>
     </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" class="highlight" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-         <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
+</header>
 
-    </div>
-</nav>
 <main>
-    <article class="page">
-        <header class="page__header">
-            <h1 class="page__title">Hướng Dẫn Sử Dụng</h1>
-            <p>Trong thời đại Công nghệ hiện diện khắp nơi, sự An toàn trên không gian mạng cũng là sự An toàn ngoài đời thật!
-                Trang web này sẽ cung cấp tất cả các kiến thức và kĩ năng cần thiết về cách cài đặt và sử dụng ứng dụng SafePhone - công cụ giúp gia tăng bảo mật cho mỗi cá nhân</p>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Chặn website giả + Chặn số lạ với SafePhone</h2>
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+                <li aria-current="page">Hướng dẫn sử dụng</li>
+            </ol>
+        </nav>
 
-            <p>
-                Nếu bạn đang tìm giải pháp phòng tránh số lạ gọi đến và nhận diện các website giả mạo, thì <strong>SafePhone</strong> được tạo ra nhằm các mục tiêu đó!
-            </p>
-
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
+        <!-- ===== HERO ===== -->
+        <div class="hero">
+            <h1>Hướng dẫn sử dụng SafePhone: chặn số lạ, chặn web lừa đảo, bảo vệ người thân</h1>
+            <p class="lede">An toàn trên không gian mạng cũng là an toàn ngoài đời thật. Dưới đây là 12 hướng dẫn từng bước giúp bạn cài đặt SafePhone, chặn cuộc gọi lừa đảo, chặn website giả mạo và nhận cảnh báo khi bố mẹ, con cái gặp rủi ro.</p>
+            <div class="cta">
+                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" title="Tải SafePhone trên Google Play" rel="noopener">
+                    <img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="175" height="52">
                 </a>
-            </p>
+                <a class="btn" href="https://youtu.be/qJEXUKpFI2Y" rel="noopener">▶ Video hướng dẫn cài đặt</a>
+            </div>
+            <nav class="toc" aria-label="Mục lục">
+                <a href="#cai-dat">Cài đặt</a>
+                <a href="#chan-cuoc-goi">Chặn cuộc gọi</a>
+                <a href="#chan-web">Chặn web lừa đảo</a>
+                <a href="#canh-bao">Cảnh báo người thân</a>
+                <a href="#nang-cao">Nâng cao</a>
+                <a href="#faq">Câu hỏi thường gặp</a>
+            </nav>
         </div>
-        <div class="page__content" style="margin-top: 2em">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    </div>
 
-                <div class="col mb-4">
-                    <a href="block-blacklisted-incoming-call.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Cách chặn số điện thoại lừa đảo</h5>
-                                <p class="card-text">Hướng dẫn chặn các số điện thoại nằm trong danh sách đen để tránh bị lừa đảo.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+    <!-- ===== INSTALL ===== -->
+    <section id="cai-dat">
+        <div class="wrap">
+            <h2>Cài đặt SafePhone trên Android</h2>
+            <p class="intro">SafePhone được thiết kế theo dạng module — bạn không cần bật toàn bộ tính năng, chỉ cần chọn chế độ phù hợp với nhu cầu của gia đình.</p>
+            <ol class="steps">
+                <li><h3>Tải app từ Google Play</h3><p><a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">Tải SafePhone</a> về điện thoại Android, hoặc xem <a href="https://youtu.be/qJEXUKpFI2Y" rel="noopener">video hướng dẫn cài đặt</a>.</p></li>
+                <li><h3>Cấp quyền chặn cuộc gọi</h3><p>Đặt SafePhone làm ứng dụng sàng lọc cuộc gọi. <a href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">Quyền sàng lọc cuộc gọi là gì?</a></p></li>
+                <li><h3>Cấp quyền kiểm tra link</h3><p>Đặt SafePhone làm trình duyệt mặc định để lọc mọi đường link. <a href="https://safephone.io.vn/url-screening-permission-on-android-and-ios.html">Quyền sàng lọc URL là gì?</a></p></li>
+                <li><h3>Bật tính năng bạn cần</h3><p>Chọn một trong các hướng dẫn bên dưới và làm theo từng bước.</p></li>
+            </ol>
+        </div>
+    </section>
 
-                <div class="col mb-4">
-                    <a href="build-trusted-contact-phone.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Chặn số lạ không cần blacklist</h5>
-                                <p class="card-text">Chỉ cho phép liên lạc từ danh bạ tin cậy mà không cần thu thập danh sách đen.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="block-incoming-call-by-number-patterns.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Chặn đầu số</h5>
-                                <p class="card-text">Chặn cuộc gọi dựa trên đầu số hoặc pattern của số điện thoại.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="send-alerts-when-receiving-calls.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Cảnh báo khi người dùng nhận cuộc gọi lạ</h5>
-                                <p class="card-text">Gửi cảnh báo khi nhận cuộc gọi đáng ngờ để bảo vệ gia đình.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="screening-urls-before-openning.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Chặn website lừa đảo</h5>
-                                <p class="card-text">Ngăn truy cập vào các trang web nguy hiểm trước khi mở.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="only-allow-access-trusted-sites.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Chỉ cho phép thiết bị truy cập các trang web tin cậy</h5>
-                                <p class="card-text">Duyệt web an toàn bằng cách chỉ cho phép truy cập danh sách trắng.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="how-to-check-a-websites-is-fake.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Kiểm tra website giả mạo</h5>
-                                <p class="card-text">Cách nhận biết một trang web có phải là giả mạo hay không.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="how-to-block-ads-url.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Chặn quảng cáo</h5>
-                                <p class="card-text">Loại bỏ các liên kết quảng cáo gây phiền nhiễu khi duyệt web.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="send-alert-when-open-url.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Cảnh báo khi người dùng mở link lừa đảo</h5>
-                                <p class="card-text">Nhận thông báo khi người thân truy cập link nguy hiểm.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="browse-internet-by-safephone-is-safer.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Cách lướt web an toàn</h5>
-                                <p class="card-text">Các nguyên tắc giúp bạn duyệt web an toàn hơn mỗi ngày.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="create-slack-channel.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Tạo kênh Slack cảnh báo</h5>
-                                <p class="card-text">Hướng dẫn tạo kênh Slack để chia sẻ cảnh báo giữa các thành viên.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col mb-4">
-                    <a href="how-to-create-ai-api-keys.html" class="text-decoration-none text-dark">
-                        <div class="card h-100">
-                            <img src="assets/banner.png" class="card-img-top" alt="safephone banner">
-                            <div class="card-body">
-                                <h5 class="card-title">Hướng dẫn tích hợp với AI trên SafePhone</h5>
-                                <p class="card-text">Tăng tối đa khả năng phát hiện website giả mạo</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
+    <!-- ===== CALLS ===== -->
+    <section id="chan-cuoc-goi">
+        <div class="wrap">
+            <h2>Chặn cuộc gọi lừa đảo và số lạ</h2>
+            <p class="intro">Ba cách chặn cuộc gọi, từ nhẹ đến chặt: chặn số đã bị báo cáo, chặn theo đầu số, hoặc chỉ nhận cuộc gọi từ danh bạ.</p>
+            <div class="guides">
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">📵 Cách chặn số lạ, số lừa đảo</a></h3>
+                    <p>Tự động chặn số spam, số lừa đảo đã bị cộng đồng báo cáo trước khi điện thoại đổ chuông.</p>
+                    <p class="for">Phù hợp: mọi người dùng</p>
+                    <a class="more" href="https://safephone.io.vn/block-blacklisted-incoming-call.html">Xem hướng dẫn chặn số lạ →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">🔢 Cách chặn đầu số, số có quy luật</a></h3>
+                    <p>Chặn theo đầu số (028, 024, 058…), đuôi số hoặc mẫu số đáng ngờ mà vẫn không lỡ cuộc gọi quan trọng.</p>
+                    <p class="for">Phù hợp: người hay nhận cuộc gọi quảng cáo, telesale</p>
+                    <a class="more" href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">Xem hướng dẫn chặn đầu số →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/build-trusted-contact-phone.html">📞 Chặn cuộc gọi ngoài danh bạ</a></h3>
+                    <p>Chỉ cho phép số trong danh bạ và các tổ chức tin cậy gọi đến — chặn 100% số lạ mà không cần danh sách đen.</p>
+                    <p class="for">Phù hợp: bố mẹ lớn tuổi, trẻ em</p>
+                    <a class="more" href="https://safephone.io.vn/build-trusted-contact-phone.html">Xem hướng dẫn chặn cuộc gọi ngoài danh bạ →</a>
+                </article>
             </div>
         </div>
-    </article>
+    </section>
 
+    <!-- ===== WEB ===== -->
+    <section id="chan-web">
+        <div class="wrap">
+            <h2>Chặn trang web lừa đảo, link giả mạo và quảng cáo</h2>
+            <p class="intro">Khi SafePhone là trình duyệt mặc định, mọi đường link được kiểm tra trước khi mở để chặn trang phishing, website giả mạo và nội dung độc hại.</p>
+            <div class="guides">
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/screening-urls-before-openning.html">🔗 Cách chặn trang web lừa đảo</a></h3>
+                    <p>Lọc link theo danh sách đen, tự động chặn đường dẫn độc hại trước khi mở trên Android.</p>
+                    <p class="for">Phù hợp: mọi người dùng</p>
+                    <a class="more" href="https://safephone.io.vn/screening-urls-before-openning.html">Xem hướng dẫn chặn web lừa đảo →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">🕵️ Cách kiểm tra trang web lừa đảo</a></h3>
+                    <p>Nhận biết website giả mạo ngân hàng, sàn thương mại điện tử và dùng SafePhone để check web trước khi nhập thông tin.</p>
+                    <p class="for">Phù hợp: người mua sắm online, giao dịch ngân hàng</p>
+                    <a class="more" href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">Xem cách kiểm tra web lừa đảo →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/only-allow-access-trusted-sites.html">🛡️ Chặn web đen, chỉ mở web tin cậy</a></h3>
+                    <p>Chỉ cho phép truy cập các trang web đã duyệt — chặn web đen, web cờ bạc và mọi trang lạ.</p>
+                    <p class="for">Phù hợp: trẻ em, người lớn tuổi</p>
+                    <a class="more" href="https://safephone.io.vn/only-allow-access-trusted-sites.html">Xem hướng dẫn chặn web đen →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/how-to-block-ads-url.html">🚫 Cách chặn quảng cáo trên Android</a></h3>
+                    <p>Bật một nút gạt để chặn quảng cáo Facebook, Google và link quảng cáo dẫn đến trang lừa đảo.</p>
+                    <p class="for">Phù hợp: mọi người dùng</p>
+                    <a class="more" href="https://safephone.io.vn/how-to-block-ads-url.html">Xem hướng dẫn chặn quảng cáo →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/browse-internet-by-safephone-is-safer.html">🌐 Cách lướt web an toàn</a></h3>
+                    <p>Dùng SafePhone làm trình duyệt hằng ngày: tự kiểm tra link, chặn trang giả mạo và ẩn quảng cáo.</p>
+                    <p class="for">Phù hợp: người ít kinh nghiệm công nghệ</p>
+                    <a class="more" href="https://safephone.io.vn/browse-internet-by-safephone-is-safer.html">Xem cách lướt web an toàn →</a>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== ALERTS ===== -->
+    <section id="canh-bao">
+        <div class="wrap">
+            <h2>Cảnh báo khi người thân gặp cuộc gọi hoặc link lừa đảo</h2>
+            <p class="intro">Nhận thông báo ngay khi bố mẹ hoặc con cái nhận cuộc gọi từ số lạ hay bấm vào đường link đáng ngờ, để kịp thời gọi lại và hỗ trợ.</p>
+            <div class="guides">
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html">🚨 Bảo vệ người thân khỏi cuộc gọi lừa đảo</a></h3>
+                    <p>Nhận cảnh báo tức thì khi người thân nhận cuộc gọi từ số lạ, trước khi kẻ gian kịp thao túng.</p>
+                    <p class="for">Phù hợp: con cái có bố mẹ lớn tuổi</p>
+                    <a class="more" href="https://safephone.io.vn/send-alerts-when-receiving-calls.html">Xem hướng dẫn cảnh báo cuộc gọi lạ →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/send-alert-when-open-url.html">👨‍👩‍👧 Cảnh báo khi người thân bấm link lạ</a></h3>
+                    <p>Biết ngay khi con cái hoặc bố mẹ mở một đường link lừa đảo hay nằm trong danh sách đen.</p>
+                    <p class="for">Phù hợp: phụ huynh, gia đình nhiều thế hệ</p>
+                    <a class="more" href="https://safephone.io.vn/send-alert-when-open-url.html">Xem hướng dẫn cảnh báo link lạ →</a>
+                </article>
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/create-slack-channel.html">⚙️ Tạo kênh Slack nhận cảnh báo</a></h3>
+                    <p>Thiết lập kênh Slack cho gia đình trong 5 bước: tạo kênh, tạo bot, lấy Bot Token, mời bot và lấy Channel ID.</p>
+                    <p class="for">Cần làm trước khi bật hai tính năng cảnh báo bên trên</p>
+                    <a class="more" href="https://safephone.io.vn/create-slack-channel.html">Xem hướng dẫn tạo kênh Slack →</a>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== ADVANCED ===== -->
+    <section id="nang-cao">
+        <div class="wrap">
+            <h2>Nâng cao: tích hợp AI để phát hiện nội dung lừa đảo</h2>
+            <div class="guides">
+                <article class="guide">
+                    <h3><a href="https://safephone.io.vn/how-to-create-ai-api-keys.html">🤖 Tạo API key OpenAI, DeepSeek cho SafePhone</a></h3>
+                    <p>Kết nối SafePhone với AI để tăng khả năng phát hiện nội dung giả mạo, kèm lưu ý bảo mật API key.</p>
+                    <p class="for">Phù hợp: người dùng muốn độ chính xác cao hơn</p>
+                    <a class="more" href="https://safephone.io.vn/how-to-create-ai-api-keys.html">Xem hướng dẫn tích hợp AI →</a>
+                </article>
+            </div>
+            <p style="margin-top:20px">Muốn hiểu SafePhone phát hiện lừa đảo ra sao? Đọc <a href="https://safephone.io.vn/safephone-mechanism.html">cơ chế hoạt động của SafePhone</a>, hoặc xem <a href="https://safephone.io.vn/security_handbook.html">cẩm nang an ninh mạng</a> để nhận biết các chiêu trò lừa đảo mới nhất.</p>
+        </div>
+    </section>
+
+    <!-- ===== FAQ (mirrors FAQPage JSON-LD above — keep both in sync) ===== -->
+    <section id="faq">
+        <div class="wrap">
+            <h2>Câu hỏi thường gặp khi sử dụng SafePhone</h2>
+            <details>
+                <summary>SafePhone cần những quyền gì trên điện thoại?</summary>
+                <p>Để chặn cuộc gọi, SafePhone cần quyền Sàng lọc cuộc gọi (Call Screening) của Android. Để kiểm tra và chặn đường link, bạn đặt SafePhone làm trình duyệt mặc định. Bạn chỉ cần cấp quyền cho những tính năng mình sử dụng.</p>
+            </details>
+            <details>
+                <summary>Nên bắt đầu dùng SafePhone từ tính năng nào?</summary>
+                <p>Với bố mẹ lớn tuổi, hãy bắt đầu bằng chặn cuộc gọi ngoài danh bạ và cảnh báo cuộc gọi lạ. Với trẻ em, hãy bật chặn trang web lừa đảo hoặc chỉ cho phép mở các trang web tin cậy. Với người dùng thông thường, bật chặn số lạ và kiểm tra link là đủ.</p>
+            </details>
+            <details>
+                <summary>Có bắt buộc dùng Slack để nhận cảnh báo không?</summary>
+                <p>Không. Các tính năng chặn cuộc gọi, chặn web và chặn quảng cáo hoạt động độc lập. Kênh Slack chỉ cần thiết nếu bạn muốn nhận cảnh báo khi người thân gặp cuộc gọi lạ hoặc bấm vào link đáng ngờ.</p>
+            </details>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap" style="text-align:center">
+            <h2>Bắt đầu bảo vệ điện thoại của bạn ngay hôm nay</h2>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener" style="display:inline-block">
+                <img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải app chống lừa đảo SafePhone trên Google Play" width="175" height="52" loading="lazy">
+            </a>
+        </div>
+    </section>
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
+
+<footer>
+    <div class="wrap cols">
+        <div>
+            <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+            <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+        </div>
+        <ul>
+            <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+            <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+            <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+            <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
 
 </body>
 </html>
