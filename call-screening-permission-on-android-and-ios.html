@@ -1,146 +1,373 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Quyền Sàng lọc cuộc gọi (Call Screening) trên Android và iOS</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="call screening permission, sàng lọc cuộc gọi, chặn cuộc gọi, cài đặt, android, ios" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Quyền Sàng lọc cuộc gọi (Call Screening) trên Android và iOS" />
-    <meta property="og:description" content="call screening permission, sàng lọc cuộc gọi, chặn cuộc gọi, cài đặt, android, ios" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quyền sàng lọc cuộc gọi (Call Screening) trên Android, iOS</title>
+  <meta name="description" content="Quyền sàng lọc cuộc gọi (Call Screening) là gì? Vì sao app chặn cuộc gọi cần quyền này trên Android, và iPhone khác biệt ra sao. Giải thích dễ hiểu.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">
+  <meta property="og:title" content="Quyền sàng lọc cuộc gọi (Call Screening) trên Android, iOS">
+  <meta property="og:description" content="Vì sao app chặn cuộc gọi trên Android cần quyền Sàng lọc cuộc gọi, quyền này cho phép làm gì, và vì sao iPhone không chặn được theo cách tương tự.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quyền sàng lọc cuộc gọi (Call Screening) trên Android, iOS">
+  <meta name="twitter:description" content="Vì sao app chặn cuộc gọi trên Android cần quyền Sàng lọc cuộc gọi, quyền này cho phép làm gì, và vì sao iPhone không chặn được theo cách tương tự.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/call-screening-permission-on-android-and-ios.html#article",
+      "headline": "Quyền sàng lọc cuộc gọi (Call Screening) là gì? Khác biệt trên Android và iOS",
+      "description": "Quyền sàng lọc cuộc gọi (Call Screening) là gì? Vì sao app chặn cuộc gọi cần quyền này trên Android, và iPhone khác biệt ra sao. Giải thích dễ hiểu.",
+      "inLanguage": "vi-VN",
+      "mainEntityOfPage": "https://safephone.io.vn/call-screening-permission-on-android-and-ios.html",
+      "image": "https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/#app"
+      },
+      "keywords": "quyền sàng lọc cuộc gọi, call screening Android, chặn cuộc gọi iPhone, ứng dụng sàng lọc cuộc gọi, Call Directory Extension, CallKit"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cẩm nang an ninh mạng",
+          "item": "https://safephone.io.vn/security_handbook.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Quyền sàng lọc cuộc gọi",
+          "item": "https://safephone.io.vn/call-screening-permission-on-android-and-ios.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quyền sàng lọc cuộc gọi là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Đây là quyền trên Android (từ phiên bản 10) cho phép một ứng dụng nhận thông tin cuộc gọi đến, như số điện thoại, trước khi điện thoại đổ chuông để quyết định chặn, tắt chuông hay cho cuộc gọi đi qua."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Có thể cấp quyền sàng lọc cuộc gọi cho hai ứng dụng cùng lúc không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không. Tại mỗi thời điểm Android chỉ cho một ứng dụng giữ quyền sàng lọc cuộc gọi. Chọn ứng dụng mới sẽ thay thế ứng dụng cũ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ứng dụng có quyền sàng lọc cuộc gọi có nghe được cuộc gọi của tôi không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không. Quyền này chỉ cung cấp thông tin cuộc gọi như số gọi đến để ứng dụng quyết định chặn hay không, không cho phép nghe hay ghi âm nội dung cuộc gọi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Làm sao thu hồi quyền sàng lọc cuộc gọi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vào Cài đặt, Ứng dụng, Ứng dụng mặc định, Ứng dụng nhận dạng người gọi và chặn spam, rồi chọn ứng dụng khác hoặc Không có. Tên mục có thể khác tùy hãng điện thoại."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "iPhone có chặn cuộc gọi lừa đảo tự động được không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ứng dụng bên thứ ba trên iPhone chỉ nạp sẵn danh sách số bị chặn và gắn nhãn qua Call Directory Extension. iPhone có sẵn tùy chọn Silence Unknown Callers để im lặng cuộc gọi từ số lạ, và từ iOS 26 có tính năng sàng lọc cuộc gọi từ số lạ của chính Apple."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
-    </div>
-</nav>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Điều hướng chính">
+      <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+      <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+    </nav>
+  </div>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+        <li aria-current="page">Quyền sàng lọc cuộc gọi</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>Quyền sàng lọc cuộc gọi (Call Screening) là gì? Khác biệt trên Android và iOS</h1>
+      <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+      <p class="lede">Khi cài một ứng dụng chặn cuộc gọi rác trên Android, bạn thường được yêu cầu cấp <strong>quyền sàng lọc cuộc gọi</strong> (Call Screening). Quyền sàng lọc cuộc gọi cho phép ứng dụng xem số gọi đến và quyết định chặn hay cho đổ chuông <em>trước khi</em> điện thoại reo. Bài viết giải thích quyền này làm được gì, có an toàn không, cách cấp và thu hồi, và vì sao iPhone không cho phép chặn cuộc gọi theo cách tương tự.</p>
+      <div class="cta-box">
+        <p>Chặn số lạ, số lừa đảo tự động với SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Mục lục">
+        <strong>Nội dung bài viết</strong>
+        <ol>
+          <li><a href="#la-gi">Quyền sàng lọc cuộc gọi là gì?</a></li>
+          <li><a href="#lam-duoc-gi">Ứng dụng có quyền sàng lọc cuộc gọi làm được gì?</a></li>
+          <li><a href="#an-toan">Cấp quyền sàng lọc cuộc gọi có an toàn không?</a></li>
+          <li><a href="#cap-thu-hoi">Cách cấp và thu hồi quyền trên Android</a></li>
+          <li><a href="#iphone">Trên iPhone thì sao?</a></li>
+          <li><a href="#so-sanh">So sánh Android và iOS</a></li>
+          <li><a href="#safephone">SafePhone dùng quyền sàng lọc cuộc gọi để làm gì?</a></li>
+          <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+        </ol>
+      </nav>
 
-        <header class="page__header">
-            <h1 class="page__title">Quyền Sàng lọc cuộc gọi (Call Screening) trên Android và iOS</h1>
-        </header>
-        <div class="page__content">
-            <div>
-                <p><span><b>Cấp quyền Sàng lọc cuộc gọi là sao?</b></span></p>
+      <h2 id="la-gi">Quyền sàng lọc cuộc gọi là gì?</h2>
+      <p>Trên Android, “Cấp quyền Sàng lọc cuộc gọi” (Call Screening Permission) cho phép một ứng dụng nhận và xử lý thông tin cuộc gọi <strong>trước khi điện thoại đổ chuông</strong>. Về mặt kỹ thuật, Android (từ phiên bản 10) cung cấp vai trò “ứng dụng sàng lọc cuộc gọi” — trong phần cài đặt, mục này thường có tên <em>Ứng dụng nhận dạng người gọi và chặn spam</em> (Caller ID &amp; spam app).</p>
+      <p>Một số điểm quan trọng:</p>
+      <ul>
+        <li><strong>Mặc định không ứng dụng nào có quyền này</strong> cho đến khi bạn chủ động cấp cho một ứng dụng cụ thể.</li>
+        <li><strong>Tại mỗi thời điểm chỉ có một ứng dụng</strong> giữ quyền sàng lọc cuộc gọi. Chọn ứng dụng mới đồng nghĩa với việc thay thế ứng dụng cũ.</li>
+        <li><strong>Bạn có thể thu hồi hoặc cấp lại quyền bất kỳ lúc nào</strong>.</li>
+        <li>Theo tài liệu của Android, việc sàng lọc áp dụng cho cuộc gọi từ các số <strong>không có trong danh bạ</strong> — người quen đã lưu số vẫn gọi được bình thường.</li>
+      </ul>
 
-                <p>
-                    Trên Android, <span>“Cấp quyền Sàng lọc cuộc gọi” (Call Screening Permission)</span> nghĩa là bạn cho phép một ứng dụng nhận và xử lý cuộc gọi trước khi điện thoại đổ chuông, để ứng dụng có thể:
-                </p>
+      <h2 id="lam-duoc-gi">Ứng dụng có quyền sàng lọc cuộc gọi làm được gì?</h2>
+      <p>Khi có cuộc gọi đến, Android gửi thông tin cuộc gọi (như số điện thoại) cho ứng dụng sàng lọc. Ứng dụng có thể dùng thông tin này để:</p>
+      <ul>
+        <li><strong>Chặn cuộc gọi spam</strong>, cuộc gọi lừa đảo — điện thoại không đổ chuông.</li>
+        <li><strong>Từ chối cuộc gọi</strong> như thể bạn tự bấm từ chối.</li>
+        <li><strong>Tắt chuông</strong> cuộc gọi đáng ngờ thay vì chặn hẳn.</li>
+        <li><strong>Hiện cảnh báo</strong> “cuộc gọi rác / lừa đảo”, hoặc giúp xác định danh tính người gọi.</li>
+        <li>Tùy chọn <strong>không ghi vào nhật ký cuộc gọi</strong> hoặc <strong>không hiện thông báo cuộc gọi nhỡ</strong> cho cuộc gọi đã chặn.</li>
+      </ul>
+      <p>Tính năng tự động trả lời bằng trợ lý ảo mà bạn có thể đã nghe (ví dụ <em>Call Screen</em> của Google Assistant trên điện thoại Pixel) là tính năng riêng của ứng dụng Điện thoại của Google, không phải điều mà mọi ứng dụng có quyền sàng lọc cuộc gọi đều làm được.</p>
 
-                <ul>
-                    <li><span>Chặn cuộc gọi spam</span></li>
-                    <li><span>Hiện cảnh báo “cuộc gọi rác / lừa đảo”</span></li>
-                    <li><span>Tự động trả lời bằng trợ lý (Google Assistant Call Screening)</span></li>
-                    <li><span>Xác định danh tính người gọi</span></li>
-                    <li><span>Quyết định cho phép, từ chối, hoặc gửi vào voicemail</span></li>
-                </ul>
+      <h2 id="an-toan">Cấp quyền sàng lọc cuộc gọi có an toàn không?</h2>
+      <p>Quyền sàng lọc cuộc gọi cho ứng dụng biết <em>ai đang gọi</em> để quyết định chặn hay cho qua — quyền này không cho phép ứng dụng nghe hay ghi âm nội dung cuộc gọi. Dù vậy, số điện thoại gọi đến vẫn là dữ liệu cá nhân, nên hãy lưu ý:</p>
+      <ul>
+        <li>Chỉ cấp quyền cho ứng dụng tải từ Google Play, của nhà phát triển rõ ràng, có chính sách quyền riêng tư công khai.</li>
+        <li>Cẩn thận với ứng dụng “chặn cuộc gọi” được gửi qua link hoặc file APK — đây là chiêu phổ biến để phát tán mã độc. Xem <a href="https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html">cách nhận biết ứng dụng độc hại</a>.</li>
+        <li>Xem ứng dụng còn đòi những quyền nào khác (danh bạ, tin nhắn, trợ năng…) và chỉ cấp khi hiểu vì sao cần.</li>
+      </ul>
 
-                <p>
-                    <span>Các ứng dụng mặc định không được cấp quyền này cho đến khi bạn chủ đích cấp quyền cho 1 ứng dụng nhất định.</span>
-                    <span>Tại mỗi thời điểm chỉ có 1 ứng dụng được nhận quyền này.</span>
-                    <span>Bạn luôn có thể thu hồi quyền hoặc tái cấp quyền bất kì lúc nào.</span>
-                </p>
+      <h2 id="cap-thu-hoi">Cách cấp và thu hồi quyền sàng lọc cuộc gọi trên Android</h2>
+      <h3>Cấp quyền từ trong ứng dụng</h3>
+      <p>Thông thường, ứng dụng chặn cuộc gọi sẽ hiện hộp thoại hệ thống hỏi bạn có muốn đặt ứng dụng đó làm ứng dụng sàng lọc cuộc gọi không. Bạn chỉ cần chọn ứng dụng trong danh sách và xác nhận.</p>
+      <div class="gallery">
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png" alt="Hộp thoại Android chọn SafePhone làm ứng dụng sàng lọc cuộc gọi" loading="lazy"></a><figcaption>Hộp thoại chọn ứng dụng sàng lọc cuộc gọi trên Android</figcaption></figure>
+      </div>
+      <h3>Thay đổi hoặc thu hồi trong Cài đặt</h3>
+      <ol class="steps">
+        <li>Mở <em>Cài đặt</em> → <em>Ứng dụng</em>.</li>
+        <li>Chọn <em>Ứng dụng mặc định</em> (Default apps).</li>
+        <li>Chọn <em>Ứng dụng nhận dạng người gọi và chặn spam</em> (Caller ID &amp; spam app).</li>
+        <li>Chọn ứng dụng khác, hoặc chọn <em>Không có</em> để thu hồi quyền.</li>
+      </ol>
+      <div class="note"><strong>Lưu ý:</strong> tên mục có thể khác tùy hãng và phiên bản Android (Samsung, Xiaomi, Oppo…). Nếu không thấy, hãy gõ “mặc định” hoặc “spam” vào ô tìm kiếm trong Cài đặt.</div>
 
-                <p><span><b>Trên iPhone thì sao?</b></span></p>
+      <h2 id="iphone">Trên iPhone thì sao?</h2>
+      <p>iPhone không có quyền sàng lọc cuộc gọi dành cho ứng dụng bên thứ ba theo đúng nghĩa như Android. iOS không cho phép ứng dụng bên thứ ba:</p>
+      <ul>
+        <li>Nghe cuộc gọi trước khi bạn nghe</li>
+        <li>Trả lời cuộc gọi thay bạn, hoặc để trợ lý ảo nói chuyện với người gọi</li>
+        <li>Xem bản chép lời khi người gọi đang nói</li>
+        <li>Chặn theo đầu số, theo quy luật hoặc theo logic xử lý tại thời điểm có cuộc gọi</li>
+      </ul>
+      <p>Thay vào đó, iOS chỉ có cơ chế <strong>Call Blocking &amp; Identification</strong> (Apple gọi là <em>Call Directory Extension</em>, thuộc CallKit), cho phép ứng dụng:</p>
+      <ul>
+        <li>Nạp sẵn một danh sách số bị chặn (block list)</li>
+        <li>Gắn nhãn (tag) cho số gọi tới</li>
+      </ul>
+      <p>Danh sách này được nạp trước vào hệ thống; ứng dụng không “thấy” cuộc gọi khi nó đến nên không thể quyết định theo từng cuộc gọi. Bạn bật các ứng dụng này tại <em>Cài đặt</em> → <em>Điện thoại</em> (hoặc <em>Ứng dụng</em> → <em>Điện thoại</em>) → <em>Chặn &amp; ID cuộc gọi</em> / <em>Call Blocking &amp; Identification</em> (tên mục có thể khác tùy phiên bản). Vì vậy, tính năng “Chặn Mở Rộng” trên Android có thể chưa sử dụng được trên iOS.</p>
+      <h3>Tính năng có sẵn của Apple</h3>
+      <p>Apple có sẵn tùy chọn <em>Silence Unknown Callers</em> (im lặng cuộc gọi từ số lạ), đưa cuộc gọi từ số lạ vào thư thoại. Từ iOS 26, ứng dụng Điện thoại của Apple có thêm tùy chọn sàng lọc cuộc gọi từ số lạ (Screen Unknown Callers): iPhone hỏi người gọi là ai và lý do gọi, rồi hiện nội dung trả lời để bạn quyết định có nghe hay không. Đây là tính năng của chính Apple — ứng dụng bên thứ ba vẫn không có quyền tương tự.</p>
 
-                <p>
-                    Trên iPhone không có Call Screening đúng nghĩa như Android. Hiện tại iOS không cho phép:
-                </p>
+      <h2 id="so-sanh">So sánh sàng lọc cuộc gọi trên Android và iOS</h2>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Khả năng của ứng dụng bên thứ ba</th><th>Android (quyền sàng lọc cuộc gọi)</th><th>iOS (Call Directory Extension)</th></tr></thead>
+        <tbody>
+          <tr><td>Kiểm tra số khi cuộc gọi đến</td><td>Có</td><td>Không — chỉ nạp danh sách trước</td></tr>
+          <tr><td>Chặn số trong danh sách đen</td><td>Có</td><td>Có</td></tr>
+          <tr><td>Gắn nhãn “spam / lừa đảo”</td><td>Có</td><td>Có</td></tr>
+          <tr><td>Chặn theo đầu số, quy luật</td><td>Có</td><td>Không</td></tr>
+          <tr><td>Chỉ cho người trong danh bạ gọi đến</td><td>Có thể thực hiện</td><td>Không qua ứng dụng (dùng tùy chọn Silence Unknown Callers của Apple)</td></tr>
+          <tr><td>Số ứng dụng được cấp cùng lúc</td><td>Một</td><td>Có thể bật nhiều</td></tr>
+        </tbody>
+      </table>
+      </div>
 
-                <ul>
-                    <li><span>App nghe cuộc gọi trước khi bạn nghe</span></li>
-                    <li><span>App trả lời cuộc gọi thay bạn</span></li>
-                    <li><span>Assistant (Siri) nói chuyện với người gọi</span></li>
-                    <li><span>Xem transcript khi người gọi đang nói</span></li>
-                    <li><span>Chặn theo prefix, pattern, hoặc logic runtime</span></li>
-                </ul>
+      <h2 id="safephone">SafePhone dùng quyền sàng lọc cuộc gọi để làm gì?</h2>
+      <p>SafePhone cần quyền sàng lọc cuộc gọi để các chế độ chặn cuộc gọi hoạt động:</p>
+      <ul>
+        <li><a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">Chặn số lạ, số lừa đảo tự động</a> — chặn cuộc gọi từ các số trong danh sách đen.</li>
+        <li><a href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">Chặn đầu số, số có quy luật</a> — chặn một dãy số theo định dạng bạn chọn.</li>
+        <li><a href="https://safephone.io.vn/build-trusted-contact-phone.html">Chặn cuộc gọi ngoài danh bạ</a> — chỉ cho số tin cậy gọi đến, phù hợp cho người lớn tuổi và trẻ em.</li>
+        <li><a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html">Bảo vệ người thân khỏi cuộc gọi lừa đảo</a> — gửi cảnh báo khi người thân nhận cuộc gọi từ số lạ.</li>
+      </ul>
+      <p>Để bật, mở SafePhone → dãy biểu tượng tấm khiên → chọn chế độ chặn cuộc gọi → bấm <strong>“Kích hoạt lá chắn số lạ”</strong> → chọn SafePhone trong hộp thoại của Android. Tìm hiểu thêm trong bài <a href="https://safephone.io.vn/safephone-mechanism.html">SafePhone hoạt động như thế nào</a>. Chưa chắc nên chọn ứng dụng nào? Xem <a href="https://safephone.io.vn/compare-call-blocker-apps.html">so sánh ứng dụng chặn cuộc gọi tốt nhất</a>.</p>
 
-                <p>
-                    <span>Thay vào đó, iOS chỉ có “Call Blocking & Identification”, dùng để:</span>
-                </p>
+      <h2 id="ket-luan">Kết luận</h2>
+      <p>Quyền sàng lọc cuộc gọi là cơ chế chính thức của Android để một ứng dụng chặn cuộc gọi rác, lừa đảo trước khi điện thoại đổ chuông. Chỉ một ứng dụng giữ quyền này tại một thời điểm và bạn có thể thu hồi bất cứ lúc nào. Trên iPhone, ứng dụng bên thứ ba bị giới hạn ở việc nạp sẵn danh sách chặn và gắn nhãn, nên khả năng chặn linh hoạt như trên Android chưa thể thực hiện.</p>
+      <div class="cta-box">
+        <p>Cấp quyền sàng lọc cuộc gọi cho SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
 
-                <ul>
-                    <li><span>App thêm danh sách số bị chặn (block list)</span></li>
-                    <li><span>App gắn nhãn (tag) cho số gọi tới</span></li>
-                </ul>
+      <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+      <details>
+        <summary>Quyền sàng lọc cuộc gọi là gì?</summary>
+        <p>Đây là quyền trên Android (từ phiên bản 10) cho phép một ứng dụng nhận thông tin cuộc gọi đến, như số điện thoại, trước khi điện thoại đổ chuông để quyết định chặn, tắt chuông hay cho cuộc gọi đi qua.</p>
+      </details>
+      <details>
+        <summary>Có thể cấp quyền sàng lọc cuộc gọi cho hai ứng dụng cùng lúc không?</summary>
+        <p>Không. Tại mỗi thời điểm Android chỉ cho một ứng dụng giữ quyền sàng lọc cuộc gọi. Chọn ứng dụng mới sẽ thay thế ứng dụng cũ.</p>
+      </details>
+      <details>
+        <summary>Ứng dụng có quyền sàng lọc cuộc gọi có nghe được cuộc gọi của tôi không?</summary>
+        <p>Không. Quyền này chỉ cung cấp thông tin cuộc gọi như số gọi đến để ứng dụng quyết định chặn hay không, không cho phép nghe hay ghi âm nội dung cuộc gọi.</p>
+      </details>
+      <details>
+        <summary>Làm sao thu hồi quyền sàng lọc cuộc gọi?</summary>
+        <p>Vào Cài đặt, Ứng dụng, Ứng dụng mặc định, Ứng dụng nhận dạng người gọi và chặn spam, rồi chọn ứng dụng khác hoặc Không có. Tên mục có thể khác tùy hãng điện thoại.</p>
+      </details>
+      <details>
+        <summary>iPhone có chặn cuộc gọi lừa đảo tự động được không?</summary>
+        <p>Ứng dụng bên thứ ba trên iPhone chỉ nạp sẵn danh sách số bị chặn và gắn nhãn qua Call Directory Extension. iPhone có sẵn tùy chọn Silence Unknown Callers để im lặng cuộc gọi từ số lạ, và từ iOS 26 có tính năng sàng lọc cuộc gọi từ số lạ của chính Apple.</p>
+      </details>
 
-                <p>
-                    <span>Apple gọi API này là Call Directory Extension (CallKit).</span>
-                    <span>Vì vậy tính năng "Chặn Mở Rộng" trên Android có thể chưa sử dụng được trên iOS.</span>
-                </p>
-            </div>
-        </div>
-    </article>
-
-
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Xem thêm</h2>
+        <p class="grp">Chặn cuộc gọi lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/block-blacklisted-incoming-call.html"><b>Cách chặn số lạ, số lừa đảo tự động</b><span>Chặn số lừa đảo trước khi điện thoại đổ chuông.</span></a></li>
+          <li><a href="https://safephone.io.vn/compare-call-blocker-apps.html"><b>So sánh ứng dụng chặn cuộc gọi tốt nhất</b><span>Truecaller, Hiya, Call Blacklist và SafePhone.</span></a></li>
+          <li><a href="https://safephone.io.vn/build-trusted-contact-phone.html"><b>Chặn cuộc gọi ngoài danh bạ</b><span>Chỉ người trong danh bạ tin cậy mới gọi được.</span></a></li>
+          <li><a href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html"><b>Cách chặn đầu số, số có quy luật</b><span>Chặn theo đầu số mà không lỡ cuộc gọi quan trọng.</span></a></li>
+        </ul>
+        <p class="grp">Chặn web và link lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/url-screening-permission-on-android-and-ios.html"><b>Quyền sàng lọc URL trên Android và iOS</b><span>Cơ chế tương tự cho đường link: trình duyệt mặc định.</span></a></li>
+        </ul>
+      </aside>
+  </article>
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
 
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+      <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+      <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+      <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

@@ -1,241 +1,370 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Cơ chế hoạt động của ứng dụng SafePhone</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="chống lừa đảo, SafePhone, cơ chế hoạt động, an ninh mạng, bảo mật, an toàn thông tin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Cơ chế hoạt động của ứng dụng SafePhone" />
-    <meta property="og:description" content="chống lừa đảo, SafePhone, cơ chế hoạt động, an ninh mạng, bảo mật, an toàn thông tin" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafePhone hoạt động như thế nào? Cơ chế chặn lừa đảo</title>
+  <meta name="description" content="SafePhone hoạt động như thế nào? Tìm hiểu cách ứng dụng đối chiếu số điện thoại và đường link với danh sách đen, chặn lừa đảo kể cả khi không có mạng.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/safephone-mechanism.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/safephone-mechanism.html">
+  <meta property="og:title" content="SafePhone hoạt động như thế nào? Cơ chế chặn lừa đảo">
+  <meta property="og:description" content="Danh sách đen offline, danh bạ tín nhiệm, chặn theo đầu số, chặn quảng cáo, phân tích dấu hiệu giả mạo: 8 chế độ bảo vệ của SafePhone giải thích dễ hiểu.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SafePhone hoạt động như thế nào? Cơ chế chặn lừa đảo">
+  <meta name="twitter:description" content="Danh sách đen offline, danh bạ tín nhiệm, chặn theo đầu số, chặn quảng cáo, phân tích dấu hiệu giả mạo: 8 chế độ bảo vệ của SafePhone giải thích dễ hiểu.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/safephone-mechanism.html#article",
+      "headline": "SafePhone hoạt động như thế nào? Cơ chế chặn cuộc gọi và đường link lừa đảo",
+      "description": "SafePhone hoạt động như thế nào? Tìm hiểu cách ứng dụng đối chiếu số điện thoại và đường link với danh sách đen, chặn lừa đảo kể cả khi không có mạng.",
+      "inLanguage": "vi-VN",
+      "mainEntityOfPage": "https://safephone.io.vn/safephone-mechanism.html",
+      "image": "https://safephone.io.vn/assets/og-image.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/#app"
+      },
+      "keywords": "SafePhone hoạt động như thế nào, cơ chế chặn lừa đảo, chặn offline, danh sách đen, danh bạ tín nhiệm, chặn link lừa đảo"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cẩm nang an ninh mạng",
+          "item": "https://safephone.io.vn/security_handbook.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SafePhone hoạt động như thế nào",
+          "item": "https://safephone.io.vn/safephone-mechanism.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SafePhone có hoạt động khi không có Internet không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. Danh sách đen được nhúng trực tiếp vào ứng dụng và hoạt động offline, nên việc chặn số điện thoại và đường link trong danh sách đen vẫn hoạt động khi không có kết nối Internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Danh sách đen của SafePhone được cập nhật như thế nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Danh sách được tổng hợp từ các tổ chức quốc tế cảnh báo lừa đảo, trang tin tức, trang báo cáo số điện thoại, mạng xã hội và báo cáo của cộng đồng, rồi được cập nhật qua các phiên bản nâng cấp của ứng dụng. Hãy cập nhật SafePhone thường xuyên trên Google Play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SafePhone cần những quyền gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Để chặn cuộc gọi, SafePhone cần quyền Sàng lọc cuộc gọi. Để chặn đường link, bạn đặt SafePhone làm trình duyệt mặc định. Bạn có thể thu hồi các quyền này bất kỳ lúc nào trong Cài đặt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Trang web lừa đảo mới chưa có trong danh sách đen thì sao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Với trang chưa có trong danh sách đen và danh sách tín nhiệm, SafePhone phân tích nội dung trang để tìm dấu hiệu giả mạo thương hiệu và khuyến nghị bạn rời trang nếu phát hiện. Bạn có thể tích hợp thêm OpenAI hoặc DeepSeek để tăng khả năng phát hiện."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Có tự thêm số điện thoại vào danh sách đen được không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. Ngoài danh sách chung, bạn có thể tự thêm các số hoặc dãy số gần giống nhau vào danh sách đen tùy theo phát hiện của mình."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
-    </div>
-</nav>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Điều hướng chính">
+      <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+      <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+    </nav>
+  </div>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+        <li aria-current="page">SafePhone hoạt động như thế nào</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>SafePhone hoạt động như thế nào? Cơ chế chặn cuộc gọi và đường link lừa đảo</h1>
+      <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+      <p class="lede"><strong>SafePhone hoạt động như thế nào?</strong> Nói ngắn gọn, SafePhone đối chiếu số điện thoại gọi đến và đường link bạn bấm với danh sách đen được nhúng sẵn trong ứng dụng, rồi chặn hoặc cảnh báo <em>trước khi</em> bạn kịp tương tác — kể cả khi điện thoại không có kết nối Internet. Trang này giải thích từng cơ chế và 8 chế độ bảo vệ của ứng dụng.</p>
+      <div class="cta-box">
+        <p>Tải SafePhone – tường lửa chống lừa đảo</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Mục lục">
+        <strong>Nội dung bài viết</strong>
+        <ol>
+          <li><a href="#tong-quan">Tổng quan: SafePhone bảo vệ bạn ra sao?</a></li>
+          <li><a href="#offline">Danh sách đen hoạt động offline</a></li>
+          <li><a href="#thu-thap">Danh sách đen được thu thập như thế nào?</a></li>
+          <li><a href="#quyen">SafePhone cần những quyền gì?</a></li>
+          <li><a href="#che-do">8 chế độ hoạt động của SafePhone</a></li>
+          <li><a href="#chon-che-do">Nên bật chế độ nào?</a></li>
+          <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+        </ol>
+      </nav>
 
-        <header class="page__header">
-            <h1 class="page__title">Cơ chế hoạt động của ứng dụng SafePhone</h1>
-        </header>
-        <div class="page__content">
-            <div>
-                <h2>Tổng quan</h2>
+      <h2 id="tong-quan">Tổng quan: SafePhone bảo vệ bạn ra sao?</h2>
+      <p>SafePhone hoạt động như một lớp bảo vệ giúp bạn tránh các đường link độc hại và các cuộc gọi từ số lạ trước khi bạn vô tình tương tác với chúng.</p>
+      <h3>Với đường link</h3>
+      <p>Khi bạn mở một liên kết từ tin nhắn, mạng xã hội hoặc ứng dụng khác, SafePhone tự động kiểm tra xem đường link đó có nằm trong danh sách cảnh báo hay từng được báo cáo là nguy hiểm hay không:</p>
+      <ul>
+        <li>Nếu an toàn, bạn mở trang bình thường.</li>
+        <li>Nếu đáng ngờ, SafePhone chặn lại và hiển thị cảnh báo để bạn không bị dẫn vào trang giả mạo hay nội dung xấu.</li>
+      </ul>
+      <h3>Với cuộc gọi</h3>
+      <p>SafePhone dựa vào cơ sở dữ liệu số điện thoại rác, lừa đảo để cảnh báo hoặc chặn trước khi bạn nghe máy.</p>
+      <p>Sau khi bật, các quá trình này diễn ra tự động — bạn không cần hiểu về kỹ thuật hay thực hiện cài đặt phức tạp.</p>
 
-                <p>
-                    <span>SafePhone hoạt động như một lớp bảo vệ thông minh giúp bạn tránh khỏi các đường link độc hại và các cuộc gọi từ số lạ trước khi bạn vô tình tương tác với chúng.</span>
-                </p>
+      <h2 id="offline">Danh sách đen hoạt động offline, không cần Internet</h2>
+      <p>Danh sách đen hiện được nhúng trực tiếp vào ứng dụng và hoạt động offline. Nghĩa là ngay cả khi bạn không có kết nối Internet, việc đối chiếu số điện thoại và đường link với danh sách đen vẫn hoạt động bình thường.</p>
+      <div class="note"><strong>Lưu ý:</strong> vì danh sách đen nằm trong ứng dụng, danh sách mới được cập nhật qua các phiên bản nâng cấp của SafePhone. Hãy <strong>cập nhật ứng dụng thường xuyên</strong> trên <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">Google Play</a> để có danh sách mới nhất.</div>
 
-                <p>
-                    <span>Khi bạn mở một liên kết từ tin nhắn, mạng xã hội hoặc bất kỳ ứng dụng nào khác, SafePhone sẽ tự động kiểm tra xem đường link đó có nằm trong danh sách cảnh báo hay từng được báo cáo là nguy hiểm hay không.</span>
-                </p>
+      <h2 id="thu-thap">Danh sách đen được thu thập như thế nào?</h2>
+      <p>Danh sách đen được tổng hợp từ nhiều nguồn khác nhau nhằm tăng độ chính xác:</p>
+      <ul>
+        <li>Dữ liệu từ các tổ chức quốc tế chuyên cảnh báo về lừa đảo, phishing và trang web độc hại.</li>
+        <li>Với số điện thoại: thông tin từ các trang tin tức, các trang báo cáo số điện thoại và mạng xã hội.</li>
+        <li>Báo cáo của cộng đồng người dùng khi gặp cuộc gọi đáng ngờ hoặc link lừa đảo.</li>
+        <li>Phân tích tự động các mẫu tấn công phổ biến để nhận diện đường link giả mạo ngân hàng, ví điện tử, mạng xã hội…</li>
+      </ul>
+      <p>Dữ liệu được kết hợp, đối chiếu và cập nhật thường xuyên để danh sách đen ngày càng đầy đủ hơn theo thời gian. Ngoài danh sách chung, bạn cũng có thể tự thêm số điện thoại hoặc dãy số gần giống nhau vào danh sách đen của mình.</p>
 
-                <ul>
-                    <li><span>Nếu an toàn, bạn có thể mở bình thường</span></li>
-                    <li><span>Nếu đáng ngờ, SafePhone sẽ chặn lại và hiển thị cảnh báo để bạn không bị dẫn vào trang giả mạo hay nội dung xấu</span></li>
-                </ul>
+      <h2 id="quyen">SafePhone cần những quyền gì?</h2>
+      <p>Để chặn trước khi bạn tương tác, SafePhone dùng hai cơ chế chính thức của Android. Bạn chủ động cấp và có thể thu hồi bất kỳ lúc nào:</p>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quyền</th><th>Cách cấp</th><th>Dùng cho</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sàng lọc cuộc gọi</strong></td><td>Chọn SafePhone làm ứng dụng sàng lọc cuộc gọi</td><td>Chế độ 1, 2, 3 — chặn cuộc gọi. Xem <a href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">quyền sàng lọc cuộc gọi trên Android và iOS</a></td></tr>
+          <tr><td><strong>Sàng lọc đường dẫn</strong></td><td>Đặt SafePhone làm trình duyệt mặc định</td><td>Chế độ 4, 5, 6 — chặn đường link. Xem <a href="https://safephone.io.vn/url-screening-permission-on-android-and-ios.html">quyền sàng lọc URL trên Android và iOS</a></td></tr>
+        </tbody>
+      </table>
+      </div>
 
-                <p>
-                    <span>Với cuộc gọi, SafePhone dựa vào cơ sở dữ liệu số điện thoại rác để cảnh báo hoặc chặn trước khi bạn nghe máy.</span>
-                    <span>Tất cả quá trình diễn ra hoàn toàn tự động, nhẹ nhàng và thân thiện, giúp bạn yên tâm hơn khi sử dụng điện thoại mỗi ngày mà không cần hiểu về kỹ thuật hay cài đặt phức tạp.</span>
-                </p>
+      <h2 id="che-do">8 chế độ hoạt động của SafePhone</h2>
+      <h3 id="den-sdt">1. Chặn số điện thoại trong danh sách đen</h3>
+      <p>Để kích hoạt, bạn cấp quyền <strong>Sàng lọc cuộc gọi</strong> cho SafePhone. Sau đó, SafePhone chặn cuộc gọi từ các số điện thoại đã có trong danh sách đen. Danh sách được cập nhật qua các phiên bản nâng cấp của ứng dụng, và bạn có thể tự thêm các số, hoặc dãy số gần giống nhau, tùy theo phát hiện của mình. Hướng dẫn: <a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">cách chặn số lạ, số lừa đảo tự động</a>.</p>
 
-                <p>
-                    <span>Danh sách đen hiện tại đang được nhúng trực tiếp vào ứng dụng và hoạt động offline, nghĩa là ngay cả khi bạn không có kết nối Internet, ứng dụng vẫn hoạt động bình thường.</span>
-                </p>
+      <h3 id="danh-ba">2. Chỉ nhận cuộc gọi từ danh bạ tín nhiệm</h3>
+      <p>Khi cần phương án “chặn nhầm còn hơn bỏ sót” — đặc biệt để bảo vệ người lớn tuổi và trẻ em mới dùng smartphone — SafePhone cung cấp cơ chế Whitelist (danh bạ tín nhiệm): chỉ cho phép các số đáng tin cậy gọi đến, gồm các số chính thống của những cơ quan, tổ chức phổ biến và các số đã lưu trong danh bạ. Mọi số nằm ngoài danh bạ này sẽ không gọi được khi chế độ đang bật. Bạn có thể bật/tắt tùy nhu cầu thực tế. Hướng dẫn: <a href="https://safephone.io.vn/build-trusted-contact-phone.html">chặn cuộc gọi ngoài danh bạ</a>.</p>
 
-                <p><span><b>Danh sách đen trong ứng dụng được thu thập như thế nào?</b></span></p>
+      <h3 id="dau-so">3. Chặn cuộc gọi theo đầu số</h3>
+      <p>Nếu chỉ muốn chặn một dãy số nhất định, bạn có thể chặn theo định dạng số điện thoại. Cơ chế này đặc biệt hữu ích khi muốn chặn các số đến từ những nhà mạng không có cơ chế KYC (xác minh danh tính chủ thuê bao) — loại số thường bị dùng cho cuộc gọi rác, cuộc gọi giả mạo gây nhiều thiệt hại tài chính cho người dân. Hướng dẫn: <a href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">cách chặn đầu số, số có quy luật</a>.</p>
 
-                <p>
-                    <span>Danh sách đen trong ứng dụng được thu thập từ nhiều nguồn khác nhau nhằm đảm bảo độ chính xác và cập nhật liên tục.</span>
-                </p>
+      <h3 id="den-url">4. Chặn đường link trong danh sách đen</h3>
+      <p>Để kích hoạt, bạn cấp quyền <strong>Sàng lọc đường dẫn</strong> bằng cách đặt SafePhone làm trình duyệt web mặc định. Khi đó, SafePhone kiểm tra các đường link bạn bấm vào; nếu link nằm trong danh sách đen, SafePhone thông báo và ngăn truy cập. Link trong danh sách đen là các trang có nội dung xấu độc, giả mạo nhằm lừa người xem tải phần mềm độc hại hoặc chuyển tiền. Hướng dẫn: <a href="https://safephone.io.vn/screening-urls-before-openning.html">cách chặn trang web lừa đảo</a>.</p>
 
-                <ul>
-                    <li><span>Tổng hợp dữ liệu từ các tổ chức quốc tế chuyên cảnh báo về lừa đảo, phishing và các trang web độc hại</span></li>
-                    <li><span>Bổ sung từ báo cáo của cộng đồng người dùng khi gặp cuộc gọi đáng ngờ hoặc link lừa đảo</span></li>
-                    <li><span>Tự động phân tích các mẫu tấn công phổ biến để nhận diện các đường link giả mạo (ngân hàng, ví điện tử, mạng xã hội...)</span></li>
-                </ul>
+      <h3 id="tin-cay-url">5. Chỉ mở các trang web tin cậy</h3>
+      <p>Với trẻ nhỏ hoặc người lớn tuổi còn thiếu kinh nghiệm với Internet, SafePhone có cơ chế Whitelist cho website: chỉ cho truy cập các website uy tín, có nguồn gốc rõ ràng, và mặc định chặn mọi website chưa được kiểm duyệt. Đây là mức bảo vệ chặt nhất, giúp giảm tối đa nguy cơ vào nhầm website giả mạo. Hướng dẫn: <a href="https://safephone.io.vn/only-allow-access-trusted-sites.html">chặn web đen, chỉ mở web tin cậy</a>.</p>
 
-                <p>
-                    <span>Tất cả dữ liệu được kết hợp, đối chiếu và cập nhật thường xuyên, giúp danh sách đen ngày càng đầy đủ, chính xác và có khả năng bảo vệ người dùng tốt hơn theo thời gian.</span>
-                </p>
-                <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-                    <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
+      <h3 id="quang-cao">6. Chặn đường link quảng cáo</h3>
+      <p>Quảng cáo là một trong những cách dẫn dụ người dùng đến website giả mạo — không phải vì quảng cáo xấu, mà vì khâu kiểm duyệt nội dung quảng cáo còn lỏng lẻo. Khi bật chế độ này, nếu bạn bấm vào một quảng cáo, SafePhone chặn truy cập vào đường link của quảng cáo đó. Ngoài ra, khi truy cập Internet bằng SafePhone, các kết quả tìm kiếm được tài trợ bằng tiền quảng cáo sẽ được ẩn đi. Hướng dẫn: <a href="https://safephone.io.vn/how-to-block-ads-url.html">cách chặn quảng cáo trên Android</a>.</p>
 
-                    <p>
-                        Nếu bạn đang tìm kiếm giải pháp giúp phòng ngừa các website giả mạo, website lừa đảo, hay website phát tán mã độc, hãy tải ngay <strong>SafePhone</strong>!
-                    </p>
+      <h3 id="gia-mao">7. Phát hiện dấu hiệu giả mạo thương hiệu</h3>
+      <p>Khi bạn truy cập một trang web chưa có trong danh sách đen lẫn danh sách tín nhiệm, SafePhone phân tích nội dung trang để tìm dấu hiệu giả mạo. Nếu phát hiện, SafePhone hiện thông báo và khuyến nghị bạn rời trang ngay. Cơ chế này giúp bảo vệ cả khi danh sách đen chưa kịp cập nhật.</p>
+      <p>Ngoài khả năng tự kiểm tra, SafePhone cho phép tích hợp với các AI như OpenAI hoặc DeepSeek để tăng khả năng phát hiện giả mạo. Việc tích hợp là tùy chọn, tùy mức độ bảo vệ bạn mong muốn — xem <a href="https://safephone.io.vn/how-to-create-ai-api-keys.html">cách tạo API key OpenAI</a>.</p>
 
-                    <p style="margin-bottom:0;">
-                        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                            Tải SafePhone từ PlayStore
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div>
-                <h2>Các chế độ hoạt động của ứng dụng SafePhone</h2>
-                <h3>
-                    1. Chặn các số có trong danh sách đen
-                </h3>
-                <p>
-                    Để kích hoạt tính năng này, người dùng cần cấp quyền <strong>Sàng lọc cuộc gọi</strong> cho ứng dụng SafePhone.
-                    Sau khi có quyền Sàng lọc cuộc gọi, SafePhone sẽ chặn cuộc gọi từ các số điện thoại đã bị liệt kê trong danh sách đen.
-                    Danh sách đen được thu thập dựa trên các trang tin tức, báo cáo trên các trang báo cáo số điện thoại và các trang mạng xã hội.
-                    Danh sách này sẽ được cập nhật qua các phiên bản nâng cấp của ứng dụng.
-                    Ngoài ra, người dùng còn có thể tự thêm các số, hoặc dãy các số gần giống nhau vào danh sách đen tuỳ theo phát hiện của mỗi người dùng.
-                </p>
-                <h3>
-                    2. Chặn tất cả các số ngoại trừ các số đã lưu trong danh bạ
-                </h3>
-                <p>
-                    Trong trường hợp người dùng cần phương án bảo vệ "chặn nhầm còn hơn bỏ sót", đặc biệt là khi bảo vệ người lớn tuổi và trẻ em khi mới sử dụng smartphone và Internet,
-                    SafePhone cung cấp cơ chế Whitelist (danh bạ tín nhiệm), nhằm chỉ cho phép các số điện thoại đáng tin cậy gọi đến, bao gồm các số chính thống của các cơ quan tổ chức phổ biến và các số đã được lưu trong danh bạ điện thoại.
-                    Tất cả các số nằm ngoài danh bạ này sẽ không gọi được khi điện thoại đã cài SafePhone và kích hoạt chế độ này.
-                    Người dùng luôn có thể bật/tắt các chế độ này tuỳ ý, tuỳ theo tình hình và nhu cầu thực tế.
-                </p>
-                <h3>
-                    3. Chặn cuộc gọi theo đầu số
-                </h3>
-                <p>
-                    Trong trường hợp người dùng chỉ muốn chặn 1 dãy các số nhất định, SafePhone cung cấp cơ chế chặn theo định dạng số điện thoại.
-                    Cơ chế này đặc biệt hữu ích khi người dùng muốn chặn tất cả các số đến từ các nhà mạng không có cơ chế KYC - cơ chế xác định danh tính người gọi.
-                    Các nhà mạng thiếu cơ chế KYC này là một trong các công cụ cho các cuộc gọi rác, cuộc gọi giả mạo đã gây rất nhiều thiệt hại về tiền tài cho người dân.
-                </p>
-                <h3>
-                    4. Chặn các đường link có trong danh sách đen
-                </h3>
-                <p>
-                    Để kích hoạt tính năng này, người dùng cần <strong>Cấp quyền Sàng lọc đường dẫn</strong> cho ứng dụng SafePhone.
-                    Để cấp quyền này, người dùng sẽ chủ động thiết lập SafePhone làm trình duyệt web mặc định trên điện thoại.
-                    Sau khi trở thành trình duyệt mặc định, SafePhone sẽ có thể kiểm tra tất cả đường link mà người dùng bấm vào, và nếu phát hiện đường dẫn đó nằm trong danh sách đen, SafePhone sẽ thông báo và ngăn chặn người dùng truy cập vào đường link đó.
-                    Các đường link trong danh sách đen là các trang web có nội dung xấu độc, giả mạo nhằm lừa phỉnh người xem tải xuống các phần mềm độc hại hoặc chuyển tiền.
-                </p>
-                <h3>
-                    5. Chặn tất cả đường link ngoại trừ các đường link có trong danh sách tín nhiệm
-                </h3>
-                <p>
-                    Trong trường hợp người dùng cần mức bảo vệ tuyệt đối trên Internet, đặc biệt là đối với con trẻ hoặc người lớn tuổi còn thiếu kinh nghiệm với Internet,
-                    SafePhone cung cấp cơ chế Whitelist - Danh bạ tín nhiệm, nhằm chỉ cho phép người dùng truy cập vào các website uy tín, có nguồn gốc rõ ràng, và mặc định chặn tất cả các website chưa được kiểm duyệt.
-                    Sử dụng SafePhone ở chế độ này, người dùng sẽ an tâm sẽ không bao giờ vào phải các website giả mạo.
-                </p>
-                <h3>
-                    6. Chặn tất cả các đường link quảng cáo
-                </h3>
-                <p>
-                    Một trong các cách dẫn dụ người dùng đến các website giả mạo là thông qua quảng cáo. Quảng cáo không xấu nhưng do hệ thống kiểm duyệt nội dung quảng cáo còn lỏng lẻo nên các đối tượng xấu đã lợi dụng quảng cáo để dẫn dụ người dùng.
-                    Do đó, ứng dụng SafePhone cho phép người dùng chặn quảng cáo.
-                    Khi bật chế độ này, nếu người dùng bấm vào 1 quảng cáo, SafePhone sẽ chặn truy cập vào đường link của quảng cáo đó.
-                    Ngoài ra, nếu người dùng truy cập Internet thông qua ứng dụng SafePhone, các kết quả tìm kiếm được tài trợ bằng tiền quảng cáo sẽ bị ẩn đi nhằm hạn chế tối đa việc người dùng vào phải các trang web giả mạo.
-                </p>
-                <h3>
-                    7. Tìm kiếm các dấu hiệu giả mạo các thương hiệu nổi tiếng trong nội dung trang web
-                </h3>
-                <p>
-                    Khi người dùng truy cập vào 1 trang web chưa được liệt kê trong danh sách đen và danh sách tín nhiệm, SafePhone sẽ thực hiện phân tích nội dung website để tìm xem có dấu hiệu giả mạo nào không.
-                    Nếu SafePhone phát hiện có dấu hiệu giả mạo từ nội dung của trang web, SafePhone sẽ hiện thông báo và khuyến nghị người dùng rời khỏi trang web đó ngay lập tức.
-                    Cơ chế này giúp bảo vệ người dùng ngay cả khi cơ sở dữ liệu trong danh sách đen chưa được cập nhật kịp thời.
-                    Ngoài khả năng tự kiểm tra nội dung trang web, SafePhone còn cho phép người dùng tích hợp với các AI nổi tiếng như OpenAI hoặc DeepSeek nhằm gia tăng khả năng phát hiện giả mạo. Người dùng có thể tích hợp hoặc không tuỳ vào nhu cầu được bảo vệ ở mức độ nào.
-                </p>
-                <h3>
-                    8. Trình duyệt web chú trọng bảo mật
-                </h3>
-                <p>
-                    Ứng dụng SafePhone cung cấp 1 Sandbox (môi trường cách ly) nhằm giúp người dùng truy cập Internet mà không lo lắng về các rủi ro bảo mật.
-                    Sandbox trong SafePhone là 1 trình duyệt web với các cấu hình bảo mật tăng cường nhằm giúp người dùng nhanh chóng hiểu và phát hiện các môi nguy khi truy cập Internet,
-                    bao gồm các Cookie, tracker và các website giả mạo. Sử dụng SafePhone thay vì các trình duyệt web khác sẽ giúp gia tăng quyền riêng tư và tính bảo mật.
-                </p>
-            </div>
-        </div>
-    </article>
+      <h3 id="trinh-duyet">8. Trình duyệt chú trọng bảo mật</h3>
+      <p>SafePhone cung cấp một Sandbox (môi trường cách ly): một trình duyệt web với cấu hình bảo mật tăng cường, giúp bạn nhanh chóng nhận ra các mối nguy khi truy cập Internet như Cookie, tracker và website giả mạo. Dùng SafePhone thay cho trình duyệt thông thường giúp tăng quyền riêng tư và tính bảo mật.</p>
 
+      <h2 id="chon-che-do">Nên bật chế độ nào?</h2>
+      <p>Các chế độ có thể bật/tắt riêng và kết hợp với nhau. Gợi ý theo nhu cầu:</p>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Nhu cầu</th><th>Chế độ gợi ý</th></tr></thead>
+        <tbody>
+          <tr><td>Người dùng thông thường, vẫn cần nhận cuộc gọi từ shipper, số lạ</td><td>1. Chặn số trong danh sách đen + 4. Chặn link trong danh sách đen + 6. Chặn quảng cáo</td></tr>
+          <tr><td>Hay bị làm phiền bởi một đầu số cụ thể</td><td>3. Chặn theo đầu số</td></tr>
+          <tr><td>Bố mẹ lớn tuổi, trẻ em mới dùng smartphone</td><td>2. Danh bạ tín nhiệm + 5. Chỉ mở web tin cậy</td></tr>
+          <tr><td>Muốn phát hiện cả trang giả mạo mới</td><td>7. Phát hiện dấu hiệu giả mạo (có thể tích hợp AI) + 8. Dùng trình duyệt SafePhone</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Để theo dõi an toàn cho người thân từ xa, bạn có thể bật thêm <a href="https://safephone.io.vn/send-alert-when-open-url.html">cảnh báo khi người thân bấm link lạ</a>.</p>
 
+      <h2 id="ket-luan">Kết luận</h2>
+      <p>SafePhone kết hợp danh sách đen nhúng sẵn (hoạt động cả khi không có mạng), danh sách tín nhiệm và phân tích dấu hiệu giả mạo để chặn cuộc gọi và đường link lừa đảo trước khi bạn tương tác. Bạn chọn mức bảo vệ phù hợp cho mình và người thân, và nhớ cập nhật ứng dụng thường xuyên để danh sách đen luôn mới.</p>
+      <div class="cta-box">
+        <p>Tải SafePhone và chọn chế độ bảo vệ phù hợp</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+
+      <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+      <details>
+        <summary>SafePhone có hoạt động khi không có Internet không?</summary>
+        <p>Có. Danh sách đen được nhúng trực tiếp vào ứng dụng và hoạt động offline, nên việc chặn số điện thoại và đường link trong danh sách đen vẫn hoạt động khi không có kết nối Internet.</p>
+      </details>
+      <details>
+        <summary>Danh sách đen của SafePhone được cập nhật như thế nào?</summary>
+        <p>Danh sách được tổng hợp từ các tổ chức quốc tế cảnh báo lừa đảo, trang tin tức, trang báo cáo số điện thoại, mạng xã hội và báo cáo của cộng đồng, rồi được cập nhật qua các phiên bản nâng cấp của ứng dụng. Hãy cập nhật SafePhone thường xuyên trên Google Play.</p>
+      </details>
+      <details>
+        <summary>SafePhone cần những quyền gì?</summary>
+        <p>Để chặn cuộc gọi, SafePhone cần quyền Sàng lọc cuộc gọi. Để chặn đường link, bạn đặt SafePhone làm trình duyệt mặc định. Bạn có thể thu hồi các quyền này bất kỳ lúc nào trong Cài đặt.</p>
+      </details>
+      <details>
+        <summary>Trang web lừa đảo mới chưa có trong danh sách đen thì sao?</summary>
+        <p>Với trang chưa có trong danh sách đen và danh sách tín nhiệm, SafePhone phân tích nội dung trang để tìm dấu hiệu giả mạo thương hiệu và khuyến nghị bạn rời trang nếu phát hiện. Bạn có thể tích hợp thêm OpenAI hoặc DeepSeek để tăng khả năng phát hiện.</p>
+      </details>
+      <details>
+        <summary>Có tự thêm số điện thoại vào danh sách đen được không?</summary>
+        <p>Có. Ngoài danh sách chung, bạn có thể tự thêm các số hoặc dãy số gần giống nhau vào danh sách đen tùy theo phát hiện của mình.</p>
+      </details>
+
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Xem thêm</h2>
+        <p class="grp">Chặn cuộc gọi lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/block-blacklisted-incoming-call.html"><b>Cách chặn số lạ, số lừa đảo tự động</b><span>Bật lá chắn số lạ chỉ trong 1 phút.</span></a></li>
+          <li><a href="https://safephone.io.vn/build-trusted-contact-phone.html"><b>Chặn cuộc gọi ngoài danh bạ</b><span>Chỉ người trong danh bạ tín nhiệm mới gọi được.</span></a></li>
+          <li><a href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html"><b>Cách chặn đầu số, số có quy luật</b><span>Chặn theo định dạng số điện thoại.</span></a></li>
+        </ul>
+        <p class="grp">Chặn web và link lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/screening-urls-before-openning.html"><b>Cách chặn trang web lừa đảo</b><span>Tự động chặn link độc hại trước khi mở trên Android.</span></a></li>
+          <li><a href="https://safephone.io.vn/only-allow-access-trusted-sites.html"><b>Chặn web đen, chỉ mở web tin cậy</b><span>Chỉ cho phép truy cập các trang đã duyệt.</span></a></li>
+          <li><a href="https://safephone.io.vn/how-to-block-ads-url.html"><b>Cách chặn quảng cáo trên Android</b><span>Chặn quảng cáo Facebook, Google dẫn đến trang lừa đảo.</span></a></li>
+        </ul>
+        <p class="grp">Hỗ trợ</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/how-to-create-ai-api-keys.html"><b>Tạo API key OpenAI</b><span>Tích hợp AI để tăng khả năng phát hiện giả mạo.</span></a></li>
+        </ul>
+      </aside>
+  </article>
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
 
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+      <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+      <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+      <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

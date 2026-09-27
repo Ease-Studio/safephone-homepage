@@ -1,336 +1,407 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Cách nhận biết ứng dụng độc hại</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="Cách để nhận biết một ứng dụng di động có các hành vi đánh cắp thông tin người dùng, hoặc hack người dùng, hoặc dùng để lừa đảo" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Cách nhận biết ứng dụng độc hại" />
-    <meta property="og:description" content="Cách để nhận biết một ứng dụng di động có các hành vi đánh cắp thông tin người dùng, hoặc hack người dùng, hoặc dùng để lừa đảo" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-    <script type="application/ld+json">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cách nhận biết ứng dụng độc hại trên Android, iPhone</title>
+  <meta name="description" content="Cách nhận biết ứng dụng độc hại trên Android và iPhone: kiểm tra nguồn tải, quyền truy cập và dấu hiệu bất thường để tránh bị đánh cắp dữ liệu.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html">
+  <meta property="og:title" content="Cách nhận biết ứng dụng độc hại trên Android, iPhone">
+  <meta property="og:description" content="File APK từ link lạ, “app ngân hàng” qua TestFlight, ứng dụng đòi quyền quá mức: 3 bước nhận biết app độc hại trước khi bị đánh cắp dữ liệu.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cách nhận biết ứng dụng độc hại trên Android, iPhone">
+  <meta name="twitter:description" content="File APK từ link lạ, “app ngân hàng” qua TestFlight, ứng dụng đòi quyền quá mức: 3 bước nhận biết app độc hại trước khi bị đánh cắp dữ liệu.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html#article",
+      "headline": "Cách nhận biết ứng dụng độc hại trên Android và iPhone: 3 bước tự kiểm tra",
+      "description": "Cách nhận biết ứng dụng độc hại trên Android và iPhone: kiểm tra nguồn tải, quyền truy cập và dấu hiệu bất thường để tránh bị đánh cắp dữ liệu.",
+      "inLanguage": "vi-VN",
+      "mainEntityOfPage": "https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html",
+      "image": "https://safephone.io.vn/assets/og-image.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/#app"
+      },
+      "keywords": "nhận biết ứng dụng độc hại, app độc hại, kiểm tra quyền ứng dụng Android, file APK lừa đảo, TestFlight lừa đảo, ứng dụng giả mạo ngân hàng"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Cách nhận biết ứng dụng độc hại",
-            "description": "Cách để nhận biết một ứng dụng di động có các hành vi đánh cắp thông tin người dùng, hoặc hack người dùng, hoặc dùng để lừa đảo"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cẩm nang an ninh mạng",
+          "item": "https://safephone.io.vn/security_handbook.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Nhận biết ứng dụng độc hại",
+          "item": "https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html"
         }
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Làm sao nhận biết ứng dụng độc hại trên Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cảnh giác nếu ứng dụng không có trên Google Play mà phải cài bằng file APK, tên nhà phát triển không khớp thương hiệu, hoặc ứng dụng đòi quyền không liên quan như đọc tin nhắn, danh bạ, quyền trợ năng. Sau khi cài, máy nóng, chậm, hao pin bất thường cũng là dấu hiệu cần kiểm tra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ứng dụng trên Google Play và App Store có an toàn tuyệt đối không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không tuyệt đối. Cửa hàng chính thức loại bỏ phần lớn ứng dụng độc hại, nhưng kẻ gian có thể phát hành ứng dụng bình thường rồi cập nhật thêm quyền nguy hiểm sau. Vì vậy vẫn cần kiểm tra quyền truy cập trước và sau khi cài."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ngân hàng yêu cầu cài ứng dụng qua link hoặc TestFlight có phải lừa đảo không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gần như chắc chắn là lừa đảo. Ứng dụng ngân hàng thật luôn có trên Google Play và App Store. Hãy cúp máy và gọi lại tổng đài chính thức in trên thẻ để xác minh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quyền trợ năng (Accessibility) nguy hiểm thế nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quyền trợ năng cho phép ứng dụng đọc nội dung màn hình và thao tác thay bạn. Ứng dụng giả mạo thường lạm dụng quyền này để đọc OTP, tự chuyển tiền. Chỉ cấp cho ứng dụng thực sự cần và bạn tin tưởng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cách xem quyền của ứng dụng trên iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trước khi tải, xem phần Quyền riêng tư của ứng dụng trên App Store. Sau khi cài, vào Cài đặt, Quyền riêng tư và Bảo mật, chọn từng danh mục như Vị trí, Ảnh, Micrô để xem và thay đổi quyền của từng ứng dụng."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
-    </div>
-</nav>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Điều hướng chính">
+      <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+      <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+    </nav>
+  </div>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+        <li aria-current="page">Nhận biết ứng dụng độc hại</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>Cách nhận biết ứng dụng độc hại trên Android và iPhone: 3 bước tự kiểm tra</h1>
+      <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+      <p class="lede">Điện thoại là nơi lưu gần như mọi thứ — ảnh, thông tin cá nhân, tài khoản ngân hàng, cả mật khẩu — nên nó trở thành mục tiêu hàng đầu của tin tặc. Cách phổ biến nhất để đánh cắp dữ liệu trên điện thoại là lừa bạn tự cài một ứng dụng độc hại. Bài viết hướng dẫn cách <strong>nhận biết ứng dụng độc hại</strong> trên Android và iPhone qua 3 bước: kiểm tra nguồn tải, kiểm tra quyền truy cập và theo dõi dấu hiệu bất thường sau khi cài.</p>
+      <div class="cta-box">
+        <p>Phát hiện website giả mạo phát tán mã độc với SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Mục lục">
+        <strong>Nội dung bài viết</strong>
+        <ol>
+          <li><a href="#vi-sao">Vì sao ứng dụng độc hại là mối nguy lớn nhất trên điện thoại?</a></li>
+          <li><a href="#nguon-tai">Bước 1: Kiểm tra nguồn tải ứng dụng</a></li>
+          <li><a href="#quyen-truy-cap">Bước 2: Kiểm tra quyền truy cập ứng dụng yêu cầu</a></li>
+          <li><a href="#hieu-nang">Bước 3: Theo dõi hiệu năng sau khi cài</a></li>
+          <li><a href="#checklist">Checklist trước khi bấm “Cài đặt”</a></li>
+          <li><a href="#lo-cai">Lỡ cài ứng dụng độc hại thì làm gì?</a></li>
+          <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+        </ol>
+      </nav>
 
-        <header class="page__header">
-            <h1 class="page__title">Cách nhận biết ứng dụng độc hại</h1>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
+      <h2 id="vi-sao">Vì sao ứng dụng độc hại là mối nguy lớn nhất trên điện thoại?</h2>
+      <p>Ngày nay hầu như ai cũng có điện thoại thông minh, từ trẻ em đến người già, và nhiều người dành cho điện thoại nhiều thời gian hơn cả cho bạn bè, người thân. Thói quen lưu mọi thứ trong máy khiến điện thoại trở thành mục tiêu ưu tiên của các chiến dịch tấn công nhằm đánh cắp thông tin cá nhân, bí mật kinh doanh hoặc đơn giản là tiền.</p>
+      <p>Android và iOS có nhiều cơ chế bảo mật, nhưng điểm yếu nhất luôn là con người. Hầu hết sự cố “bị hack” bắt đầu từ <strong>social engineering</strong> — kỹ thuật thao túng tâm lý để người dùng tự tiết lộ thông tin, quyền truy cập hoặc tiền, thay vì tấn công vào máy móc. Trên điện thoại, trong đại đa số trường hợp, kẻ gian cần lừa bạn <em>tự cài</em> một ứng dụng độc hại; sau khi cài, ứng dụng âm thầm đánh cắp dữ liệu và gửi về cho chúng. Vì vậy, biết nhận biết ứng dụng độc hại là bạn đã chặn được phần lớn nguy cơ.</p>
+      <p>Phần còn lại là các cuộc tấn công khai thác lỗ hổng zero-day — hiếm gặp hơn và đòi hỏi kỹ năng hack thực thụ, được nhắc ngắn ở Bước 3. Tìm hiểu thêm về các dạng mã độc trong bài <a href="https://safephone.io.vn/malware-types-and-how-to-avoid.html">các loại mã độc</a> và bức tranh tổng thể ở <a href="https://safephone.io.vn/top-risks-on-internet.html">các mối nguy trên không gian mạng</a>.</p>
 
-            <p>
-                Nếu bạn đang tìm kiếm giải pháp để phát hiện các website giả mạo phát tán mã độc thì hãy tải ngay ứng dụng
-                <strong>SafePhone</strong>!
-            </p>
+      <h2 id="nguon-tai">Bước 1: Kiểm tra nguồn tải ứng dụng</h2>
+      <p>Nguyên tắc vàng: chỉ tải ứng dụng từ hai cửa hàng chính thức được cài sẵn trên điện thoại — <strong>Google Play</strong> (Android như Samsung, Pixel, Xiaomi, Oppo…) và <strong>App Store</strong> (iPhone). Không cài ứng dụng từ nguồn khác, bất kể lý do gì, khẩn cấp đến đâu hay ai yêu cầu.</p>
 
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
-                </a>
-            </p>
-        </div>
+      <h3>File APK trên Android: dấu hiệu lừa đảo rõ ràng nhất</h3>
+      <p>Ứng dụng Android được đóng gói thành tệp <code>.apk</code> và ký bằng chữ ký số của nhà phát triển. Ứng dụng trên Google Play còn gắn với tài khoản nhà phát triển đã đăng ký, cho người dùng biết ai đứng sau ứng dụng. Bạn có thể xem thông tin nhà phát triển (tên, email, địa chỉ, website) trong mục <em>Thông tin liên hệ của nhà phát triển</em> (App support) trên trang ứng dụng.</p>
+      <p>Tệp APK cũng có thể được cài trực tiếp: người dùng bấm vào tệp trong thư mục Tải xuống, Android hiện cảnh báo và hỏi quyền cài ứng dụng từ nguồn không xác định. Cách này vốn dành cho nhà phát triển thử nghiệm ứng dụng. Với người dùng thông thường, <strong>bị hướng dẫn tự cài file APK là dấu hiệu rõ ràng của ứng dụng độc hại</strong>. Nếu ai đó yêu cầu bạn làm các bước này, đừng tin và hãy báo cho cơ quan công an.</p>
+      <p>Một kịch bản lừa đảo điển hình qua file APK:</p>
+      <ol class="steps">
+        <li>Bạn thấy bài đăng trên Facebook: cài ứng dụng để nhận 1.000 USD miễn phí dành cho người dùng đầu tiên.</li>
+        <li>Bạn bấm link tải, điện thoại lưu tệp APK vào thư mục Tải xuống.</li>
+        <li>Bạn làm theo “hướng dẫn cài đặt” bên cạnh: mở Cài đặt, bật “cài ứng dụng từ nguồn không xác định”, rồi bấm vào tệp APK.</li>
+        <li>Android cảnh báo APK đến từ nguồn không xác định, nhưng hướng dẫn bảo bạn cứ bấm Chấp nhận.</li>
+        <li>Ứng dụng độc hại được cài và bắt đầu đánh cắp dữ liệu.</li>
+      </ol>
 
-        <div class="page__content">
-            <p>Ngày nay, hầu như ai cũng có điện thoại thông minh (smartphone), từ trẻ em đến người già.
-                Điện thoại thông minh giúp gia tăng năng suất và sự tiện lợi trong các hoạt động thường ngày.
-                Thực tế cho thấy, chúng ta hiện nay có thể đang dành nhiều thời gian cho điện thoại thông minh hơn là dành cho bạn bè & người thân.
-                Điện thoại thông minh đã và đang trở thành một phần thiết yếu của cuộc sống và dần trở thành một phụ kiện, và cũng là nơi cất giữ nhiều thông tin cá nhân của người dùng.
-                Mọi người lưu trữ gần như mọi thứ trong điện thoại của mình, từ hình ảnh, thông tin cá nhân đến tài khoản ngân hàng, có cả mật khẩu.
-                Thói quen này khiến điện thoại thông minh trở thành mục tiêu ưu tiên hàng đầu của tin tặc trong các chiến dịch tấn công mạng, nhằm đánh cắp thông tin cá nhân, bí mật kinh doanh, hoặc đơn giản là tiền bạc.
-                Các chiến dịch tấn công mạng này thường khai thác sự thiếu kiến thức của người dùng về các yếu tố bảo mật trên di động.
-                Android và iOS vốn cung cấp nhiều cơ chế để bảo mật giúp người dùng tránh khỏi bị tấn công, nhưng điểm yếu nhất trong hệ thống luôn là tâm lý con người.
-                Nếu bạn đang e ngại các cuộc tấn công mạng ngày nay, bài viết này có thể giúp bạn chuẩn bị tinh thần để chống lại một trong những yếu tố rủi ro cao nhất trong thời đại Internet: tội phạm mạng.</p>
-            <p>Hầu hết các sự cố an ninh mạng – hay còn gọi là bị hack - đều bắt đầu từ một phương pháp khai thác tâm lý và có thể được thực hiện bởi bất kỳ ai, được gọi là Social Engineering. Social Engineering là một loại thao túng mà kẻ gian lừa phỉnh người dùng để người dùng tự tiết lộ thông tin nhạy cảm, quyền truy cập hoặc tiền bạc – bằng cách khai thác các điểm yếu trong tâm lý con người thay vì tấn công vào máy móc.
-                Để đánh cắp dữ liệu từ điện thoại của bạn, 99% trường hợp, tin tặc cần lừa bạn cài đặt các ứng dụng độc hại.
-                Sau khi được cài đặt, các ứng dụng độc hại này sẽ âm thầm đánh cắp dữ liệu và gửi lại cho tin tặc.
-                Vì vậy, chỉ cần nhận biết ứng dụng nào là độc hại, bạn đã an toàn đến 99%.
-                1% còn lại liên quan đến các cuộc tấn công có sử dụng lỗ hổng Zero Day, đây là những cuộc tấn công mạng thực sự, đòi hỏi kiến thức và kỹ năng hack thực thụ, nhưng chủ đề này sẽ không được đề cập trong bài viết này.
-                Dưới đây là các bước giúp bạn tránh xa các ứng dụng độc hại trên smartphone:
-            </p>
+      <h3>Ứng dụng giả mạo trên iPhone qua TestFlight</h3>
+      <p>Ứng dụng iOS được đóng gói thành tệp <code>.ipa</code> và thường chỉ cài được qua App Store hoặc công cụ dành cho nhà phát triển như Xcode. Tuy nhiên, kẻ gian có thể lạm dụng <strong>TestFlight</strong> — công cụ chính thức của Apple để phân phối bản thử nghiệm (beta) trước khi phát hành trên App Store. TestFlight hợp pháp, nhưng có thể bị lợi dụng trong các vụ lừa đảo:</p>
+      <ol class="steps">
+        <li>Kẻ gian giả làm nhân viên ngân hàng hoặc công an, gọi điện, nói đúng tên, địa chỉ của bạn và đe dọa: “Tài khoản của bạn nhận tiền từ băng nhóm tội phạm”, “Cảnh sát đang điều tra bạn rửa tiền”. Chúng gửi link cài “ứng dụng nội bộ” để bạn “chứng minh mình vô tội”.</li>
+        <li>Bạn bấm link, iPhone chuyển sang App Store để cài TestFlight nếu máy chưa có.</li>
+        <li>Bạn được yêu cầu bấm link lần nữa — lần này ứng dụng giả được cài qua TestFlight.</li>
+        <li>Ứng dụng giả trông giống hệt ứng dụng ngân hàng thật nên bạn không nghi ngờ.</li>
+        <li>Ứng dụng đánh cắp dữ liệu hoặc lừa bạn nhập tên đăng nhập, mật khẩu, mã OTP, cả mã CVV của thẻ.</li>
+      </ol>
+      <div class="note"><strong>Ghi nhớ:</strong> ngân hàng và cơ quan công an không yêu cầu bạn cài ứng dụng qua đường link, TestFlight hay file APK. Ứng dụng ngân hàng thật luôn có trên Google Play và App Store. Link giả mạo thường đến qua tin nhắn — SafePhone có thể <a href="https://safephone.io.vn/screening-urls-before-openning.html">chặn trang web lừa đảo</a> trước khi bạn mở, và đa số cuộc gọi kiểu này có thể lọc bằng <a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">cách chặn số lạ, số lừa đảo tự động</a>.</div>
 
-            <h2>1. Đặc biệt chú ý đến nguồn tải app</h2>
+      <h2 id="quyen-truy-cap">Bước 2: Kiểm tra quyền truy cập ứng dụng yêu cầu</h2>
+      <p>Khi người dùng đã cảnh giác với nguồn tải lạ, kẻ gian chuyển sang chiêu thứ hai: <strong>ngụy trang ngay trên cửa hàng chính thức</strong>.</p>
+      <ol class="steps">
+        <li>Chúng tự viết hoặc mua mã nguồn một ứng dụng bình thường rồi phát hành trên Google Play, App Store.</li>
+        <li>Vì ứng dụng bình thường, cửa hàng chấp nhận và cho phép tải.</li>
+        <li>Các bản cập nhật sau thêm “tính năng mới” đòi quyền hệ thống: đọc danh bạ, nhật ký cuộc gọi, thư viện ảnh, vị trí GPS…</li>
+        <li>Chúng quảng cáo ứng dụng với tính năng “tuyệt vời”, đánh đúng nhu cầu của một nhóm người dùng.</li>
+        <li>Người dùng tò mò cài đặt từ cửa hàng chính thức.</li>
+        <li>Ứng dụng xin rất nhiều quyền; người dùng không để ý hoặc không hiểu nên bấm đồng ý hết.</li>
+        <li>Nhờ chính các quyền đó, ứng dụng lấy nhật ký cuộc gọi, ảnh, vị trí… từ điện thoại.</li>
+      </ol>
+      <p>Android và iOS đều bảo vệ dữ liệu nhạy cảm bằng hệ thống quyền: nhà phát triển phải khai báo quyền (ví dụ “truy cập ảnh”), và khi ứng dụng cần dùng, hệ điều hành hiện hộp thoại hỏi bạn. Chỉ khi bạn đồng ý, ứng dụng mới đọc được dữ liệu. Vì vậy, kiểm tra quyền là cách hiệu quả để nhận ra ứng dụng độc hại. Tên các mục dưới đây có thể khác tùy phiên bản và hãng điện thoại.</p>
 
-            <p>Nguyên tắc vàng đối với ứng dụng di động là bạn chỉ tải xuống từ các cửa hàng chính thống bao gồm 2 cửa hàng chính là: PlayStore và AppStore. PlayStore và AppStore được cài đặt sẵn trên mọi điện thoại thông minh.
-                Đối với bất kỳ ứng dụng nào, chỉ tải xuống từ ứng dụng PlayStore (đối với điện thoại Android như Samsung, Pixel, Nexus, v.v.) và ứng dụng AppStore (đối với iPhone).
-                Tuyệt đối KHÔNG cài đặt bất kỳ ứng dụng nào ngoài 2 cửa hàng chính thức này, bất kể lý do gì, mức độ khẩn cấp hay ai nói với bạn.</p>
-            <p>Trên Android, các ứng dụng di động được viết bằng ngôn ngữ Java và Kotlin, được xuất dưới dạng tệp APK (tệp có phần mở rộng .apk). Các tệp .apk này sau đó được ký bằng chữ ký số của chủ sở hữu – người đã đăng ký làm nhà phát triển trên PlayStore với thông tin pháp lý của họ.
-                Quá trình này là rất cần thiết vì nó có thể cho người dùng biết ai thực sự đứng sau một ứng dụng, và nếu bạn có bằng chứng về bất kỳ hoạt động độc hại nào, bạn biết phải kiện ai.
-                Thông tin về người phát triển ứng dụng cụ thể có thể được tìm thấy trong phần “Hỗ trợ ứng dụng” bên dưới logo của ứng dụng đó.</p>
-            <p>Tệp APK có thể được cài đặt trực tiếp vào điện thoại Android thông qua sự cho phép rõ ràng của người dùng.
-                Người dùng có thể chạm vào các tệp .apk được lưu trữ trong điện thoại của họ (ví dụ: trong thư mục Tải xuống hoặc thư mục Tài liệu), một cửa sổ bật lên sẽ hiển thị yêu cầu quyền cài đặt.
-                Nếu người dùng cho phép, tệp .apk sẽ được cài đặt.
-                Quá trình này thường dành cho các nhà phát triển để kiểm tra ứng dụng trước khi gửi lên Play Store.
-                Đối với người dùng thông thường, quá trình này là một dấu hiệu rõ ràng của một ứng dụng độc hại.
-                Vì vậy, nếu ai đó, vì bất kỳ lý do gì, yêu cầu bạn thực hiện các bước này theo cách thủ công, đừng tin họ và nhanh chóng báo cáo cho cảnh sát càng sớm càng tốt.
-                1 quy trình lừa đảo điển hình sẽ diễn ra như sau:</p>
-            <ol>
-                <li>Bạn đang sử dụng mạng xã hội như Facebook, thấy một bài đăng nói rằng hãy cài đặt một ứng dụng để nhận 1000 USD miễn phí như một phần thưởng dành cho người dùng đầu tiên.</li>
+      <h3>Cách kiểm tra quyền ứng dụng Android</h3>
+      <p><strong>Trước khi bấm Cài đặt:</strong></p>
+      <ol>
+        <li>Mở trang ứng dụng trên Google Play.</li>
+        <li>Mở mục <em>Giới thiệu về ứng dụng này</em> (About this app) → cuộn xuống <em>Quyền của ứng dụng</em> (App permissions) → <em>Xem thêm</em>.</li>
+        <li>Xem ứng dụng có thể truy cập những gì: vị trí, danh bạ, bộ nhớ, micrô, tin nhắn…</li>
+        <li>Đọc thêm mục <em>An toàn dữ liệu</em> (Data safety) để biết ứng dụng thu thập và chia sẻ dữ liệu gì.</li>
+      </ol>
+      <p><strong>Sau khi cài đặt:</strong></p>
+      <ol>
+        <li>Vào <em>Cài đặt</em> → <em>Quyền riêng tư</em> → <em>Trình quản lý quyền</em> (Permission manager).</li>
+        <li>Chọn một quyền, ví dụ <em>Vị trí</em>, để xem ứng dụng nào đang dùng.</li>
+        <li>Đặt mức phù hợp: <em>Luôn cho phép</em>, <em>Chỉ cho phép khi dùng ứng dụng</em>, hoặc <em>Không cho phép</em>.</li>
+      </ol>
+      <p>Mẹo: Android hỏi quyền ở lần dùng đầu tiên — đừng lúc nào cũng bấm “Cho phép”, hãy ưu tiên “Chỉ cho phép khi dùng ứng dụng”.</p>
 
-                <li>Bạn nhấp vào liên kết tải xuống, điện thoại của bạn tải nó vào thư mục Tải xuống.</li>
+      <h3>Cách kiểm tra quyền ứng dụng iPhone (iOS)</h3>
+      <p><strong>Trước khi bấm Tải:</strong></p>
+      <ol>
+        <li>Mở trang ứng dụng trên App Store.</li>
+        <li>Cuộn đến phần <em>Quyền riêng tư của ứng dụng</em> (App Privacy).</li>
+        <li>Xem dữ liệu ứng dụng có thể thu thập: vị trí, danh bạ, mã định danh, dữ liệu sử dụng…</li>
+      </ol>
+      <p><strong>Sau khi cài đặt:</strong></p>
+      <ol>
+        <li>Vào <em>Cài đặt</em> → <em>Quyền riêng tư &amp; Bảo mật</em>.</li>
+        <li>Chọn một danh mục như <em>Dịch vụ định vị</em>, <em>Ảnh</em>, <em>Micrô</em>.</li>
+        <li>Chọn ứng dụng và mức truy cập: <em>Không bao giờ</em>, <em>Hỏi lần sau</em>, <em>Khi dùng ứng dụng</em>, hoặc <em>Luôn luôn</em>.</li>
+      </ol>
 
-                <li>Bạn làm theo "hướng dẫn cài đặt" được viết bên cạnh liên kết tải xuống, nói rằng bạn mở ứng dụng Cài đặt, bật "cài đặt ứng dụng từ nguồn không xác định", sau đó mở thư mục Tải xuống, chạm vào tệp APK.</li>
+      <h3>Quyền nào đáng ngờ?</h3>
+      <p>Hãy tự hỏi: tính năng nào của ứng dụng cần đến quyền này? Nếu quyền quá nhiều so với tính năng, đó là dấu hiệu cảnh báo.</p>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Loại ứng dụng</th><th>Quyền hợp lý</th><th>Quyền đáng ngờ</th></tr></thead>
+        <tbody>
+          <tr><td>Đèn pin, máy tính, hình nền</td><td>Gần như không cần quyền gì (đèn pin có thể cần camera để bật đèn flash)</td><td>Danh bạ, tin nhắn, vị trí, trợ năng</td></tr>
+          <tr><td>Chỉnh sửa ảnh</td><td>Ảnh, camera</td><td>Nhật ký cuộc gọi, tin nhắn SMS</td></tr>
+          <tr><td>Trò chơi</td><td>Bộ nhớ, thông báo</td><td>Danh bạ, micrô, trợ năng</td></tr>
+          <tr><td>“Dọn rác”, “tăng tốc”, “nhận quà”</td><td>Hầu như không cần</td><td>Quyền trợ năng, quản trị thiết bị, hiển thị trên ứng dụng khác</td></tr>
+          <tr><td>Chặn cuộc gọi, ứng dụng gọi điện</td><td>Danh bạ, nhật ký cuộc gọi, quyền sàng lọc cuộc gọi</td><td>Tin nhắn SMS, ảnh (nếu không có tính năng liên quan)</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Đặc biệt cảnh giác với <strong>quyền trợ năng</strong> (Accessibility) và <strong>quyền quản trị thiết bị</strong>: chúng cho phép ứng dụng đọc màn hình, tự bấm thay bạn và khó bị gỡ — thường bị ứng dụng giả mạo ngân hàng lạm dụng. Muốn hiểu vì sao một ứng dụng bảo mật cần quyền nhất định, xem <a href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">quyền sàng lọc cuộc gọi trên Android và iOS</a>.</p>
 
-                <li>Điện thoại Android của bạn hiển thị một cửa sổ bật lên cho biết APK đến từ nguồn không xác định, nhưng theo hướng dẫn, nó nói rằng bạn chỉ cần nhấn Chấp nhận.</li>
-                <li>Sau đó, tệp APK độc hại sẽ được cài đặt và đánh cắp dữ liệu của bạn.</li>
-            </ol>
-            <p>Tương tự, trên iPhone, các ứng dụng iOS được viết bằng ngôn ngữ Swift và ObjectC, và được xuất dưới dạng tệp .ipa. Các tệp IPA có thể được cài đặt thông qua App Store hoặc thông qua các công cụ dành cho nhà phát triển như Xcode.
-                Thông thường, chúng ta không thể tự do cài đặt các tệp IPA trừ khi ứng dụng được ký bằng chứng chỉ hợp lệ hoặc iPhone được đăng ký để phát triển sản phẩm.
-                Nhưng vẫn có một thủ đoạn mà tin tặc có thể lừa người dùng cài đặt các tệp IPA độc hại: thông qua việc lạm dụng TestFlight.
-                TestFlight là công cụ chính thức của Apple để phân phối các phiên bản beta (thử nghiệm) của ứng dụng iOS trước khi chúng được phát hành công khai trên App Store.
-                Các nhà phát triển sử dụng nó để mời người thử nghiệm, thu thập phản hồi và sửa lỗi trước khi phát hành.
-                TestFlight là hợp pháp - nhưng nó có thể bị lạm dụng trong các cuộc tấn công sử dụng Social Engineering.
-                Quy trình lừa đảo lạm dụng TestFlight sẽ diễn ra như sau:</p>
-            <ol>
-                <li>Ai đó giả mạo nhân viên ngân hàng, gọi cho bạn, nói chính xác tên, địa chỉ của bạn và nói rằng "Tài khoản ngân hàng của bạn đang gặp rủi ro pháp lý do chuyển tiền từ băng đảng tội phạm" hoặc "Cảnh sát đang kiểm tra tài khoản của bạn vì họ nghĩ bạn rửa tiền", với giọng điệu khẩn cấp, nghiêm trọng và có phần đe dọa.
-                    Sau đó, họ gửi cho bạn một đường dẫn để cài đặt ứng dụng iOS nội bộ của họ nhằm chứng minh bạn vô tội.</li>
+      <h2 id="hieu-nang">Bước 3: Theo dõi hiệu năng điện thoại sau khi cài ứng dụng</h2>
+      <p>Nhờ quy trình kiểm duyệt của App Store và Google Play, phần lớn ứng dụng độc hại bị loại bỏ — nhưng đừng quá lạc quan. Ở cấp độ cao nhất là khai thác lỗ hổng <strong>zero-day</strong>: lỗ hổng chưa được công khai, kể cả trong giới chuyên gia, và chưa có bản vá.</p>
+      <p>Android và iOS cũng là phần mềm, nên có thể có lỗi và lỗ hổng. Các lỗ hổng này được săn tìm ráo riết, có cái được mua bán với giá cao hoặc được một số chính phủ sử dụng như vũ khí; khi rơi vào tay nhóm tấn công, chúng trở thành cửa ngõ xâm nhập điện thoại. Dù hiếm gặp với người dùng thông thường, sau khi cài một ứng dụng mới bạn vẫn nên để ý:</p>
+      <ul>
+        <li>Thiết bị có chậm hơn không?</li>
+        <li>Thiết bị có tự dưng nóng hơn, hao pin nhanh hơn không?</li>
+        <li>Có bị giật, lag bất thường không?</li>
+        <li>Có hành vi lạ nào khác: tự mở ứng dụng, dữ liệu di động tăng vọt, quảng cáo bật lên ngoài trình duyệt?</li>
+      </ul>
+      <p>Nhiều dạng khai thác tạo tải lớn lên thiết bị trong quá trình chạy, nên có thể khiến điện thoại chậm, nóng hoặc lag. Những dấu hiệu này không khẳng định chắc chắn máy bị tấn công, nhưng là lý do để gỡ ứng dụng vừa cài và kiểm tra kỹ. Cách phòng vệ tốt nhất trước zero-day là cập nhật hệ điều hành ngay khi có bản vá.</p>
 
-                <li>Bạn nhấn vào đường dẫn đó, iPhone sẽ chuyển hướng bạn đến ứng dụng TestFlight vì đó là đường dẫn mời cài đặt TestFlight và iPhone của bạn chưa cài đặt TestFlight.</li>
-                <li>Sau đó, bạn được yêu cầu nhấn vào đường dẫn một lần nữa, lần này ứng dụng giả mạo sẽ được cài đặt vào iPhone của bạn thông qua TestFlight.</li>
-                <li>Ứng dụng giả mạo trông giống hệt ứng dụng chính thức của ngân hàng nên bạn không hề nghi ngờ.</li>
-                <li>Nhưng sau đó, ứng dụng sẽ đánh cắp dữ liệu từ iPhone của bạn, hoặc lừa bạn điền tên người dùng, mật khẩu, thậm chí cả mã OTP và mã CVV.</li>
-            </ol>
+      <h2 id="checklist">Checklist trước khi bấm “Cài đặt”</h2>
+      <ul>
+        <li>Ứng dụng có trên Google Play hoặc App Store không? Không phải file APK, không phải link TestFlight từ người lạ.</li>
+        <li>Tên nhà phát triển có khớp với thương hiệu (ngân hàng, cơ quan nhà nước) không?</li>
+        <li>Số lượt tải, ngày phát hành và đánh giá có hợp lý? Cẩn thận với ứng dụng mới toanh nhưng đầy đánh giá 5 sao na ná nhau.</li>
+        <li>Quyền yêu cầu có tương xứng với tính năng?</li>
+        <li>Ai giới thiệu ứng dụng cho bạn? Người gọi điện, tin nhắn lạ, quảng cáo “nhận quà” đều là tín hiệu đỏ — xem <a href="https://safephone.io.vn/how-fake-advertisement-target-you.html">quảng cáo lừa đảo nhắm đến bạn như thế nào</a>.</li>
+        <li>Link tải có dẫn về đúng trang chủ chính thức? Nếu không chắc, dán vào SafePhone để <a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">kiểm tra trang web lừa đảo</a>.</li>
+      </ul>
 
-            <h2>2. Luôn kiểm tra kỹ các quyền truy cập mà ứng dụng yêu cầu</h2>
+      <h2 id="lo-cai">Lỡ cài ứng dụng độc hại thì làm gì?</h2>
+      <ol>
+        <li>Bật chế độ máy bay để cắt kết nối của ứng dụng.</li>
+        <li>Nếu đã nhập thông tin ngân hàng, gọi ngay tổng đài chính thức của ngân hàng để khóa tài khoản, thẻ.</li>
+        <li>Thu hồi quyền trợ năng, quyền quản trị thiết bị của ứng dụng (nếu có), rồi gỡ cài đặt. Trên iPhone, xóa ứng dụng và kiểm tra mục <em>Cài đặt</em> → <em>Cài đặt chung</em> → <em>VPN &amp; Quản lý thiết bị</em> xem có hồ sơ lạ không.</li>
+        <li>Quét lại bằng Google Play Protect (Android).</li>
+        <li>Đổi mật khẩu email, mạng xã hội, ngân hàng từ một thiết bị khác và bật xác thực hai lớp.</li>
+        <li>Báo cho người thân để họ cảnh giác với tin nhắn mạo danh bạn, và trình báo công an nếu đã mất tiền.</li>
+      </ol>
 
-            <p>Khi người dùng đủ kiến thức để không cài đặt ứng dụng từ nguồn không đáng tin cậy thì tin tặc lại có thể sử dụng chiêu trò lừa phỉnh cấp độ 2: Ngụy trang.
-                Kế hoạch lừa phỉnh điển hình như sau:</p>
-            <ol>
-                <li>Lần này, tin tặc phát triển hoặc mua mã nguồn ứng dụng di động thông thường rồi phát hành trên PlayStore và AppStore như bình thường.</li>
+      <h2 id="ket-luan">Kết luận</h2>
+      <p>Phần lớn vụ đánh cắp dữ liệu trên điện thoại cần bạn tự tay cài ứng dụng. Chỉ cần ba thói quen — chỉ tải từ cửa hàng chính thức, soi kỹ quyền truy cập, và để ý hiệu năng sau khi cài — bạn đã có thể <strong>nhận biết ứng dụng độc hại</strong> trước khi nó gây hại. Hãy chia sẻ những bước này với bố mẹ và con nhỏ, những người dễ bị dụ cài app nhất.</p>
+      <div class="cta-box">
+        <p>Chặn link tải app giả mạo với SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
 
-                <li>Vì nó thông thường, PlayStore & AppStore chấp nhận và cho phép người dùng tải xuống.</li>
+      <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+      <details>
+        <summary>Làm sao nhận biết ứng dụng độc hại trên Android?</summary>
+        <p>Cảnh giác nếu ứng dụng không có trên Google Play mà phải cài bằng file APK, tên nhà phát triển không khớp thương hiệu, hoặc ứng dụng đòi quyền không liên quan như đọc tin nhắn, danh bạ, quyền trợ năng. Sau khi cài, máy nóng, chậm, hao pin bất thường cũng là dấu hiệu cần kiểm tra.</p>
+      </details>
+      <details>
+        <summary>Ứng dụng trên Google Play và App Store có an toàn tuyệt đối không?</summary>
+        <p>Không tuyệt đối. Cửa hàng chính thức loại bỏ phần lớn ứng dụng độc hại, nhưng kẻ gian có thể phát hành ứng dụng bình thường rồi cập nhật thêm quyền nguy hiểm sau. Vì vậy vẫn cần kiểm tra quyền truy cập trước và sau khi cài.</p>
+      </details>
+      <details>
+        <summary>Ngân hàng yêu cầu cài ứng dụng qua link hoặc TestFlight có phải lừa đảo không?</summary>
+        <p>Gần như chắc chắn là lừa đảo. Ứng dụng ngân hàng thật luôn có trên Google Play và App Store. Hãy cúp máy và gọi lại tổng đài chính thức in trên thẻ để xác minh.</p>
+      </details>
+      <details>
+        <summary>Quyền trợ năng (Accessibility) nguy hiểm thế nào?</summary>
+        <p>Quyền trợ năng cho phép ứng dụng đọc nội dung màn hình và thao tác thay bạn. Ứng dụng giả mạo thường lạm dụng quyền này để đọc OTP, tự chuyển tiền. Chỉ cấp cho ứng dụng thực sự cần và bạn tin tưởng.</p>
+      </details>
+      <details>
+        <summary>Cách xem quyền của ứng dụng trên iPhone?</summary>
+        <p>Trước khi tải, xem phần Quyền riêng tư của ứng dụng trên App Store. Sau khi cài, vào Cài đặt, Quyền riêng tư và Bảo mật, chọn từng danh mục như Vị trí, Ảnh, Micrô để xem và thay đổi quyền của từng ứng dụng.</p>
+      </details>
 
-                <li>Sau đó, tin tặc gửi các bản cập nhật tiếp theo cho ứng dụng thông thường đó, với các tính năng mới yêu cầu một số quyền hệ thống như: đọc danh bạ, đọc nhật ký cuộc gọi, đọc thư viện ảnh, đọc GPS, v.v…</li>
-
-                <li>Tin tặc quảng cáo ứng dụng đó với các tính năng tuyệt vời có thể mang lại kết quả vượt trội, đúng vào nhu cầu của một số người dùng.</li>
-
-                <li>Sau đó, vì tò mò, người dùng cài đặt ứng dụng từ PlayStore hoặc AppStore tùy thuộc vào hệ điều hành điện thoại của họ.</li>
-
-                <li>Ứng dụng yêu cầu người dùng cấp khá nhiều quyền nhưng người dùng thường không quan tâm và không hiểu nên chỉ chấp nhận.</li>
-
-                <li>Sau đó, ứng dụng đánh cắp nhật ký cuộc gọi, ảnh, dữ liệu vị trí, v.v… từ điện thoại, nhờ vào sự cho phép của người dùng.</li>
-            </ol>
-
-            <p>Cả Android và iOS đều có các biện pháp bảo vệ mặc định để bảo vệ quyền riêng tư của người dùng: không phải ứng dụng nào cũng có thể truy cập vào dữ liệu nhạy cảm trên điện thoại thông minh.
-                Ví dụ, nếu một ứng dụng muốn xem ảnh, nhà phát triển – người tạo ra ứng dụng đó – phải đăng ký quyền “Truy cập thư viện ảnh”.
-                Sau đó, bất cứ khi nào ứng dụng muốn sử dụng quyền này, hệ điều hành (Android/iOS) sẽ hiển thị một thông báo yêu cầu người dùng cấp quyền.
-                Khi được cấp quyền, ứng dụng mới có thể xem ảnh trong điện thoại.
-                Tương tự, các thông tin nhạy cảm khác như nhật ký cuộc gọi, GPS và nhiều thông tin khác cũng yêu cầu người dùng cấp quyền trước khi ứng dụng có thể thực sự đọc dữ liệu.
-                Để biết ứng dụng muốn quyền gì, chúng ta có thể kiểm tra ngay trên Play Store đối với ứng dụng Android và App Store đối với ứng dụng iOS.</p>
-            <div>
-                <div>
-                    <h3>Cách kiểm tra quyền truy cập của ứng dụng Android</h3>
-                    <p><strong>Trước khi bấm Cài đặt:</strong></p>
-                    <ol>
-                        <li>Mở trang ứng dụng trên <span>Google Play Store</span></li>
-                        <li>Cuộn xuống “App info” → “Permissions”</li>
-                        <li>Nhấn “See more” để xem đầy đủ chi tiết</li>
-                        <li>Kiểm tra những gì ứng dụng có thể truy cập, ví dụ như: Location, Contacts, Storage, Microphone, v.v.</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <p><strong>Sau khi cài đặt:</strong></p>
-                    <ol>
-                        <li>Vào Settings → Privacy → Permission Manager</li>
-                        <li>Chọn một quyền (ví dụ: Location)</li>
-                        <li>Xem những ứng dụng nào đang sử dụng quyền đó</li>
-                        <li>Bạn có thể thiết lập: Allow (luôn cho phép ứng dụng đọc dữ liệu), Allow only while using (chỉ cho phép ứng dụng đọc dữ liệu khi app đang mở), Deny (không cho phép ứng dụng đọc dữ liệu)</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <p>👉 Mẹo: Android cũng hiển thị quyền khi sử dụng lần đầu, vì vậy đừng lúc nào cũng nhấn “Allow”, hãy ưu tiên "Allow only while using"</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Cách kiểm tra quyền truy cập của ứng dụng iOS</h3>
-
-                <div>
-                    <p><strong>Trước khi bấm Cài đặt: </strong></p>
-                    <ol>
-                        <li>Mở trang ứng dụng trên <span>App Store</span></li>
-                        <li>Cuộn đến phần “App Privacy”</li>
-                        <li>Xem lại những dữ liệu mà ứng dụng có thể thu thập, ví dụ như: Location, Contacts, Identifiers, Usage data, v.v.</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <p><strong>Sau khi cài đặt:</strong></p>
-                    <ol>
-                        <li>Vào Settings → Privacy & Security</li>
-                        <li>Nhấn vào một danh mục (ví dụ: Location, Photos, Microphone)</li>
-                        <li>Chọn ứng dụng</li>
-                        <li>Chọn mức truy cập:Never (không cho phép ứng dụng đọc dữ liệu), Ask Next Time (luôn hỏi bạn quyền đọc dữ liệu khi cần), While Using (cho phép đọc dữ liệu khi app đang mở), Always (ứng dụng có thể đọc dữ liệu bất kì lúc nào)</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <p>Hãy xem xét các quyền này một cách cẩn thận. Dự đoán xem tính năng nào cần đến chúng. Nếu có quá nhiều quyền so với các tính năng dự kiến, đó là một dấu hiệu cảnh báo.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>3. Theo dõi hiệu suất của điện thoại sau khi cài thêm ứng dụng</h3>
-
-                <div>
-                    <p>Chào mừng bạn đến với cấp độ hacking thực sự: Zero Day Exploitation</p>
-
-                    <p>Nhờ vào quy trình kiểm duyệt nghiêm ngặt của <span>AppStore</span> và <span>PlayStore</span>, phần lớn các ứng dụng di động độc hại đều bị cấm.
-                        Nhưng đừng quá lạc quan!. Zero Day là những lỗ hổng chưa được công chúng biết đến, ngay cả trong giới chuyên gia, và trên thực tế, chúng được nhiều chính phủ vũ khí hóa như một lợi thế của quốc gia.</p>
-
-                    <p>Bản thân Android & iOS cũng là phần mềm. Phần mềm thì có thể có lỗi và lỗ hổng bảo mật.
-                        Những lỗ hổng này được các chuyên gia trong ngành an ninh mạng tích cực săn tìm và được tài trợ bởi các chính phủ.
-                        Khi một Zero Day được phát hiện, nó trở thành vũ khí bí mật cho các nhóm tội phạm mạng để tấn công hoặc xâm nhập hệ thống trên toàn thế giới.
-                        Ứng dụng di động cũng không phải là ngoại lệ.
-                        Nếu có lỗ hổng trong hệ điều hành, ở đây là Android hoặc iOS, thì đó sẽ là cửa ngõ để tin tặc xâm nhập vào điện thoại của bạn.</p>
-
-                    <p>Mặc dù hiếm gặp, nhưng đây vẫn là trường hợp mà chúng ta – những người dùng thông thường – cần chú ý. Sau khi cài đặt một ứng dụng từ <span>Google Play Store</span> hoặc <span>AppStore</span>, hãy chú ý đến hiệu năng thiết bị:</p>
-                </div>
-
-                <div>
-                    <ol>
-                        <li>thiết bị có bị chậm hơn không,</li>
-                        <li>thiết bị có tự dưng nóng hơn không,</li>
-                        <li>thiết bị có bị giật lag bất thường không</li>
-                        <li>hoặc có bất kỳ hành vi bất thường nào.</li>
-                    </ol>
-                </div>
-
-                <div>
-                    <p>Lỗ hổng có nhiều dạng khác nhau, rất khó để giải thích trong một bài viết ngắn như thế này,
-                        nhưng nhiều dạng trong số đó tạo ra tải lớn lên thiết bị trong quá trình khai thác,
-                        vì vậy có thể khiến điện thoại chậm hơn, nóng hơn hoặc bị lag.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div>
-            <h3>Xem thêm:</h3>
-            <ul>
-                <li><a href="top-risks-on-internet.html">Các rủi ro trên Internet</a></li>
-  <li><a href="fake_bts_and_risk_of_loss_password.html">Trạm phát sóng di động giả (fake BTS) và nguy cơ đánh cắp mật khẩu</a></li>
- <li><a href="advanced_scam_techniques_how_to_defend.html">Những Hình Thức Lừa Đảo Công Nghệ Cao — Và Cách Tự Bảo Vệ Bản Thân</a></li>
-                <li><a href="top-habits-make-you-lose-personal-data.html">Các thói quen khiến bạn tự làm mất dữ liệu</a></li>
-                <li><a href="top-security-holes-every-company-have.html">6 con đường hacker dùng để xâm nhập hệ thống</a></li>
-                <li><a href="top-app-employee-should-install.html">Các app mà một nhân viên văn phòng nên có trên điện thoại</a></li>
-                <li><a href="top-app-to-protect-your-children.html">Các app dùng để đảm bảo an toàn cho trẻ em trên Internet</a></li>
-                <li><a href="top-app-to-protect-parent.html">Các app dùng để đảm bảo an toàn cho người lớn tuổi trên Internet</a></li>
-                <li><a href="top-security-app-on-android.html">Các ứng dụng bảo mật có trên Android</a></li>
-                <li><a href="top-app-for-crypto-trader.html">Các ứng dụng một crypto trader nên có trên điện thoại</a></li>
-                <li><a href="compare-url-blocker-apps.html">So sánh các ứng dụng chặn web nổi tiếng</a></li>
-                <li><a href="compare-parental-control-apps.html">So sánh các ứng dụng đảm bảo an toàn cho con cái</a></li>
-                <li><a href="compare-call-blocker-apps.html">So sánh các ứng dụng chặn cuộc gọi nổi tiếng</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách để biết khi nào con mình bấm phải link độc hại</a></li>
-                <li><a href="send-alert-when-open-url.html">Cách để biết khi nào con mình nhận phải cuộc gọi từ số lạ</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách để đảm bảo con cái luôn tránh xa khỏi các trang web giả mạo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách để chặn 100% số lạ</a></li>
-                <li><a href="what_to_do_to_be_safe_online.html">Các bước để bạn đảm bảo an toàn trên Internet</a></li>
-                <li><a href="how_to_detect_malicious_mobile_apps.html">Cách để phát hiện ứng dụng độc hại trên di động</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách để phát hiện trang web giả mạo</a></li>
-            </ul>
-        </div>
-    </article>
-
-
-
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Xem thêm</h2>
+        <p class="grp">Mã độc và dữ liệu cá nhân</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/top-risks-on-internet.html"><b>Các mối nguy trên không gian mạng</b><span>7 rủi ro an ninh mạng phổ biến nhất và cách phòng tránh.</span></a></li>
+          <li><a href="https://safephone.io.vn/malware-types-and-how-to-avoid.html"><b>Các loại mã độc</b><span>Virus, trojan, keylogger, ransomware và cách mã độc lây lan.</span></a></li>
+          <li><a href="https://safephone.io.vn/top-habits-make-you-lose-personal-data.html"><b>Thói quen làm lộ dữ liệu cá nhân</b><span>9 thói quen nhỏ gây hậu quả lớn và cách khắc phục.</span></a></li>
+          <li><a href="https://safephone.io.vn/top-security-app-on-android.html"><b>Ứng dụng bảo mật Android</b><span>Các ứng dụng giúp bảo vệ điện thoại Android.</span></a></li>
+        </ul>
+        <p class="grp">Nhận biết lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/advanced_scam_techniques_how_to_defend.html"><b>Lừa đảo công nghệ cao</b><span>Các thủ đoạn tinh vi và cách phòng vệ.</span></a></li>
+        </ul>
+      </aside>
+  </article>
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
 
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+      <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+      <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+      <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

@@ -1,401 +1,410 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>12 Kỹ Thuật “Ngụy Trang” Mà Website Lừa Đảo Đang Sử Dụng (Và Cách Phát Hiện)</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="12 Kỹ Thuật “Ngụy Trang” Mà Website Lừa Đảo Đang Sử Dụng (Và Cách Phát Hiện)" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="12 Kỹ Thuật “Ngụy Trang” Mà Website Lừa Đảo Đang Sử Dụng (Và Cách Phát Hiện)" />
-    <meta property="og:description" content="12 Kỹ Thuật “Ngụy Trang” Mà Website Lừa Đảo Đang Sử Dụng (Và Cách Phát Hiện)" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 kỹ thuật ngụy trang website lừa đảo và cách phát hiện</title>
+  <meta name="description" content="12 kỹ thuật ngụy trang website lừa đảo dùng để qua mặt kiểm duyệt: cloaking, định vị địa lý, URL dùng một lần, SEO poisoning… và cách phát hiện.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html">
+  <meta property="og:title" content="12 kỹ thuật ngụy trang website lừa đảo và cách phát hiện">
+  <meta property="og:description" content="Vì sao trang lừa đảo qua mặt được Google, Facebook và các công cụ quét? 12 kỹ thuật ngụy trang và cách người dùng tự bảo vệ.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="12 kỹ thuật ngụy trang website lừa đảo và cách phát hiện">
+  <meta name="twitter:description" content="Vì sao trang lừa đảo qua mặt được Google, Facebook và các công cụ quét? 12 kỹ thuật ngụy trang và cách người dùng tự bảo vệ.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html#article",
+      "headline": "12 kỹ thuật ngụy trang website lừa đảo đang dùng để qua mặt kiểm duyệt (và cách phát hiện)",
+      "description": "12 kỹ thuật ngụy trang website lừa đảo dùng để qua mặt kiểm duyệt: cloaking, định vị địa lý, URL dùng một lần, SEO poisoning… và cách phát hiện.",
+      "inLanguage": "vi-VN",
+      "mainEntityOfPage": "https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html",
+      "image": "https://safephone.io.vn/assets/og-image.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/#app"
+      },
+      "keywords": "kỹ thuật ngụy trang website lừa đảo, cloaking, SEO poisoning, URL rút gọn, website lừa đảo, chuỗi chuyển hướng, quảng cáo lừa đảo"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cẩm nang an ninh mạng",
+          "item": "https://safephone.io.vn/security_handbook.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "12 kỹ thuật ngụy trang",
+          "item": "https://safephone.io.vn/12-camouflage-techniques-scam-websites-are-using.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cloaking là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cloaking là kỹ thuật cho trang web hiển thị nội dung khác nhau tuỳ người xem, dựa trên cookie, địa chỉ IP, thiết bị hoặc thời điểm. Trang lừa đảo dùng nó để hiện nội dung vô hại cho máy quét và kiểm duyệt quảng cáo, chỉ hiện nội dung lừa đảo cho nạn nhân."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SEO poisoning là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO poisoning là thao túng thứ hạng tìm kiếm để trang lừa đảo xuất hiện gần đầu kết quả Google cho các từ khoá phổ biến. Trang thường có phần lớn nội dung đúng để lấy lòng tin, còn một phần dẫn người dùng tải mã độc hoặc thanh toán trước."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Link rút gọn bit.ly, TinyURL có nguy hiểm không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bản thân dịch vụ rút gọn không nguy hiểm, nhưng link rút gọn che giấu tên miền thật nên hay bị kẻ lừa đảo dùng, đặc biệt trong SMS. Đừng bấm link rút gọn từ người lạ; hãy kiểm tra bằng công cụ trước khi mở."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vì sao mở lại link lừa đảo thì báo lỗi 404?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Đó có thể là URL dùng một lần: link chỉ hiện nội dung lừa đảo lần đầu, sau đó báo lỗi hoặc hiện trang vô hại để tránh bị xác minh. Nếu thấy trang đáng ngờ, hãy chụp màn hình ngay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Trang web có tên miền chính thức có chắc chắn an toàn không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không chắc chắn. Trang hợp pháp, kể cả trang cơ quan nhà nước, có thể bị hack và bị chèn link hoặc mã độc chuyển hướng sang trang lừa đảo. Hãy xem tên miền cuối cùng trên thanh địa chỉ trước khi nhập thông tin."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
-    </div>
-</nav>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Điều hướng chính">
+      <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+      <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+    </nav>
+  </div>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
-        <header class="page__header">
-            <h1 class="page__title">12 Kỹ Thuật “Ngụy Trang” Mà Website Lừa Đảo Đang Sử Dụng (Và Cách Phát Hiện)</h1>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+        <li aria-current="page">12 kỹ thuật ngụy trang</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>12 kỹ thuật ngụy trang website lừa đảo đang dùng để qua mặt kiểm duyệt (và cách phát hiện)</h1>
+      <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+      <p class="lede">Trang lừa đảo ngày nay không chỉ sao chép logo mà còn biết “trốn”: chúng hiện nội dung vô hại khi bị kiểm tra và chỉ lộ mặt thật với nạn nhân được chọn. Bài viết phân tích 12 <strong>kỹ thuật ngụy trang website lừa đảo</strong> phổ biến — từ cloaking, định vị địa lý, URL dùng một lần đến SEO poisoning — và cách bạn tự phát hiện, phòng tránh.</p>
+      <div class="cta-box">
+        <p>Kiểm tra link lừa đảo trước khi mở với SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Mục lục">
+        <strong>Nội dung bài viết</strong>
+        <ol>
+          <li><a href="#tai-sao">Vì sao website lừa đảo ngày càng khó phát hiện?</a></li>
+          <li><a href="#tong-quan">Bảng tóm tắt 12 kỹ thuật ngụy trang</a></li>
+          <li><a href="#theo-nguoi-xem">Nhóm 1: Hiển thị nội dung khác nhau tuỳ người xem</a></li>
+          <li><a href="#an-link">Nhóm 2: Che giấu đường link</a></li>
+          <li><a href="#qua-mat-may-quet">Nhóm 3: Qua mặt phần mềm quét tự động</a></li>
+          <li><a href="#muon-uy-tin">Nhóm 4: Mượn uy tín của Google, quảng cáo và trang hợp pháp</a></li>
+          <li><a href="#phat-hien">Làm thế nào để phát hiện website lừa đảo được ngụy trang?</a></li>
+          <li><a href="#tu-bao-ve">Người dùng tự bảo vệ thế nào?</a></li>
+          <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+        </ol>
+      </nav>
 
-            <p>
-                Nếu bạn đang tìm kiếm giải pháp giúp phòng ngừa các website giả mạo, website lừa đảo, hay website phát tán mã độc, hãy tải ngay <strong>SafePhone</strong>!
-            </p>
+      <h2 id="tai-sao">Vì sao website lừa đảo ngày càng khó phát hiện?</h2>
+      <p>Những kẻ lừa đảo ngày nay được trang bị công nghệ cao. Nhiều đường dây có đội ngũ IT giỏi không kém các công ty phần mềm — những người có thể không trực tiếp lừa ai, nhưng xây dựng công cụ và hệ thống cho bọn lừa đảo. Họ có thể tự nguyện, có thể chính là nạn nhân của một vụ tuyển dụng lừa đảo khác, hoặc làm việc cho các băng nhóm tội phạm mạng có tổ chức. Dù thế nào, sự thật không dễ chịu là: bọn lừa đảo có những hacker mũ đen đứng về phía mình.</p>
+      <p>Trang web giả mạo, mạo danh ngày nay được thiết kế trau chuốt như trang chính thức, sao chép cả logo lẫn cảm giác chuyên nghiệp. Điểm yếu của chúng thường nằm ở <strong>tên miền</strong> — xem <a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">cách kiểm tra trang web lừa đảo</a>. Trước đây, các nhà nghiên cứu bảo mật có thể dùng trình thu thập dữ liệu web (crawler) để phát hiện chúng khá dễ dàng. Hiện nay thì không: các trang này dùng nhiều kỹ thuật ngụy trang để che giấu nội dung khỏi nhà nghiên cứu và hệ thống kiểm duyệt.</p>
 
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
-                </a>
-            </p>
-        </div>
-        <div class="page__content">
-            <div>
-                <p>
-                    Ngày nay, những kẻ lừa đảo đã được trang bị thêm công nghệ cao. Chúng có đội ngũ IT giỏi không kém bất kỳ công ty phần mềm nào. Những chuyên gia IT này có thể không trực tiếp thực hiện các hoạt động lừa đảo, nhưng họ cung cấp các công cụ và hệ thống nguy hiểm cho bọn lừa đảo.
-                    Không rõ liệu những người có trình độ học vấn cao như này lại tự nguyện làm việc cho ngành công nghiệp lừa đảo,
-                    hay chính họ cũng là nạn nhân của một vụ tuyển dụng lừa đảo khác,
-                    hoặc họ được hậu thuẫn bởi một số băng đảng tội phạm mạng,
-                    mà những băng đảng này lại được một số chính phủ hỗ trợ – điều mà bạn có thể đoán được :).
-                    Nhưng có một sự thật không dễ chịu là: chúng có những hacker mũ đen đứng về phía mình!
-                </p>
+      <h2 id="tong-quan">Bảng tóm tắt 12 kỹ thuật ngụy trang website lừa đảo</h2>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Kỹ thuật</th><th>Né tránh điều gì</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Cloaking dựa trên cookie</td><td>Crawler truy cập trực tiếp, không đi qua quảng cáo</td></tr>
+          <tr><td>2</td><td>Định vị địa lý (geo-targeting)</td><td>Máy quét dùng IP nước ngoài, trung tâm dữ liệu</td></tr>
+          <tr><td>3</td><td>Nhắm mục tiêu theo thiết bị</td><td>Nhà nghiên cứu dùng hệ điều hành khác</td></tr>
+          <tr><td>4</td><td>Kích hoạt theo thời điểm</td><td>Kiểm duyệt quảng cáo của Facebook, Google</td></tr>
+          <tr><td>5</td><td>Lạm dụng công cụ rút gọn URL</td><td>Sự cảnh giác của người nhận link</td></tr>
+          <tr><td>6</td><td>URL dùng một lần</td><td>Việc xác minh lại sau khi nạn nhân đã bấm</td></tr>
+          <tr><td>7</td><td>Hiển thị nội dung bằng JavaScript</td><td>Máy quét chỉ đọc HTML</td></tr>
+          <tr><td>8</td><td>Hiển thị nội dung bằng hình ảnh</td><td>Máy quét phân tích văn bản, từ khoá</td></tr>
+          <tr><td>9</td><td>Lợi dụng trang web hợp pháp bị hack</td><td>Danh sách đen tên miền</td></tr>
+          <tr><td>10</td><td>SEO poisoning</td><td>Sự nghi ngờ với link lạ (người dùng tự tìm đến)</td></tr>
+          <tr><td>11</td><td>Lạm dụng quảng cáo</td><td>Thứ hạng tìm kiếm tự nhiên</td></tr>
+          <tr><td>12</td><td>Chuyển hướng qua nhiều bước</td><td>Máy quét chỉ kiểm tra bước đầu tiên</td></tr>
+        </tbody>
+      </table>
+      </div>
 
-                <p>
-                    Các trang web giả mạo, trang web mạo danh (hoặc trang web lừa đảo) ngày nay được thiết kế trau chuốt như các trang web chính thức.
-                    Các trang web lừa đảo không chỉ sao chép logo mà còn cả cảm giác chuyên nghiệp.
-                    Nhưng điểm yếu của chúng luôn nằm ở tên miền.
-                    Các nhà nghiên cứu bảo mật thường có thể dễ dàng phát hiện các trang web này bằng trình thu thập dữ liệu web, nhưng hiện nay điều đó không còn dễ dàng nữa.
-                    Các trang web này ngày nay có thể sử dụng một số kỹ thuật ngụy trang để che giấu bản thân khỏi các nhà nghiên cứu bảo mật.
-                </p>
+      <h2 id="theo-nguoi-xem">Nhóm 1: Hiển thị nội dung khác nhau tuỳ người xem</h2>
 
-                <p>
-                    Bài viết này sẽ liệt kê một số kỹ thuật thường được bọn lừa đảo sử dụng để che giấu nội dung của chúng khỏi các nhà nghiên cứu, và một giải pháp cho vấn đề này.
-                </p>
+      <h3 id="ky-thuat-1">1. Cookie-based cloaking — che giấu nội dung dựa trên cookie</h3>
+      <p>Che giấu nội dung dựa trên cookie (còn gọi là chuyển hướng dựa trên cookie, nội dung bị khoá bởi cookie) là kỹ thuật trong đó trang web thay đổi hành vi tuỳ vào cookie lưu trong trình duyệt của người truy cập. Cookie là mẩu dữ liệu nhỏ mà trang web lưu trong trình duyệt để ghi nhớ phiên đăng nhập, nguồn giới thiệu, chiến dịch quảng cáo, các lần truy cập trước, mã định danh theo dõi — xem <a href="https://safephone.io.vn/cookie-and-how-website-track-you-via-cookie.html">cookie là gì</a>. Trang web có thể dựa vào đó để quyết định hiển thị gì. Trang lừa đảo dùng kỹ thuật này để:</p>
+      <ul>
+        <li>Hiển thị nội dung bình thường (trang giới thiệu sản phẩm mới, trang đích của một công ty nhân sự nhỏ…) cho người truy cập trực tiếp.</li>
+        <li>Nhưng nếu người truy cập đến từ quảng cáo trên mạng xã hội, trang sẽ hiển thị nội dung lừa đảo — ví dụ mạo danh dịch vụ, công ty nổi tiếng để dụ tải phần mềm hoặc trả tiền trước.</li>
+      </ul>
+      <p>Nhờ vậy, chương trình thu thập dữ liệu web không thấy nội dung lừa đảo và không đưa trang vào danh sách đen.</p>
 
-                <h2>1. Cookie-Based Cloaking (Che giấu nội dung dựa trên cookie)</h2>
+      <h3 id="ky-thuat-2">2. Geo-targeting — định vị địa lý</h3>
+      <p>Tương tự cloaking dựa trên cookie, trang lừa đảo dùng địa chỉ IP để chỉ kích hoạt nội dung độc hại với khách từ một số quốc gia hoặc thành phố nhất định. Nhiều công ty an ninh mạng quét web từ địa chỉ IP của nhà cung cấp cloud tại Mỹ, trung tâm dữ liệu hoặc các nhóm nghiên cứu nổi tiếng. Trang lừa đảo có thể lưu các dải IP này và tự động ẩn nội dung khi gặp lượt truy cập từ đó.</p>
+      <p>Định vị địa lý còn được dùng để <strong>bản địa hoá</strong> nội dung: dùng ngôn ngữ, tiền tệ, số điện thoại, thương hiệu địa phương, các ngày lễ và sự kiện của khu vực. Nạn nhân dễ tin hơn khi thấy thông tin và biểu tượng quen thuộc — kết hợp với tên miền gần giống tên miền chính thống, kỹ thuật này đánh lừa rất nhiều người trên khắp thế giới.</p>
 
-                <p>
-                    Che giấu nội dung dựa trên cookie, hay chuyển hướng dựa trên cookie, nội dung bị khóa bởi cookie là một kỹ thuật web trong đó một trang web thay đổi hành vi của nó tùy thuộc vào cookie được lưu trữ trong trình duyệt của người truy cập.
-                    Cookie là một mẩu dữ liệu nhỏ mà các trang web lưu trong trình duyệt để ghi nhớ thông tin như: phiên đăng nhập, nguồn giới thiệu, chiến dịch quảng cáo, các lần truy cập trước, mã định danh theo dõi.
-                    Một trang web có thể sử dụng thông tin này để xác định nội dung nào sẽ hiển thị cho người truy cập.
-                    Các trang web lừa đảo sử dụng kỹ thuật này để:
-                </p>
+      <h3 id="ky-thuat-3">3. Nhắm mục tiêu theo thông tin thiết bị</h3>
+      <p>Trang web thay đổi hành vi tuỳ thiết bị, hệ điều hành, trình duyệt hoặc đặc điểm phần cứng của người truy cập. Cùng một URL có thể hiển thị nội dung hoàn toàn khác cho điện thoại Android, iPhone, máy tính Windows hay macOS. Điều này làm được vì trình duyệt (Chrome, Firefox…) gửi kèm thông tin hệ điều hành trong mỗi yêu cầu HTTP.</p>
+      <p>Kẻ lừa đảo dùng kỹ thuật này để phát tán <a href="https://safephone.io.vn/malware-types-and-how-to-avoid.html">mã độc</a> dành riêng cho từng nền tảng. Ví dụ, muốn phát tán mã độc Windows, chúng chỉ hiện nội dung lừa đảo cho người dùng Windows; nhà nghiên cứu dùng macOS hay điện thoại sẽ không thấy gì bất thường. Đây là một trong những phương pháp ngụy trang phổ biến nhất trong các chiến dịch lừa đảo và quảng cáo độc hại hiện đại.</p>
 
-                <ul>
-                    <li>
-                        Hiển thị nội dung bình thường, chẳng hạn như trang chủ sản phẩm mới, hoặc trang đích của một công ty nhân sự nhỏ, v.v., cho những người mà họ truy cập trực tiếp vào các trang web đó.
-                    </li>
-                    <li>
-                        Nhưng, nếu người truy cập đến thông qua việc nhấp vào quảng cáo trên Mạng xã hội, trang web đó sẽ hiển thị nội dung lừa đảo, ví dụ như mạo danh các dịch vụ hoặc công ty nổi tiếng để lừa người truy cập tải xuống hoặc trả tiền trước.
-                    </li>
+      <h3 id="ky-thuat-4">4. Kích hoạt theo thời điểm</h3>
+      <p>Trang lừa đảo chỉ trở nên độc hại trong những khoảng thời gian cụ thể. Kỹ thuật này thường đi cùng chiến dịch quảng cáo: Facebook và Google xem xét nội dung trang trước khi cho chạy quảng cáo và cấm nội dung lừa đảo, mạo danh. Kẻ gian vượt qua bằng cách đặt nội dung bình thường trong thời gian kiểm duyệt, rồi lập trình trang chỉ hiện nội dung lừa đảo vào giờ nhất định — ví dụ từ 20h đến 22h, khi nạn nhân thường trực tuyến. Hệ thống kiểm duyệt quảng cáo không xem được mã nguồn phía máy chủ nên khó biết trang có dùng kỹ thuật này hay không.</p>
+      <p>Cách này cũng giúp chúng tránh các phần mềm quét tự động, giảm khả năng bị phát hiện và tăng tỷ lệ thành công.</p>
 
-                </ul>
+      <h2 id="an-link">Nhóm 2: Che giấu đường link</h2>
 
-                <p>
-                    Bằng thủ đoạn này, các chương trình thu thập dữ liệu web sẽ không thể thấy nội dung lừa đảo nên không thể cho trang web đó vào danh sách đen.
-                </p>
+      <h3 id="ky-thuat-5">5. Lạm dụng công cụ rút gọn URL</h3>
+      <p>Công cụ rút gọn URL như Bitly hay TinyURL giúp link ngắn gọn, dễ chia sẻ và bớt cảm giác nguy hiểm. Khi bạn bấm link rút gọn, trình duyệt gửi yêu cầu đến máy chủ của dịch vụ rút gọn, rồi dịch vụ này chuyển hướng bạn đến link thật của kẻ lừa đảo. Nhờ đó, kẻ gian che giấu tên miền thật và mượn uy tín của Bitly, TinyURL.</p>
+      <p>Phương pháp này đặc biệt hay dùng trong tin nhắn SMS: link ngắn, đến từ dịch vụ nổi tiếng, khiến nạn nhân mất cảnh giác. Đừng bấm link rút gọn từ người lạ — hãy dán vào ô kiểm duyệt URL của SafePhone hoặc bật <a href="https://safephone.io.vn/screening-urls-before-openning.html">chặn trang web lừa đảo</a> để link được kiểm tra trước khi mở.</p>
 
-                <h2>2. Geo-Targeting (Định vị địa lý)</h2>
-                <p>
-                    Tương tự như cách che giấu dựa trên cookie, các trang web lừa đào sử dụng kĩ thuật nhắm mục tiêu theo địa lý chỉ kích hoạt đối với khách truy cập từ các quốc gia hoặc thành phố nhất định.
-                    Các trang web lừa đảo có thể sử dụng địa chỉ IP của khách truy cập để xác định nội dung hiển thị thay vì dữ liệu trong cookie.
-                    Chúng có thể sử dụng kỹ thuật này để che giấu bản thân khỏi các nhà nghiên cứu an ninh mạng – những người sẽ săn lùng chúng.
-                    Nhiều công ty an ninh mạng quét các trang web sử dụng địa chỉa IP từ các nhà cung cấp dịch vụ cloud của Hoa Kỳ, hoặc từ các trung tâm dữ liệu, hoặc các hội nhóm nổi tiếng.
-                    Các trang web lừa đảo có thể lưu trữ các dải IP này và tự động ẩn nội dung lừa đảo khi gặp lượt truy cập từ các IP đó.
-                </p>
-                <p>Một cách sử dụng khác của kĩ thuật nhắm mục tiêu theo vị trí địa lý là bản địa hóa nội dung bằng cách sử dụng ngôn ngữ của khách truy cập.
-                    Nội dung lừa đảo sẽ thuyết phục hơn nếu sử dụng ngôn ngữ địa phương, đơn vị tiền tệ của địa phương, số điện thoại địa phương, thương hiệu địa phương và các ngày lễ hoặc sự kiện cụ thể của khu vực.
-                    Nạn nhân có nhiều khả năng sẽ tin tưởng trang web hơn nếu họ thấy thông tin và biểu tượng quen thuộc.
-                    Cùng với tên miền gần giống với các tên miền chính thống, bọn này thực sự đánh lừa được rất nhiều người trên khắp thế giới.</p>
+      <h3 id="ky-thuat-6">6. URL dùng một lần</h3>
+      <p>URL dùng một lần chỉ hiển thị nội dung lừa đảo một lần, sau đó nội dung biến mất hoặc thay đổi hoàn toàn. Về kỹ thuật, điều này không khó — nhà phát triển web có kinh nghiệm nào cũng làm được, và các đường dây có tổ chức thường có nhóm IT triển khai trên quy mô lớn.</p>
+      <p>Kịch bản điển hình: nạn nhân bấm link độc hại qua SMS, email, mạng xã hội hoặc quảng cáo và thấy nội dung lừa đảo — biểu mẫu đăng nhập giả, lời mời đầu tư, hoặc lời nhắc tải phần mềm độc hại. Nhưng khi mở lại link đó, hoặc gửi cho bạn bè hay nhà nghiên cứu để xác minh, trang có thể báo lỗi “404 Not Found”, chuyển sang trang vô hại, hoặc hiện nội dung bình thường không liên quan. Vì vậy, nếu nghi ngờ, hãy chụp màn hình ngay lần đầu thấy trang.</p>
 
-                <h2>3. Nhắm mục tiêu dựa trên thông tin thiết bị</h2>
-                <p>
-                    Tấn công nhắm mục tiêu dựa theo thông tin thiết bị là một kỹ thuật mà trong đó một trang web thay đổi hành vi của nó tùy thuộc vào thiết bị, hệ điều hành, trình duyệt hoặc đặc điểm phần cứng của người truy cập.
-                    Cùng một URL, 1 trang web có thể hiển thị nội dung hoàn toàn khác nhau đối với điện thoại Android, điện thoại iOS, máy tính Windows hoặc MacOS.
-                    Những kẻ lừa đảo sử dụng kỹ thuật này để nhắm mục tiêu vào các nạn nhân cụ thể nhằm phát tán phần mềm độc hại dành riêng cho môi nền tảng.
-                    Ví dụ, nếu những kẻ lừa đảo muốn phát tán phần mềm độc hại trên Windows, chúng có thể khiến trang web lừa đảo của mình chỉ hiển thị các nội dung lừa đảo nếu người dùng đang sử dụng Windows.
-                    Điều này có thể thực hiện được vì các trình duyệt (Chrome, Firefox,…) đính kèm thông tin hệ điều hành trong mỗi yêu cầu HTTP.
-                    Khi một nhà nghiên cứu sử dụng MacOS hoặc sử dụng điện thoại, họ sẽ không thấy các nội dung lừa đảo.
-                    Đây là một trong những phương pháp ngụy trang phổ biến nhất trong các chiến dịch lừa đảo và quảng cáo độc hại hiện đại.
-                </p>
+      <h2 id="qua-mat-may-quet">Nhóm 3: Qua mặt phần mềm quét tự động</h2>
 
-                <h2>4. Kích hoạt theo thời điểm</h2>
-                <p>
-                    Kích hoạt theo thời điểm là một kỹ thuật ngụy trang, trong đó một trang web lừa đảo chỉ trở nên độc hại trong những khoảng thời gian cụ thể.
-                </p>
-                <p>
-                    Kỹ thuật này thường được sử dụng cùng các chiến dịch quảng cáo.
-                    Bởi vì các nền tảng quảng cáo kỹ thuật số như Facebook hoặc Google luôn xem xét nội dung của trang web trước khi đặt quảng cáo và họ nghiêm cấm nội dung lừa đảo và mạo danh.
-                    Nhưng hiện nay, những kẻ lừa đảo có thể vượt qua Hệ thống Kiểm duyệt Quảng cáo này.
-                    Chúng có thể đặt nội dung bình thường lên trang web trong thời gian kiểm duyệt để trang web của chúng được chấp nhận.
-                    Nhưng trang web của kẻ lừa đảo có thể được lập trình để chỉ hiển thị nội dung lừa đảo vào những thời điểm cụ thể, ví dụ: chỉ từ 8 giờ tối đến 10 giờ tối.
-                    Vì Hệ thống Kiểm duyệt Quảng cáo không có quyền truy cập vào mã nguồn của trang web nên chúng không biết liệu một trang web có sử dụng kỹ thuật này hay không.
-                    Kết quả là, kẻ lừa đảo có thể đoán thử khi nào nạn nhân của chúng thường trực tuyến và cấu hình trang web lừa đảo để hiển thị nội dung lừa đảo vào thời điểm đó.
-                </p>
-                <p>
-                    Phương pháp kích hoạt theo thời gian này cũng giúp chúng tránh bị phát hiện bởi các phần mềm quét tự động, hạn chế mức độ bị phát hiện và tăng tỷ lệ thành công.
-                </p>
+      <h3 id="ky-thuat-7">7. Hiển thị nội dung bằng JavaScript</h3>
+      <p>Nhiều phần mềm quét web dựa vào nội dung HTML để phân tích. Để che giấu ý đồ, trang lừa đảo hiện đại tránh đặt văn bản độc hại, biểu mẫu lừa đảo hay các chỉ báo đáng ngờ trực tiếp trong HTML ban đầu. Thay vào đó, chúng dùng JavaScript tạo nội dung động sau khi trang tải xong, thường dựa trên loại thiết bị, trình duyệt, cookie, vị trí hoặc tương tác của người dùng.</p>
+      <p>HTML ban đầu gần như trống hoặc hoàn toàn vô hại với máy quét, nhưng sau khi tải, JavaScript mới hiện nội dung giả mạo, biểu mẫu đăng nhập giả hoặc chuyển hướng sang trang khác. Một số trang chỉ kích hoạt với người dùng di động thật, còn hiển thị nội dung vô hại cho nhà nghiên cứu hoặc bot. Kỹ thuật này (client-side rendering) khiến việc phát hiện khó hơn đáng kể vì máy quét truyền thống có thể không chạy mã đủ lâu để thấy hành vi độc hại.</p>
 
-                <h2>5. Lạm dụng công cụ rút gọn URL</h2>
-                <p>
-                    Các công cụ rút gọn URL như Bitly hoặc TinyURL giúp rút ngắn URL để trông đẹp mắt hơn khi chia sẻ và giảm cảm giác nguy hiểm khi người nhận nhìn thấy đường link.
-                    Kẻ lừa đảo có thể lợi dụng những công cụ này để làm cho liên kết của chúng ít đáng ngờ hơn.
-                    Khi người dùng nhấp vào một liên kết rút gọn, ví dụ như được rút gọn bởi TinyURL, trình duyệt (Chrome, Firefox) sẽ gửi yêu cầu đến máy chủ của TinyURL, sau đó TinyURL sẽ chuyển hướng người dùng đến liên kết thực sự của kẻ lừa đảo.
-                    Kẻ lừa đảo lợi dụng chức năng này để che giấu tên miền thật của chúng và mượn danh tiếng từ các công ty nổi tiếng, ở đây là Bitly và TinyURL.
-                    Phương pháp này thường được sử dụng khi kẻ lừa đảo chọn gửi liên kết qua tin nhắn SMS.
-                    Bởi vì URL trông ngắn gọn và đến từ các dịch vụ nổi tiếng như Bitly hoặc TinyURL, nạn nhân có thể mất cảnh giác và nhấp vào liên kết rút gọn.
-                </p>
+      <h3 id="ky-thuat-8">8. Hiển thị nội dung bằng hình ảnh</h3>
+      <p>Tương tự, một số trang tránh đặt văn bản có nghĩa trong HTML mà hiển thị toàn bộ giao diện dưới dạng hình ảnh: biểu mẫu, thông báo, cảnh báo, banner quảng cáo, cả khung “chat với nhân viên hỗ trợ” giả mạo.</p>
+      <p>Vì nhiều hệ thống bảo mật chủ yếu phân tích cấu trúc HTML và từ khoá, trang chỉ có hình ảnh làm giảm đáng kể hiệu quả phát hiện. Nếu không phân tích hình ảnh nâng cao hoặc OCR (nhận dạng ký tự quang học), máy quét có thể không nhận ra việc mạo danh thương hiệu hay lời dụ dỗ nằm trong ảnh. Một số chiến dịch còn kết hợp với JavaScript, định vị địa lý hoặc nhắm mục tiêu theo thiết bị để phát các hình ảnh khác nhau tuỳ môi trường của nạn nhân.</p>
 
-                <h2>6. URL dùng một lần</h2>
-                <p>
-                    Một phương pháp ngụy trang hiệu quả khác được những kẻ lừa đảo sử dụng là “URL dùng một lần”.
-                    URL dùng một lần là những liên kết chỉ hiển thị nội dung lừa đảo một lần, sau đó, nội dung sẽ biến mất hoặc thay đổi hoàn toàn.
-                    Về mặt kỹ thuật, hành vi này không khó thực hiện — bất kỳ nhà phát triển web có kinh nghiệm nào cũng có thể xây dựng chức năng như vậy, và các bọn lừa đảo có tổ chức thường có các nhóm CNTT chuyên trách có khả năng triển khai nó trên quy mô lớn.
-                </p>
-                <p>
-                    Trong một kịch bản điển hình, khi nạn nhân nhấp vào một liên kết độc hại được gửi qua SMS, email, mạng xã hội hoặc quảng cáo, trang sẽ hiển thị nội dung lừa đảo, biểu mẫu đăng nhập giả mạo, lừa đảo đầu tư hoặc lời nhắc tải xuống phần mềm độc hại.
-                    Tuy nhiên, nếu nạn nhân sau đó truy cập lại cùng một liên kết — hoặc gửi nó cho bạn bè hoặc nhà nghiên cứu an ninh mạng để xác minh — trang đó có thể đột nhiên không khả dụng, trả về lỗi “404 Not Found”, chuyển hướng đến một trang web vô hại hoặc hiển thị nội dung hoàn toàn bình thường không liên quan đến vụ lừa đảo.
-                </p>
+      <h2 id="muon-uy-tin">Nhóm 4: Mượn uy tín của Google, quảng cáo và trang hợp pháp</h2>
 
-                <h2>7. Hiển thị nội dung bằng mã Javascript</h2>
-                <p>
-                    Nhiều phần mềm quét web dựa vào nội dung HTML khi phân tích các trang web.
-                    Để che giấu ý định lừa đảo, các trang web lừa đảo hiện đại ngày càng tránh đặt văn bản độc hại, biểu mẫu lừa đảo hoặc các chỉ báo lừa đảo trực tiếp vào phản hồi HTML ban đầu.
-                    Thay vào đó, chúng sử dụng JavaScript để tạo nội dung động chỉ sau khi trang tải xong, thường dựa trên các yếu tố như loại thiết bị, trình duyệt, cookie, vị trí hoặc tương tác của người dùng.
-                </p>
-                <p>
-                    Trong nhiều trường hợp, trang HTML ban đầu gần như không chứa nhiều thông tin hoặc hoàn toàn vô hại đối với các phần mềm quét tự động.
-                    Tuy nhiên sau khi tải, mã javascript sau đó sẽ hiện ra các nội dung giả mạo, biểu mẫu đăng nhập giả mạo hoặc chuyển hướng sang các trang khác.
-                    Một số trang lừa đảo thậm chí chỉ kích hoạt đối với người dùng di động thực sự trong khi hiển thị nội dung vô hại cho các nhà nghiên cứu bảo mật hoặc bot tự động.
-                </p>
-                <p>
-                    Kỹ thuật này, thường được gọi là client-side rendering, khiến việc phát hiện trở nên khó khăn hơn đáng kể vì các phần mềm quét truyền thống có thể không bao giờ thực thi các tập lệnh cần thiết đủ lâu để quan sát hành vi độc hại.
-                </p>
+      <h3 id="ky-thuat-9">9. Lợi dụng các trang web hợp pháp đã bị hack</h3>
+      <p>Trường hợp này ít gặp hơn nhưng vẫn xảy ra — kể cả với trang web cơ quan nhà nước. Ở một số nơi, đầu tư cho an ninh mạng còn hạn chế hoặc bảo trì kém, nên trang chính thức vẫn có thể bị tấn công qua nền tảng CMS chưa vá lỗi, mật khẩu quản trị dễ đoán hoặc bị lộ, plugin lỗi thời, hay máy chủ có lỗ hổng — xem thêm <a href="https://safephone.io.vn/top-security-holes-every-company-have.html">lỗ hổng bảo mật doanh nghiệp</a>.</p>
+      <p>Khi đã chiếm quyền, kẻ tấn công có thể đặt quảng cáo lừa đảo, link lừa đảo, quảng cáo đầu tư giả, nội dung cờ bạc, file mã độc hoặc chuyển hướng ngay trên trang chủ hay trang con. Có khi chúng âm thầm chèn link ẩn hoặc JavaScript độc hại chỉ chuyển hướng một số khách truy cập, trong khi trang vẫn trông bình thường.</p>
+      <p>Vì nội dung độc hại nằm trên tên miền chính thức, nạn nhân dễ tin hơn. Bài học: <strong>tên miền đáng tin cậy không phải lúc nào cũng đảm bảo nội dung đáng tin cậy</strong>.</p>
 
-                <h2>8. Hiển thị nội dung bằng hình ảnh</h2>
-                <p>
-                    Tương tự như Hiển thị nội dung bằng mã Javascript,
-                    để vượt qua các phần mềm quét truyền thống, một số trang web lừa đảo tránh đặt nội dung văn bản có ý nghĩa trực tiếp vào trang HTML và thay vào đó hiển thị toàn bộ giao diện dưới dạng hình ảnh.
-                    Các biểu mẫu, thông báo, cảnh báo, biểu ngữ quảng cáo, cuộc trò chuyện hỗ trợ khách hàng giả mạo chỉ tồn tại dưới dạng hình ảnh.
-                </p>
-                <p>
-                    Vì nhiều hệ thống bảo mật chủ yếu phân tích cấu trúc HTML  và từ khóa, các trang web chỉ có hình ảnh có thể làm giảm đáng kể hiệu quả của các phương pháp phát hiện lừa đảo thông thường.
-                    Nếu không thực hiện phân tích hình ảnh nâng cao hoặc OCR (Nhận dạng Ký tự Quang học),
-                    các phần mềm quét tự động có thể không nhận ra được việc mạo danh thương hiệu, hướng dẫn lừa đảo hoặc ngôn ngữ liên quan đến lừa đảo có trong chính hình ảnh.
-                </p>
-                <p>
-                    Một số chiến dịch còn kết hợp kỹ thuật này với JavaScript, nhắm mục tiêu theo vị trí địa lý hoặc nhắm mục tiêu dựa trên thiết bị để tự động cung cấp các payload hình ảnh khác nhau tùy thuộc vào môi trường của nạn nhân, khiến việc phân tích tự động càng trở nên khó khăn hơn.
-                </p>
+      <h3 id="ky-thuat-10">10. SEO poisoning — thao túng kết quả tìm kiếm</h3>
+      <p>Nhiều người tin kết quả tìm kiếm của Google hơn cả phán đoán của mình, và kẻ lừa đảo khai thác điều đó. Thay vì gửi link đáng ngờ, chúng thao túng thứ hạng để trang lừa đảo xuất hiện gần đầu kết quả cho các từ khoá phổ biến hoặc cấp bách.</p>
+      <p>Các đường dây lừa đảo ngày nay có đội ngũ sáng tạo nội dung riêng để sản xuất tài liệu thuyết phục, và đội ngũ SEO để đẩy thứ hạng trang. Khi người dùng tìm giải pháp trên Google, họ có thể vào đúng trang của kẻ lừa đảo. Những trang này thường có phần lớn nội dung đúng và vô hại để lấy lòng tin, còn một phần nhỏ là giả mạo — chủ yếu để dẫn người dùng tải phần mềm độc hại hoặc thanh toán trước.</p>
 
-                <h2>9. Thông qua các trang web hợp pháp đã bị hack</h2>
-                <p>
-                    Trường hợp này hiếm khi xảy ra, nhưng vẫn có – ngay cả đối với các trang web chính phủ.
-                    Ở một số quốc gia, đầu tư vào an ninh mạng vẫn còn hạn chế, lỗi thời hoặc được bảo trì kém.
-                    Kết quả là, các trang web chính thức của chính phủ vẫn có thể bị tấn công thông qua các nền tảng CMS có lỗ hổng chưa vá, hay do mật khẩu quản trị viên dễ đoán hoặc bị lộ, plugin lỗi thời, hoặc máy chủ có lỗ hổng.
-                </p>
-                <p>
-                    Sau khi kẻ tấn công giành được quyền truy cập, chúng có thể đặt các quảng cáo lừa đảo, liên kết lừa đảo, quảng cáo đầu tư giả mạo, nội dung cờ bạc, tải xuống phần mềm độc hại hoặc chuyển hướng đến các trang web bất hợp pháp trực tiếp trên trang chủ hoặc bên trong các trang con đáng tin cậy của chính phủ.
-                    Trong các trường hợp khác, kẻ tấn công âm thầm chèn các liên kết ẩn hoặc JavaScript độc hại chỉ chuyển hướng một số khách truy cập nhất định đến các trang lừa đảo trong khi trang web vẫn trông bình thường.
-                </p>
-                <p>
-                    Vì nội dung độc hại được hiển thị trên một tên miền chính thức của chính phủ, nạn nhân dễ tin tưởng nó hơn.
-                    Trường hợp này chứng minh một thực tế quan trọng: một tên miền đáng tin cậy không phải lúc nào cũng đảm bảo nội dung đáng tin cậy.
-                    Ngay cả các trang web hợp pháp cũng có thể bị tấn công và bị chèn các chiến dịch lừa đảo nếu hệ thống của chúng không được bảo mật và giám sát đúng cách.
-                </p>
+      <h3 id="ky-thuat-11">11. Lạm dụng quảng cáo</h3>
+      <p>Khi lên top SEO mất nhiều thời gian hoặc không làm được, kẻ lừa đảo trả tiền chạy Google Ads để trang của chúng hiện ở vị trí đầu tiên. Quảng cáo có chữ <em>“Được tài trợ”</em> để phân biệt với kết quả tự nhiên, nhưng người dùng thường bỏ qua và tin trang đầu tiên.</p>
+      <p>Kẻ gian tạo quảng cáo giả mạo ngân hàng, hãng hàng không, dịch vụ công, nền tảng tiền điện tử, công ty hỗ trợ kỹ thuật, dịch vụ giao hàng — dùng logo chính thức, mô tả chuyên nghiệp, đôi khi cả tên miền gần giống thương hiệu thật. Vì hệ thống quảng cáo vận hành ở quy mô rất lớn, quảng cáo độc hại đôi khi chạy được một thời gian ngắn trước khi bị phát hiện và gỡ — đủ để nhiều người bấm vào. Xem <a href="https://safephone.io.vn/how-fake-advertisement-target-you.html">quảng cáo lừa đảo nhắm đến bạn như thế nào?</a> và <a href="https://safephone.io.vn/how-to-block-ads-url.html">cách chặn quảng cáo trên Android</a>.</p>
 
-                <h2>10. SEO Poisoning (Thao túng điểm SEO)</h2>
-                <p>
-                    Ngày nay, mọi người thường tin tưởng kết quả tìm kiếm của Google hơn là phán đoán của chính mình,
-                    và những kẻ lừa đảo đang tích cực khai thác hành vi này thông qua một kỹ thuật thường được gọi là SEO Poisoning.
-                    Thay vì gửi trực tiếp các liên kết đáng ngờ, kẻ tấn công cố gắng thao túng thứ hạng tìm kiếm để các trang lừa đảo của chúng xuất hiện gần đầu kết quả tìm kiếm cho các từ khóa phổ biến hoặc cấp bách.
-                </p>
-                <p>
-                    Những kẻ lừa đảo ngày nay có đội ngũ sáng tạo nội dung riêng. Các đội ngũ này chịu trách nhiệm sản xuất các tài liệu thuyết phục được thiết kế để xây dựng lòng tin, thu hút nạn nhân và làm cho các chiến dịch lừa đảo trông chuyên nghiệp và hợp pháp.
-                    Bọn này cũng có đội ngũ SEO, chịu trách nhiệm tối ưu hóa thứ hạng SEO của trang web.
-                    Kết quả là, khi người dùng tìm kiếm giải pháp trên Google Search, họ có thể truy cập vào các trang web của kẻ lừa đảo.
-                    Các trang web này thường cung cấp nội dung đúng 90% và vô hại, nhưng 10% còn lại là giả mạo, chủ yếu để hướng dẫn người dùng - những người đã tin tưởng vì 90% đó - tải xuống phần mềm độc hại hoặc thực hiện các khoản thanh toán trước.
-                </p>
+      <h3 id="ky-thuat-12">12. Chuyển hướng truy cập qua nhiều bước</h3>
+      <p>Đây không phải kỹ thuật mới mà là sự kết hợp các kỹ thuật trên. Nạn nhân không vào thẳng trang lừa đảo mà bị chuyển hướng âm thầm qua nhiều trang trung gian, hệ thống theo dõi, URL rút gọn, mạng quảng cáo, trang che giấu hoặc tên miền bị hack. Mỗi bước có một mục đích:</p>
+      <ul>
+        <li>Thay đổi nội dung độc hại</li>
+        <li>Che giấu đích đến cuối cùng</li>
+        <li>Vượt qua danh sách đen</li>
+        <li>Lọc khách truy cập không mong muốn</li>
+        <li>Theo dõi nạn nhân</li>
+        <li>Né tránh trình quét tự động</li>
+      </ul>
+      <p>Ví dụ, máy quét có thể chỉ kiểm tra lần chuyển hướng đầu tiên và kết luận link vô hại, trong khi nội dung lừa đảo chỉ xuất hiện sau vài lần chuyển hướng nữa, trong điều kiện rất cụ thể. Chuỗi chuyển hướng có thể kiểm tra: địa chỉ IP, quốc gia, trình duyệt, thiết bị và hệ điều hành, cookie, trang web nơi người dùng bấm link, và liệu lượt truy cập có phải là bot hay không. Nếu nghi khách là nhà nghiên cứu, trình thu thập bảo mật, máy ảo hoặc trình duyệt không giao diện (headless), chuỗi sẽ dừng sớm và hiện nội dung vô hại.</p>
+      <p>Các đường dây lừa đảo hiện đại dùng chuỗi chuyển hướng như hạ tầng “định tuyến” lưu lượng: mỗi nạn nhân có thể được đưa đến trang lừa đảo khác nhau tuỳ ngôn ngữ, vị trí, thiết bị, chiến dịch quảng cáo và giờ trong ngày. Không trang nào trong chuỗi nhất thiết trông độc hại — một số trang trung gian thậm chí thuộc mạng quảng cáo hợp pháp, nền tảng cloud uy tín, dịch vụ rút gọn URL hoặc trang bị hack. Máy quét phải theo được từng bước, mô phỏng hành vi người dùng thật và đúng điều kiện môi trường thì mới thấy được nội dung cuối cùng.</p>
 
-                <h2>11. Lạm dụng quảng cáo</h2>
-                <p>
-                    Khi việc đạt thứ hạng cao trong SEO mất thời gian hoặc không thể thực hiện được, kẻ lừa đảo vẫn còn một lựa chọn khác.
-                    Chúng chạy các chiến dịch quảng cáo. Chúng trả tiền cho Google Ads để hiển thị trang web của mình ở vị trí đầu tiên.
-                    Những quảng cáo này thường có từ “Được tài trợ” bên dưới tên để phân biệt với các kết quả SEO tự nhiên khác.
-                    Nhưng người dùng thường bỏ qua điều này và thường tin tưởng trang web đầu tiên xuất hiện.
-                </p>
-                <p>
-                    Kẻ lừa đảo thường lợi dụng hành vi này bằng cách tạo ra các quảng cáo giả mạo ngân hàng, hãng hàng không, dịch vụ chính phủ, nền tảng tiền điện tử, công ty hỗ trợ kỹ thuật và dịch vụ giao hàng.
-                    Bản thân quảng cáo có thể trông hoàn toàn hợp pháp, sử dụng logo chính thức, mô tả chuyên nghiệp và tên miền chuyên nghiệp.
-                    Một số chiến dịch thậm chí còn sử dụng các tên miền giả mạo trông giống với các thương hiệu đáng tin cậy.
-                </p>
-                <p>
-                    Vì hệ thống quảng cáo hoạt động trên quy mô lớn, đôi khi kẻ tấn công có thể chạy các quảng cáo độc hại trong thời gian ngắn trước khi hệ thống kiểm duyệt tự động phát hiện và xóa chúng.
-                    Trong khoảng thời gian đó, hàng nghìn người dùng có thể đã nhấp vào quảng cáo lừa đảo.
-                </p>
+      <h2 id="phat-hien">Làm thế nào để phát hiện website lừa đảo được ngụy trang?</h2>
+      <p>Với các kỹ thuật trên, thuật toán phát hiện không thể chỉ dựa vào phân tích nội dung tĩnh. Trang lừa đảo hiện đại thay đổi hành vi linh hoạt theo thiết bị, vị trí, cookie, nguồn giới thiệu, lịch sử duyệt web, thậm chí cả thời gian truy cập. Một trang trông vô hại với máy quét có thể cùng lúc hiện biểu mẫu lừa đảo, file mã độc hay bảng điều khiển đầu tư giả cho nạn nhân được chọn.</p>
+      <p>Vì vậy, hệ thống phát hiện phải phát triển từ “kiểm tra trang” đơn giản thành phân tích hành vi và ngữ cảnh. Thay vì chỉ phân tích HTML hiển thị cuối cùng, cần quan sát:</p>
+      <ul>
+        <li>Chuỗi chuyển hướng</li>
+        <li>Phản hồi khác nhau theo thiết bị</li>
+        <li>Hành vi phụ thuộc vị trí địa lý</li>
+        <li>Việc thực thi JavaScript</li>
+        <li>Bất thường về thời gian</li>
+        <li>Phản hồi khác nhau theo trình duyệt</li>
+      </ul>
+      <p>Chẳng hạn, nếu một trang hoạt động khác nhau giữa điện thoại và máy tính, đổi nội dung sau vài lần truy cập, hoặc chỉ kích hoạt khi vào từ quảng cáo, thì chính sự không nhất quán này có thể là chỉ báo mạnh hơn cả nội dung hiển thị. Đó là lý do phát hiện lừa đảo hiện đại khó hơn nhiều so với lọc thư rác truyền thống: hệ thống lừa đảo không còn tĩnh, nó thích ứng, chọn lọc và “nghiên cứu” người truy cập trước khi lộ ý định thật.</p>
 
-                <h2>12. Điểu hướng truy cập theo nhiều bước</h2>
-                <p>
-                    Đây không phải là 1 kỹ thuật mới, mà là sự kết hợp của nhiều phương pháp ngụy trang được mô tả ở trên.
-                    Trong trường hợp này, nạn nhân không trực tiếp truy cập vào trang lừa đảo chính thức.
-                    Thay vào đó, họ bị chuyển hướng âm thầm qua nhiều trang web trung gian, hệ thống theo dõi, URL rút gọn, mạng lưới quảng cáo, trang che giấu hoặc tên miền bị đã hack trước khi cuối cùng đến trang đích thực sự.
-                    Mỗi bước phục vụ một mục đích cụ thể:
-                </p>
-                <ul>
-                    <li>thay đổi nội dung độc hại</li>
-                    <li>che giấu đích đến cuối cùng</li>
-                    <li>vượt qua hệ thống danh sách đen</li>
-                    <li>lọc khách truy cập không mong muốn</li>
-                    <li>theo dõi nạn nhân</li>
-                    <li>né tránh các trình quét tự động</li>
-                </ul>
-                <p>
-                    Ví dụ, một trình quét bảo mật có thể chỉ kiểm tra lần chuyển hướng đầu tiên và kết luận liên kết đó vô hại, trong khi nội dung lừa đảo thực sự chỉ xuất hiện sau một số lần chuyển hướng bổ sung được kích hoạt trong các điều kiện rất cụ thể. Một số chuỗi chuyển hướng còn kiểm tra thêm:
-                </p>
-                <ul>
-                    <li>Địa chỉ IP</li>
-                    <li>quốc gia</li>
-                    <li>thông tin trình duyệt được sử dụng</li>
-                    <li>thông tin thiết bị & hệ điều hành đang được sử dụng</li>
-                    <li>cookie</li>
-                    <li>trang web mà người dùng bấm vào link</li>
-                    <li>liệu lượt truy cập có phải là chương trình thu thập thông tin hay không</li>
-                </ul>
+      <h2 id="tu-bao-ve">Người dùng tự bảo vệ thế nào trước website lừa đảo được ngụy trang?</h2>
+      <p>Bạn không cần hiểu hết các kỹ thuật trên để an toàn. Điểm chung của chúng là nhắm vào <em>khoảnh khắc bạn bấm link</em> — vì vậy hãy kiểm tra đúng lúc đó, trên chính thiết bị của bạn:</p>
+      <ul>
+        <li><strong>Tự gõ địa chỉ hoặc dùng ứng dụng chính thức</strong> của ngân hàng, cơ quan nhà nước; không đi qua link trong tin nhắn, quảng cáo hay kết quả “Được tài trợ”.</li>
+        <li><strong>Đọc kỹ tên miền trên thanh địa chỉ sau khi trang đã mở</strong> — sau mọi lần chuyển hướng, tên miền cuối cùng mới là tên miền thật.</li>
+        <li><strong>Nghi ngờ link rút gọn</strong> từ người lạ, đặc biệt trong SMS.</li>
+        <li><strong>Không tải file</strong> (APK, .exe) từ trang bạn tìm thấy qua quảng cáo hay link lạ.</li>
+        <li><strong>Chụp màn hình ngay</strong> khi thấy trang đáng ngờ, vì URL dùng một lần có thể biến mất khi mở lại.</li>
+        <li><strong>Để link được kiểm tra tự động trên điện thoại:</strong> khi SafePhone là trình duyệt mặc định, mỗi đường link được đối chiếu với danh sách cảnh báo; nếu trang chưa có trong danh sách, SafePhone phân tích nội dung trang để tìm dấu hiệu giả mạo, và có thể kết hợp AI như OpenAI hoặc DeepSeek — xem <a href="https://safephone.io.vn/safephone-mechanism.html">SafePhone hoạt động như thế nào</a>. Vì kiểm tra diễn ra trên chính điện thoại của bạn, nó gặp đúng thiết bị, vị trí và thời điểm mà kẻ gian nhắm tới.</li>
+      </ul>
+      <p>Với trẻ em và người lớn tuổi, cách chắc chắn hơn là <a href="https://safephone.io.vn/only-allow-access-trusted-sites.html">chặn web đen, chỉ mở web tin cậy</a>: trang nào chưa được duyệt đều không mở được, bất kể nó ngụy trang tinh vi đến đâu. So sánh các công cụ trong bài <a href="https://safephone.io.vn/compare-url-blocker-apps.html">so sánh ứng dụng chặn web lừa đảo</a>.</p>
+      <div class="note"><strong>Lưu ý:</strong> không công cụ nào phát hiện được mọi trang lừa đảo. Hãy kết hợp công cụ với thói quen kiểm tra tên miền và không nhập mật khẩu, OTP vào trang bạn đến từ link lạ.</div>
 
-                <p>
-                    Nếu khách truy cập bị nghi ngờ là: nhà nghiên cứu, trình thu thập thông tin bảo mật, máy ảo hoặc trình duyệt không giao diện người dùng, chuỗi điều hướng có thể kết thúc sớm và hiển thị nội dung vô hại thay vì trang lừa đảo thực sự.
-                </p>
+      <h2 id="ket-luan">Kết luận</h2>
+      <p>12 kỹ thuật ngụy trang website lừa đảo cho thấy một điều: trang lừa đảo có thể trông vô hại với máy quét và cả với người khác, nhưng lộ mặt thật đúng lúc bạn bấm vào. Vì vậy, lớp bảo vệ hiệu quả nhất là kiểm tra ngay tại thời điểm mở link trên điện thoại của bạn, cộng với thói quen đọc kỹ tên miền và không tin link lạ.</p>
+      <div class="cta-box">
+        <p>Chặn web lừa đảo ngay khi bấm link với SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
 
-                <p>Các hoạt động lừa đảo hiện đại thường sử dụng chuỗi chuyển hướng như cơ sở hạ tầng định tuyến lưu lượng truy cập.
-                    Các nạn nhân khác nhau có thể được chuyển hướng đến các trang lừa đảo hoàn toàn khác nhau tùy thuộc vào: ngôn ngữ, vị trí, loại thiết bị, chiến dịch quảng cáo và thời gian trong ngày.
-                    Kỹ thuật này đặc biệt hiệu quả vì không có trang web nào trong chuỗi nhất thiết phải hiển thị rõ ràng là độc hại.
-                    Một số trang trung gian thậm chí có thể thuộc về các mạng quảng cáo hợp pháp, các trang web chính phủ bị tấn công, các nền tảng đám mây đáng tin cậy, các công cụ rút gọn URL hoặc các trang web bị hack.</p>
-                <p>Do đó, việc phát hiện tự động trở nên khó khăn hơn đáng kể vì các trình quét phải theo dõi thành công từng bước chuyển hướng, mô phỏng hành vi người dùng thực tế và kích hoạt các điều kiện môi trường chính xác trước khi nội dung độc hại cuối cùng được tiết lộ.</p>
+      <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+      <details>
+        <summary>Cloaking là gì?</summary>
+        <p>Cloaking là kỹ thuật cho trang web hiển thị nội dung khác nhau tuỳ người xem, dựa trên cookie, địa chỉ IP, thiết bị hoặc thời điểm. Trang lừa đảo dùng nó để hiện nội dung vô hại cho máy quét và kiểm duyệt quảng cáo, chỉ hiện nội dung lừa đảo cho nạn nhân.</p>
+      </details>
+      <details>
+        <summary>SEO poisoning là gì?</summary>
+        <p>SEO poisoning là thao túng thứ hạng tìm kiếm để trang lừa đảo xuất hiện gần đầu kết quả Google cho các từ khoá phổ biến. Trang thường có phần lớn nội dung đúng để lấy lòng tin, còn một phần dẫn người dùng tải mã độc hoặc thanh toán trước.</p>
+      </details>
+      <details>
+        <summary>Link rút gọn bit.ly, TinyURL có nguy hiểm không?</summary>
+        <p>Bản thân dịch vụ rút gọn không nguy hiểm, nhưng link rút gọn che giấu tên miền thật nên hay bị kẻ lừa đảo dùng, đặc biệt trong SMS. Đừng bấm link rút gọn từ người lạ; hãy kiểm tra bằng công cụ trước khi mở.</p>
+      </details>
+      <details>
+        <summary>Vì sao mở lại link lừa đảo thì báo lỗi 404?</summary>
+        <p>Đó có thể là URL dùng một lần: link chỉ hiện nội dung lừa đảo lần đầu, sau đó báo lỗi hoặc hiện trang vô hại để tránh bị xác minh. Nếu thấy trang đáng ngờ, hãy chụp màn hình ngay.</p>
+      </details>
+      <details>
+        <summary>Trang web có tên miền chính thức có chắc chắn an toàn không?</summary>
+        <p>Không chắc chắn. Trang hợp pháp, kể cả trang cơ quan nhà nước, có thể bị hack và bị chèn link hoặc mã độc chuyển hướng sang trang lừa đảo. Hãy xem tên miền cuối cùng trên thanh địa chỉ trước khi nhập thông tin.</p>
+      </details>
 
-                <p>Vậy làm thế nào để phát hiện các trang web lừa đảo được ngụy trang này?</p>
-
-                <h2>Làm thế nào để phát hiện các trang web lừa đảo được ngụy trang?</h2>
-                <p>
-                    Dựa trên các kỹ thuật ngụy trang đã biết, các thuật toán phát hiện không thể chỉ dựa vào phân tích nội dung tĩnh nữa.
-                    Các trang web lừa đảo hiện đại ngày càng có khả năng thay đổi hành vi một cách linh hoạt tùy thuộc vào thiết bị, vị trí, cookie, nguồn giới thiệu, lịch sử duyệt web hoặc thậm chí cả thời gian hiện tại của người truy cập.
-                    Một trang web trông hoàn toàn vô hại đối với trình quét tự động có thể đồng thời hiển thị các biểu mẫu lừa đảo, tải xuống phần mềm độc hại hoặc bảng điều khiển đầu tư giả mạo cho các nạn nhân trong những điều kiện được lựa chọn cẩn thận.
-                </p>
-                <p>
-                    Vì lý do này, các hệ thống phát hiện hiện đại phải phát triển từ việc “kiểm tra trang” đơn giản thành các hệ thống phân tích hành vi và ngữ cảnh. Thay vì chỉ phân tích HTML được hiển thị cuối cùng, các giải pháp bảo mật ngày càng cần phải quan sát:
-                </p>
-                <ul>
-                    <li>chuỗi chuyển hướng</li>
-                    <li>phản hồi cụ thể theo thiết bị</li>
-                    <li>hành vi phụ thuộc vào vị trí địa lý</li>
-                    <li>thực thi JavaScript</li>
-                    <li>bất thường về thời gian</li>
-                    <li>phản hồi cụ thể theo từng trình duyệt</li>
-                </ul>
-
-                <p>
-                    Ví dụ, nếu một trang web hoạt động khác nhau giữa thiết bị di động và máy tính để bàn, thay đổi nội dung sau một vài lần truy cập hoặc chỉ được kích hoạt sau khi truy cập từ quảng cáo, thì chính những sự không nhất quán về hành vi này có thể trở thành những chỉ báo mạnh hơn cả nội dung hiển thị.
-                </p>
-
-                <p>
-                    Đây là một lý do tại sao việc phát hiện lừa đảo hiện đại trở nên khó khăn hơn đáng kể so với việc lọc thư rác truyền thống. Hệ thống lừa đảo không còn tĩnh nữa. Nó thích ứng, có tính chọn lọc và ngày càng được thiết kế để nghiên cứu người truy cập trước khi tiết lộ ý định thực sự.
-                </p>
-            </div>
-
-        </div>
-        <div>
-            <h3>Xem thêm:</h3>
-            <ul>
-                <li><a href="top-risks-on-internet.html">Các rủi ro trên Internet</a></li>
-                <li><a href="fake_bts_and_risk_of_loss_password.html">Trạm phát sóng di động giả (fake BTS) và nguy cơ đánh cắp mật khẩu</a></li>
-                <li><a href="advanced_scam_techniques_how_to_defend.html">Những Hình Thức Lừa Đảo Công Nghệ Cao — Và Cách Tự Bảo Vệ Bản Thân</a></li>
-                <li><a href="top-habits-make-you-lose-personal-data.html">Các thói quen khiến bạn tự làm mất dữ liệu</a></li>
-                <li><a href="top-security-holes-every-company-have.html">6 con đường hacker dùng để xâm nhập hệ thống</a></li>
-                <li><a href="top-app-employee-should-install.html">Các app mà một nhân viên văn phòng nên có trên điện thoại</a></li>
-                <li><a href="top-app-to-protect-your-children.html">Các app dùng để đảm bảo an toàn cho trẻ em trên Internet</a></li>
-                <li><a href="top-app-to-protect-parent.html">Các app dùng để đảm bảo an toàn cho người lớn tuổi trên Internet</a></li>
-                <li><a href="top-security-app-on-android.html">Các ứng dụng bảo mật có trên Android</a></li>
-                <li><a href="top-app-for-crypto-trader.html">Các ứng dụng một crypto trader nên có trên điện thoại</a></li>
-                <li><a href="compare-url-blocker-apps.html">So sánh các ứng dụng chặn web nổi tiếng</a></li>
-                <li><a href="compare-parental-control-apps.html">So sánh các ứng dụng đảm bảo an toàn cho con cái</a></li>
-                <li><a href="compare-call-blocker-apps.html">So sánh các ứng dụng chặn cuộc gọi nổi tiếng</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách để biết khi nào con mình bấm phải link độc hại</a></li>
-                <li><a href="send-alert-when-open-url.html">Cách để biết khi nào con mình nhận phải cuộc gọi từ số lạ</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách để đảm bảo con cái luôn tránh xa khỏi các trang web giả mạo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách để chặn 100% số lạ</a></li>
-                <li><a href="what_to_do_to_be_safe_online.html">Các bước để bạn đảm bảo an toàn trên Internet</a></li>
-                <li><a href="how_to_detect_malicious_mobile_apps.html">Cách để phát hiện ứng dụng độc hại trên di động</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách để phát hiện trang web giả mạo</a></li>
-            </ul>
-        </div>
-    </article>
-
-
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Xem thêm</h2>
+        <p class="grp">Chặn web và link lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html"><b>Cách kiểm tra trang web lừa đảo</b><span>9 dấu hiệu nhận biết website giả mạo và cách check web.</span></a></li>
+          <li><a href="https://safephone.io.vn/screening-urls-before-openning.html"><b>Cách chặn trang web lừa đảo</b><span>Tự động kiểm tra link trước khi mở trên Android.</span></a></li>
+          <li><a href="https://safephone.io.vn/how-to-block-ads-url.html"><b>Cách chặn quảng cáo trên Android</b><span>Chặn quảng cáo Facebook, Google dẫn đến trang lừa đảo.</span></a></li>
+          <li><a href="https://safephone.io.vn/only-allow-access-trusted-sites.html"><b>Chặn web đen, chỉ mở web tin cậy</b><span>Chỉ cho phép truy cập các trang đã duyệt.</span></a></li>
+          <li><a href="https://safephone.io.vn/compare-url-blocker-apps.html"><b>So sánh ứng dụng chặn web lừa đảo</b><span>Ưu nhược điểm các công cụ chặn web phổ biến.</span></a></li>
+        </ul>
+        <p class="grp">Nhận biết lừa đảo</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/how-fake-advertisement-target-you.html"><b>Quảng cáo lừa đảo nhắm đến bạn như thế nào?</b><span>Cơ chế nhắm mục tiêu và dấu hiệu nhận biết quảng cáo giả mạo.</span></a></li>
+        </ul>
+      </aside>
+  </article>
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
 
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+      <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+      <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+      <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
