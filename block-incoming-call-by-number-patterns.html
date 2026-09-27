@@ -1,229 +1,330 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Cách chặn đầu số, đuôi số, hoặc số có quy luật trên Android</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="Chặn số điện thoại có đầu số 028, đầu số 024, đầu số 058, đầu số 077, đầu số 0592, đầu số 086, đầu số 081, đầu số 085" />
-    <meta name="keywords" content="Chặn số điện thoại, đầu số 028, đầu số 024, đầu số 058, đầu số 077, đầu số 0592, đầu số 086, đầu số 081, đầu số 085, số đẹp, số có quy luật" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Cách chặn đầu số, đuôi số, hoặc số có quy luật trên Android" />
-    <meta property="og:description" content="Chặn số điện thoại, đầu số 028, đầu số 024, đầu số 058, đầu số 077, đầu số 0592, đầu số 086, đầu số 081, đầu số 085, số đẹp, số có quy luật" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cách chặn đầu số 028, 024, đuôi số trên Android | SafePhone</title>
+    <meta name="description" content="Cách chặn đầu số, đuôi số hoặc số có quy luật trên Android (028, 024, 058…). Kết hợp danh sách đen, danh sách trắng để không lỡ cuộc gọi quan trọng.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">
+    <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+    <meta name="theme-color" content="#0f6e56">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SafePhone">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">
+    <meta property="og:title" content="Cách chặn đầu số 028, 024, đuôi số trên Android | SafePhone">
+    <meta property="og:description" content="Chặn cả nhóm số làm phiền chỉ bằng một quy tắc: chặn theo đầu số, đuôi số hoặc độ dài số. Hướng dẫn cú pháp và cài đặt trên SafePhone.">
+    <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png">
+    <meta property="article:modified_time" content="2026-09-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cách chặn đầu số 028, 024, đuôi số trên Android | SafePhone">
+    <meta name="twitter:description" content="Chặn cả nhóm số làm phiền chỉ bằng một quy tắc: chặn theo đầu số, đuôi số hoặc độ dài số. Hướng dẫn cú pháp và cài đặt trên SafePhone.">
+    <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Cách chặn đầu số, đuôi số, hoặc số có quy luật trên Android",
-            "description": "Chặn số điện thoại, đầu số 028, đầu số 024, đầu số 058, đầu số 077, đầu số 0592, đầu số 086, đầu số 081, đầu số 085, số đẹp, số có quy luật"
+            "@graph": [
+                {
+                    "@type": "TechArticle",
+                    "@id": "https://safephone.io.vn/block-incoming-call-by-number-patterns.html#article",
+                    "headline": "Cách chặn đầu số, đuôi số hoặc số có quy luật trên Android",
+                    "description": "Cách chặn đầu số, đuôi số hoặc số có quy luật trên Android (028, 024, 058…). Kết hợp danh sách đen, danh sách trắng để không lỡ cuộc gọi quan trọng.",
+                    "inLanguage": "vi-VN",
+                    "mainEntityOfPage": "https://safephone.io.vn/block-incoming-call-by-number-patterns.html",
+                    "image": "https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png",
+                    "dateModified": "2026-09-27",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "SafePhone",
+                        "url": "https://safephone.io.vn/"
+                    },
+                    "publisher": {
+                        "@id": "https://safephone.io.vn/#org"
+                    },
+                    "about": {
+                        "@id": "https://safephone.io.vn/#app"
+                    },
+                    "keywords": "cách chặn đầu số, chặn đầu số 028, chặn đầu số 024, chặn đuôi số, chặn số có quy luật, chặn cuộc gọi telesale"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "SafePhone",
+                            "item": "https://safephone.io.vn/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Hướng dẫn sử dụng",
+                            "item": "https://safephone.io.vn/tutorials.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Cách chặn đầu số",
+                            "item": "https://safephone.io.vn/block-incoming-call-by-number-patterns.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Dấu * trong quy tắc chặn đầu số nghĩa là gì?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Mỗi dấu * thay cho đúng một chữ số bất kỳ từ 0 đến 9. Ví dụ quy tắc 028******** (3 chữ số và 8 dấu *) chặn mọi số máy bàn 11 chữ số bắt đầu bằng 028."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Chặn đầu số 028 có chặn nhầm cuộc gọi quan trọng không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Có thể. Quy tắc chặn mọi số khớp mẫu, kể cả ngân hàng, bệnh viện hay doanh nghiệp dùng máy bàn 028. Hãy kiểm tra nhật ký cuộc gọi bị chặn và tạm tắt quy tắc khi bạn đang chờ cuộc gọi quan trọng."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Chặn đầu số có cần cấp quyền sàng lọc cuộc gọi không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Có. SafePhone cần quyền sàng lọc cuộc gọi của Android để kiểm tra số gọi đến trước khi đổ chuông. Nếu chưa cấp quyền, các quy tắc chặn đầu số sẽ không hoạt động."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Nên chặn theo đầu số hay chặn số ngoài danh bạ?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Chặn theo đầu số phù hợp khi bạn chỉ muốn dẹp một nhóm số làm phiền mà vẫn nhận cuộc gọi từ số lạ khác. Chặn số ngoài danh bạ phù hợp với bố mẹ lớn tuổi và trẻ em, những người chỉ cần nhận cuộc gọi từ người quen."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+    <style>
+        :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+        a{color:var(--brand)}
+        img{max-width:100%;height:auto;display:block}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+        header.site{border-bottom:1px solid var(--line);background:#fff}
+        header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+        .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+        .brand img{width:32px;height:32px}
+        nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+        nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+        .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+        .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+        .crumbs li+li::before{content:"›";margin-right:6px}
+        article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+        article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+        .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+        .lede{font-size:18px}
+        article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+        article.post h3{font-size:19px;margin:24px 0 8px}
+        .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+        .cta-box p{margin:0;font-weight:600}
+        .cta-box img{height:48px;width:auto}
+        .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+        .toc strong{display:block;margin-bottom:4px}
+        .toc ol{margin:0;padding-left:20px}
+        .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+        .steps li{margin-bottom:6px}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+        .gallery figure{margin:0}
+        .gallery img{border:1px solid var(--line);border-radius:10px}
+        .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+        table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+        th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+        th{background:var(--brand-soft)}
+        .tablewrap{overflow-x:auto}
+        details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+        summary{font-weight:600;cursor:pointer}
+        .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+        .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+        .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+        .related a b{display:block;color:var(--brand)}
+        .related a span{font-size:14px;color:var(--muted)}
+        .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+        footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+        footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+        footer ul{list-style:none;padding:0;margin:0}
+        footer li{margin:4px 0}
+        .social{display:flex;gap:12px;align-items:center}
+        .social img{height:28px;width:auto}
+        @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+        <nav class="top" aria-label="Điều hướng chính">
+            <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+            <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+        </nav>
     </div>
-</nav>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
-        <header class="page__header">
-            <h1 class="page__title">Cách chặn đầu số, đuôi số, hoặc số có quy luật trên Android</h1>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
-
-            <p>
-                Nếu bạn đang tìm kiếm giải pháp giúp chặn cuộc gọi rác, cuộc gọi lừa đảo, hãy tải ngay <strong>SafePhone</strong>!
-            </p>
-
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
-                </a>
-            </p>
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+                <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+                <li aria-current="page">Cách chặn đầu số</li>
+            </ol>
+        </nav>
+    </div>
+    <article class="post">
+        <h1>Cách chặn đầu số, đuôi số hoặc số có quy luật trên Android</h1>
+        <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+        <p class="lede">Bạn liên tục nhận cuộc gọi quảng cáo, telesale từ các số máy bàn 028, 024 — mỗi lần một số khác nhau? Thay vì chặn từng số, bạn có thể <strong>chặn đầu số</strong>, chặn đuôi số hoặc chặn cả nhóm số có quy luật chỉ bằng một quy tắc. Bài viết hướng dẫn cú pháp và cách cài đặt trên điện thoại Android bằng SafePhone.</p>
+        <div class="cta-box">
+            <p>Chặn đầu số, đuôi số với SafePhone</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
-        <div class="page__content">
+        <nav class="toc" aria-label="Mục lục">
+            <strong>Nội dung bài viết</strong>
+            <ol>
+                <li><a href="#khi-nao">Khi nào nên chặn theo đầu số?</a></li>
+                <li><a href="#cu-phap">Cú pháp quy tắc chặn đầu số, đuôi số</a></li>
+                <li><a href="#huong-dan">Hướng dẫn cài đặt chặn đầu số trên SafePhone</a></li>
+                <li><a href="#luu-y">Lưu ý để không chặn nhầm cuộc gọi quan trọng</a></li>
+                <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+            </ol>
+        </nav>
 
-    <h3>1. Hạn chế của blacklist và whitelist riêng lẻ</h3>
-    <p>
-        Hai phương pháp phổ biến hiện nay là chặn theo danh sách đen (blacklist) và chỉ nhận cuộc gọi từ danh bạ (whitelist).
-        Tuy nhiên, khi sử dụng riêng lẻ, mỗi cách đều có điểm hạn chế:
-    </p>
-    <ul>
-        <li>Blacklist: Không theo kịp các số spam mới liên tục thay đổi</li>
-        <li>Whitelist: Có thể bỏ lỡ cuộc gọi quan trọng từ số chưa lưu</li>
-        <li>Cả hai đều thiếu tính linh hoạt khi đối phó với các dạng số đáng ngờ có quy luật</li>
-    </ul>
+        <h2 id="khi-nao">Khi nào nên chặn theo đầu số?</h2>
+        <p>Chặn theo danh sách đen hay chỉ nhận cuộc gọi trong danh bạ đều hữu ích, nhưng mỗi cách có hạn chế riêng:</p>
+        <ul>
+            <li><strong>Danh sách đen</strong> khó theo kịp khi số spam thay đổi liên tục — mỗi ngày kẻ gian có thể dùng một số mới.</li>
+            <li><strong>Chỉ nhận cuộc gọi trong danh bạ</strong> có thể khiến bạn lỡ cuộc gọi quan trọng từ số chưa lưu, như shipper hay phòng khám.</li>
+            <li>Cả hai đều thiếu linh hoạt với những số đáng ngờ có chung một quy luật.</li>
+        </ul>
+        <p>Thực tế, nhiều cuộc gọi làm phiền đến từ cùng một dải số — ví dụ các tổng đài telesale dùng hàng loạt số máy bàn có cùng đầu số, hoặc những số có độ dài bất thường. Chặn theo mẫu số giúp bạn:</p>
+        <ul>
+            <li>Chủ động chặn cả nhóm số đáng ngờ chỉ với một quy tắc</li>
+            <li>Giảm việc phải cập nhật danh sách đen thủ công</li>
+            <li>Vẫn nhận cuộc gọi từ số lạ không khớp quy tắc, nên không lỡ cuộc gọi quan trọng</li>
+        </ul>
+        <p>Chặn đầu số hoạt động song song với <a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">chặn số lạ, số lừa đảo tự động</a> — nên bật cả hai.</p>
 
-    <p>
-        Trong thực tế, nhiều cuộc gọi rác thường xuất phát từ các dải số hoặc có mẫu hình giống nhau
-        (ví dụ: cùng đầu số, độ dài bất thường, hoặc định dạng quốc tế lạ).
-        Đây là cơ sở để áp dụng giải pháp chặn theo mẫu hình.
-    </p>
+        <h2 id="cu-phap">Cú pháp quy tắc chặn đầu số, đuôi số</h2>
+        <p>Trong SafePhone, mỗi dấu <code>*</code> tương ứng với <strong>một chữ số bất kỳ (0–9)</strong>. Quy tắc phải có <strong>đúng số ký tự</strong> bằng độ dài số điện thoại muốn chặn: số di động Việt Nam có 10 chữ số, số máy bàn (ví dụ 028, 024) có 11 chữ số.</p>
+        <div class="tablewrap">
+            <table>
+                <thead><tr><th>Muốn chặn</th><th>Quy tắc</th><th>Ví dụ số bị chặn</th></tr></thead>
+                <tbody>
+                <tr><td>Máy bàn đầu số 028 (TP.HCM)</td><td><code>028********</code></td><td>028 1234 5678</td></tr>
+                <tr><td>Máy bàn đầu số 024 (Hà Nội)</td><td><code>024********</code></td><td>024 8765 4321</td></tr>
+                <tr><td>Di động bắt đầu bằng 090</td><td><code>090*******</code></td><td>0901 234 567</td></tr>
+                <tr><td>Số kết thúc bằng 888</td><td><code>*******888</code></td><td>0912 345 888</td></tr>
+                <tr><td>Số theo quy luật riêng</td><td><code>09*5****8*</code></td><td>0925 1234 81</td></tr>
+                <tr><td>Mọi số có 12 chữ số</td><td><code>************</code></td><td>Số có độ dài bất thường</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Quy tắc có ít ký tự hơn hoặc nhiều ký tự hơn số thật sẽ không khớp, nên hãy đếm kỹ số dấu <code>*</code>.</p>
 
-    <h3>2. Giải pháp: Kết hợp blacklist, whitelist và chặn theo mẫu hình</h3>
-    <p>
-        Ứng dụng SafePhone cho phép người dùng thiết lập quy tắc chặn dựa trên mẫu số điện thoại,
-        giúp cân bằng giữa việc bảo vệ và không bỏ lỡ liên lạc quan trọng.
-    </p>
-            <p>
-                <span><strong>Tải SafePhone tại:</strong> <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" target="_blank">https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup</a></span>
-            </p>
+        <h2 id="huong-dan">Hướng dẫn cài đặt chặn đầu số trên SafePhone</h2>
+        <ol class="steps">
+            <li>Mở ứng dụng SafePhone. Nếu chưa cài, <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">tải SafePhone trên Google Play</a>.</li>
+            <li>Chuyển sang tab thứ 3.</li>
+            <li>Bấm <strong>“Chặn đầu số”</strong>.</li>
+            <li>Thêm quy tắc mới theo cú pháp ở trên, ví dụ <code>028********</code> để chặn mọi số máy bàn bắt đầu bằng 028.</li>
+            <li>Bấm <strong>“Lưu lại”</strong>.</li>
+            <li>Đảm bảo bạn đã cấp cho SafePhone quyền <a href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">sàng lọc cuộc gọi</a> — nếu chưa, làm theo các bước trong bài <a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">cách chặn số lạ</a>.</li>
+        </ol>
+        <div class="gallery">
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_1.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_1.png" alt="Tab thứ 3 trong ứng dụng SafePhone" loading="lazy"></a><figcaption>Bước 2: Chuyển sang tab thứ 3</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png" alt="Mục chặn đầu số trong SafePhone" loading="lazy"></a><figcaption>Bước 3: Bấm “Chặn đầu số”</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png" alt="Thêm quy tắc chặn đầu số 028 bằng ký tự đại diện" loading="lazy"></a><figcaption>Bước 4–5: Thêm quy tắc và lưu</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_blacklist_completed.png"><img src="https://safephone.io.vn/assets/screenshots/phone_blacklist_completed.png" alt="SafePhone đã bật lá chắn chặn cuộc gọi" loading="lazy"></a><figcaption>Hoàn tất: quy tắc chặn đang hoạt động</figcaption></figure>
+        </div>
+        <p>Sau khi thiết lập, SafePhone tự động lọc cuộc gọi đến theo các quy tắc bạn đã tạo — cuộc gọi khớp quy tắc sẽ bị chặn trước khi điện thoại đổ chuông.</p>
 
-    <p>Lợi ích của phương pháp này:</p>
-    <ul>
-        <li>Chủ động chặn các nhóm số đáng ngờ theo quy luật</li>
-        <li>Giảm phụ thuộc vào việc cập nhật blacklist thủ công</li>
-        <li>Vẫn cho phép nhận cuộc gọi ngoài danh bạ nếu không thuộc mẫu bị chặn</li>
-    </ul>
+        <h2 id="luu-y">Lưu ý để không chặn nhầm cuộc gọi quan trọng</h2>
+        <ul>
+            <li><strong>Tránh chặn quá rộng.</strong> Một đầu số di động như 086 hay 090 được hàng triệu người dùng, gồm cả người thân và bạn bè của bạn. Chặn cả đầu số di động chỉ nên dùng khi bạn thật sự chắc chắn.</li>
+            <li><strong>Máy bàn cũng có thể là cuộc gọi quan trọng.</strong> Ngân hàng, bệnh viện, cơ quan nhà nước cũng gọi từ số 028, 024. Nếu bạn đang chờ cuộc gọi từ những nơi này, hãy tạm tắt quy tắc.</li>
+            <li><strong>Kiểm tra nhật ký cuộc gọi.</strong> Thỉnh thoảng xem lại danh sách cuộc gọi bị chặn trong ứng dụng Điện thoại để chắc chắn không có cuộc gọi quan trọng nào bị chặn nhầm.</li>
+            <li><strong>Kết hợp nhiều quy tắc</strong> thay vì một quy tắc quá rộng — ví dụ chặn đúng đuôi số hoặc dải số hay gọi đến cho bạn.</li>
+        </ul>
+        <p>Với bố mẹ lớn tuổi hoặc trẻ em, cách an toàn hơn là <a href="https://safephone.io.vn/build-trusted-contact-phone.html">chặn cuộc gọi ngoài danh bạ</a>: chỉ người quen mới gọi được, không cần đoán đầu số.</p>
 
-    <h3>3. Hướng dẫn cấu hình chặn theo mẫu hình</h3>
-    <ol>
-        <li>Mở ứng dụng SafePhone trên điện thoại</li>
-        <li>Chuyển sang tab thứ 3 như hình</li>
-        <li>Bấm vào "Chặn đầu số" </li>
-        <li>Thêm quy tắc mới theo hình dạng của số điện thoại, ví dụ:
+        <h2 id="ket-luan">Kết luận</h2>
+        <p>Chặn đầu số là cách nhanh nhất để dẹp các cuộc gọi quảng cáo, telesale đến từ cùng một dải số. Kết hợp với danh sách đen số lừa đảo, bạn vừa chặn được số đã bị báo cáo, vừa chặn được cả nhóm số làm phiền mới xuất hiện.</p>
+        <div class="cta-box">
+            <p>Tạo quy tắc chặn đầu số đầu tiên của bạn</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+        </div>
+
+        <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+        <details>
+            <summary>Dấu * trong quy tắc chặn đầu số nghĩa là gì?</summary>
+            <p>Mỗi dấu * thay cho đúng một chữ số bất kỳ từ 0 đến 9. Ví dụ quy tắc 028******** (3 chữ số và 8 dấu *) chặn mọi số máy bàn 11 chữ số bắt đầu bằng 028.</p>
+        </details>
+        <details>
+            <summary>Chặn đầu số 028 có chặn nhầm cuộc gọi quan trọng không?</summary>
+            <p>Có thể. Quy tắc chặn mọi số khớp mẫu, kể cả ngân hàng, bệnh viện hay doanh nghiệp dùng máy bàn 028. Hãy kiểm tra nhật ký cuộc gọi bị chặn và tạm tắt quy tắc khi bạn đang chờ cuộc gọi quan trọng.</p>
+        </details>
+        <details>
+            <summary>Chặn đầu số có cần cấp quyền sàng lọc cuộc gọi không?</summary>
+            <p>Có. SafePhone cần quyền sàng lọc cuộc gọi của Android để kiểm tra số gọi đến trước khi đổ chuông. Nếu chưa cấp quyền, các quy tắc chặn đầu số sẽ không hoạt động.</p>
+        </details>
+        <details>
+            <summary>Nên chặn theo đầu số hay chặn số ngoài danh bạ?</summary>
+            <p>Chặn theo đầu số phù hợp khi bạn chỉ muốn dẹp một nhóm số làm phiền mà vẫn nhận cuộc gọi từ số lạ khác. Chặn số ngoài danh bạ phù hợp với bố mẹ lớn tuổi và trẻ em, những người chỉ cần nhận cuộc gọi từ người quen.</p>
+        </details>
+
+        <aside class="related" aria-labelledby="xem-them">
+            <h2 id="xem-them">Xem thêm</h2>
+            <p class="grp">Các cách chặn cuộc gọi khác</p>
             <ul>
-                <li><strong>028********</strong> chặn tất cả các số bắt đầu bởi 028 (mỗi dấu * đại diện cho 1 chữ số bất kì</li>
-                <li><strong>************</strong> chặn tất cả các số có 12 chữ số (tương ứng với 12 dấu *)</li>
-                <li>       <strong>   <a href="tutorial_config_phone_pattern.html">Xem thêm về quy tắc cấu hình hình dạng SĐT</a> </strong>
-                </li>
+                <li><a href="https://safephone.io.vn/block-blacklisted-incoming-call.html"><b>Cách chặn số lạ, số lừa đảo tự động</b><span>Hướng dẫn đầy đủ: chặn số lừa đảo trước khi điện thoại đổ chuông.</span></a></li>
+                <li><a href="https://safephone.io.vn/build-trusted-contact-phone.html"><b>Chặn cuộc gọi ngoài danh bạ</b><span>Chặn 100% số lạ, chỉ người trong danh bạ mới gọi được.</span></a></li>
+                <li><a href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html"><b>Quyền sàng lọc cuộc gọi trên Android và iOS</b><span>Vì sao cần cấp quyền này để chặn đầu số.</span></a></li>
+                <li><a href="https://safephone.io.vn/compare-call-blocker-apps.html"><b>So sánh ứng dụng chặn cuộc gọi tốt nhất</b><span>Truecaller, Hiya, Call Blacklist và SafePhone.</span></a></li>
             </ul>
-        </li>
-        <li>Bấm "Lưu lại"</li>
-        <li>Đảm bảo rằng bạn đã Cấp quyền cho ứng dụng để Sàng lọc cuộc gọi</li>
-    </ol>
-
-
-            <div class="app__screenshots-list">
-                <a href="assets/screenshots/phone_pattern_step_1.png" class="lightbox">
-                    <img src="assets/screenshots/phone_pattern_step_1.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/phone_pattern_step_2.png" class="lightbox">
-                    <img src="assets/screenshots/phone_pattern_step_2.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/phone_pattern_step_3.png" class="lightbox">
-                    <img src="assets/screenshots/phone_pattern_step_3.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/phone_blacklist_completed.png" class="lightbox">
-                    <img src="assets/screenshots/phone_blacklist_completed.png" class="app__screenshot" alt="" />
-                </a>
-            </div>
-
-    <p>
-        Sau khi thiết lập, hệ thống sẽ tự động lọc các cuộc gọi dựa trên quy tắc bạn đã định nghĩa,
-        giúp giảm thiểu cuộc gọi rác mà vẫn đảm bảo tính linh hoạt.
-    </p>
-
-    <ul>
-        <li>Nên theo dõi nhật ký cuộc gọi bị chặn để điều chỉnh quy tắc phù hợp</li>
-        <li>Tránh thiết lập mẫu quá rộng gây chặn nhầm cuộc gọi quan trọng</li>
-    </ul>
-
-
-        </div>
-        <div>
-            <h3>Xem thêm:</h3>
+            <p class="grp">Có thể bạn quan tâm</p>
             <ul>
-                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
-                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
-                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
-                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
-                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
-                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
-                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+                <li><a href="https://safephone.io.vn/list-keywords-used-in-fraud-campaign-2026.html"><b>Các chiêu trò lừa đảo 2026</b><span>Nhận ra kịch bản lừa đảo qua điện thoại chỉ sau vài câu.</span></a></li>
             </ul>
-        </div>
+        </aside>
     </article>
-
-
-
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
+
+<footer>
+    <div class="wrap cols">
+        <div>
+            <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+            <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+        </div>
+        <ul>
+            <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+            <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+            <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+            <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+            <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
 
 </body>
 </html>
