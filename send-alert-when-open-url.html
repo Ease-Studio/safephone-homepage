@@ -1,227 +1,334 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Làm sao để biết liệu người thân có bấm vào link lừa đảo?</title>
-    <meta name="robots" content="index, follow">
-
-
-    <meta name="description" content="Cách để theo dõi con cái hoặc bố mẹ xem họ có lỡ bấm vào đường link giả mạo hay không, bằng cách tích hợp SafePhone với Slack, từ đó giúp bảo vệ họ kịp thời, parental control app" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Làm sao để biết liệu người thân có bấm vào link lừa đảo?" />
-    <meta property="og:description" content="Cách để theo dõi con cái hoặc bố mẹ xem họ có lỡ bấm vào đường link giả mạo hay không, bằng cách tích hợp SafePhone với Slack, từ đó giúp bảo vệ họ kịp thời, parental control app" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cảnh báo khi người thân bấm link lạ, link lừa đảo | SafePhone</title>
+    <meta name="description" content="Nhận cảnh báo khi người thân bấm link lạ hoặc link lừa đảo. Hướng dẫn kết nối SafePhone với Slack để kịp thời bảo vệ con cái và bố mẹ.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://safephone.io.vn/send-alert-when-open-url.html">
+    <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+    <meta name="theme-color" content="#0f6e56">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SafePhone">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://safephone.io.vn/send-alert-when-open-url.html">
+    <meta property="og:title" content="Cảnh báo khi người thân bấm link lạ, link lừa đảo | SafePhone">
+    <meta property="og:description" content="Con hay bố mẹ vừa bấm vào một link lừa đảo? Bạn biết ngay trên điện thoại của mình — và biết phải làm gì tiếp theo.">
+    <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/phone_alert_step_4.png">
+    <meta property="article:modified_time" content="2026-09-27">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cảnh báo khi người thân bấm link lạ, link lừa đảo | SafePhone">
+    <meta name="twitter:description" content="Con hay bố mẹ vừa bấm vào một link lừa đảo? Bạn biết ngay trên điện thoại của mình — và biết phải làm gì tiếp theo.">
+    <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/phone_alert_step_4.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Làm sao để biết liệu người thân có bấm vào link lừa đảo?",
-            "description": "Cách để theo dõi con cái hoặc bố mẹ xem họ có lỡ bấm vào đường link giả mạo hay không, bằng cách tích hợp SafePhone với Slack, từ đó giúp bảo vệ họ kịp thời, parental control app"
+            "@graph": [
+                {
+                    "@type": "TechArticle",
+                    "@id": "https://safephone.io.vn/send-alert-when-open-url.html#article",
+                    "headline": "Làm sao biết người thân bấm vào link lừa đảo? Cách nhận cảnh báo từ xa",
+                    "description": "Nhận cảnh báo khi người thân bấm link lạ hoặc link lừa đảo. Hướng dẫn kết nối SafePhone với Slack để kịp thời bảo vệ con cái và bố mẹ.",
+                    "inLanguage": "vi-VN",
+                    "mainEntityOfPage": "https://safephone.io.vn/send-alert-when-open-url.html",
+                    "image": "https://safephone.io.vn/assets/screenshots/phone_alert_step_4.png",
+                    "dateModified": "2026-09-27",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "SafePhone",
+                        "url": "https://safephone.io.vn/"
+                    },
+                    "publisher": {
+                        "@id": "https://safephone.io.vn/#org"
+                    },
+                    "about": {
+                        "@id": "https://safephone.io.vn/#app"
+                    },
+                    "keywords": "cảnh báo khi người thân bấm link lạ, biết người thân bấm link lừa đảo, lỡ bấm vào link lừa đảo, giám sát link con truy cập, bảo vệ trẻ em khỏi link lừa đảo"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "SafePhone",
+                            "item": "https://safephone.io.vn/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Hướng dẫn sử dụng",
+                            "item": "https://safephone.io.vn/tutorials.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Cảnh báo khi người thân bấm link lạ",
+                            "item": "https://safephone.io.vn/send-alert-when-open-url.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Làm sao biết con hoặc bố mẹ đã bấm vào link lừa đảo?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Cài SafePhone trên điện thoại của người thân, đặt SafePhone làm trình duyệt mặc định và bật Gửi thông báo đến người thân qua Slack. Bạn sẽ nhận cảnh báo khi người thân bấm vào link khớp điều kiện đã chọn, như link trong danh sách đen hoặc trang có dấu hiệu mạo danh."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Lỡ bấm vào link lừa đảo nhưng chưa nhập gì thì có sao không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Thường chưa gây thiệt hại nếu bạn chưa nhập thông tin hay tải tệp nào. Hãy đóng trang ngay và kiểm tra xem điện thoại có ứng dụng lạ mới được cài hay không."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Người thân đã nhập mã OTP vào link lừa đảo thì phải làm gì?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Gọi ngay tổng đài chính thức của ngân hàng để khoá tài khoản và thẻ, đổi mật khẩu từ một thiết bị khác, bật xác thực hai lớp và trình báo công an nếu đã mất tiền."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Có cần bật cảnh báo cuộc gọi riêng không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Cảnh báo link lạ và cảnh báo cuộc gọi lạ được cấu hình trên cùng một màn hình Gửi thông báo đến người thân. Bạn có thể chọn bật một hoặc cả hai."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+    <style>
+        :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+        a{color:var(--brand)}
+        img{max-width:100%;height:auto;display:block}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+        header.site{border-bottom:1px solid var(--line);background:#fff}
+        header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+        .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+        .brand img{width:32px;height:32px}
+        nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+        nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+        .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+        .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+        .crumbs li+li::before{content:"›";margin-right:6px}
+        article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+        article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+        .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+        .lede{font-size:18px}
+        article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+        article.post h3{font-size:19px;margin:24px 0 8px}
+        .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+        .cta-box p{margin:0;font-weight:600}
+        .cta-box img{height:48px;width:auto}
+        .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+        .toc strong{display:block;margin-bottom:4px}
+        .toc ol{margin:0;padding-left:20px}
+        .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+        .steps li{margin-bottom:6px}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+        .gallery figure{margin:0}
+        .gallery img{border:1px solid var(--line);border-radius:10px}
+        .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+        table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+        th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+        th{background:var(--brand-soft)}
+        .tablewrap{overflow-x:auto}
+        details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+        summary{font-weight:600;cursor:pointer}
+        .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+        .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+        .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+        .related a b{display:block;color:var(--brand)}
+        .related a span{font-size:14px;color:var(--muted)}
+        .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+        footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+        footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+        footer ul{list-style:none;padding:0;margin:0}
+        footer li{margin:4px 0}
+        .social{display:flex;gap:12px;align-items:center}
+        .social img{height:28px;width:auto}
+        @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+        <nav class="top" aria-label="Điều hướng chính">
+            <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+            <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+        </nav>
     </div>
-</nav>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
-        <header class="page__header">
-            <h1 class="page__title">Làm sao để biết liệu người thân có bấm vào link lừa đảo?</h1>
-        </header>
-        <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-            <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
-
-            <p>
-                Nếu bạn đang tìm kiếm giải pháp giúp phòng ngừa các website giả mạo, website lừa đảo, hay website phát tán mã độc, hãy tải ngay <strong>SafePhone</strong>!
-            </p>
-
-            <p style="margin-bottom:0;">
-                <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                    Tải SafePhone từ PlayStore
-                </a>
-            </p>
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+                <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+                <li aria-current="page">Cảnh báo khi người thân bấm link lạ</li>
+            </ol>
+        </nav>
+    </div>
+    <article class="post">
+        <h1>Làm sao biết người thân bấm vào link lừa đảo? Cách nhận cảnh báo từ xa</h1>
+        <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
+        <p class="lede">Một tin nhắn “nhận quà tri ân”, một link “cập nhật sinh trắc học” — con nhỏ hay bố mẹ lớn tuổi bấm vào lúc nào bạn không hề hay biết. Bài viết hướng dẫn cách nhận <strong>cảnh báo khi người thân bấm link lạ</strong> hoặc link lừa đảo bằng SafePhone, và những việc cần làm ngay nếu người thân đã lỡ bấm.</p>
+        <div class="cta-box">
+            <p>Nhận cảnh báo link lạ với SafePhone</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
-        <div class="page__content">
-
-
-
-    <h3>1. Vấn đề: Rủi ro từ các đường link không an toàn</h3>
-    <p>
-        Trẻ em và người lớn tuổi có thể vô tình nhấp vào các đường link độc hại hoặc lừa đảo trong email, tin nhắn hoặc trang web.
-        Những rủi ro thường gặp gồm:
-    </p>
-    <ul>
-        <li>Trang web giả mạo yêu cầu thông tin cá nhân hoặc tài khoản</li>
-        <li>Download phần mềm độc hại hoặc virus</li>
-        <li>Mất quyền kiểm soát thiết bị hoặc dữ liệu cá nhân</li>
-        <li>Khó nhận biết ngay lập tức nếu không có cảnh báo kịp thời</li>
-    </ul>
-
-    <p>
-        Việc chỉ dựa vào chặn website hoặc blacklist đôi khi chưa đủ, cần có cơ chế cảnh báo ngay khi người thân tương tác với link nguy hiểm.
-    </p>
-
-    <h3>2. Giải pháp: Tích hợp SafePhone với Slack</h3>
-    <p>
-        SafePhone cho phép gửi cảnh báo đến kênh Slack của gia đình mỗi khi người thân bấm vào các đường link nằm trong blacklist hoặc nghi ngờ mạo danh.
-    </p>
-            <p>
-                <span><strong>Tải SafePhone tại:</strong> <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" target="_blank">https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup</a></span>
-            </p>
-
-    <p>Lợi ích:</p>
-    <ul>
-        <li>Nhận cảnh báo tức thì khi có hành động nguy hiểm</li>
-        <li>Giúp người thân nhận hỗ trợ kịp thời</li>
-        <li>Dễ dàng quản lý và giám sát nhiều thành viên trong gia đình</li>
-        <li>Tích hợp linh hoạt với workflow Slack cho các hành động tiếp theo</li>
-    </ul>
-
-    <h3>3. Hướng dẫn cấu hình</h3>
-
+        <nav class="toc" aria-label="Mục lục">
+            <strong>Nội dung bài viết</strong>
             <ol>
-                <li>Tạo một kênh riêng trên Slack  <a href="create-slack-channel.html"> (xem hướng dẫn tạo kênh Slack và lấy thông tin cấu hình tại đây) </a></li>
-                <li>Bấm vào chuỗi biểu tượng tấm khiên dòng đầu tiên</li>
-                <li>Bấm vào <strong>Gửi thông báo đến người thân</strong></li>
-                <li>Trên màn hình mới hiện lên, nhập tên thiết bị, ví dụ: "điện thoại của ba", "tablet của cu tí", ... </li>
-                <li>Chọn <strong>Gửi qua Slack</strong></li>
-                <li>Dán channel ID và bot token vào phần <strong>Cấu hình kênh Slack</strong> </li>
-                <li>Đánh dấu tick vào các lựa chọn ở phần <strong>Khi người dùng bấm vào các liên kết, gửi cảnh báo nếu </strong> </li>
-                <li>Bấm vào <strong>Lưu lại</strong></li>
+                <li><a href="#rui-ro">Link lừa đảo đến với người thân từ đâu?</a></li>
+                <li><a href="#vi-sao">Vì sao cần cảnh báo, không chỉ chặn?</a></li>
+                <li><a href="#huong-dan">Cách bật cảnh báo khi người thân bấm link lạ</a></li>
+                <li><a href="#lo-bam">Người thân lỡ bấm vào link lừa đảo phải làm gì?</a></li>
+                <li><a href="#ca-gia-dinh">Thiết lập cho cả gia đình</a></li>
+                <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
             </ol>
+        </nav>
 
-            <div class="app__screenshots-list">
-                <a href="assets/screenshots/phone_alert_step_1.png" class="lightbox">
-                    <img src="assets/screenshots/phone_alert_step_1.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/phone_alert_step_2.png" class="lightbox">
-                    <img src="assets/screenshots/phone_alert_step_2.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/phone_alert_step_3.png" class="lightbox">
-                    <img src="assets/screenshots/phone_alert_step_3.png" class="app__screenshot" alt="" />
-                </a>
-                <a href="assets/screenshots/phone_alert_step_4.png" class="lightbox">
-                    <img src="assets/screenshots/phone_alert_step_4.png" class="app__screenshot" alt="" />
-                </a>
-            </div>
+        <h2 id="rui-ro">Link lừa đảo đến với người thân từ đâu?</h2>
+        <p>Trẻ em và người lớn tuổi có thể vô tình bấm vào link độc hại trong tin nhắn SMS, Zalo, email, bình luận mạng xã hội hay <a href="https://safephone.io.vn/how-fake-advertisement-target-you.html">quảng cáo lừa đảo</a>. Hậu quả thường gặp:</p>
+        <ul>
+            <li>Trang web giả mạo yêu cầu nhập thông tin cá nhân, mật khẩu, mã OTP</li>
+            <li>Tải về phần mềm độc hại hoặc ứng dụng giả mạo cơ quan nhà nước</li>
+            <li>Mất quyền kiểm soát thiết bị hoặc dữ liệu cá nhân</li>
+            <li>Người thân không nhận ra mình đã gặp nguy hiểm cho đến khi mất tiền</li>
+        </ul>
+        <p>Xem thêm các kịch bản phổ biến trong bài <a href="https://safephone.io.vn/list-keywords-used-in-fraud-campaign-2026.html">các chiêu trò lừa đảo 2026</a>.</p>
 
-            <p>
-                Sau khi thiết lập, mỗi khi người dùng bấm vào một đường dẫn nào đó, ứng dụng SafePhone sẽ gửi thông báo đến kênh Slack bạn đã tạo,
-                giúp bạn nhanh chóng nắm bắt tình hình và chủ động xử lý khi có các dấu hiệu đáng ngờ.
-            </p>
+        <h2 id="vi-sao">Vì sao cần cảnh báo, không chỉ chặn?</h2>
+        <p>SafePhone có thể <a href="https://safephone.io.vn/screening-urls-before-openning.html">chặn trang web lừa đảo</a> đã biết, hoặc <a href="https://safephone.io.vn/only-allow-access-trusted-sites.html">chỉ cho mở trang web tin cậy</a>. Nhưng trang lừa đảo mới xuất hiện hằng ngày, và không phải thiết bị nào cũng phù hợp để bật chế độ chặn chặt nhất. Cảnh báo là lớp bảo vệ thứ hai:</p>
+        <ul>
+            <li>Nhận cảnh báo tức thì khi người thân tương tác với link nguy hiểm</li>
+            <li>Kịp thời gọi điện hỗ trợ trước khi người thân nhập thông tin hay chuyển tiền</li>
+            <li>Theo dõi nhiều thành viên trong gia đình tại một nơi</li>
+            <li>Tích hợp với quy trình làm việc trên Slack nếu bạn cần xử lý tiếp</li>
+        </ul>
 
-            <p>Nếu bạn là người am hiểu công nghệ duy nhất trong nhà và lo lắng trước hiện trạng lừa đảo qua mạng nhan nhản, hãy:</p>
+        <h2 id="huong-dan">Cách bật cảnh báo khi người thân bấm link lạ</h2>
+        <div class="note"><strong>Đã bật <a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html">cảnh báo cuộc gọi lạ</a>?</strong> Cảnh báo link nằm trên cùng màn hình — bạn chỉ cần làm bước 7.</div>
+        <p>Trước tiên, hãy <a href="https://safephone.io.vn/create-slack-channel.html">tạo kênh Slack nhận cảnh báo</a> cho gia đình và lấy <em>channel ID</em>, <em>bot token</em>. Sau đó, trên điện thoại của người thân:</p>
+        <ol class="steps">
+            <li>Cài SafePhone từ <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">Google Play</a> và đặt SafePhone làm trình duyệt mặc định để link được kiểm tra.</li>
+            <li>Mở SafePhone, bấm vào dãy biểu tượng tấm khiên ở dòng đầu tiên.</li>
+            <li>Bấm <strong>“Gửi thông báo đến người thân”</strong>.</li>
+            <li>Nhập tên thiết bị, ví dụ “Điện thoại của ba”, “Tablet của cu Tí”.</li>
+            <li>Chọn <strong>“Gửi qua Slack”</strong>.</li>
+            <li>Dán <em>channel ID</em> và <em>bot token</em> vào phần <strong>“Cấu hình kênh Slack”</strong>.</li>
+            <li>Đánh dấu các lựa chọn trong phần <strong>“Khi người dùng bấm vào các liên kết, gửi cảnh báo nếu”</strong> — ví dụ link nằm trong danh sách đen hoặc trang có dấu hiệu mạo danh.</li>
+            <li>Bấm <strong>“Lưu lại”</strong>.</li>
+        </ol>
+        <div class="gallery">
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_alert_step_1.png"><img src="https://safephone.io.vn/assets/screenshots/phone_alert_step_1.png" alt="Mục gửi thông báo đến người thân trong SafePhone" loading="lazy"></a><figcaption>Bước 3: Gửi thông báo đến người thân</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_alert_step_2.png"><img src="https://safephone.io.vn/assets/screenshots/phone_alert_step_2.png" alt="Nhập tên thiết bị và chọn gửi cảnh báo qua Slack" loading="lazy"></a><figcaption>Bước 4–5: Đặt tên thiết bị, chọn Slack</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_alert_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_alert_step_3.png" alt="Dán channel ID và bot token vào cấu hình kênh Slack" loading="lazy"></a><figcaption>Bước 6: Cấu hình kênh Slack</figcaption></figure>
+            <figure><a href="https://safephone.io.vn/assets/screenshots/phone_alert_step_4.png"><img src="https://safephone.io.vn/assets/screenshots/phone_alert_step_4.png" alt="Chọn điều kiện gửi cảnh báo khi người dùng bấm vào liên kết" loading="lazy"></a><figcaption>Bước 7–8: Chọn khi nào gửi cảnh báo, lưu lại</figcaption></figure>
+        </div>
+        <p>Từ đó, mỗi khi người thân bấm vào một đường link khớp điều kiện bạn chọn, SafePhone gửi thông báo đến kênh Slack của gia đình để bạn nắm tình hình và chủ động xử lý.</p>
+        <p>Lưu ý: link mở bên trong trình duyệt riêng của Facebook, Messenger, Zalo có thể không đi qua SafePhone — hãy hướng dẫn người thân chọn <em>“Mở bằng trình duyệt”</em> với link lạ. Vì sao? Xem <a href="https://safephone.io.vn/url-screening-permission-on-android-and-ios.html">quyền sàng lọc URL trên Android và iOS</a>.</p>
 
-            <ol>
-                <li>Cài đặt SafePhone trên các thiết bị của con cái và bố mẹ</li>
-                <li>Bật tính năng Cảnh báo này của SafePhone trên tất cả các thiết bị</li>
-                <li>Cài app Slack trên điện thoại của bạn & đăng nhập vào Slack để nhận các cảnh báo từ kênh Slack bạn đã cấu hình.</li>
-            </ol>
+        <h2 id="lo-bam">Người thân lỡ bấm vào link lừa đảo phải làm gì?</h2>
+        <p>Chỉ bấm vào link mà chưa nhập gì thường chưa gây thiệt hại, nhưng vẫn cần kiểm tra. Khi nhận cảnh báo, hãy gọi cho người thân và làm theo thứ tự:</p>
+        <ol>
+            <li><strong>Đóng trang ngay</strong>, không nhập thêm bất kỳ thông tin nào.</li>
+            <li><strong>Đã nhập mật khẩu ngân hàng hoặc mã OTP?</strong> Gọi ngay tổng đài chính thức của ngân hàng (số in trên mặt sau thẻ) để khoá tài khoản, khoá thẻ.</li>
+            <li><strong>Đã tải hoặc cài ứng dụng lạ?</strong> Bật chế độ máy bay để ngắt kết nối, gỡ ứng dụng đó, và kiểm tra xem có ứng dụng lạ nào được cấp quyền <em>Trợ năng</em> (Accessibility) hay không — xem <a href="https://safephone.io.vn/how_to_detect_malicious_mobile_apps.html">cách nhận biết ứng dụng độc hại</a>.</li>
+            <li><strong>Đổi mật khẩu</strong> các tài khoản vừa nhập, tốt nhất từ một thiết bị khác, và bật xác thực hai lớp.</li>
+            <li><strong>Trình báo công an</strong> nếu đã bị mất tiền, và báo cáo trang lừa đảo để người khác không mắc bẫy.</li>
+        </ol>
+        <p>Muốn tự kiểm tra một đường link trước khi bấm? Xem <a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">cách kiểm tra trang web lừa đảo</a>.</p>
+
+        <h2 id="ca-gia-dinh">Thiết lập cho cả gia đình</h2>
+        <ol>
+            <li>Cài SafePhone trên điện thoại, máy tính bảng của con cái và bố mẹ.</li>
+            <li>Bật cảnh báo link lạ (và cảnh báo cuộc gọi lạ) trên tất cả các thiết bị.</li>
+            <li>Cài Slack trên điện thoại của bạn để nhận cảnh báo từ kênh đã tạo.</li>
+        </ol>
+        <div class="note"><strong>Hãy nói trước với người thân.</strong> Giải thích vì sao bạn bật cảnh báo và để họ đồng ý. Với con lớn, đây là dịp tốt để cùng nói chuyện về lừa đảo trực tuyến thay vì chỉ giám sát.</div>
+        <p>Tìm thêm công cụ cho gia đình: <a href="https://safephone.io.vn/top-app-to-protect-your-children.html">ứng dụng bảo vệ trẻ em trên điện thoại</a> và <a href="https://safephone.io.vn/top-app-to-protect-parent.html">ứng dụng cho người lớn tuổi</a>.</p>
+
+        <h2 id="ket-luan">Kết luận</h2>
+        <p>Không bộ lọc nào chặn được 100% link lừa đảo, nhưng biết kịp thời khi người thân bấm vào link nguy hiểm giúp bạn ngăn thiệt hại trước khi quá muộn. Thiết lập một lần, bạn có thể yên tâm hơn khi không ở bên cạnh con cái và bố mẹ.</p>
+        <div class="cta-box">
+            <p>Bật cảnh báo link lạ cho người thân</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
 
-        <div>
-            <h3>Xem thêm:</h3>
+        <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+        <details>
+            <summary>Làm sao biết con hoặc bố mẹ đã bấm vào link lừa đảo?</summary>
+            <p>Cài SafePhone trên điện thoại của người thân, đặt SafePhone làm trình duyệt mặc định và bật Gửi thông báo đến người thân qua Slack. Bạn sẽ nhận cảnh báo khi người thân bấm vào link khớp điều kiện đã chọn, như link trong danh sách đen hoặc trang có dấu hiệu mạo danh.</p>
+        </details>
+        <details>
+            <summary>Lỡ bấm vào link lừa đảo nhưng chưa nhập gì thì có sao không?</summary>
+            <p>Thường chưa gây thiệt hại nếu bạn chưa nhập thông tin hay tải tệp nào. Hãy đóng trang ngay và kiểm tra xem điện thoại có ứng dụng lạ mới được cài hay không.</p>
+        </details>
+        <details>
+            <summary>Người thân đã nhập mã OTP vào link lừa đảo thì phải làm gì?</summary>
+            <p>Gọi ngay tổng đài chính thức của ngân hàng để khoá tài khoản và thẻ, đổi mật khẩu từ một thiết bị khác, bật xác thực hai lớp và trình báo công an nếu đã mất tiền.</p>
+        </details>
+        <details>
+            <summary>Có cần bật cảnh báo cuộc gọi riêng không?</summary>
+            <p>Cảnh báo link lạ và cảnh báo cuộc gọi lạ được cấu hình trên cùng một màn hình Gửi thông báo đến người thân. Bạn có thể chọn bật một hoặc cả hai.</p>
+        </details>
+
+        <aside class="related" aria-labelledby="xem-them">
+            <h2 id="xem-them">Xem thêm</h2>
+            <p class="grp">Bảo vệ trẻ em và người thân</p>
             <ul>
-                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
-                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
-                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
-                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
-                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
-                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
-                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+                <li><a href="https://safephone.io.vn/top-app-to-protect-your-children.html"><b>Ứng dụng bảo vệ trẻ em trên điện thoại</b><span>Giới hạn thời gian, chặn nội dung xấu, chặn link lừa đảo cho trẻ.</span></a></li>
+                <li><a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html"><b>Bảo vệ người thân khỏi cuộc gọi lừa đảo</b><span>Nhận cảnh báo khi bố mẹ, con cái nhận cuộc gọi từ số lạ.</span></a></li>
+                <li><a href="https://safephone.io.vn/create-slack-channel.html"><b>Tạo kênh Slack nhận cảnh báo</b><span>5 bước tạo kênh, bot token và channel ID.</span></a></li>
+                <li><a href="https://safephone.io.vn/compare-parental-control-apps.html"><b>So sánh ứng dụng parental control</b><span>Qustodio, Norton Family, Bark, Google Family Link và SafePhone.</span></a></li>
             </ul>
-        </div>
+            <p class="grp">Chặn web lừa đảo</p>
+            <ul>
+                <li><a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html"><b>Cách kiểm tra trang web lừa đảo</b><span>9 dấu hiệu nhận biết website giả mạo và cách check web.</span></a></li>
+            </ul>
+        </aside>
     </article>
-
-
-
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
+
+<footer>
+    <div class="wrap cols">
+        <div>
+            <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+            <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+        </div>
+        <ul>
+            <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+            <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+            <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+            <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+            <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
 
 </body>
 </html>
