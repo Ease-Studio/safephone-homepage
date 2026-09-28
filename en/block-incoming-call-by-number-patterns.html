@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Block Calls by Area Code or Number Pattern on Android</title>
-  <meta name="description" content="How to block calls by area code, ending digits or number pattern on Android (028, 024, 058...). Pair it with blacklists and allowlists to never miss key calls.">
+  <meta name="description" content="How to block calls by area code, ending digits or number pattern on Android. Pair it with blacklists and allowlists to never miss key calls.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html">
   <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">
@@ -34,7 +34,7 @@
       "@type": "TechArticle",
       "@id": "https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html#article",
       "headline": "How to Block Calls by Prefix, Ending Digits or Number Pattern on Android",
-      "description": "How to block calls by area code, ending digits or number pattern on Android (028, 024, 058...). Pair it with blacklists and allowlists to never miss key calls.",
+      "description": "How to block calls by area code, ending digits or number pattern on Android. Pair it with blacklists and allowlists to never miss key calls.",
       "inLanguage": "en",
       "mainEntityOfPage": "https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html",
       "image": "https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png",
@@ -50,7 +50,7 @@
       "about": {
         "@id": "https://safephone.io.vn/en/#app"
       },
-      "keywords": "block calls by prefix, block area code 028, block area code 024, block numbers by ending digits, block number patterns, block telemarketing calls"
+      "keywords": "block calls by prefix, block calls by area code, block numbers by ending digits, block number patterns, block telemarketing calls"
     },
     {
       "@type": "BreadcrumbList",
@@ -83,15 +83,15 @@
           "name": "What does * mean in a prefix-blocking rule?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Each * stands for exactly one digit from 0 to 9. For example, the rule 028******** (3 digits followed by 8 asterisks) blocks every 11-digit landline number starting with 028."
+            "text": "Each * stands for exactly one digit from 0 to 9. For example, the rule 555******* (3 digits followed by 7 asterisks) blocks every 10-digit number starting with 555."
           }
         },
         {
           "@type": "Question",
-          "name": "Can blocking the 028 prefix block important calls by mistake?",
+          "name": "Can blocking a whole area code block important calls by mistake?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It can. The rule blocks every number that matches the pattern, including banks, hospitals and businesses using 028 landlines. Check your blocked call log and temporarily turn the rule off when you're expecting an important call."
+            "text": "It can. The rule blocks every number that matches the pattern, including banks, hospitals and businesses with numbers in that range. Check your blocked call log and temporarily turn the rule off when you're expecting an important call."
           }
         },
         {
@@ -196,7 +196,7 @@
   <article class="post">
       <h1>How to Block Calls by Prefix, Ending Digits or Number Pattern on Android</h1>
       <p class="byline">SafePhone · Updated September 27, 2026</p>
-      <p class="lede">Do you keep getting marketing and telemarketing calls from 028 or 024 landlines (the area codes for Ho Chi Minh City and Hanoi), each time from a different number? Instead of blocking numbers one by one, you can <strong>block calls by prefix</strong>, by ending digits, or block a whole group of numbers that follow a pattern with a single rule. This guide explains the syntax and how to set it up on an Android phone with SafePhone.</p>
+      <p class="lede">Do you keep getting marketing and telemarketing calls from numbers starting with the same area code, each time from a different number? Instead of blocking numbers one by one, you can <strong>block calls by prefix</strong>, by ending digits, or block a whole group of numbers that follow a pattern with a single rule. This guide explains the syntax and how to set it up on an Android phone with SafePhone.</p>
       <div class="cta-box">
         <p>Block calls by prefix or ending digits with SafePhone</p>
         <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
@@ -228,16 +228,16 @@
       <p>Prefix blocking works alongside <a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html">automatic blocking of unknown and scam numbers</a>; we recommend turning on both.</p>
 
       <h2 id="cu-phap">Rule syntax for blocking prefixes and ending digits</h2>
-      <p>In SafePhone, each <code>*</code> stands for <strong>any single digit (0–9)</strong>. A rule must have <strong>exactly as many characters</strong> as the phone number you want to block: Vietnamese mobile numbers have 10 digits, and landline numbers (for example 028, 024) have 11 digits.</p>
+      <p>In SafePhone, each <code>*</code> stands for <strong>any single digit (0–9)</strong>. A rule must have <strong>exactly as many characters</strong> as the phone number you want to block. Number length depends on your country's numbering format (mobile and landline numbers may also differ), so check how many digits the numbers you want to block have, for example by looking at them in your call log. The examples below use 10- and 11-digit numbers.</p>
       <div class="tablewrap">
       <table>
         <thead><tr><th>To block</th><th>Rule</th><th>Example of a blocked number</th></tr></thead>
         <tbody>
-          <tr><td>Landlines with the 028 prefix (Ho Chi Minh City)</td><td><code>028********</code></td><td>028 1234 5678</td></tr>
-          <tr><td>Landlines with the 024 prefix (Hanoi)</td><td><code>024********</code></td><td>024 8765 4321</td></tr>
-          <tr><td>Mobile numbers starting with 090</td><td><code>090*******</code></td><td>0901 234 567</td></tr>
-          <tr><td>Numbers ending in 888</td><td><code>*******888</code></td><td>0912 345 888</td></tr>
-          <tr><td>Numbers following a custom pattern</td><td><code>09*5****8*</code></td><td>0925 1234 81</td></tr>
+          <tr><td>10-digit numbers starting with 555</td><td><code>555*******</code></td><td>555 123 4567</td></tr>
+          <tr><td>11-digit numbers starting with 0123</td><td><code>0123*******</code></td><td>0123 456 7890</td></tr>
+          <tr><td>10-digit numbers starting with 0900</td><td><code>0900******</code></td><td>0900 123 456</td></tr>
+          <tr><td>10-digit numbers ending in 888</td><td><code>*******888</code></td><td>555 234 5888</td></tr>
+          <tr><td>10-digit numbers following a custom pattern</td><td><code>55*5****8*</code></td><td>552 512 3481</td></tr>
           <tr><td>Any 12-digit number</td><td><code>************</code></td><td>Numbers of unusual length</td></tr>
         </tbody>
       </table>
@@ -248,23 +248,23 @@
       <ol class="steps">
         <li>Open the SafePhone app. If you haven't installed it yet, <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener">get SafePhone on Google Play</a>.</li>
         <li>Switch to the third tab.</li>
-        <li>Tap <strong>“Block by prefix”</strong> (“Chặn đầu số”).</li>
-        <li>Add a new rule using the syntax above, for example <code>028********</code> to block every landline number starting with 028.</li>
-        <li>Tap <strong>“Save”</strong> (“Lưu lại”).</li>
+        <li>Tap <strong>“Block by prefix”</strong>.</li>
+        <li>Add a new rule using the syntax above, for example <code>555*******</code> to block every 10-digit number starting with 555.</li>
+        <li>Tap <strong>“Save”</strong>.</li>
         <li>Make sure you've granted SafePhone the <a href="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html">call screening</a> permission. If not, follow the steps in <a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html">how to block unknown and scam numbers</a>.</li>
       </ol>
       <div class="gallery">
         <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_1.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_1.png" alt="The third tab in the SafePhone app" loading="lazy"></a><figcaption>Step 2: Switch to the third tab</figcaption></figure>
         <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png" alt="The Block by prefix option in SafePhone" loading="lazy"></a><figcaption>Step 3: Tap “Block by prefix”</figcaption></figure>
-        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png" alt="Adding a wildcard rule to block the 028 prefix" loading="lazy"></a><figcaption>Steps 4–5: Add a rule and save</figcaption></figure>
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png" alt="Adding a wildcard rule to block a number prefix" loading="lazy"></a><figcaption>Steps 4–5: Add a rule and save</figcaption></figure>
         <figure><a href="https://safephone.io.vn/assets/screenshots/phone_blacklist_completed.png"><img src="https://safephone.io.vn/assets/screenshots/phone_blacklist_completed.png" alt="SafePhone with the call-blocking shield turned on" loading="lazy"></a><figcaption>Done: your blocking rule is active</figcaption></figure>
       </div>
       <p>Once set up, SafePhone automatically filters incoming calls according to your rules: calls that match a rule are blocked before your phone rings.</p>
 
       <h2 id="luu-y">Tips to avoid blocking important calls by mistake</h2>
       <ul>
-        <li><strong>Don't block too broadly.</strong> A mobile prefix such as 086 or 090 is used by millions of people, including your family and friends. Only block an entire mobile prefix when you're really sure.</li>
-        <li><strong>Landline calls can be important too.</strong> Banks, hospitals and government agencies also call from 028 and 024 numbers. If you're expecting a call from one of them, temporarily turn the rule off.</li>
+        <li><strong>Don't block too broadly.</strong> A common mobile prefix is used by millions of people, including your family and friends. Only block an entire mobile prefix when you're really sure.</li>
+        <li><strong>Landline calls can be important too.</strong> Banks, hospitals and government agencies also call from landline numbers, including ones in area codes you might block. If you're expecting a call from one of them, temporarily turn the rule off.</li>
         <li><strong>Check your call log.</strong> Now and then, review the list of blocked calls in your Phone app to make sure no important call was blocked by mistake.</li>
         <li><strong>Combine several rules</strong> instead of one overly broad rule, for example blocking the exact ending digits or number range that keeps calling you.</li>
       </ul>
@@ -280,11 +280,11 @@
       <h2 id="cau-hoi-thuong-gap">FAQ</h2>
       <details>
         <summary>What does * mean in a prefix-blocking rule?</summary>
-        <p>Each * stands for exactly one digit from 0 to 9. For example, the rule 028******** (3 digits followed by 8 asterisks) blocks every 11-digit landline number starting with 028.</p>
+        <p>Each * stands for exactly one digit from 0 to 9. For example, the rule 555******* (3 digits followed by 7 asterisks) blocks every 10-digit number starting with 555.</p>
       </details>
       <details>
-        <summary>Can blocking the 028 prefix block important calls by mistake?</summary>
-        <p>It can. The rule blocks every number that matches the pattern, including banks, hospitals and businesses using 028 landlines. Check your blocked call log and temporarily turn the rule off when you're expecting an important call.</p>
+        <summary>Can blocking a whole area code block important calls by mistake?</summary>
+        <p>It can. The rule blocks every number that matches the pattern, including banks, hospitals and businesses with numbers in that range. Check your blocked call log and temporarily turn the rule off when you're expecting an important call.</p>
       </details>
       <details>
         <summary>Does prefix blocking require the call screening permission?</summary>

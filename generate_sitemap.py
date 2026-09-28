@@ -2,9 +2,9 @@ import os
 from datetime import datetime
 
 # 🔧 CONFIG
-BASE_URL = "https://safephone.io.vn"
-HTML_FOLDER = ""
-OUTPUT_FILE = "sitemap.xml"
+BASE_URL = "https://safephone.io.vn/en"
+HTML_FOLDER = "en"
+OUTPUT_FILE = "sitemap_en.xml"
 
 def get_html_files(folder):
     html_files = []
