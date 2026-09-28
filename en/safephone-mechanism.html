@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How SafePhone Works: Scam Call and Link Blocking</title>
+  <meta name="description" content="How does SafePhone work? Learn how the app checks phone numbers and links against a built-in blacklist and blocks scams even when you're offline.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/en/safephone-mechanism.html">
+  <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/safephone-mechanism.html">
+  <link rel="alternate" hreflang="en" href="https://safephone.io.vn/en/safephone-mechanism.html">
+  <link rel="alternate" hreflang="x-default" href="https://safephone.io.vn/safephone-mechanism.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/en/safephone-mechanism.html">
+  <meta property="og:title" content="How SafePhone Works: Scam Call and Link Blocking">
+  <meta property="og:description" content="Offline blacklist, trusted contacts, prefix blocking, ad blocking and impersonation detection: SafePhone's 8 protection modes explained in plain English.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How SafePhone Works: Scam Call and Link Blocking">
+  <meta name="twitter:description" content="Offline blacklist, trusted contacts, prefix blocking, ad blocking and impersonation detection: SafePhone's 8 protection modes explained in plain English.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/en/safephone-mechanism.html#article",
+      "headline": "How Does SafePhone Work? How It Blocks Scam Calls and Links",
+      "description": "How does SafePhone work? Learn how the app checks phone numbers and links against a built-in blacklist and blocks scams even when you're offline.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://safephone.io.vn/en/safephone-mechanism.html",
+      "image": "https://safephone.io.vn/assets/og-image.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/en/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/en/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/en/#app"
+      },
+      "keywords": "how SafePhone works, scam blocking, offline blocking, blacklist, trusted contacts, block scam links, block scam calls"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security handbook",
+          "item": "https://safephone.io.vn/en/security_handbook.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How SafePhone works",
+          "item": "https://safephone.io.vn/en/safephone-mechanism.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does SafePhone work without an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The blacklist is built directly into the app and works offline, so blocking of blacklisted phone numbers and links keeps working even without an internet connection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is SafePhone's blacklist updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The list is compiled from international scam-warning organizations, news sites, phone number reporting sites, social media and community reports, and is updated through new versions of the app. Keep SafePhone updated regularly on Google Play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What permissions does SafePhone need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To block calls, SafePhone needs the Call screening permission. To block links, you set SafePhone as your default browser. You can revoke these permissions at any time in Settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about new scam websites that aren't on the blacklist yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For sites that are on neither the blacklist nor the trusted list, SafePhone analyzes the page content for signs of brand impersonation and recommends that you leave the page if it finds any. You can also connect OpenAI or DeepSeek to improve detection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add phone numbers to the blacklist myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. In addition to the shared list, you can add your own numbers or ranges of similar numbers to the blacklist based on what you encounter."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/en/"><img src="https://safephone.io.vn/assets/icon.png" alt="SafePhone logo" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Main navigation">
+      <a href="https://safephone.io.vn/en/tutorials.html">User guides</a>
+      <a href="https://safephone.io.vn/en/security_handbook.html">Security handbook<span class="tag">Must read</span></a>
+      <a href="https://safephone.io.vn/safephone-mechanism.html" hreflang="vi" lang="vi" class="lang-switch">Tiếng Việt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/en/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/en/security_handbook.html">Security handbook</a></li>
+        <li aria-current="page">How SafePhone works</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>How Does SafePhone Work? How It Blocks Scam Calls and Links</h1>
+      <p class="byline">SafePhone · Updated September 27, 2026</p>
+      <p class="lede"><strong>How does SafePhone work?</strong> In short, SafePhone checks incoming phone numbers and the links you tap against a blacklist built into the app, then blocks them or warns you <em>before</em> you have a chance to interact — even when your phone has no internet connection. This page explains each mechanism and the app's 8 protection modes.</p>
+      <div class="cta-box">
+        <p>Get SafePhone – the anti-scam firewall</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Table of contents">
+        <strong>In this article</strong>
+        <ol>
+          <li><a href="#tong-quan">Overview: how SafePhone protects you</a></li>
+          <li><a href="#offline">The blacklist works offline</a></li>
+          <li><a href="#thu-thap">How the blacklist is compiled</a></li>
+          <li><a href="#quyen">What permissions SafePhone needs</a></li>
+          <li><a href="#che-do">SafePhone's 8 protection modes</a></li>
+          <li><a href="#chon-che-do">Which modes should you turn on?</a></li>
+          <li><a href="#cau-hoi-thuong-gap">FAQ</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="tong-quan">Overview: how SafePhone protects you</h2>
+      <p>SafePhone acts as a protective layer that helps you avoid malicious links and calls from unknown numbers before you accidentally interact with them.</p>
+      <h3>For links</h3>
+      <p>When you open a link from a message, social media or another app, SafePhone automatically checks whether that link is on a warning list or has been reported as dangerous:</p>
+      <ul>
+        <li>If it's safe, the page opens as usual.</li>
+        <li>If it's suspicious, SafePhone blocks it and shows a warning so you aren't led to a fake site or harmful content.</li>
+      </ul>
+      <h3>For calls</h3>
+      <p>SafePhone uses a database of spam and scam phone numbers to warn you about or block a call before you answer.</p>
+      <p>Once turned on, all of this happens automatically — no technical knowledge or complicated setup required.</p>
+
+      <h2 id="offline">The blacklist works offline, no internet needed</h2>
+      <p>The blacklist is built directly into the app and works offline. This means that even without an internet connection, SafePhone can still check phone numbers and links against the blacklist as usual.</p>
+      <div class="note"><strong>Note:</strong> because the blacklist lives inside the app, new entries arrive through SafePhone app updates. <strong>Update the app regularly</strong> on <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener">Google Play</a> to get the latest list.</div>
+
+      <h2 id="thu-thap">How the blacklist is compiled</h2>
+      <p>The blacklist is compiled from many different sources to improve accuracy:</p>
+      <ul>
+        <li>Data from international organizations that specialize in warning about scams, phishing and malicious websites.</li>
+        <li>For phone numbers: information from news sites, phone number reporting sites and social media.</li>
+        <li>Reports from the user community about suspicious calls or scam links.</li>
+        <li>Automated analysis of common attack patterns to identify links impersonating banks, e-wallets, social networks and more.</li>
+      </ul>
+      <p>The data is combined, cross-checked and updated regularly so the blacklist becomes more complete over time. In addition to the shared list, you can also add your own phone numbers or ranges of similar numbers to your blacklist.</p>
+
+      <h2 id="quyen">What permissions SafePhone needs</h2>
+      <p>To block threats before you interact with them, SafePhone uses two official Android mechanisms. You grant them yourself and can revoke them at any time:</p>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Permission</th><th>How to grant it</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Call screening</strong> (“Sàng lọc cuộc gọi”)</td><td>Choose SafePhone as your call screening app</td><td>Modes 1, 2, 3 — blocking calls. See <a href="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html">call screening permission on Android and iOS</a></td></tr>
+          <tr><td><strong>Link screening</strong> (“Sàng lọc đường dẫn”)</td><td>Set SafePhone as your default browser</td><td>Modes 4, 5, 6 — blocking links. See <a href="https://safephone.io.vn/en/url-screening-permission-on-android-and-ios.html">URL screening permission on Android and iOS</a></td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="che-do">SafePhone's 8 protection modes</h2>
+      <h3 id="den-sdt">1. Block blacklisted phone numbers</h3>
+      <p>To activate this mode, grant SafePhone the <strong>Call screening</strong> permission. SafePhone will then block calls from numbers already on the blacklist. The list is updated through new versions of the app, and you can add your own numbers, or ranges of similar numbers, based on what you encounter. Guide: <a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html">how to block unknown and scam numbers</a>.</p>
+
+      <h3 id="danh-ba">2. Only accept calls from trusted contacts</h3>
+      <p>When you'd rather block too much than miss a scam — especially to protect elderly people and children who are new to smartphones — SafePhone offers a whitelist (trusted contacts): only trusted numbers can call, including the official numbers of common agencies and organizations and the numbers saved in your contacts. While this mode is on, no number outside this list can get through. You can turn it on or off as needed. Guide: <a href="https://safephone.io.vn/en/build-trusted-contact-phone.html">block calls from numbers not in your contacts</a>.</p>
+
+      <h3 id="dau-so">3. Block calls by number prefix</h3>
+      <p>If you only want to block a certain range of numbers, you can block by phone number pattern. This is especially useful for blocking numbers from carriers with no KYC (subscriber identity verification) — the kind of numbers often used for spam and impersonation calls that cause serious financial losses. Guide: <a href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html">how to block number prefixes and patterns</a>.</p>
+
+      <h3 id="den-url">4. Block blacklisted links</h3>
+      <p>To activate this mode, grant the <strong>Link screening</strong> permission by setting SafePhone as your default web browser. SafePhone then checks the links you tap; if a link is on the blacklist, SafePhone notifies you and blocks access. Blacklisted links are sites with malicious or fake content designed to trick visitors into downloading malware or transferring money. Guide: <a href="https://safephone.io.vn/en/screening-urls-before-openning.html">how to block scam websites</a>.</p>
+
+      <h3 id="tin-cay-url">5. Only open trusted websites</h3>
+      <p>For young children or older adults with little internet experience, SafePhone offers a website whitelist: only reputable websites with a clear origin can be opened, and every unreviewed website is blocked by default. This is the strictest level of protection and minimizes the risk of landing on a fake site. Guide: <a href="https://safephone.io.vn/en/only-allow-access-trusted-sites.html">block adult sites and allow only trusted websites</a>.</p>
+
+      <h3 id="quang-cao">6. Block ad links</h3>
+      <p>Ads are one of the ways users get lured to fake websites — not because ads are bad, but because ad content review is still lax. With this mode on, if you tap an ad, SafePhone blocks access to that ad's link. In addition, when you browse with SafePhone, search results sponsored by ad money are hidden. Guide: <a href="https://safephone.io.vn/en/how-to-block-ads-url.html">how to block ads on Android</a>.</p>
+
+      <h3 id="gia-mao">7. Detect signs of brand impersonation</h3>
+      <p>When you visit a site that is on neither the blacklist nor the trusted list, SafePhone analyzes the page content for signs of impersonation. If it finds any, SafePhone shows a notification and recommends that you leave the page immediately. This protects you even before the blacklist has been updated.</p>
+      <p>Beyond its own checks, SafePhone can connect to AI services such as OpenAI or DeepSeek to improve impersonation detection. This integration is optional, depending on how much protection you want — see <a href="https://safephone.io.vn/en/how-to-create-ai-api-keys.html">how to create an OpenAI API key</a>.</p>
+
+      <h3 id="trinh-duyet">8. A security-focused browser</h3>
+      <p>SafePhone provides a sandbox (an isolated environment): a web browser with hardened security settings that helps you quickly spot online threats such as cookies, trackers and fake websites. Using SafePhone instead of a regular browser improves your privacy and security.</p>
+
+      <h2 id="chon-che-do">Which modes should you turn on?</h2>
+      <p>Each mode can be turned on or off separately, and they can be combined. Suggestions by need:</p>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Need</th><th>Suggested modes</th></tr></thead>
+        <tbody>
+          <tr><td>Everyday users who still need to take calls from delivery drivers and unknown numbers</td><td>1. Block blacklisted numbers + 4. Block blacklisted links + 6. Block ads</td></tr>
+          <tr><td>Frequently bothered by a specific number prefix</td><td>3. Block by number prefix</td></tr>
+          <tr><td>Elderly parents, children new to smartphones</td><td>2. Trusted contacts + 5. Only open trusted websites</td></tr>
+          <tr><td>Want to catch brand-new fake sites too</td><td>7. Impersonation detection (optionally with AI) + 8. Use the SafePhone browser</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>To keep an eye on family members' safety remotely, you can also turn on <a href="https://safephone.io.vn/en/send-alert-when-open-url.html">alerts when a family member opens a suspicious link</a>.</p>
+
+      <h2 id="ket-luan">Conclusion</h2>
+      <p>SafePhone combines a built-in blacklist (which works even offline), trusted lists and impersonation analysis to block scam calls and links before you interact with them. Choose the level of protection that suits you and your family, and remember to update the app regularly so the blacklist stays current.</p>
+      <div class="cta-box">
+        <p>Get SafePhone and choose the right protection modes</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+
+      <h2 id="cau-hoi-thuong-gap">FAQ</h2>
+      <details>
+        <summary>Does SafePhone work without an internet connection?</summary>
+        <p>Yes. The blacklist is built directly into the app and works offline, so blocking of blacklisted phone numbers and links keeps working even without an internet connection.</p>
+      </details>
+      <details>
+        <summary>How is SafePhone's blacklist updated?</summary>
+        <p>The list is compiled from international scam-warning organizations, news sites, phone number reporting sites, social media and community reports, and is updated through new versions of the app. Keep SafePhone updated regularly on Google Play.</p>
+      </details>
+      <details>
+        <summary>What permissions does SafePhone need?</summary>
+        <p>To block calls, SafePhone needs the Call screening permission. To block links, you set SafePhone as your default browser. You can revoke these permissions at any time in Settings.</p>
+      </details>
+      <details>
+        <summary>What about new scam websites that aren't on the blacklist yet?</summary>
+        <p>For sites that are on neither the blacklist nor the trusted list, SafePhone analyzes the page content for signs of brand impersonation and recommends that you leave the page if it finds any. You can also connect OpenAI or DeepSeek to improve detection.</p>
+      </details>
+      <details>
+        <summary>Can I add phone numbers to the blacklist myself?</summary>
+        <p>Yes. In addition to the shared list, you can add your own numbers or ranges of similar numbers to the blacklist based on what you encounter.</p>
+      </details>
+
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Related articles</h2>
+        <p class="grp">Blocking scam calls</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html"><b>How to block unknown and scam numbers</b><span>Turn on the unknown-number shield in just 1 minute.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/build-trusted-contact-phone.html"><b>Block calls from numbers not in your contacts</b><span>Only people on your trusted contact list can call.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html"><b>How to block number prefixes and patterns</b><span>Block calls by phone number pattern.</span></a></li>
+        </ul>
+        <p class="grp">Blocking scam websites and links</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/screening-urls-before-openning.html"><b>How to block scam websites</b><span>Automatically block malicious links before they open on Android.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/only-allow-access-trusted-sites.html"><b>Block adult sites, allow only trusted websites</b><span>Allow access only to approved sites.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/how-to-block-ads-url.html"><b>How to block ads on Android</b><span>Block Facebook and Google ads that lead to scam sites.</span></a></li>
+        </ul>
+        <p class="grp">Support</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/how-to-create-ai-api-keys.html"><b>Create an OpenAI API key</b><span>Connect AI to improve impersonation detection.</span></a></li>
+        </ul>
+      </aside>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – Anti-scam firewall for your phone</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/en/">Home</a></li>
+      <li><a href="https://safephone.io.vn/en/tutorials.html">User guides</a></li>
+      <li><a href="https://safephone.io.vn/en/security_handbook.html">Security handbook</a></li>
+      <li><a href="https://safephone.io.vn/en/privacy.html">Privacy policy</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone on Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone on Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create a Slack Channel, Bot Token and Channel ID | SafePhone</title>
+  <meta name="description" content="How to create a Slack channel for SafePhone alerts in 5 steps: create the channel, create a bot, get the Bot Token, invite the bot, and find the Channel ID.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/en/create-slack-channel.html">
+  <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/create-slack-channel.html">
+  <link rel="alternate" hreflang="en" href="https://safephone.io.vn/en/create-slack-channel.html">
+  <link rel="alternate" hreflang="x-default" href="https://safephone.io.vn/create-slack-channel.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/en/create-slack-channel.html">
+  <meta property="og:title" content="Create a Slack Channel, Bot Token and Channel ID | SafePhone">
+  <meta property="og:description" content="5 steps to set up a family Slack channel that alerts you when your parents or kids get a call from an unknown number or tap a scam link.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Create a Slack Channel, Bot Token and Channel ID | SafePhone">
+  <meta name="twitter:description" content="5 steps to set up a family Slack channel that alerts you when your parents or kids get a call from an unknown number or tap a scam link.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/en/create-slack-channel.html#article",
+      "headline": "How to Create a Slack Channel for Alerts: Get Your Bot Token and Channel ID",
+      "description": "How to create a Slack channel for SafePhone alerts in 5 steps: create the channel, create a bot, get the Bot Token, invite the bot, and find the Channel ID.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://safephone.io.vn/en/create-slack-channel.html",
+      "image": "https://safephone.io.vn/assets/og-image.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/en/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/en/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/en/#app"
+      },
+      "keywords": "create Slack channel for alerts, Slack bot token, find Slack channel ID, create Slack bot, Slack chat:write"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "User guides",
+          "item": "https://safephone.io.vn/en/tutorials.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Create a Slack alert channel",
+          "item": "https://safephone.io.vn/en/create-slack-channel.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does it cost anything to create a Slack channel for alerts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can create a workspace, channel, and bot on Slack's free plan to receive alerts from SafePhone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Slack Bot Token and where do I get it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Bot Token is a code starting with xoxb- that lets an app send messages to Slack. You'll find it under OAuth & Permissions for your app at api.slack.com/apps, after clicking Install to Workspace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find a Slack channel's Channel ID?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open the channel in a web browser and look at the address bar: the part starting with the letter C at the end of the URL is the Channel ID. You can also open the channel details in the Slack app to see the Channel ID."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why am I not getting alerts even though everything is set up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The usual causes are: the bot hasn't been invited to the channel, you entered the channel name instead of the Channel ID, you used a token that doesn't start with xoxb-, or the chat:write permission is missing."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/en/"><img src="https://safephone.io.vn/assets/icon.png" alt="SafePhone logo" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Main navigation">
+      <a href="https://safephone.io.vn/en/tutorials.html">User guides</a>
+      <a href="https://safephone.io.vn/en/security_handbook.html">Security handbook<span class="tag">Must read</span></a>
+      <a href="https://safephone.io.vn/create-slack-channel.html" hreflang="vi" lang="vi" class="lang-switch">Tiếng Việt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/en/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/en/tutorials.html">User guides</a></li>
+        <li aria-current="page">Create a Slack alert channel</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>How to Create a Slack Channel for Alerts: Get Your Bot Token and Channel ID</h1>
+      <p class="byline">SafePhone · Updated September 27, 2026</p>
+      <p class="lede">SafePhone can send an alert to Slack whenever a family member's phone receives a call from an unknown number or they tap a suspicious link. This guide shows you how to <strong>create a Slack channel for alerts</strong> in 5 steps: create the channel, create a bot, get the <strong>Bot Token</strong>, invite the bot to the channel, and find the <strong>Channel ID</strong>. You only need to do this once, and it takes about 5–10 minutes.</p>
+      <div class="cta-box">
+        <p>Get SafePhone to receive alerts in Slack</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Table of contents">
+        <strong>In this article</strong>
+        <ol>
+          <li><a href="#vi-sao">Why does SafePhone use Slack for alerts?</a></li>
+          <li><a href="#chuan-bi">What you'll need</a></li>
+          <li><a href="#buoc-1">Step 1: Create a Slack channel</a></li>
+          <li><a href="#buoc-2">Step 2: Create a Slack app and bot</a></li>
+          <li><a href="#buoc-3">Step 3: Install the app and get the Bot Token</a></li>
+          <li><a href="#buoc-4">Step 4: Invite the bot to the channel</a></li>
+          <li><a href="#buoc-5">Step 5: Find the Channel ID</a></li>
+          <li><a href="#hoan-tat">Finish: enter the details in SafePhone</a></li>
+          <li><a href="#khac-phuc">Not getting alerts? Check these common issues</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="vi-sao">Why does SafePhone use Slack for alerts?</h2>
+      <p>Slack is a team messaging platform that lets you create private channels, receive messages in real time, and connect other apps to send alerts automatically. When you install SafePhone on your child's or parent's phone, every unusual event is posted to your family's Slack channel, so you know when:</p>
+      <ul>
+        <li>A call comes in from a number that isn't in their contacts</li>
+        <li>Someone taps an unfamiliar link in the browser</li>
+        <li>A call was blocked or only flagged with a warning</li>
+      </ul>
+      <p>This way, you can spot signs of a scam early without having to pick up your family member's phone and check it. Learn how to use alerts in these two guides: <a href="https://safephone.io.vn/en/send-alerts-when-receiving-calls.html">protect your family from scam calls</a> and <a href="https://safephone.io.vn/en/send-alert-when-open-url.html">get alerts when a family member taps a suspicious link</a>.</p>
+
+      <h2 id="chuan-bi">What you'll need</h2>
+      <ul>
+        <li><strong>A Slack workspace.</strong> If you don't have one, you can create one for free at <a href="https://slack.com" rel="noopener">slack.com</a>.</li>
+        <li><strong>A computer with a web browser.</strong> Creating the bot (steps 2–3) is much easier on a computer than on a phone.</li>
+        <li><strong>The Slack app on your own phone</strong> to receive alerts once setup is complete.</li>
+      </ul>
+
+      <h2 id="buoc-1">Step 1: Create a Slack channel</h2>
+      <ol class="steps">
+        <li>Sign in to Slack at <a href="https://slack.com" rel="noopener">slack.com</a>.</li>
+        <li>In the left sidebar, click <strong>Add channels</strong> → <strong>Create a new channel</strong>.</li>
+        <li>Name the channel (for example <code>family-alerts</code>) and create it.</li>
+      </ol>
+      <p>This is where all SafePhone alerts will arrive.</p>
+
+      <h2 id="buoc-2">Step 2: Create a Slack app and bot</h2>
+      <ol class="steps">
+        <li>Go to the Slack app management page: <a href="https://api.slack.com/apps" rel="noopener">api.slack.com/apps</a>.</li>
+        <li>Click <strong>Create New App</strong> → choose <strong>From scratch</strong>.</li>
+        <li>Give the app a name (for example “SafePhone”) and select your workspace.</li>
+        <li>Once it's created, go to <strong>OAuth &amp; Permissions</strong>.</li>
+        <li>Under <strong>Bot Token Scopes</strong>, add the <code>chat:write</code> scope so the bot can post messages.</li>
+      </ol>
+
+      <h2 id="buoc-3">Step 3: Install the app and get the Bot Token</h2>
+      <ol class="steps">
+        <li>Still on the <strong>OAuth &amp; Permissions</strong> page, click <strong>Install to Workspace</strong> and then allow it.</li>
+        <li>After installation, you'll see a <strong>Bot User OAuth Token</strong> that looks like <code>xoxb-...</code>.</li>
+        <li>Copy this token. This is the <strong>Bot Token</strong> SafePhone uses to send messages.</li>
+      </ol>
+      <div class="note"><strong>Keep your Bot Token secret.</strong> Anyone with the token can post messages to your channel. Never share it on social media or in group chats. If it leaks, revoke it and generate a new token on the Slack app management page.</div>
+
+      <h2 id="buoc-4">Step 4: Invite the bot to the channel</h2>
+      <ol class="steps">
+        <li>Open the Slack channel you created in step 1.</li>
+        <li>Type <code>/invite @bot-name</code> (the app name you chose in step 2) and send it.</li>
+      </ol>
+      <p>The bot must be a member of the channel to post alerts.</p>
+
+      <h2 id="buoc-5">Step 5: Find the Channel ID</h2>
+      <p><strong>Option 1: from the page URL.</strong> Open the Slack channel in a web browser and look at the address bar, which looks like this:</p>
+      <p><code>https://app.slack.com/client/TXXXXXXX/CYYYYYYY</code></p>
+      <p>The part starting with the letter <strong>C</strong> (for example <code>CYYYYYYY</code>) is the <strong>Channel ID</strong>.</p>
+      <p><strong>Option 2: in the Slack app.</strong> Tap the channel name at the top to open the channel details; the Channel ID is usually at the bottom.</p>
+
+      <h2 id="hoan-tat">Finish: enter the Bot Token and Channel ID in SafePhone</h2>
+      <p>On your family member's phone, open SafePhone → the first row of shield icons → <strong>Send alerts to family</strong> (“Gửi thông báo đến người thân”) → choose <strong>Send via Slack</strong> (“Gửi qua Slack”), then paste the <strong>Bot Token</strong> and <strong>Channel ID</strong> into <strong>Slack channel settings</strong> (“Cấu hình kênh Slack”). Don't have SafePhone yet? <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener">Get it on Google Play</a>.</p>
+      <p>You can use the same channel for every device in your household. Just give each device a different name (“Dad's phone”, “Timmy's tablet”) so you know where each alert comes from.</p>
+
+      <h2 id="khac-phuc">Not getting alerts? Check these common issues</h2>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Cause</th><th>Fix</th></tr></thead>
+        <tbody>
+          <tr><td>The bot hasn't been invited to the channel</td><td>Repeat step 4 with <code>/invite @bot-name</code></td></tr>
+          <tr><td>You entered the channel name instead of the Channel ID</td><td>Use the code starting with C (step 5), not <code>#channel-name</code></td></tr>
+          <tr><td>You copied the wrong token</td><td>Use the <strong>Bot User OAuth Token</strong> that starts with <code>xoxb-</code>, not a token starting with <code>xoxp-</code></td></tr>
+          <tr><td>Missing permission to post messages</td><td>Make sure you added <code>chat:write</code> in step 2, then reinstall the app (step 3)</td></tr>
+          <tr><td>Alert conditions aren't turned on</td><td>In SafePhone, check that you've ticked the options under “Send alerts when” (“Gửi cảnh báo khi”)</td></tr>
+          <tr><td>Slack notifications are off on your phone</td><td>Open the Slack app → the channel's notification settings, and choose to be notified of all messages</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="ket-luan">Conclusion</h2>
+      <p>After these 5 steps, you'll have a dedicated alert channel for the whole family: every unknown call or suspicious link on your parents' or kids' phones shows up right away in your Slack. It's a simple way to add an extra layer of protection against increasingly sophisticated scams.</p>
+      <div class="cta-box">
+        <p>Turn on family alerts with SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+
+      <h2 id="cau-hoi-thuong-gap">FAQ</h2>
+      <details>
+        <summary>Does it cost anything to create a Slack channel for alerts?</summary>
+        <p>No. You can create a workspace, channel, and bot on Slack's free plan to receive alerts from SafePhone.</p>
+      </details>
+      <details>
+        <summary>What is a Slack Bot Token and where do I get it?</summary>
+        <p>A Bot Token is a code starting with xoxb- that lets an app send messages to Slack. You'll find it under OAuth & Permissions for your app at api.slack.com/apps, after clicking Install to Workspace.</p>
+      </details>
+      <details>
+        <summary>How do I find a Slack channel's Channel ID?</summary>
+        <p>Open the channel in a web browser and look at the address bar: the part starting with the letter C at the end of the URL is the Channel ID. You can also open the channel details in the Slack app to see the Channel ID.</p>
+      </details>
+      <details>
+        <summary>Why am I not getting alerts even though everything is set up?</summary>
+        <p>The usual causes are: the bot hasn't been invited to the channel, you entered the channel name instead of the Channel ID, you used a token that doesn't start with xoxb-, or the chat:write permission is missing.</p>
+      </details>
+
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Related articles</h2>
+        <p class="grp">Family alerts</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/send-alerts-when-receiving-calls.html"><b>Protect your family from scam calls</b><span>Get alerts when your parents or kids receive a call from an unknown number.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/send-alert-when-open-url.html"><b>Get alerts when a family member taps a suspicious link</b><span>Know right away when a loved one opens a scam link, and what to do next.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/top-app-to-protect-your-children.html"><b>Apps to protect children on phones</b><span>Set screen-time limits, block harmful content and scam links for kids.</span></a></li>
+        </ul>
+        <p class="grp">Advanced setup</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/how-to-create-ai-api-keys.html"><b>Create OpenAI and DeepSeek API keys for SafePhone</b><span>Connect AI to improve scam content detection.</span></a></li>
+        </ul>
+      </aside>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – Anti-scam firewall for your phone</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/en/">Home</a></li>
+      <li><a href="https://safephone.io.vn/en/tutorials.html">User guides</a></li>
+      <li><a href="https://safephone.io.vn/en/security_handbook.html">Security handbook</a></li>
+      <li><a href="https://safephone.io.vn/en/privacy.html">Privacy policy</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone on Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone on Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

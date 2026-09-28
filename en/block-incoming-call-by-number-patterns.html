@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block Calls by Area Code or Number Pattern on Android</title>
+  <meta name="description" content="How to block calls by area code, ending digits or number pattern on Android (028, 024, 058...). Pair it with blacklists and allowlists to never miss key calls.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html">
+  <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">
+  <link rel="alternate" hreflang="en" href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html">
+  <link rel="alternate" hreflang="x-default" href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html">
+  <meta property="og:title" content="Block Calls by Area Code or Number Pattern on Android">
+  <meta property="og:description" content="Block a whole group of nuisance numbers with a single rule: by prefix, ending digits or number length. Syntax and setup guide for SafePhone.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Block Calls by Area Code or Number Pattern on Android">
+  <meta name="twitter:description" content="Block a whole group of nuisance numbers with a single rule: by prefix, ending digits or number length. Syntax and setup guide for SafePhone.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html#article",
+      "headline": "How to Block Calls by Prefix, Ending Digits or Number Pattern on Android",
+      "description": "How to block calls by area code, ending digits or number pattern on Android (028, 024, 058...). Pair it with blacklists and allowlists to never miss key calls.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html",
+      "image": "https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/en/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/en/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/en/#app"
+      },
+      "keywords": "block calls by prefix, block area code 028, block area code 024, block numbers by ending digits, block number patterns, block telemarketing calls"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "User guides",
+          "item": "https://safephone.io.vn/en/tutorials.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Block calls by prefix",
+          "item": "https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does * mean in a prefix-blocking rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each * stands for exactly one digit from 0 to 9. For example, the rule 028******** (3 digits followed by 8 asterisks) blocks every 11-digit landline number starting with 028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can blocking the 028 prefix block important calls by mistake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can. The rule blocks every number that matches the pattern, including banks, hospitals and businesses using 028 landlines. Check your blocked call log and temporarily turn the rule off when you're expecting an important call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does prefix blocking require the call screening permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. SafePhone needs Android's call screening permission to check incoming numbers before they ring. Without it, prefix-blocking rules won't work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I block by prefix or block numbers not in my contacts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Blocking by prefix works well when you only want to get rid of one group of nuisance numbers while still receiving calls from other unknown numbers. Blocking numbers not in your contacts suits older parents and children, who only need calls from people they know."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/en/"><img src="https://safephone.io.vn/assets/icon.png" alt="SafePhone logo" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Main navigation">
+      <a href="https://safephone.io.vn/en/tutorials.html">User guides</a>
+      <a href="https://safephone.io.vn/en/security_handbook.html">Security handbook<span class="tag">Must read</span></a>
+      <a href="https://safephone.io.vn/block-incoming-call-by-number-patterns.html" hreflang="vi" lang="vi" class="lang-switch">Tiếng Việt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/en/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/en/tutorials.html">User guides</a></li>
+        <li aria-current="page">Block calls by prefix</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>How to Block Calls by Prefix, Ending Digits or Number Pattern on Android</h1>
+      <p class="byline">SafePhone · Updated September 27, 2026</p>
+      <p class="lede">Do you keep getting marketing and telemarketing calls from 028 or 024 landlines (the area codes for Ho Chi Minh City and Hanoi), each time from a different number? Instead of blocking numbers one by one, you can <strong>block calls by prefix</strong>, by ending digits, or block a whole group of numbers that follow a pattern with a single rule. This guide explains the syntax and how to set it up on an Android phone with SafePhone.</p>
+      <div class="cta-box">
+        <p>Block calls by prefix or ending digits with SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Table of contents">
+        <strong>In this article</strong>
+        <ol>
+          <li><a href="#khi-nao">When should you block by prefix?</a></li>
+          <li><a href="#cu-phap">Rule syntax for blocking prefixes and ending digits</a></li>
+          <li><a href="#huong-dan">How to set up prefix blocking in SafePhone</a></li>
+          <li><a href="#luu-y">Tips to avoid blocking important calls by mistake</a></li>
+          <li><a href="#cau-hoi-thuong-gap">FAQ</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="khi-nao">When should you block calls by prefix?</h2>
+      <p>Blocking with a blacklist or accepting calls only from your contacts are both useful, but each has its limits:</p>
+      <ul>
+        <li><strong>A blacklist</strong> struggles to keep up when spam numbers change constantly; scammers can use a new number every day.</li>
+        <li><strong>Accepting calls only from contacts</strong> can make you miss important calls from numbers you haven't saved, such as a delivery driver or a clinic.</li>
+        <li>Neither is flexible enough for suspicious numbers that share a common pattern.</li>
+      </ul>
+      <p>In practice, many nuisance calls come from the same number range: telemarketing call centers use batches of landline numbers with the same prefix, for example, or numbers of unusual length. Blocking by number pattern lets you:</p>
+      <ul>
+        <li>Proactively block a whole group of suspicious numbers with one rule</li>
+        <li>Spend less time updating a blacklist by hand</li>
+        <li>Still receive calls from unknown numbers that don't match the rule, so you don't miss important calls</li>
+      </ul>
+      <p>Prefix blocking works alongside <a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html">automatic blocking of unknown and scam numbers</a>; we recommend turning on both.</p>
+
+      <h2 id="cu-phap">Rule syntax for blocking prefixes and ending digits</h2>
+      <p>In SafePhone, each <code>*</code> stands for <strong>any single digit (0–9)</strong>. A rule must have <strong>exactly as many characters</strong> as the phone number you want to block: Vietnamese mobile numbers have 10 digits, and landline numbers (for example 028, 024) have 11 digits.</p>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>To block</th><th>Rule</th><th>Example of a blocked number</th></tr></thead>
+        <tbody>
+          <tr><td>Landlines with the 028 prefix (Ho Chi Minh City)</td><td><code>028********</code></td><td>028 1234 5678</td></tr>
+          <tr><td>Landlines with the 024 prefix (Hanoi)</td><td><code>024********</code></td><td>024 8765 4321</td></tr>
+          <tr><td>Mobile numbers starting with 090</td><td><code>090*******</code></td><td>0901 234 567</td></tr>
+          <tr><td>Numbers ending in 888</td><td><code>*******888</code></td><td>0912 345 888</td></tr>
+          <tr><td>Numbers following a custom pattern</td><td><code>09*5****8*</code></td><td>0925 1234 81</td></tr>
+          <tr><td>Any 12-digit number</td><td><code>************</code></td><td>Numbers of unusual length</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>A rule with fewer or more characters than the actual number won't match, so count your <code>*</code> characters carefully.</p>
+
+      <h2 id="huong-dan">How to set up prefix blocking in SafePhone</h2>
+      <ol class="steps">
+        <li>Open the SafePhone app. If you haven't installed it yet, <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener">get SafePhone on Google Play</a>.</li>
+        <li>Switch to the third tab.</li>
+        <li>Tap <strong>“Block by prefix”</strong> (“Chặn đầu số”).</li>
+        <li>Add a new rule using the syntax above, for example <code>028********</code> to block every landline number starting with 028.</li>
+        <li>Tap <strong>“Save”</strong> (“Lưu lại”).</li>
+        <li>Make sure you've granted SafePhone the <a href="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html">call screening</a> permission. If not, follow the steps in <a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html">how to block unknown and scam numbers</a>.</li>
+      </ol>
+      <div class="gallery">
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_1.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_1.png" alt="The third tab in the SafePhone app" loading="lazy"></a><figcaption>Step 2: Switch to the third tab</figcaption></figure>
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_2.png" alt="The Block by prefix option in SafePhone" loading="lazy"></a><figcaption>Step 3: Tap “Block by prefix”</figcaption></figure>
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_pattern_step_3.png" alt="Adding a wildcard rule to block the 028 prefix" loading="lazy"></a><figcaption>Steps 4–5: Add a rule and save</figcaption></figure>
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_blacklist_completed.png"><img src="https://safephone.io.vn/assets/screenshots/phone_blacklist_completed.png" alt="SafePhone with the call-blocking shield turned on" loading="lazy"></a><figcaption>Done: your blocking rule is active</figcaption></figure>
+      </div>
+      <p>Once set up, SafePhone automatically filters incoming calls according to your rules: calls that match a rule are blocked before your phone rings.</p>
+
+      <h2 id="luu-y">Tips to avoid blocking important calls by mistake</h2>
+      <ul>
+        <li><strong>Don't block too broadly.</strong> A mobile prefix such as 086 or 090 is used by millions of people, including your family and friends. Only block an entire mobile prefix when you're really sure.</li>
+        <li><strong>Landline calls can be important too.</strong> Banks, hospitals and government agencies also call from 028 and 024 numbers. If you're expecting a call from one of them, temporarily turn the rule off.</li>
+        <li><strong>Check your call log.</strong> Now and then, review the list of blocked calls in your Phone app to make sure no important call was blocked by mistake.</li>
+        <li><strong>Combine several rules</strong> instead of one overly broad rule, for example blocking the exact ending digits or number range that keeps calling you.</li>
+      </ul>
+      <p>For older parents or children, a safer option is to <a href="https://safephone.io.vn/en/build-trusted-contact-phone.html">block calls from numbers not in your contacts</a>: only people they know can get through, with no need to guess prefixes.</p>
+
+      <h2 id="ket-luan">Conclusion</h2>
+      <p>Prefix blocking is the fastest way to stop marketing and telemarketing calls coming from the same number range. Combined with a blacklist of scam numbers, you block both numbers that have already been reported and whole groups of newly appearing nuisance numbers.</p>
+      <div class="cta-box">
+        <p>Create your first prefix-blocking rule</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+
+      <h2 id="cau-hoi-thuong-gap">FAQ</h2>
+      <details>
+        <summary>What does * mean in a prefix-blocking rule?</summary>
+        <p>Each * stands for exactly one digit from 0 to 9. For example, the rule 028******** (3 digits followed by 8 asterisks) blocks every 11-digit landline number starting with 028.</p>
+      </details>
+      <details>
+        <summary>Can blocking the 028 prefix block important calls by mistake?</summary>
+        <p>It can. The rule blocks every number that matches the pattern, including banks, hospitals and businesses using 028 landlines. Check your blocked call log and temporarily turn the rule off when you're expecting an important call.</p>
+      </details>
+      <details>
+        <summary>Does prefix blocking require the call screening permission?</summary>
+        <p>Yes. SafePhone needs Android's call screening permission to check incoming numbers before they ring. Without it, prefix-blocking rules won't work.</p>
+      </details>
+      <details>
+        <summary>Should I block by prefix or block numbers not in my contacts?</summary>
+        <p>Blocking by prefix works well when you only want to get rid of one group of nuisance numbers while still receiving calls from other unknown numbers. Blocking numbers not in your contacts suits older parents and children, who only need calls from people they know.</p>
+      </details>
+
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Related articles</h2>
+        <p class="grp">Other ways to block calls</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html"><b>How to block unknown and scam numbers</b><span>Complete guide: block scam numbers before your phone even rings.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/build-trusted-contact-phone.html"><b>Block calls from numbers not in your contacts</b><span>Block 100% of unknown numbers so only your contacts can call.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html"><b>Call screening permissions on Android and iOS</b><span>Why prefix blocking needs this permission.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/compare-call-blocker-apps.html"><b>Best call blocker apps compared</b><span>Truecaller, Hiya, Call Blacklist and SafePhone.</span></a></li>
+        </ul>
+        <p class="grp">You might also like</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/list-keywords-used-in-fraud-campaign-2026.html"><b>Common scam tactics in 2026</b><span>Recognize a phone scam script within a few sentences.</span></a></li>
+        </ul>
+      </aside>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – An anti-scam firewall for your phone</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/en/">Home</a></li>
+      <li><a href="https://safephone.io.vn/en/tutorials.html">User guides</a></li>
+      <li><a href="https://safephone.io.vn/en/security_handbook.html">Security handbook</a></li>
+      <li><a href="https://safephone.io.vn/en/privacy.html">Privacy policy</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone on Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone on Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

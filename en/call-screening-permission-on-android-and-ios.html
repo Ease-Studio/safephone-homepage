@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Call Screening Permission on Android vs iOS Explained</title>
+  <meta name="description" content="What is the call screening permission? Why call blocker apps need it on Android, what it can and can't do, and how iPhone differs. A plain-English guide.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html">
+  <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">
+  <link rel="alternate" hreflang="en" href="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html">
+  <link rel="alternate" hreflang="x-default" href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html">
+  <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+  <meta name="theme-color" content="#0f6e56">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SafePhone">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:url" content="https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html">
+  <meta property="og:title" content="Call Screening Permission on Android vs iOS Explained">
+  <meta property="og:description" content="Why call blocker apps on Android need the call screening permission, what it lets them do, and why iPhone can't block calls the same way.">
+  <meta property="og:image" content="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png">
+  <meta property="article:modified_time" content="2026-09-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Call Screening Permission on Android vs iOS Explained">
+  <meta name="twitter:description" content="Why call blocker apps on Android need the call screening permission, what it lets them do, and why iPhone can't block calls the same way.">
+  <meta name="twitter:image" content="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html#article",
+      "headline": "What Is the Call Screening Permission? How It Differs on Android and iOS",
+      "description": "What is the call screening permission? Why call blocker apps need it on Android, what it can and can't do, and how iPhone differs. A plain-English guide.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html",
+      "image": "https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png",
+      "dateModified": "2026-09-27",
+      "author": {
+        "@type": "Organization",
+        "name": "SafePhone",
+        "url": "https://safephone.io.vn/en/"
+      },
+      "publisher": {
+        "@id": "https://safephone.io.vn/en/#org"
+      },
+      "about": {
+        "@id": "https://safephone.io.vn/en/#app"
+      },
+      "keywords": "call screening permission, call screening Android, block calls on iPhone, call screening app, Call Directory Extension, CallKit"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SafePhone",
+          "item": "https://safephone.io.vn/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security handbook",
+          "item": "https://safephone.io.vn/en/security_handbook.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Call screening permission",
+          "item": "https://safephone.io.vn/en/call-screening-permission-on-android-and-ios.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the call screening permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's an Android permission (Android 10 and later) that lets an app receive information about an incoming call, such as the phone number, before your phone rings, so it can decide whether to block the call, silence it, or let it through."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I give the call screening permission to two apps at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Android only lets one app hold the call screening permission at a time. Choosing a new app replaces the old one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an app with the call screening permission listen to my calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The permission only provides call information, such as the incoming number, so the app can decide whether to block it. It does not allow the app to listen to or record your calls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I revoke the call screening permission?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Go to Settings, Apps, Default apps, Caller ID & spam app, then choose a different app or None. Menu names may vary by phone manufacturer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an iPhone block scam calls automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Third-party apps on iPhone can only preload a list of blocked numbers and caller labels through the Call Directory Extension. iPhone has a built-in Silence Unknown Callers option that silences calls from unknown numbers, and starting with iOS 26 Apple offers its own feature for screening calls from unknown numbers."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:var(--brand)}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    header.site{border-bottom:1px solid var(--line);background:#fff}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+    .brand img{width:32px;height:32px}
+    nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+    nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+    .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+    .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+    .crumbs li+li::before{content:"›";margin-right:6px}
+    article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+    article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+    .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+    .lede{font-size:18px}
+    article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+    article.post h3{font-size:19px;margin:24px 0 8px}
+    .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .cta-box p{margin:0;font-weight:600}
+    .cta-box img{height:48px;width:auto}
+    .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+    .toc strong{display:block;margin-bottom:4px}
+    .toc ol{margin:0;padding-left:20px}
+    .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+    .steps li{margin-bottom:6px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+    .gallery figure{margin:0}
+    .gallery img{border:1px solid var(--line);border-radius:10px}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+    table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    th{background:var(--brand-soft)}
+    .tablewrap{overflow-x:auto}
+    details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+    summary{font-weight:600;cursor:pointer}
+    .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+    .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+    .related a b{display:block;color:var(--brand)}
+    .related a span{font-size:14px;color:var(--muted)}
+    .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+    footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+    footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin:4px 0}
+    .social{display:flex;gap:12px;align-items:center}
+    .social img{height:28px;width:auto}
+    @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://safephone.io.vn/en/"><img src="https://safephone.io.vn/assets/icon.png" alt="SafePhone logo" width="32" height="32">SafePhone</a>
+    <nav class="top" aria-label="Main navigation">
+      <a href="https://safephone.io.vn/en/tutorials.html">User guides</a>
+      <a href="https://safephone.io.vn/en/security_handbook.html">Security handbook<span class="tag">Must read</span></a>
+      <a href="https://safephone.io.vn/call-screening-permission-on-android-and-ios.html" hreflang="vi" lang="vi" class="lang-switch">Tiếng Việt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://safephone.io.vn/en/">SafePhone</a></li>
+        <li><a href="https://safephone.io.vn/en/security_handbook.html">Security handbook</a></li>
+        <li aria-current="page">Call screening permission</li>
+      </ol>
+    </nav>
+  </div>
+  <article class="post">
+      <h1>What Is the Call Screening Permission? How It Differs on Android and iOS</h1>
+      <p class="byline">SafePhone · Updated September 27, 2026</p>
+      <p class="lede">When you install a spam call blocker on Android, you're usually asked to grant the <strong>call screening permission</strong>. This permission lets the app see the incoming number and decide whether to block the call or let it ring <em>before</em> your phone actually rings. This article explains what the permission can do, whether it's safe, how to grant and revoke it, and why iPhone doesn't allow calls to be blocked the same way.</p>
+      <div class="cta-box">
+        <p>Block unknown and scam numbers automatically with SafePhone</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+      <nav class="toc" aria-label="Table of contents">
+        <strong>In this article</strong>
+        <ol>
+          <li><a href="#la-gi">What is the call screening permission?</a></li>
+          <li><a href="#lam-duoc-gi">What can an app with call screening permission do?</a></li>
+          <li><a href="#an-toan">Is it safe to grant the call screening permission?</a></li>
+          <li><a href="#cap-thu-hoi">How to grant and revoke the permission on Android</a></li>
+          <li><a href="#iphone">What about iPhone?</a></li>
+          <li><a href="#so-sanh">Android vs iOS compared</a></li>
+          <li><a href="#safephone">What does SafePhone use call screening for?</a></li>
+          <li><a href="#cau-hoi-thuong-gap">FAQ</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="la-gi">What is the call screening permission?</h2>
+      <p>On Android, the call screening permission lets an app receive and process call information <strong>before your phone rings</strong>. Technically, Android (version 10 and later) provides a “call screening app” role — in Settings, this is usually listed as <em>Caller ID &amp; spam app</em>.</p>
+      <p>A few key points:</p>
+      <ul>
+        <li><strong>By default, no app has this permission</strong> until you actively grant it to a specific app.</li>
+        <li><strong>Only one app can hold the call screening permission at a time.</strong> Choosing a new app means replacing the old one.</li>
+        <li><strong>You can revoke or re-grant the permission at any time</strong>.</li>
+        <li>According to Android's documentation, screening applies to calls from numbers <strong>not in your contacts</strong> — people you've saved can still call you as usual.</li>
+      </ul>
+
+      <h2 id="lam-duoc-gi">What can an app with call screening permission do?</h2>
+      <p>When a call comes in, Android sends the call information (such as the phone number) to the screening app. The app can use it to:</p>
+      <ul>
+        <li><strong>Block spam</strong> and scam calls — your phone never rings.</li>
+        <li><strong>Reject the call</strong> as if you'd tapped decline yourself.</li>
+        <li><strong>Silence</strong> a suspicious call instead of blocking it outright.</li>
+        <li><strong>Show a warning</strong> such as “spam / scam call,” or help identify who's calling.</li>
+        <li>Optionally <strong>keep the call out of your call log</strong> or <strong>skip the missed-call notification</strong> for blocked calls.</li>
+      </ul>
+      <p>The auto-answer-by-assistant feature you may have heard of (for example Google Assistant's <em>Call Screen</em> on Pixel phones) is a feature of Google's own Phone app, not something every app with the call screening permission can do.</p>
+
+      <h2 id="an-toan">Is it safe to grant the call screening permission?</h2>
+      <p>The call screening permission tells an app <em>who is calling</em> so it can decide whether to block the call or let it through — it does not let the app listen to or record your calls. That said, incoming phone numbers are still personal data, so keep in mind:</p>
+      <ul>
+        <li>Only grant the permission to apps downloaded from Google Play, from an identifiable developer, with a public privacy policy.</li>
+        <li>Be wary of “call blocker” apps sent to you as a link or APK file — this is a common way to spread malware. See <a href="https://safephone.io.vn/en/how_to_detect_malicious_mobile_apps.html">how to spot malicious apps</a>.</li>
+        <li>Check what other permissions the app asks for (contacts, SMS, accessibility…) and only grant them if you understand why they're needed.</li>
+      </ul>
+
+      <h2 id="cap-thu-hoi">How to grant and revoke the call screening permission on Android</h2>
+      <h3>Granting it from inside the app</h3>
+      <p>Usually, a call blocker app shows a system dialog asking whether you want to set it as your call screening app. Just pick the app from the list and confirm.</p>
+      <div class="gallery">
+        <figure><a href="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png"><img src="https://safephone.io.vn/assets/screenshots/phone_blacklist_step_3.png" alt="Android dialog for choosing SafePhone as the call screening app" loading="lazy"></a><figcaption>The Android dialog for choosing a call screening app</figcaption></figure>
+      </div>
+      <h3>Changing or revoking it in Settings</h3>
+      <ol class="steps">
+        <li>Open <em>Settings</em> (“Cài đặt”) → <em>Apps</em> (“Ứng dụng”).</li>
+        <li>Select <em>Default apps</em> (“Ứng dụng mặc định”).</li>
+        <li>Select <em>Caller ID &amp; spam app</em> (“Ứng dụng nhận dạng người gọi và chặn spam”).</li>
+        <li>Choose a different app, or choose <em>None</em> (“Không có”) to revoke the permission.</li>
+      </ol>
+      <div class="note"><strong>Note:</strong> menu names may vary by manufacturer and Android version (Samsung, Xiaomi, Oppo…). If you can't find it, type “default” or “spam” into the Settings search box (“mặc định” or “spam” if your phone is set to Vietnamese).</div>
+
+      <h2 id="iphone">What about iPhone?</h2>
+      <p>iPhone doesn't offer third-party apps a call screening permission in the same sense as Android. iOS does not let third-party apps:</p>
+      <ul>
+        <li>Hear a call before you do</li>
+        <li>Answer calls for you, or let a virtual assistant talk to the caller</li>
+        <li>See a live transcript while the caller is speaking</li>
+        <li>Block by prefix, by pattern, or with custom logic at the moment a call comes in</li>
+      </ul>
+      <p>Instead, iOS only offers <strong>Call Blocking &amp; Identification</strong> (which Apple calls the <em>Call Directory Extension</em>, part of CallKit), which lets apps:</p>
+      <ul>
+        <li>Preload a list of blocked numbers (a block list)</li>
+        <li>Attach a label (tag) to incoming numbers</li>
+      </ul>
+      <p>This list is loaded into the system in advance; the app never “sees” the call when it arrives, so it can't make decisions call by call. You enable these apps under <em>Settings</em> → <em>Phone</em> (or <em>Apps</em> → <em>Phone</em>) → <em>Call Blocking &amp; Identification</em> (“<em>Chặn &amp; ID cuộc gọi</em>” on a Vietnamese-language iPhone; the menu name may vary by version). That's why the Android “Extended blocking” feature (“Chặn Mở Rộng”) may not yet be available on iOS.</p>
+      <h3>Apple's built-in features</h3>
+      <p>Apple has a built-in <em>Silence Unknown Callers</em> option that sends calls from unknown numbers to voicemail. Starting with iOS 26, Apple's Phone app also offers Screen Unknown Callers: the iPhone asks the caller who they are and why they're calling, then shows you their answer so you can decide whether to pick up. This is Apple's own feature — third-party apps still don't get an equivalent permission.</p>
+
+      <h2 id="so-sanh">Call screening on Android vs iOS compared</h2>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>What third-party apps can do</th><th>Android (call screening permission)</th><th>iOS (Call Directory Extension)</th></tr></thead>
+        <tbody>
+          <tr><td>Check the number when a call comes in</td><td>Yes</td><td>No — can only preload a list</td></tr>
+          <tr><td>Block blacklisted numbers</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Label numbers as “spam / scam”</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Block by prefix or pattern</td><td>Yes</td><td>No</td></tr>
+          <tr><td>Allow only contacts to call</td><td>Possible</td><td>Not via apps (use Apple's Silence Unknown Callers option)</td></tr>
+          <tr><td>Number of apps allowed at once</td><td>One</td><td>Several can be enabled</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="safephone">What does SafePhone use the call screening permission for?</h2>
+      <p>SafePhone needs the call screening permission for its call-blocking modes to work:</p>
+      <ul>
+        <li><a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html">Block unknown and scam numbers automatically</a> — blocks calls from numbers on the blacklist.</li>
+        <li><a href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html">Block calls by number prefix or pattern</a> — blocks a range of numbers matching a format you choose.</li>
+        <li><a href="https://safephone.io.vn/en/build-trusted-contact-phone.html">Block calls from numbers not in contacts</a> — only trusted numbers can call, ideal for seniors and children.</li>
+        <li><a href="https://safephone.io.vn/en/send-alerts-when-receiving-calls.html">Protect your family from scam calls</a> — sends an alert when a family member gets a call from an unknown number.</li>
+      </ul>
+      <p>To turn it on, open SafePhone → tap the row of shield icons → choose a call-blocking mode → tap <strong>“Activate unknown-number shield”</strong> (“Kích hoạt lá chắn số lạ”) → select SafePhone in the Android dialog. Learn more in <a href="https://safephone.io.vn/en/safephone-mechanism.html">how SafePhone works</a>. Not sure which app to choose? See the <a href="https://safephone.io.vn/en/compare-call-blocker-apps.html">best call blocker apps compared</a>.</p>
+
+      <h2 id="ket-luan">Conclusion</h2>
+      <p>The call screening permission is Android's official mechanism for letting an app block spam and scam calls before your phone rings. Only one app can hold it at a time, and you can revoke it whenever you like. On iPhone, third-party apps are limited to preloading block lists and labels, so Android-style flexible blocking isn't possible there yet.</p>
+      <div class="cta-box">
+        <p>Give SafePhone the call screening permission</p>
+        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup&amp;hl=en" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Get SafePhone on Google Play" width="160" height="48" loading="lazy"></a>
+      </div>
+
+      <h2 id="cau-hoi-thuong-gap">FAQ</h2>
+      <details>
+        <summary>What is the call screening permission?</summary>
+        <p>It's an Android permission (Android 10 and later) that lets an app receive information about an incoming call, such as the phone number, before your phone rings, so it can decide whether to block the call, silence it, or let it through.</p>
+      </details>
+      <details>
+        <summary>Can I give the call screening permission to two apps at once?</summary>
+        <p>No. Android only lets one app hold the call screening permission at a time. Choosing a new app replaces the old one.</p>
+      </details>
+      <details>
+        <summary>Can an app with the call screening permission listen to my calls?</summary>
+        <p>No. The permission only provides call information, such as the incoming number, so the app can decide whether to block it. It does not allow the app to listen to or record your calls.</p>
+      </details>
+      <details>
+        <summary>How do I revoke the call screening permission?</summary>
+        <p>Go to Settings, Apps, Default apps, Caller ID &amp; spam app, then choose a different app or None. Menu names may vary by phone manufacturer.</p>
+      </details>
+      <details>
+        <summary>Can an iPhone block scam calls automatically?</summary>
+        <p>Third-party apps on iPhone can only preload a list of blocked numbers and caller labels through the Call Directory Extension. iPhone has a built-in Silence Unknown Callers option that silences calls from unknown numbers, and starting with iOS 26 Apple offers its own feature for screening calls from unknown numbers.</p>
+      </details>
+
+      <aside class="related" aria-labelledby="xem-them">
+        <h2 id="xem-them">Related articles</h2>
+        <p class="grp">Block scam calls</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/block-blacklisted-incoming-call.html"><b>How to block unknown and scam numbers automatically</b><span>Block scam numbers before your phone rings.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/compare-call-blocker-apps.html"><b>Best call blocker apps compared</b><span>Truecaller, Hiya, Call Blacklist, and SafePhone.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/build-trusted-contact-phone.html"><b>Block calls from numbers not in contacts</b><span>Only people in your trusted contacts can call.</span></a></li>
+          <li><a href="https://safephone.io.vn/en/block-incoming-call-by-number-patterns.html"><b>How to block calls by number prefix or pattern</b><span>Block by prefix without missing important calls.</span></a></li>
+        </ul>
+        <p class="grp">Block scam websites and links</p>
+        <ul>
+          <li><a href="https://safephone.io.vn/en/url-screening-permission-on-android-and-ios.html"><b>URL screening permission on Android and iOS</b><span>The equivalent mechanism for links: the default browser.</span></a></li>
+        </ul>
+      </aside>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong>SafePhone</strong> – An anti-scam firewall for your phone</p>
+      <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+    </div>
+    <ul>
+      <li><a href="https://safephone.io.vn/en/">Home</a></li>
+      <li><a href="https://safephone.io.vn/en/tutorials.html">User guides</a></li>
+      <li><a href="https://safephone.io.vn/en/security_handbook.html">Security handbook</a></li>
+      <li><a href="https://safephone.io.vn/en/privacy.html">Privacy policy</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone on Facebook" loading="lazy"></a>
+      <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone on Product Hunt" loading="lazy"></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
