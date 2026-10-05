@@ -3,24 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cách tạo kênh Slack, lấy Bot Token và Channel ID | SafePhone</title>
-    <meta name="description" content="Hướng dẫn tạo kênh Slack nhận cảnh báo từ SafePhone trong 5 bước: tạo kênh, tạo bot, lấy Bot Token, mời bot vào kênh và lấy Channel ID.">
+    <title>Cách tạo Slack, kênh và Bot Token nhận cảnh báo</title>
+    <meta name="description" content="Hướng dẫn tạo kênh Slack nhận cảnh báo từ SafePhone từ đầu: đăng ký Slack, tạo workspace, tạo kênh, tạo bot, lấy Bot Token và Channel ID.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://safephone.io.vn/create-slack-channel.html">
+    <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/create-slack-channel.html">
+    <link rel="alternate" hreflang="en" href="https://safephone.io.vn/en/create-slack-channel.html">
+    <link rel="alternate" hreflang="x-default" href="https://safephone.io.vn/create-slack-channel.html">
     <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
     <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
     <meta name="theme-color" content="#0f6e56">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="SafePhone">
     <meta property="og:locale" content="vi_VN">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:url" content="https://safephone.io.vn/create-slack-channel.html">
-    <meta property="og:title" content="Cách tạo kênh Slack, lấy Bot Token và Channel ID | SafePhone">
-    <meta property="og:description" content="5 bước tạo kênh Slack cho gia đình để nhận cảnh báo khi bố mẹ, con cái gặp cuộc gọi lạ hoặc bấm vào link lừa đảo.">
+    <meta property="og:title" content="Cách tạo Slack, kênh và Bot Token nhận cảnh báo">
+    <meta property="og:description" content="Từng bước dễ làm theo: đăng ký Slack miễn phí, tạo workspace và kênh, tạo bot, lấy Bot Token, Channel ID để nhận cảnh báo từ SafePhone.">
     <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
-    <meta property="article:modified_time" content="2026-09-27">
+    <meta property="article:modified_time" content="2026-10-05">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cách tạo kênh Slack, lấy Bot Token và Channel ID | SafePhone">
-    <meta name="twitter:description" content="5 bước tạo kênh Slack cho gia đình để nhận cảnh báo khi bố mẹ, con cái gặp cuộc gọi lạ hoặc bấm vào link lừa đảo.">
+    <meta name="twitter:title" content="Cách tạo Slack, kênh và Bot Token nhận cảnh báo">
+    <meta name="twitter:description" content="Từng bước dễ làm theo: đăng ký Slack miễn phí, tạo workspace và kênh, tạo bot, lấy Bot Token, Channel ID để nhận cảnh báo từ SafePhone.">
     <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
     <script type="application/ld+json">
         {
@@ -29,12 +33,12 @@
                 {
                     "@type": "TechArticle",
                     "@id": "https://safephone.io.vn/create-slack-channel.html#article",
-                    "headline": "Hướng dẫn tạo kênh Slack nhận cảnh báo: lấy Bot Token và Channel ID",
-                    "description": "Hướng dẫn tạo kênh Slack nhận cảnh báo từ SafePhone trong 5 bước: tạo kênh, tạo bot, lấy Bot Token, mời bot vào kênh và lấy Channel ID.",
+                    "headline": "Hướng dẫn tạo kênh Slack nhận cảnh báo từ A đến Z: đăng ký, tạo kênh, tạo Bot Token",
+                    "description": "Hướng dẫn tạo kênh Slack nhận cảnh báo từ SafePhone từ đầu: đăng ký Slack, tạo workspace, tạo kênh, tạo bot, lấy Bot Token và Channel ID.",
                     "inLanguage": "vi-VN",
                     "mainEntityOfPage": "https://safephone.io.vn/create-slack-channel.html",
                     "image": "https://safephone.io.vn/assets/og-image.png",
-                    "dateModified": "2026-09-27",
+                    "dateModified": "2026-10-05",
                     "author": {
                         "@type": "Organization",
                         "name": "SafePhone",
@@ -46,7 +50,7 @@
                     "about": {
                         "@id": "https://safephone.io.vn/#app"
                     },
-                    "keywords": "tạo kênh Slack nhận cảnh báo, Slack bot token, lấy channel ID Slack, tạo Slack bot, Slack chat:write"
+                    "keywords": "tạo kênh Slack nhận cảnh báo, đăng ký Slack, tạo workspace Slack, Slack bot token, lấy channel ID Slack"
                 },
                 {
                     "@type": "BreadcrumbList",
@@ -76,34 +80,42 @@
                     "mainEntity": [
                         {
                             "@type": "Question",
-                            "name": "Tạo kênh Slack để nhận cảnh báo có mất phí không?",
+                            "name": "Dùng Slack để nhận cảnh báo có mất phí không?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Không. Bạn có thể tạo workspace, kênh và bot trên gói miễn phí của Slack để nhận cảnh báo từ SafePhone."
+                                "text": "Không. Bạn có thể đăng ký Slack, tạo workspace, kênh và bot trên gói miễn phí để nhận cảnh báo từ SafePhone."
                             }
                         },
                         {
                             "@type": "Question",
-                            "name": "Bot Token của Slack là gì và lấy ở đâu?",
+                            "name": "Tôi đã có workspace Slack, có cần tạo mới không?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Bot Token là mã bắt đầu bằng xoxb- cho phép ứng dụng gửi tin nhắn vào Slack. Bạn lấy nó trong mục OAuth & Permissions của app tại api.slack.com/apps, sau khi bấm Install to Workspace."
+                                "text": "Không cần. Bạn có thể bỏ qua Bước 1 và tạo một kênh riêng cho cảnh báo trong workspace hiện có."
                             }
                         },
                         {
                             "@type": "Question",
-                            "name": "Làm sao lấy Channel ID của kênh Slack?",
+                            "name": "Bot Token là gì và lấy ở đâu?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Mở kênh trên trình duyệt và xem thanh địa chỉ: phần bắt đầu bằng chữ C ở cuối đường dẫn là Channel ID. Bạn cũng có thể mở thông tin kênh trong ứng dụng Slack để xem Channel ID."
+                                "text": "Bot Token là chuỗi bắt đầu bằng xoxb- cho phép SafePhone gửi tin nhắn vào Slack. Bạn lấy nó trong mục OAuth & Permissions của app tại api.slack.com/apps sau khi bấm Install to Workspace."
                             }
                         },
                         {
                             "@type": "Question",
-                            "name": "Vì sao đã cấu hình mà không nhận được cảnh báo?",
+                            "name": "Có bắt buộc mời bot vào kênh không?",
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Nguyên nhân thường gặp là bot chưa được mời vào kênh, nhập tên kênh thay vì Channel ID, dùng nhầm token không bắt đầu bằng xoxb-, hoặc thiếu quyền chat:write."
+                                "text": "Có. Với quyền chat:write, bot phải là thành viên của kênh thì mới gửi được cảnh báo. Gõ /invite kèm tên bot trong kênh để mời."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Làm sao lấy Channel ID?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Bấm vào tên kênh để mở chi tiết kênh, kéo xuống cuối cửa sổ và bấm Copy channel ID. Channel ID bắt đầu bằng chữ C."
                             }
                         }
                     ]
@@ -174,6 +186,7 @@
         <nav class="top" aria-label="Điều hướng chính">
             <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
             <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+            <a href="https://safephone.io.vn/en/create-slack-channel.html" hreflang="en" lang="en" class="lang-switch">English</a>
         </nav>
     </div>
 </header>
@@ -189,9 +202,9 @@
         </nav>
     </div>
     <article class="post">
-        <h1>Hướng dẫn tạo kênh Slack nhận cảnh báo: lấy Bot Token và Channel ID</h1>
-        <p class="byline">SafePhone · Cập nhật 27/09/2026</p>
-        <p class="lede">SafePhone có thể gửi cảnh báo đến Slack mỗi khi điện thoại của người thân nhận cuộc gọi từ số lạ hoặc bấm vào link đáng ngờ. Bài viết hướng dẫn <strong>tạo kênh Slack nhận cảnh báo</strong> trong 5 bước: tạo kênh, tạo bot, lấy <strong>Bot Token</strong>, mời bot vào kênh và lấy <strong>Channel ID</strong>. Bạn chỉ cần làm một lần, mất khoảng 5–10 phút.</p>
+        <h1>Hướng dẫn tạo kênh Slack nhận cảnh báo từ A đến Z: đăng ký, tạo kênh, tạo Bot Token</h1>
+        <p class="byline">SafePhone · Cập nhật 05/10/2026</p>
+        <p class="lede">SafePhone gửi cảnh báo qua Slack mỗi khi điện thoại của người thân nhận cuộc gọi lạ hoặc bấm vào link đáng ngờ. Bài này hướng dẫn <strong>tạo kênh Slack nhận cảnh báo</strong> từ đầu, kể cả khi bạn chưa từng dùng Slack. Bạn chỉ cần làm một lần, khoảng 10–15 phút, và hoàn toàn miễn phí.</p>
         <div class="cta-box">
             <p>Tải SafePhone để nhận cảnh báo qua Slack</p>
             <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
@@ -199,93 +212,103 @@
         <nav class="toc" aria-label="Mục lục">
             <strong>Nội dung bài viết</strong>
             <ol>
-                <li><a href="#vi-sao">Vì sao SafePhone dùng Slack để gửi cảnh báo?</a></li>
-                <li><a href="#chuan-bi">Chuẩn bị</a></li>
-                <li><a href="#buoc-1">Bước 1: Tạo kênh Slack</a></li>
-                <li><a href="#buoc-2">Bước 2: Tạo Slack App và Bot</a></li>
-                <li><a href="#buoc-3">Bước 3: Cài App và lấy Bot Token</a></li>
-                <li><a href="#buoc-4">Bước 4: Mời Bot vào kênh</a></li>
+                <li><a href="#chuan-bi">Bạn cần chuẩn bị gì?</a></li>
+                <li><a href="#buoc-1">Bước 1: Đăng ký Slack và tạo workspace</a></li>
+                <li><a href="#buoc-2">Bước 2: Tạo kênh nhận cảnh báo</a></li>
+                <li><a href="#buoc-3">Bước 3: Tạo bot và lấy Bot Token</a></li>
+                <li><a href="#buoc-4">Bước 4: Mời bot vào kênh</a></li>
                 <li><a href="#buoc-5">Bước 5: Lấy Channel ID</a></li>
-                <li><a href="#hoan-tat">Hoàn tất: nhập vào SafePhone</a></li>
-                <li><a href="#khac-phuc">Không nhận được cảnh báo? Kiểm tra các lỗi thường gặp</a></li>
+                <li><a href="#buoc-6">Bước 6: Nhập vào SafePhone</a></li>
+                <li><a href="#khac-phuc">Không nhận được cảnh báo?</a></li>
+                <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
             </ol>
         </nav>
 
-        <h2 id="vi-sao">Vì sao SafePhone dùng Slack để gửi cảnh báo?</h2>
-        <p>Slack là nền tảng nhắn tin theo nhóm, cho phép tạo kênh riêng, nhận tin nhắn theo thời gian thực và tích hợp với các ứng dụng khác để tự động gửi cảnh báo. Khi bạn cài SafePhone cho con cái hoặc bố mẹ, mỗi sự kiện bất thường sẽ được gửi vào kênh Slack của gia đình, giúp bạn biết được:</p>
+        <h2 id="chuan-bi">Bạn cần chuẩn bị gì?</h2>
         <ul>
-            <li>Có cuộc gọi từ số không nằm trong danh bạ</li>
-            <li>Có người bấm vào link lạ trên trình duyệt</li>
-            <li>Cuộc gọi đã bị chặn hay chỉ được cảnh báo</li>
+            <li><strong>Một địa chỉ email</strong> (hoặc tài khoản Google, Apple) để đăng ký Slack.</li>
+            <li><strong>Một máy tính có trình duyệt.</strong> Các bước tạo bot làm trên máy tính dễ hơn nhiều so với điện thoại.</li>
+            <li><strong>Điện thoại của bạn</strong> để cài ứng dụng Slack và nhận cảnh báo sau khi xong.</li>
         </ul>
-        <p>Nhờ vậy, bạn phát hiện sớm dấu hiệu lừa đảo mà không cần cầm điện thoại của người thân để kiểm tra. Tìm hiểu cách dùng cảnh báo trong hai bài <a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html">bảo vệ người thân khỏi cuộc gọi lừa đảo</a> và <a href="https://safephone.io.vn/send-alert-when-open-url.html">cảnh báo khi người thân bấm link lạ</a>.</p>
+        <p>Cuối cùng bạn sẽ có hai thông tin để dán vào SafePhone: <strong>Bot Token</strong> (bắt đầu bằng <code>xoxb-</code>) và <strong>Channel ID</strong> (bắt đầu bằng chữ <code>C</code>).</p>
 
-        <h2 id="chuan-bi">Chuẩn bị</h2>
-        <ul>
-            <li><strong>Một workspace Slack.</strong> Nếu chưa có, bạn có thể tạo miễn phí tại <a href="https://slack.com" rel="noopener">slack.com</a>.</li>
-            <li><strong>Máy tính có trình duyệt.</strong> Các bước tạo bot (bước 2–3) làm trên máy tính sẽ dễ hơn nhiều so với điện thoại.</li>
-            <li><strong>Ứng dụng Slack trên điện thoại của bạn</strong> để nhận cảnh báo sau khi thiết lập xong.</li>
-        </ul>
-
-        <h2 id="buoc-1">Bước 1: Tạo kênh Slack</h2>
+        <h2 id="buoc-1">Bước 1: Đăng ký Slack và tạo workspace</h2>
+        <p>Workspace là “ngôi nhà” chứa các kênh của bạn. Nếu bạn đã có workspace, hãy bỏ qua bước này.</p>
         <ol class="steps">
-            <li>Đăng nhập Slack tại <a href="https://slack.com" rel="noopener">slack.com</a>.</li>
-            <li>Ở thanh bên trái, bấm <strong>Add channels</strong> → <strong>Create a new channel</strong>.</li>
-            <li>Đặt tên kênh (ví dụ <code>canh-bao-gia-dinh</code>) và tạo kênh.</li>
+            <li>Mở <a href="https://slack.com/get-started#/createnew" rel="noopener">slack.com/get-started</a> trên máy tính.</li>
+            <li>Nhập email rồi bấm <strong>Continue</strong> (hoặc chọn đăng nhập bằng <strong>Google</strong> / <strong>Apple</strong>).</li>
+            <li>Mở hộp thư, lấy <strong>mã xác nhận</strong> Slack vừa gửi và nhập vào trang.</li>
+            <li>Bấm <strong>Create a Workspace</strong>.</li>
+            <li>Đặt tên workspace, ví dụ <code>Gia đình Nguyễn</code>, rồi nhập tên của bạn.</li>
+            <li>Khi Slack hỏi mời thêm người, bạn có thể bấm bỏ qua (<strong>Skip</strong>) — cảnh báo chỉ cần gửi cho bạn.</li>
+            <li>Nếu Slack đề nghị gói trả phí, chọn tiếp tục với gói miễn phí (<strong>Free</strong>).</li>
         </ol>
-        <p>Đây là nơi nhận mọi cảnh báo từ SafePhone.</p>
+        <div class="note">Các màn hình đăng ký của Slack có thể thay đổi theo thời gian. Nếu thấy khác, cứ làm theo hướng dẫn trên màn hình — mục tiêu chỉ là có một workspace.</div>
 
-        <h2 id="buoc-2">Bước 2: Tạo Slack App và Bot</h2>
+        <h2 id="buoc-2">Bước 2: Tạo kênh nhận cảnh báo</h2>
         <ol class="steps">
-            <li>Truy cập trang quản lý ứng dụng Slack: <a href="https://api.slack.com/apps" rel="noopener">api.slack.com/apps</a>.</li>
+            <li>Trong workspace, ở thanh bên trái bấm <strong>Add channels</strong> (hoặc dấu <strong>+</strong> cạnh mục Channels) → <strong>Create a new channel</strong>.</li>
+            <li>Đặt tên kênh, ví dụ <code>canh-bao-gia-dinh</code>.</li>
+            <li>Bấm <strong>Create</strong> để tạo kênh.</li>
+        </ol>
+        <p>Đây là nơi tất cả cảnh báo từ SafePhone sẽ hiện ra.</p>
+
+        <h2 id="buoc-3">Bước 3: Tạo bot và lấy Bot Token</h2>
+        <p>Bot là “người đưa tin” giúp SafePhone gửi tin nhắn vào kênh của bạn.</p>
+        <ol class="steps">
+            <li>Mở <a href="https://api.slack.com/apps" rel="noopener">api.slack.com/apps</a> (đăng nhập bằng tài khoản Slack vừa tạo).</li>
             <li>Bấm <strong>Create New App</strong> → chọn <strong>From scratch</strong>.</li>
-            <li>Đặt tên cho app (ví dụ “SafePhone”) và chọn workspace của bạn.</li>
-            <li>Sau khi tạo xong, vào mục <strong>OAuth &amp; Permissions</strong>.</li>
-            <li>Trong phần <strong>Bot Token Scopes</strong>, thêm quyền <code>chat:write</code> để bot có thể gửi tin nhắn.</li>
+            <li>Đặt tên app, ví dụ <code>SafePhone</code>, chọn workspace ở Bước 1, rồi bấm <strong>Create App</strong>.</li>
+            <li>Ở menu bên trái, chọn <strong>OAuth &amp; Permissions</strong>.</li>
+            <li>Kéo xuống phần <strong>Scopes</strong> → <strong>Bot Token Scopes</strong>, bấm <strong>Add an OAuth Scope</strong> và chọn <code>chat:write</code>.</li>
+            <li>Kéo lên đầu trang, bấm <strong>Install to Workspace</strong> (có thể hiện là <em>Install to</em> + tên workspace của bạn), rồi bấm <strong>Allow</strong>.</li>
+            <li>Sao chép <strong>Bot User OAuth Token</strong> — chuỗi bắt đầu bằng <code>xoxb-</code>. Đây là <strong>Bot Token</strong>.</li>
         </ol>
+        <div class="note"><strong>Giữ bí mật Bot Token.</strong> Ai có token đều có thể gửi tin nhắn vào kênh của bạn. Không đăng token lên mạng xã hội hay nhóm chat. Nếu lỡ để lộ, hãy tạo lại token trong trang quản lý app.</div>
 
-        <h2 id="buoc-3">Bước 3: Cài App và lấy Bot Token</h2>
-        <ol class="steps">
-            <li>Vẫn trong trang <strong>OAuth &amp; Permissions</strong>, bấm <strong>Install to Workspace</strong> rồi cho phép.</li>
-            <li>Sau khi cài, bạn sẽ thấy <strong>Bot User OAuth Token</strong> có dạng <code>xoxb-...</code>.</li>
-            <li>Sao chép token này — đây là <strong>Bot Token</strong> để SafePhone gửi tin nhắn.</li>
-        </ol>
-        <div class="note"><strong>Giữ bí mật Bot Token.</strong> Ai có token đều có thể gửi tin nhắn vào kênh của bạn. Không chia sẻ token lên mạng xã hội hay nhóm chat. Nếu lỡ để lộ, hãy thu hồi và tạo lại token trong trang quản lý ứng dụng Slack.</div>
-
-        <h2 id="buoc-4">Bước 4: Mời Bot vào kênh</h2>
-        <ol class="steps">
-            <li>Mở kênh Slack đã tạo ở bước 1.</li>
-            <li>Gõ lệnh <code>/invite @tên-bot</code> (tên app bạn đặt ở bước 2) và gửi.</li>
-        </ol>
-        <p>Bot phải là thành viên của kênh thì mới gửi được cảnh báo.</p>
+        <h2 id="buoc-4">Bước 4: Mời bot vào kênh</h2>
+        <p>Với quyền <code>chat:write</code>, bot phải là thành viên của kênh thì mới gửi được cảnh báo. Mời bot bằng một trong hai cách:</p>
+        <ul>
+            <li><strong>Cách 1:</strong> mở kênh vừa tạo, gõ <code>/invite @SafePhone</code> (tên app bạn đặt ở Bước 3) rồi gửi.</li>
+            <li><strong>Cách 2:</strong> bấm vào tên kênh ở phía trên → <strong>Integrations</strong> → <strong>Add apps</strong> → chọn app của bạn.</li>
+        </ul>
+        <p>Khi thấy dòng thông báo bot đã tham gia kênh là xong.</p>
 
         <h2 id="buoc-5">Bước 5: Lấy Channel ID</h2>
-        <p><strong>Cách 1 — từ địa chỉ trang:</strong> mở kênh Slack trên trình duyệt, nhìn vào thanh địa chỉ có dạng:</p>
-        <p><code>https://app.slack.com/client/TXXXXXXX/CYYYYYYY</code></p>
-        <p>Phần bắt đầu bằng chữ <strong>C</strong> (ví dụ <code>CYYYYYYY</code>) chính là <strong>Channel ID</strong>.</p>
-        <p><strong>Cách 2 — trong ứng dụng Slack:</strong> bấm vào tên kênh ở phía trên để mở thông tin kênh; Channel ID thường nằm ở cuối phần thông tin.</p>
+        <ol class="steps">
+            <li>Mở kênh nhận cảnh báo trên máy tính.</li>
+            <li>Bấm vào tên kênh ở phía trên để mở <strong>chi tiết kênh</strong>.</li>
+            <li>Kéo xuống cuối cửa sổ, bạn sẽ thấy <strong>Channel ID</strong> (bắt đầu bằng chữ <code>C</code>) và nút <strong>Copy channel ID</strong>.</li>
+        </ol>
+        <p><strong>Cách khác:</strong> mở Slack trên trình duyệt, nhìn thanh địa chỉ dạng <code>https://app.slack.com/client/TXXXXXXX/CYYYYYYY</code> — phần bắt đầu bằng <code>C</code> chính là Channel ID.</p>
 
-        <h2 id="hoan-tat">Hoàn tất: nhập Bot Token và Channel ID vào SafePhone</h2>
-        <p>Trên điện thoại của người thân, mở SafePhone → dãy tấm khiên dòng đầu tiên → <strong>Gửi thông báo đến người thân</strong> → chọn <strong>Gửi qua Slack</strong>, rồi dán <strong>Bot Token</strong> và <strong>Channel ID</strong> vào phần <strong>Cấu hình kênh Slack</strong>. Chưa cài SafePhone? <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">Tải trên Google Play</a>.</p>
-        <p>Bạn có thể dùng cùng một kênh cho tất cả thiết bị trong nhà — chỉ cần đặt tên thiết bị khác nhau (“Điện thoại của ba”, “Tablet của cu Tí”) để biết cảnh báo đến từ máy nào.</p>
+        <h2 id="buoc-6">Bước 6: Nhập Bot Token và Channel ID vào SafePhone</h2>
+        <ol class="steps">
+            <li>Trên điện thoại của người thân, mở SafePhone (chưa có? <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">tải trên Google Play</a>).</li>
+            <li>Bấm vào dãy biểu tượng tấm khiên dòng đầu tiên → <strong>Gửi thông báo đến người thân</strong>.</li>
+            <li>Đặt tên thiết bị, ví dụ “Điện thoại của mẹ”, rồi chọn <strong>Gửi qua Slack</strong>.</li>
+            <li>Dán <strong>Bot Token</strong> và <strong>Channel ID</strong> vào phần <strong>Cấu hình kênh Slack</strong>.</li>
+            <li>Chọn các trường hợp muốn nhận cảnh báo, rồi bấm <strong>Lưu lại</strong>.</li>
+        </ol>
+        <p>Cuối cùng, cài <strong>ứng dụng Slack</strong> trên điện thoại của bạn, đăng nhập và bật thông báo cho kênh để không bỏ lỡ cảnh báo. Một kênh có thể dùng cho mọi thiết bị trong nhà — chỉ cần đặt tên thiết bị khác nhau.</p>
+        <p>Xem cách dùng cảnh báo trong hai bài <a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html">bảo vệ người thân khỏi cuộc gọi lừa đảo</a> và <a href="https://safephone.io.vn/send-alert-when-open-url.html">cảnh báo khi người thân bấm link lạ</a>.</p>
 
-        <h2 id="khac-phuc">Không nhận được cảnh báo? Kiểm tra các lỗi thường gặp</h2>
+        <h2 id="khac-phuc">Không nhận được cảnh báo? Kiểm tra nhanh</h2>
         <div class="tablewrap">
             <table>
                 <thead><tr><th>Nguyên nhân</th><th>Cách khắc phục</th></tr></thead>
                 <tbody>
-                <tr><td>Bot chưa được mời vào kênh</td><td>Làm lại bước 4 với lệnh <code>/invite @tên-bot</code></td></tr>
-                <tr><td>Nhập tên kênh thay vì Channel ID</td><td>Dùng mã bắt đầu bằng chữ C (bước 5), không dùng <code>#tên-kênh</code></td></tr>
-                <tr><td>Sao chép nhầm token</td><td>Dùng <strong>Bot User OAuth Token</strong> bắt đầu bằng <code>xoxb-</code>, không dùng token bắt đầu bằng <code>xoxp-</code></td></tr>
-                <tr><td>Thiếu quyền gửi tin nhắn</td><td>Kiểm tra đã thêm <code>chat:write</code> ở bước 2, rồi cài lại app (bước 3)</td></tr>
-                <tr><td>Chưa bật điều kiện gửi cảnh báo</td><td>Trong SafePhone, kiểm tra đã đánh dấu các lựa chọn “Gửi cảnh báo khi”</td></tr>
-                <tr><td>Chưa bật thông báo Slack trên điện thoại</td><td>Mở ứng dụng Slack → cài đặt thông báo của kênh, chọn nhận mọi tin nhắn</td></tr>
+                <tr><td>Bot chưa ở trong kênh</td><td>Làm lại Bước 4</td></tr>
+                <tr><td>Nhập tên kênh thay vì Channel ID</td><td>Dùng mã bắt đầu bằng <code>C</code> (Bước 5), không dùng <code>#tên-kênh</code></td></tr>
+                <tr><td>Sao chép nhầm token</td><td>Dùng <strong>Bot User OAuth Token</strong> bắt đầu bằng <code>xoxb-</code></td></tr>
+                <tr><td>Thiếu quyền gửi tin</td><td>Thêm <code>chat:write</code> (Bước 3), rồi cài lại app (Reinstall)</td></tr>
+                <tr><td>Chưa bật thông báo trên điện thoại</td><td>Trong app Slack, bật thông báo cho kênh, chọn nhận mọi tin nhắn</td></tr>
                 </tbody>
             </table>
         </div>
 
         <h2 id="ket-luan">Kết luận</h2>
-        <p>Sau 5 bước, bạn có một kênh cảnh báo riêng cho cả gia đình: mỗi cuộc gọi lạ hay link đáng ngờ trên điện thoại của bố mẹ, con cái đều hiện ngay trên Slack của bạn. Đây là cách đơn giản để thêm một lớp bảo vệ trước các chiêu lừa đảo ngày càng tinh vi.</p>
+        <p>Chỉ với 6 bước, bạn có một kênh cảnh báo riêng cho cả gia đình: mỗi cuộc gọi lạ hay link đáng ngờ trên điện thoại của bố mẹ, con cái đều hiện ngay trên Slack của bạn.</p>
         <div class="cta-box">
             <p>Bật cảnh báo cho người thân với SafePhone</p>
             <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
@@ -293,20 +316,24 @@
 
         <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
         <details>
-            <summary>Tạo kênh Slack để nhận cảnh báo có mất phí không?</summary>
-            <p>Không. Bạn có thể tạo workspace, kênh và bot trên gói miễn phí của Slack để nhận cảnh báo từ SafePhone.</p>
+            <summary>Dùng Slack để nhận cảnh báo có mất phí không?</summary>
+            <p>Không. Bạn có thể đăng ký Slack, tạo workspace, kênh và bot trên gói miễn phí để nhận cảnh báo từ SafePhone.</p>
         </details>
         <details>
-            <summary>Bot Token của Slack là gì và lấy ở đâu?</summary>
-            <p>Bot Token là mã bắt đầu bằng xoxb- cho phép ứng dụng gửi tin nhắn vào Slack. Bạn lấy nó trong mục OAuth & Permissions của app tại api.slack.com/apps, sau khi bấm Install to Workspace.</p>
+            <summary>Tôi đã có workspace Slack, có cần tạo mới không?</summary>
+            <p>Không cần. Bạn có thể bỏ qua Bước 1 và tạo một kênh riêng cho cảnh báo trong workspace hiện có.</p>
         </details>
         <details>
-            <summary>Làm sao lấy Channel ID của kênh Slack?</summary>
-            <p>Mở kênh trên trình duyệt và xem thanh địa chỉ: phần bắt đầu bằng chữ C ở cuối đường dẫn là Channel ID. Bạn cũng có thể mở thông tin kênh trong ứng dụng Slack để xem Channel ID.</p>
+            <summary>Bot Token là gì và lấy ở đâu?</summary>
+            <p>Bot Token là chuỗi bắt đầu bằng xoxb- cho phép SafePhone gửi tin nhắn vào Slack. Bạn lấy nó trong mục OAuth & Permissions của app tại api.slack.com/apps sau khi bấm Install to Workspace.</p>
         </details>
         <details>
-            <summary>Vì sao đã cấu hình mà không nhận được cảnh báo?</summary>
-            <p>Nguyên nhân thường gặp là bot chưa được mời vào kênh, nhập tên kênh thay vì Channel ID, dùng nhầm token không bắt đầu bằng xoxb-, hoặc thiếu quyền chat:write.</p>
+            <summary>Có bắt buộc mời bot vào kênh không?</summary>
+            <p>Có. Với quyền chat:write, bot phải là thành viên của kênh thì mới gửi được cảnh báo. Gõ /invite kèm tên bot trong kênh để mời.</p>
+        </details>
+        <details>
+            <summary>Làm sao lấy Channel ID?</summary>
+            <p>Bấm vào tên kênh để mở chi tiết kênh, kéo xuống cuối cửa sổ và bấm Copy channel ID. Channel ID bắt đầu bằng chữ C.</p>
         </details>
 
         <aside class="related" aria-labelledby="xem-them">
@@ -315,7 +342,7 @@
             <ul>
                 <li><a href="https://safephone.io.vn/send-alerts-when-receiving-calls.html"><b>Bảo vệ người thân khỏi cuộc gọi lừa đảo</b><span>Nhận cảnh báo khi bố mẹ, con cái nhận cuộc gọi từ số lạ.</span></a></li>
                 <li><a href="https://safephone.io.vn/send-alert-when-open-url.html"><b>Cảnh báo khi người thân bấm link lạ</b><span>Biết ngay khi người thân mở đường link lừa đảo — và phải làm gì.</span></a></li>
-                <li><a href="https://safephone.io.vn/top-app-to-protect-your-children.html"><b>Ứng dụng bảo vệ trẻ em trên điện thoại</b><span>Giới hạn thời gian, chặn nội dung xấu, chặn link lừa đảo cho trẻ.</span></a></li>
+                <li><a href="https://safephone.io.vn/top-app-to-protect-your-children.html"><b>Ứng dụng bảo vệ trẻ em trên điện thoại</b><span>Chặn link lừa đảo, chặn nội dung xấu và cảnh báo phụ huynh.</span></a></li>
             </ul>
             <p class="grp">Thiết lập nâng cao</p>
             <ul>
