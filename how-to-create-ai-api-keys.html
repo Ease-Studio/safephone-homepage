@@ -1,325 +1,413 @@
 <!DOCTYPE html>
-<html dir="auto" lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <title>Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo</title>
-    <meta name="robots" content="index, follow">
-
-    <meta name="description" content="Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/favicon.png" />
-
-    <meta property="og:title" content="Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo" />
-    <meta property="og:description" content="Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo" />
-    <meta property="og:image" content="assets/og-image.png" />
-
-    <link rel="stylesheet" href="assets/tobi.css" />
-    <link rel="stylesheet" href="assets/style.css" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cách tạo API key OpenAI, DeepSeek từ đầu cho SafePhone</title>
+    <meta name="description" content="Cách tạo API key OpenAI và DeepSeek từ đầu: đăng ký tài khoản, nạp tiền, tạo key và dán vào SafePhone để bật AI phát hiện lừa đảo.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://safephone.io.vn/how-to-create-ai-api-keys.html">
+    <link rel="alternate" hreflang="vi" href="https://safephone.io.vn/how-to-create-ai-api-keys.html">
+    <link rel="alternate" hreflang="en" href="https://safephone.io.vn/en/how-to-create-ai-api-keys.html">
+    <link rel="alternate" hreflang="x-default" href="https://safephone.io.vn/how-to-create-ai-api-keys.html">
+    <link rel="icon" href="https://safephone.io.vn/assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://safephone.io.vn/assets/icon.png">
+    <meta name="theme-color" content="#0f6e56">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="SafePhone">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://safephone.io.vn/how-to-create-ai-api-keys.html">
+    <meta property="og:title" content="Cách tạo API key OpenAI, DeepSeek từ đầu cho SafePhone">
+    <meta property="og:description" content="Hướng dẫn từng bước tạo API key OpenAI, DeepSeek, nạp tiền và nhập key vào SafePhone để bật tính năng AI phát hiện nội dung giả mạo.">
+    <meta property="og:image" content="https://safephone.io.vn/assets/og-image.png">
+    <meta property="article:modified_time" content="2026-10-05">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cách tạo API key OpenAI, DeepSeek từ đầu cho SafePhone">
+    <meta name="twitter:description" content="Hướng dẫn từng bước tạo API key OpenAI, DeepSeek, nạp tiền và nhập key vào SafePhone để bật tính năng AI phát hiện nội dung giả mạo.">
+    <meta name="twitter:image" content="https://safephone.io.vn/assets/og-image.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo",
-            "description": "Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo"
+            "@graph": [
+                {
+                    "@type": "TechArticle",
+                    "@id": "https://safephone.io.vn/how-to-create-ai-api-keys.html#article",
+                    "headline": "Cách tạo API key OpenAI và DeepSeek từ đầu: đăng ký, nạp tiền, tạo key cho SafePhone",
+                    "description": "Cách tạo API key OpenAI và DeepSeek từ đầu: đăng ký tài khoản, nạp tiền, tạo key và dán vào SafePhone để bật AI phát hiện lừa đảo.",
+                    "inLanguage": "vi-VN",
+                    "mainEntityOfPage": "https://safephone.io.vn/how-to-create-ai-api-keys.html",
+                    "image": "https://safephone.io.vn/assets/og-image.png",
+                    "dateModified": "2026-10-05",
+                    "author": {
+                        "@type": "Organization",
+                        "name": "SafePhone",
+                        "url": "https://safephone.io.vn/"
+                    },
+                    "publisher": {
+                        "@id": "https://safephone.io.vn/#org"
+                    },
+                    "about": {
+                        "@id": "https://safephone.io.vn/#app"
+                    },
+                    "keywords": "tạo API key OpenAI, API key DeepSeek, lấy API key ChatGPT, tích hợp AI SafePhone, bảo mật API key"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "SafePhone",
+                            "item": "https://safephone.io.vn/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Hướng dẫn sử dụng",
+                            "item": "https://safephone.io.vn/tutorials.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Tạo API key OpenAI, DeepSeek",
+                            "item": "https://safephone.io.vn/how-to-create-ai-api-keys.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Có bắt buộc tạo API key để dùng SafePhone không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Không. API key chỉ cần khi bạn muốn bật tính năng AI. Các tính năng chặn cuộc gọi, chặn web lừa đảo và chặn quảng cáo vẫn hoạt động khi chưa bật AI."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Nên chọn OpenAI hay DeepSeek?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "SafePhone hỗ trợ cả hai, bạn chỉ cần tạo key ở một nhà cung cấp. Hãy tham khảo bảng giá của OpenAI và DeepSeek để chọn phương án phù hợp với nhu cầu."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Dùng API key OpenAI hoặc DeepSeek có mất phí không?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Có. Để sử dụng API key, bạn cần có phương thức thanh toán hợp lệ hoặc số dư trong tài khoản; chi phí tính theo bảng giá của nhà cung cấp."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Cần nạp bao nhiêu tiền để bắt đầu?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Với OpenAI, mức nạp tối thiểu là 5 USD. Với DeepSeek, hãy xem số tiền tối thiểu hiển thị trên trang Top up. Bạn có thể bắt đầu với số tiền nhỏ và theo dõi trang Usage."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Lỡ để lộ API key thì phải làm gì?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Hãy xoá ngay API key đó trên trang quản lý của OpenAI hoặc DeepSeek, tạo key mới và nhập lại vào SafePhone. Sau đó kiểm tra trang Usage để phát hiện mức sử dụng bất thường."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Làm sao biết SafePhone đã kết nối AI thành công?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Sau khi dán API key và bấm Lưu lại, nút có chữ AI bên cạnh tiêu đề SafePhone sẽ chuyển sang màu xanh."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2N6LEQEEE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-P2N6LEQEEE');
-    </script>
-
+    <style>
+        :root{--ink:#16211d;--muted:#55635d;--brand:#0f6e56;--brand-soft:#e3f2ec;--line:#dfe6e2;--bg:#fbfcfb;--card:#fff;--warn:#fdf3dc}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+        a{color:var(--brand)}
+        img{max-width:100%;height:auto;display:block}
+        .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+        header.site{border-bottom:1px solid var(--line);background:#fff}
+        header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+        .brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+        .brand img{width:32px;height:32px}
+        nav.top a{margin-left:16px;text-decoration:none;font-size:15px}
+        nav.top .tag{background:#fdecc8;color:#7a4b00;border-radius:4px;padding:1px 6px;font-size:12px;margin-left:4px}
+        .crumbs{font-size:14px;color:var(--muted);padding-top:20px}
+        .crumbs ol{list-style:none;padding:0;margin:0;display:flex;gap:6px;flex-wrap:wrap}
+        .crumbs li+li::before{content:"›";margin-right:6px}
+        article.post{max-width:760px;margin:0 auto;padding:16px 16px 40px}
+        article.post h1{font-size:clamp(28px,4.5vw,38px);line-height:1.25;margin:8px 0 12px}
+        .byline{font-size:14px;color:var(--muted);margin-bottom:20px}
+        .lede{font-size:18px}
+        article.post h2{font-size:clamp(22px,3vw,27px);line-height:1.3;margin:40px 0 12px;scroll-margin-top:16px}
+        article.post h3{font-size:19px;margin:24px 0 8px}
+        .cta-box{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--brand-soft);border-radius:12px;padding:16px 20px;margin:20px 0}
+        .cta-box p{margin:0;font-weight:600}
+        .cta-box img{height:48px;width:auto}
+        .toc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px;margin:20px 0}
+        .toc strong{display:block;margin-bottom:4px}
+        .toc ol{margin:0;padding-left:20px}
+        .note{background:var(--warn);border-radius:10px;padding:12px 16px;margin:16px 0}
+        .steps li{margin-bottom:6px}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:16px 0}
+        .gallery figure{margin:0}
+        .gallery img{border:1px solid var(--line);border-radius:10px}
+        .gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+        table{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0;background:#fff}
+        th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+        th{background:var(--brand-soft)}
+        .tablewrap{overflow-x:auto}
+        details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+        summary{font-weight:600;cursor:pointer}
+        .related{border-top:1px solid var(--line);margin-top:40px;padding-top:8px}
+        .related ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+        .related a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+        .related a b{display:block;color:var(--brand)}
+        .related a span{font-size:14px;color:var(--muted)}
+        .related .grp{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px}
+        footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+        footer .cols{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+        footer ul{list-style:none;padding:0;margin:0}
+        footer li{margin:4px 0}
+        .social{display:flex;gap:12px;align-items:center}
+        .social img{height:28px;width:auto}
+        @media (max-width:760px){nav.top a{margin-left:0;margin-right:14px}}
+    </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar__left">
-        <a href="index.html" class="navbar__home">
-            <img src="assets/icon.png" class="navbar__logo" />
-        </a>
-        <span class="navbar__title">
-            SafePhone - Tường Lửa Chống Lừa Đảo
-        </span>
-    </div>
-    <div class="navbar__right">
-        <span class="navbar__menu">
-            <a href="tutorials.html" style="text-decoration: none;">Hướng Dẫn Sử Dụng</a>
-        </span>
-        <span class="navbar__menu">
-            <a href="security_handbook.html" style="text-decoration: none;">Cẩm Nang An Ninh Mạng</a>
-        </span>
 
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="https://safephone.io.vn/"><img src="https://safephone.io.vn/assets/icon.png" alt="Logo SafePhone" width="32" height="32">SafePhone</a>
+        <nav class="top" aria-label="Điều hướng chính">
+            <a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a>
+            <a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng<span class="tag">Phải đọc</span></a>
+            <a href="https://safephone.io.vn/en/how-to-create-ai-api-keys.html" hreflang="en" lang="en" class="lang-switch">English</a>
+        </nav>
     </div>
-</nav>
+</header>
+
 <main>
-    <article class="page">
-        <img class="banner" src="assets/banner.png">
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="https://safephone.io.vn/">SafePhone</a></li>
+                <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+                <li aria-current="page">Tạo API key OpenAI, DeepSeek</li>
+            </ol>
+        </nav>
+    </div>
+    <article class="post">
+        <h1>Cách tạo API key OpenAI và DeepSeek từ đầu: đăng ký, nạp tiền, tạo key cho SafePhone</h1>
+        <p class="byline">SafePhone · Cập nhật 05/10/2026</p>
+        <p class="lede">SafePhone có thể kết nối với AI để tăng khả năng phát hiện nội dung giả mạo. Để bật tính năng này, bạn cần <strong>tạo API key OpenAI</strong> hoặc DeepSeek. Bài viết hướng dẫn từ đầu, kể cả khi bạn chưa có tài khoản: đăng ký, nạp tiền, tạo key và dán vào SafePhone — khoảng 10 phút.</p>
+        <div class="cta-box">
+            <p>Tải SafePhone để bật tính năng AI phát hiện lừa đảo</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
+        </div>
+        <nav class="toc" aria-label="Mục lục">
+            <strong>Nội dung bài viết</strong>
+            <ol>
+                <li><a href="#api-key-la-gi">API key là gì và vì sao SafePhone cần?</a></li>
+                <li><a href="#tong-quan">Tổng quan: OpenAI và DeepSeek</a></li>
+                <li><a href="#chuan-bi">Bạn cần chuẩn bị gì?</a></li>
+                <li><a href="#openai">Phần A: Tạo API key OpenAI từ đầu</a></li>
+                <li><a href="#deepseek">Phần B: Tạo API key DeepSeek từ đầu</a></li>
+                <li><a href="#nhap-vao-safephone">Phần C: Nhập API key vào SafePhone</a></li>
+                <li><a href="#bao-mat">Giữ API key an toàn và kiểm soát chi phí</a></li>
+                <li><a href="#kiem-tra">Checklist khi nút AI chưa hoạt động</a></li>
+            </ol>
+        </nav>
 
-        <header class="page__header">
-            <h1 class="page__title">Hướng dẫn tích hợp với AI trên SafePhone để tối đa hoá khả năng phát hiện nội dung giả mạo</h1>
-        </header>
-        <div class="page__content">
-            <div class="article">
-                <h2>Hướng Dẫn Tạo API Key OpenAI và DeepSeek</h2>
+        <h2 id="api-key-la-gi">API key là gì và vì sao SafePhone cần?</h2>
+        <p>Các mô hình AI hiện đại như OpenAI và DeepSeek cho phép nhà phát triển tích hợp trí tuệ nhân tạo vào ứng dụng, website hoặc hệ thống tự động hoá thông qua API. Để sử dụng các dịch vụ này, bạn cần tạo một <strong>API key</strong> — mã xác thực giúp ứng dụng của bạn giao tiếp với hệ thống AI.</p>
+        <p>Khi bạn nhập API key vào SafePhone, ứng dụng có thể dùng AI để tăng khả năng phát hiện nội dung giả mạo, bên cạnh cơ chế đối chiếu danh sách đen sẵn có (xem <a href="https://safephone.io.vn/safephone-mechanism.html">SafePhone hoạt động như thế nào</a>). Tính năng AI là tuỳ chọn: các tính năng như <a href="https://safephone.io.vn/block-blacklisted-incoming-call.html">cách chặn số lạ, số lừa đảo tự động</a> hay <a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html">kiểm tra trang web lừa đảo</a> vẫn hoạt động khi bạn chưa bật AI.</p>
 
-                <div style="
-background: linear-gradient(135deg, #e8f4ff 0%, #d6ecff 100%);
-    border: 2px solid #2196f3;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 24px 0;
-    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
-">
-                    <h2 style="margin-top:0;">Tăng cường bảo mật trên điện thoại di động</h2>
+        <h2 id="tong-quan">Tổng quan: OpenAI và DeepSeek</h2>
+        <p>SafePhone hỗ trợ hai nhà cung cấp AI. Bạn chỉ cần tạo key ở <strong>một</strong> trong hai.</p>
+        <div class="tablewrap">
+            <table>
+                <thead><tr><th></th><th>OpenAI</th><th>DeepSeek</th></tr></thead>
+                <tbody>
+                <tr><td>Trang dành cho nhà phát triển</td><td><a href="https://platform.openai.com/" rel="noopener">platform.openai.com</a></td><td><a href="https://platform.deepseek.com/" rel="noopener">platform.deepseek.com</a></td></tr>
+                <tr><td>Nút tạo key</td><td>+ Create new secret key</td><td>Create new API key</td></tr>
+                <tr><td>Nạp tiền</td><td><a href="https://platform.openai.com/settings/organization/billing/overview" rel="noopener">Trang Billing</a></td><td><a href="https://platform.deepseek.com/top_up" rel="noopener">Trang Top-up</a></td></tr>
+                <tr><td>Bảng giá</td><td><a href="https://openai.com/api/pricing/" rel="noopener">openai.com/api/pricing</a></td><td><a href="https://api-docs.deepseek.com/quick_start/pricing/" rel="noopener">api-docs.deepseek.com/quick_start/pricing</a></td></tr>
+                <tr><td>Theo dõi mức sử dụng</td><td><a href="https://platform.openai.com/usage" rel="noopener">platform.openai.com/usage</a></td><td><a href="https://platform.deepseek.com/usage" rel="noopener">platform.deepseek.com/usage</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Giao diện của OpenAI và DeepSeek có thể thay đổi; tên mục, tên nút trong bài có thể khác tùy thời điểm.</p>
 
-                    <p>
-                        Nếu bạn đang tìm kiếm giải pháp để phòng tránh các website giả mạo hoặc website phát tán mã độc thì hãy tải ngay ứng dụng
-                        <strong>SafePhone</strong>!
-                    </p>
+        <h2 id="chuan-bi">Bạn cần chuẩn bị gì?</h2>
+        <ul>
+            <li><strong>Một địa chỉ email</strong> (hoặc tài khoản Google) để đăng ký.</li>
+            <li><strong>Một máy tính có trình duyệt</strong> — các trang quản lý API dễ thao tác trên máy tính hơn.</li>
+            <li><strong>Thẻ thanh toán quốc tế</strong> (Visa/Mastercard) hoặc phương thức thanh toán mà nhà cung cấp chấp nhận. Dùng API là dịch vụ trả phí theo mức sử dụng.</li>
+        </ul>
+        <p>Thứ tự nên làm: <strong>đăng ký tài khoản → nạp tiền → tạo API key → dán key vào SafePhone</strong>. Nạp tiền trước giúp key hoạt động ngay khi bạn nhập vào ứng dụng.</p>
 
-                    <p style="margin-bottom:0;">
-                        <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           style="
-               display:inline-block;
-               background:#198754;
-               color:white;
-               text-decoration:none;
-               padding:10px 18px;
-               border-radius:6px;
-               font-weight:bold;
-           ">
-                            Tải SafePhone từ PlayStore
-                        </a>
-                    </p>
-                </div>
+        <h2 id="openai">Phần A: Tạo API key OpenAI từ đầu</h2>
+        <h3>Bước A1: Đăng ký tài khoản OpenAI</h3>
+        <ol class="steps">
+            <li>Mở <a href="https://platform.openai.com/" rel="noopener">platform.openai.com</a> trên máy tính và bấm <strong>Sign up</strong> (đã có tài khoản ChatGPT thì bấm <strong>Log in</strong> và dùng luôn tài khoản đó).</li>
+            <li>Nhập email rồi bấm <strong>Continue</strong>, hoặc chọn đăng nhập bằng Google.</li>
+            <li>Đặt mật khẩu, mở hộp thư và bấm vào link xác nhận OpenAI gửi tới.</li>
+            <li>Điền thông tin cơ bản theo hướng dẫn trên màn hình (tên, ngày sinh). OpenAI có thể yêu cầu xác minh số điện thoại.</li>
+        </ol>
+        <h3>Bước A2: Nạp tiền vào tài khoản</h3>
+        <ol class="steps">
+            <li>Mở trang <a href="https://platform.openai.com/settings/organization/billing/overview" rel="noopener">Billing</a> (hoặc bấm biểu tượng bánh răng <strong>Settings</strong> → <strong>Billing</strong>).</li>
+            <li>Bấm <strong>Add payment details</strong>, chọn dùng cá nhân (<em>Individual</em>) và nhập thông tin thẻ.</li>
+            <li>Chọn số tiền nạp — mức tối thiểu là <strong>$5</strong>, thường đủ để bắt đầu.</li>
+            <li>OpenAI bật sẵn chế độ tự động nạp thêm tiền (<em>auto recharge</em>). Nếu muốn kiểm soát chi phí, hãy tắt tuỳ chọn này trước khi xác nhận.</li>
+            <li>Bấm xác nhận để hoàn tất. Xem bảng giá tại <a href="https://openai.com/api/pricing/" rel="noopener">openai.com/api/pricing</a>.</li>
+        </ol>
+        <h3>Bước A3: Tạo API key</h3>
+        <ol class="steps">
+            <li>Mở trang <a href="https://platform.openai.com/api-keys" rel="noopener">API keys</a> (hoặc chọn <strong>API keys</strong> ở menu bên trái).</li>
+            <li>Bấm <strong>+ Create new secret key</strong>.</li>
+            <li>Ở ô <strong>Name</strong>, đặt tên dễ nhớ, ví dụ <code>SafePhone</code>, rồi bấm <strong>Create secret key</strong>.</li>
+            <li>Bấm <strong>Copy</strong> để sao chép key (bắt đầu bằng <code>sk-</code>) và lưu ở nơi an toàn.</li>
+        </ol>
+        <div class="note"><strong>Quan trọng:</strong> OpenAI chỉ hiển thị key <strong>một lần</strong>. Nếu đóng hộp thoại mà chưa sao chép, bạn phải tạo key mới.</div>
 
-                <p>
-                    Các mô hình AI hiện đại như <span>OpenAI</span> và <span>DeepSeek</span> cho phép nhà phát triển tích hợp trí tuệ nhân tạo vào ứng dụng, website hoặc hệ thống tự động hóa thông qua API. Để sử dụng các dịch vụ này, bạn cần tạo một <span>API Key</span>, đây là mã xác thực giúp ứng dụng của bạn giao tiếp với hệ thống AI.
-                </p>
+        <h2 id="deepseek">Phần B: Tạo API key DeepSeek từ đầu</h2>
+        <h3>Bước B1: Đăng ký tài khoản DeepSeek</h3>
+        <ol class="steps">
+            <li>Mở <a href="https://platform.deepseek.com/" rel="noopener">platform.deepseek.com</a> và chọn đăng ký (<strong>Sign up</strong>).</li>
+            <li>Đăng ký bằng email (nhập mã xác nhận được gửi về hộp thư) hoặc đăng nhập bằng Google.</li>
+            <li>Đăng nhập vào trang quản lý sau khi tạo tài khoản.</li>
+        </ol>
+        <h3>Bước B2: Nạp tiền vào tài khoản</h3>
+        <ol class="steps">
+            <li>Mở trang <a href="https://platform.deepseek.com/top_up" rel="noopener">Top up</a> (hoặc mục <strong>Top up</strong> ở menu bên trái).</li>
+            <li>Chọn số tiền muốn nạp và một phương thức thanh toán có sẵn trên trang, rồi hoàn tất thanh toán.</li>
+            <li>Xem bảng giá tại <a href="https://api-docs.deepseek.com/quick_start/pricing/" rel="noopener">api-docs.deepseek.com/quick_start/pricing</a>.</li>
+        </ol>
+        <h3>Bước B3: Tạo API key</h3>
+        <ol class="steps">
+            <li>Mở trang <a href="https://platform.deepseek.com/api_keys" rel="noopener">API keys</a>.</li>
+            <li>Bấm <strong>Create new API key</strong>, đặt tên, ví dụ <code>SafePhone</code>, rồi bấm <strong>Create</strong>.</li>
+            <li>Sao chép key (bắt đầu bằng <code>sk-</code>) và lưu ở nơi an toàn — key cũng chỉ hiển thị một lần.</li>
+        </ol>
 
-                <div>
-                    <p>
-                        Trong bài viết này, chúng tôi sẽ hướng dẫn từng bước cách tạo API Key từ OpenAI và DeepSeek.
-                    </p>
-                </div>
+        <h2 id="nhap-vao-safephone">Phần C: Nhập API key vào SafePhone</h2>
+        <p>Sau khi tạo API key thành công, bạn nhập key vào ô API Key trong SafePhone:</p>
+        <ol class="steps">
+            <li>Mở ứng dụng SafePhone. Chưa cài? <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener">Tải trên Google Play</a>.</li>
+            <li>Bấm vào nút có chữ <strong>AI</strong> ngay bên cạnh tiêu đề “SafePhone”; một hộp thoại sẽ hiện lên.</li>
+            <li>Bấm <strong>kích hoạt AI</strong>.</li>
+            <li>Chọn nhà cung cấp AI: <strong>OpenAI</strong> hoặc <strong>DeepSeek</strong> (đúng với nơi bạn đã tạo key).</li>
+            <li>Dán API key vào ô <strong>API Key</strong>.</li>
+            <li>Bấm <strong>Lưu lại</strong>.</li>
+        </ol>
+        <p>Sau khi hoàn tất, nút có chữ <strong>AI</strong> sẽ chuyển sang màu xanh.</p>
 
-                <h2>Tạo API Key OpenAI</h2>
+        <h2 id="bao-mat">Giữ API key an toàn và kiểm soát chi phí</h2>
+        <p>API key giống như mật khẩu của dịch vụ AI. Nếu bị lộ, người khác có thể dùng tài khoản của bạn và phát sinh chi phí ngoài ý muốn. Bạn có thể lưu API key vừa tạo theo các cách sau:</p>
+        <ul>
+            <li>Lưu key trong trình quản lý mật khẩu, hoặc một file chỉ mình bạn truy cập được.</li>
+            <li>Với OpenAI, tắt <em>auto recharge</em> và chỉ nạp số tiền nhỏ để giới hạn chi phí tối đa.</li>
+            <li>Thường xuyên kiểm tra mức sử dụng của API key tại <a href="https://platform.openai.com/usage" rel="noopener">https://platform.openai.com/usage</a> (OpenAI) hoặc <a href="https://platform.deepseek.com/usage" rel="noopener">https://platform.deepseek.com/usage</a> (DeepSeek). Nếu thấy bất thường, hãy xoá API key đó và tạo key mới.</li>
+        </ul>
+        <div class="note"><strong>Cảnh giác lừa đảo:</strong> không gửi API key qua tin nhắn, mạng xã hội hay cho người tự xưng là “hỗ trợ kỹ thuật”. Kẻ gian thường giả danh bộ phận hỗ trợ để xin mật khẩu, mã OTP — API key cũng cần được bảo vệ như vậy. Xem thêm <a href="https://safephone.io.vn/top-habits-make-you-lose-personal-data.html">thói quen làm lộ dữ liệu cá nhân</a>.</div>
 
-                <p>
-                    Trang chính thức của OpenAI: <span>
-                    <a href="https://platform.openai.com/" target="_blank">
-                        https://platform.openai.com/
-                    </a>
-                </span>
-                </p>
+        <h2 id="kiem-tra">Checklist khi nút AI chưa hoạt động</h2>
+        <p>Nếu nút AI chưa chuyển xanh hoặc tính năng AI không hoạt động như mong đợi, hãy kiểm tra lần lượt:</p>
+        <div class="tablewrap">
+            <table>
+                <thead><tr><th>Cần kiểm tra</th><th>Cách xử lý</th></tr></thead>
+                <tbody>
+                <tr><td>Chọn đúng nhà cung cấp</td><td>Key tạo trên OpenAI thì chọn OpenAI; key tạo trên DeepSeek thì chọn DeepSeek.</td></tr>
+                <tr><td>Key được sao chép đầy đủ</td><td>Dán lại key, chú ý không thiếu ký tự và không có khoảng trắng thừa ở đầu hoặc cuối.</td></tr>
+                <tr><td>Tài khoản có phương thức thanh toán hoặc số dư</td><td>Kiểm tra trang Billing (OpenAI, bước A2) hoặc Top up (DeepSeek, bước B2).</td></tr>
+                <tr><td>Key đã bị xoá</td><td>Nếu bạn đã xoá key trên trang quản lý, hãy tạo key mới và nhập lại vào SafePhone.</td></tr>
+                <tr><td>Đã bấm Lưu lại</td><td>Mở lại hộp thoại AI, kiểm tra đã kích hoạt AI và bấm “Lưu lại”.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Nếu cần nhận cảnh báo từ điện thoại của người thân, bạn có thể thiết lập thêm <a href="https://safephone.io.vn/create-slack-channel.html">kênh Slack nhận cảnh báo</a>.</p>
 
-                <h3>Bước 1: Đăng ký hoặc đăng nhập tài khoản OpenAI</h3>
-
-                <p>
-                    Truy cập nền tảng dành cho nhà phát triển của OpenAI tại: <span>
-                    <a href="https://platform.openai.com/" target="_blank">
-                        https://platform.openai.com/
-                    </a>
-                </span>
-                </p>
-
-
-
-                <p>
-                    Đăng nhập hoặc tạo tài khoản mới nếu bạn chưa có tài khoản OpenAI.
-                </p>
-
-                <h3>Bước 2: Truy cập mục API Keys</h3>
-
-                <ol>
-                    <li>Bấm vào mục "API keys" (trên thanh menu bên trái màn hình)</li>
-                    <li>Bấm vào  <span>+ Create new secret key</span>, một hộp thoại sẽ hiện lên
-                </ol>
-
-                <h3>Bước 3: Tạo API Key mới</h3>
-
-                <ul>
-                    <li>Trên hộp thoại mới hiện lên, đặt tên cho API key ở ô "Name" (bất kì tên gì cũng được, ví dụ: SafePhone AI) </li>
-                    <li>Bấm vào nút "Create secret key" để tạo khoá, một hộp thoại khác sẽ hiện lên</li>
-                    <li>Trên hộp thoại này hiển thị API key bạn cần lưu trữ. Hãy sao chép API key đó và lưu vào đâu đó để có thể copy & paste vào ứng dụng SafePhone. <strong>(Lưu ý: API key tương tự như mật khẩu, không được để lộ API key với người khác.</strong></li>
-                </ul>
-
-                <h3>Bước 4: Thiết lập thanh toán</h3>
-
-                <p>
-                    Để sử dụng API Key của OpenAI, bạn cần có phương thức thanh toán hợp lệ hoặc số dư trong tài khoản.
-                    Để nạp tiền cho API key trên OpenAI, thực hiện theo các bước sau:
-                </p>
-                <ul>
-                    <li>
-                        Truy cập trang Billing: <span>
-                    <a href="https://platform.openai.com/settings/organization/billing" target="_blank">
-                        https://platform.openai.com/settings/organization/billing/overview
-                    </a>
-                </span>
-                    </li>
-                    <li>
-                        Tham khảo bảng giá của OpenAI tại: <a href="https://openai.com/api/pricing/" target="_blank">https://openai.com/api/pricing/</a>
-                    </li>
-                    <li>
-                        Bấm vào "Add payment details", điền thông tin thanh toán và thực hiện chuyển khoản như thông thường.
-                    </li>
-                </ul>
-
-                <h2>Tạo API Key DeepSeek</h2>
-
-                <p>
-                    Trang chính thức của DeepSeek: <span>
-                    <a href="https://platform.deepseek.com/" target="_blank">
-                       https://platform.deepseek.com/
-                    </a>
-                </span>
-                </p>
-
-                <h3>Bước 1: Đăng ký hoặc đăng nhập tài khoản DeepSeek</h3>
-
-                <p>
-                    Truy cập nền tảng dành cho nhà phát triển của DeepSeek tại: <span>
-                    <a href="https://platform.deepseek.com/" target="_blank">
-                       https://platform.deepseek.com/
-                    </a>
-                </span>
-                </p>
-
-                <p>
-                    Đăng nhập hoặc tạo tài khoản mới nếu bạn chưa có tài khoản DeepSeek.
-                </p>
-
-                <h3>Bước 2: Truy cập mục API Keys</h3>
-
-                <ol>
-                    <li>Bấm vào mục "API keys" (trên thanh menu bên trái màn hình)</li>
-                    <li>Bấm vào  <span>Create new API key</span>, một hộp thoại sẽ hiện lên
-                </ol>
-
-                <h3>Bước 3: Tạo API Key mới</h3>
-
-                <ul>
-                    <li>Trên hộp thoại mới hiện lên, đặt tên cho API key ở ô "Name" (bất kì tên gì cũng được, ví dụ: SafePhone AI) </li>
-                    <li>Bấm vào nút "Create API key" để tạo khoá, một hộp thoại khác sẽ hiện lên</li>
-                    <li>Trên hộp thoại này hiển thị API key bạn cần lưu trữ. Hãy sao chép API key đó và lưu vào đâu đó để có thể copy & paste vào ứng dụng SafePhone.<strong>(Lưu ý: API key tương tự như mật khẩu, không được để lộ API key với người khác.)</strong> </li>
-                </ul>
-
-                <h3>Bước 4: Thiết lập thanh toán</h3>
-
-                <p>
-                    Để sử dụng API key của DeepSeek, bạn cần có phương thức thanh toán hợp lệ hoặc số dư trong tài khoản.
-                    Để nạp tiền cho API key trên DeepSeek, thực hiện theo các bước sau:
-                </p>
-                <ul>
-                    <li>
-                        Truy cập trang Top-up của DeepSeek : <span>
-                    <a href="https://platform.deepseek.com/top_up" target="_blank">
-                       https://platform.deepseek.com/top_up
-                    </a>
-                </span>
-                    </li>
-                    <li>
-                        Tham khảo bảng giá của OpenAI tại: <a href="https://api-docs.deepseek.com/quick_start/pricing/" target="_blank">https://api-docs.deepseek.com/quick_start/pricing/</a>
-                    </li>
-                    <li>
-                        Điền thông tin thanh toán và thực hiện chuyển khoản như thông thường.
-                    </li>
-                </ul>
-
-                <h2>Lưu Ý: Bảo Mật API Key</h2>
-
-                <p>
-                    API Key tương tự như mật khẩu của dịch vụ AI. Nếu bị lộ, người khác có thể sử dụng tài khoản của bạn và phát sinh chi phí ngoài ý muốn.
-                    Bạn có thể lưu API Key vừa được tạo theo các cách sau để đảm bảo tính bảo mật:
-                </p>
-
-                <ul>
-                    <li>Tạo 1 file Word trên máy tính, copy & paste API vào file Word đó, giấu ở nơi an toàn hoặc đặt mật khẩu cho file Word</li>
-                    <li>Tạo 1 file trên Drive của bạn, lưu API Key vào đó và thiết lập chỉ mình bạn mới được xem file đó.</li>
-                    <li>Thường xuyên kiểm tra mức độ sử dụng của API Key trên trang chủ của OpenAI hoặc DeepSeek,
-                        tương ứng tại:  <a href="https://platform.openai.com/usage" target="_blank">https://platform.openai.com/usage</a>
-                        hoặc <a href="https://platform.deepseek.com/usage" target="_blank">https://platform.deepseek.com/usage</a>,
-                        nếu phát hiện thấy bất thường, hãy xoá API key và tạo mới API key khác.
-                    </li>
-                </ul>
-
-                <h2>Sử Dụng API Key Trong Ứng Dụng</h2>
-                <p>
-                    Sau khi tạo thành công API Key, bạn có thể sử dụng AI Key này để nhập vào ô API Key trong SafePhone. Các bước thực hiện như sau:
-                    <ul>
-                <li>Mở ứng dụng SafePhone</li>
-                <li>Bấm vào nút có chữ "AI" ngay bên cạnh tiêu đề "SafePhone", 1 hộp thoại sẽ hiện lên</li>
-                <li>Bấm kích hoạt AI</li>
-                <li>Chọn nhà cung cấp AI: OpenAI hoặc DeepSeek</li>
-                <li>Dán API Key vào ô "API Key"</li>
-                <li>Bấm "Lưu lại"</li>
-                <li>Sau khi hoàn tất, nút có chữ "AI" sẽ chuyển sang màu xanh</li>
-
-                </ul>
-                </p>
-
-            </div>
-
+        <h2 id="ket-luan">Kết luận</h2>
+        <p>Chỉ với vài bước — đăng nhập trang dành cho nhà phát triển, tạo key, nạp tiền và dán key vào SafePhone — bạn đã bật được tính năng AI để tăng khả năng phát hiện nội dung giả mạo. Hãy giữ API key như mật khẩu và thường xuyên kiểm tra mức sử dụng để tránh chi phí ngoài ý muốn.</p>
+        <div class="cta-box">
+            <p>Bật tính năng AI phát hiện lừa đảo trên SafePhone</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ease_studio.phone_lookup" rel="noopener"><img src="https://safephone.io.vn/assets/google-play-badge.png" alt="Tải SafePhone trên Google Play" width="160" height="48" loading="lazy"></a>
         </div>
 
-        <div>
-            <h3>Xem thêm:</h3>
+        <h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+        <details>
+            <summary>Có bắt buộc tạo API key để dùng SafePhone không?</summary>
+            <p>Không. API key chỉ cần khi bạn muốn bật tính năng AI. Các tính năng chặn cuộc gọi, chặn web lừa đảo và chặn quảng cáo vẫn hoạt động khi chưa bật AI.</p>
+        </details>
+        <details>
+            <summary>Nên chọn OpenAI hay DeepSeek?</summary>
+            <p>SafePhone hỗ trợ cả hai, bạn chỉ cần tạo key ở một nhà cung cấp. Hãy tham khảo bảng giá của OpenAI và DeepSeek để chọn phương án phù hợp với nhu cầu.</p>
+        </details>
+        <details>
+            <summary>Dùng API key OpenAI hoặc DeepSeek có mất phí không?</summary>
+            <p>Có. Để sử dụng API key, bạn cần có phương thức thanh toán hợp lệ hoặc số dư trong tài khoản; chi phí tính theo bảng giá của nhà cung cấp.</p>
+        </details>
+        <details>
+            <summary>Cần nạp bao nhiêu tiền để bắt đầu?</summary>
+            <p>Với OpenAI, mức nạp tối thiểu là 5 USD. Với DeepSeek, hãy xem số tiền tối thiểu hiển thị trên trang Top up. Bạn có thể bắt đầu với số tiền nhỏ và theo dõi trang Usage.</p>
+        </details>
+        <details>
+            <summary>Lỡ để lộ API key thì phải làm gì?</summary>
+            <p>Hãy xoá ngay API key đó trên trang quản lý của OpenAI hoặc DeepSeek, tạo key mới và nhập lại vào SafePhone. Sau đó kiểm tra trang Usage để phát hiện mức sử dụng bất thường.</p>
+        </details>
+        <details>
+            <summary>Làm sao biết SafePhone đã kết nối AI thành công?</summary>
+            <p>Sau khi dán API key và bấm Lưu lại, nút có chữ AI bên cạnh tiêu đề SafePhone sẽ chuyển sang màu xanh.</p>
+        </details>
+
+        <aside class="related" aria-labelledby="xem-them">
+            <h2 id="xem-them">Xem thêm</h2>
+            <p class="grp">Hiểu và thiết lập SafePhone</p>
             <ul>
-                <li><a href="block-blacklisted-incoming-call.html">Cách chặn số điện thoại lừa đảo</a></li>
-                <li><a href="build-trusted-contact-phone.html">Cách chặn hết số lạ mà không cần thu thập danh sách đen</a></li>
-                <li><a href="block-incoming-call-by-number-patterns.html">Cách chặn số lạ bằng đầu số hoặc số có quy luật</a></li>
-                <li><a href="send-alerts-when-receiving-calls.html">Cách bảo vệ người thân khỏi các cuộc gọi lừa đảo</a></li>
-                <li><a href="screening-urls-before-openning.html">Cách chặn các trang web lừa đảo</a></li>
-                <li><a href="only-allow-access-trusted-sites.html">Cách chặn các trang web lừa đảo mà không cần thu thập danh sách đen</a></li>
-                <li><a href="how-to-check-a-websites-is-fake.html">Cách kiểm tra trang web giả mạo</a></li>
-                <li><a href="how-to-block-ads-url.html">Cách chặn link quảng cáo</a></li>
-                <li><a href="send-alert-when-open-url.html">Làm sao để biết người thân bấm vào link lừa đảo</a></li>
-                <li><a href="browse-internet-by-safephone-is-safer.html">Cách lướt web an toàn</a></li>
-                <li><a href="create-slack-channel.html">Hướng dẫn tạo kênh Slack để truyền cảnh báo</a></li>
+                <li><a href="https://safephone.io.vn/safephone-mechanism.html"><b>SafePhone hoạt động như thế nào</b><span>Cách SafePhone đối chiếu số điện thoại và đường link với danh sách đen.</span></a></li>
+                <li><a href="https://safephone.io.vn/create-slack-channel.html"><b>Tạo kênh Slack nhận cảnh báo</b><span>Thiết lập kênh Slack để nhận cảnh báo từ điện thoại người thân.</span></a></li>
             </ul>
-        </div>
+            <p class="grp">Tính năng chống lừa đảo</p>
+            <ul>
+                <li><a href="https://safephone.io.vn/how-to-check-a-websites-is-fake.html"><b>Cách kiểm tra trang web lừa đảo</b><span>Dấu hiệu nhận biết website giả mạo và cách check web.</span></a></li>
+                <li><a href="https://safephone.io.vn/block-blacklisted-incoming-call.html"><b>Cách chặn số lạ, số lừa đảo tự động</b><span>Chặn số lừa đảo trước khi điện thoại đổ chuông.</span></a></li>
+            </ul>
+        </aside>
     </article>
-
-
-
 </main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__container">
-            <p class="footer__love">
-                <script>document.write('&copy;' + (new Date()).getFullYear());</script><noscript>&copy;2026</noscript> All rights reserved
-            &mdash; Founded by <a href="https://github.com/nguyenduyy94" target="_blank">N.D.Y</a>
-            &mdash; Powered by <a href="" target="_blank" title="Ease Studio">Ease Studio</a>
-            </p>
-            <ul class="footer__links">
-                <li class="footer__link">
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.facebook.com/safephonevn" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__link">
-                    <a href="https://www.producthunt.com/products/safephone/launches" target="_blank">Product Hunt</a>
-                </li>
-            </ul>
+
+<footer>
+    <div class="wrap cols">
+        <div>
+            <p><strong>SafePhone</strong> – Tường lửa chống lừa đảo trên điện thoại</p>
+            <p>©2026 SafePhone. Founded by <a href="https://github.com/nguyenduyy94" rel="noopener">N.D.Y</a> — Powered by Ease Studio</p>
+        </div>
+        <ul>
+            <li><a href="https://safephone.io.vn/">Trang chủ</a></li>
+            <li><a href="https://safephone.io.vn/tutorials.html">Hướng dẫn sử dụng</a></li>
+            <li><a href="https://safephone.io.vn/security_handbook.html">Cẩm nang an ninh mạng</a></li>
+            <li><a href="https://safephone.io.vn/privacy.html">Chính sách quyền riêng tư</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://www.facebook.com/safephonevn" rel="noopener"><img src="https://safephone.io.vn/assets/Logo_de_Facebook.png" alt="SafePhone trên Facebook" loading="lazy"></a>
+            <a href="https://www.producthunt.com/products/safephone/launches" rel="noopener"><img src="https://safephone.io.vn/assets/producthunt_logo.png" alt="SafePhone trên Product Hunt" loading="lazy"></a>
         </div>
     </div>
 </footer>
-
-<script type="text/javascript" src="assets/tobi.min.js" /></script>
-<script>
-    window.onload = function () {
-        var tobi = new Tobi();
-    };
-</script>
 
 </body>
 </html>
